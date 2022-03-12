@@ -1,34 +1,8 @@
-//DESCRIPTION: permettent d'ajouter facilement des points d'arrêt personnalisés à vos feuilles de style et d'ajouter rapidement un comportement réactif personnalisé dans un élément pour différents points d'arrêt (breakpoint).
-
-/*
- USAGE:
- 
-@import './media-queries';
-
-.foo {
-  @include screen(large) {
-    width: 20%;
-  }
-  @include screen(med) {
-    width: 40%;
-  }
-  @include screen(med-small) {
-    width: 60%;
-  }
-  @include screen(small) {
-    width: 80%;
-  }
-  @include screen(custom, max, 400) {
-    width: 100%;
-  }
-}
-*/
-
 //TODO: verified
 $breakpoint-small: 600px;
 $breakpoint-med-small: 960px;
 $breakpoint-med: 1175px;
-
+/// Ajouter facilement des points d'arrêt personnalisés à vos feuilles de style et d'ajouter rapidement un comportement réactif personnalisé dans un élément pour différents points d'arrêt (breakpoint).
 @mixin media-queries($size, $type: max, $pixels: $breakpoint-small) {
 	@if $size == 'small' {
 		@media screen and ($type + -width: $breakpoint-small) {
