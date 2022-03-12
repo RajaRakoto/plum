@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/RajaRakoto/sass-toolkit/issues"
   },
-  "homepage": "https://github.com/RajaRakoto/sass-toolkit#readme"
+  "homepage": "https://github.com/RajaRakoto/sass-toolkit#readme",
+  "dependencies": {
+    "sassdoc": "^2.7.3"
+  }
 }

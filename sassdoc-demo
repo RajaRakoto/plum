@@ -1,0 +1,10 @@
+/// Centre a block to make it a container
+/// @group helpers
+/// @param {Number} $max-width - Max width for the container
+/// @require $baseline
+/// @output 'max-width', 'margin' and 'width'
+@mixin center($max-width: 1170px) {
+	max-width: $max-width;
+	margin: 0 auto $baseline;
+	width: 100%;
+}
