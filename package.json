@@ -1,7 +1,7 @@
 {
-	"name": "sass-toolkit",
+	"name": "sass-eo",
 	"version": "1.0.0",
-	"description": "Style your website faster using a set of custom SASS-based tools (mixins and function)",
+	"description": "Style your website faster with a minimalist SASS-powered toolset",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,8 @@
 		"toolkit",
 		"collection",
 		"mixins",
-		"function"
+		"function",
+		"minimalist"
 	],
 	"author": "Raja",
 	"license": "MIT",
