@@ -34,7 +34,7 @@
 //TODO: verified
 /// Centrer rapidement un block
 /// @param {string} $selector [tag, id, class] - selecteur
-@mixin position-center-block($selector) {
+@mixin position-block-center($selector) {
 	#{$selector} {
 		display: block;
 		margin-left: auto;
@@ -50,7 +50,7 @@
 //TODO: verified
 /// Centrer rapidement l'element (containers|items) enfant du selecteur en argument
 /// @param {string} $selector [tag, id, class] - selecteur
-@mixin position-center-flex($selector) {
+@mixin position-flex-center($selector) {
 	#{$selector} {
 		display: flex;
 		align-items: center;
@@ -63,7 +63,7 @@
 /// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 /// @param {string} $child [tag, id, class] - selecteur de l'element fils
 /// @param {boolean} $reverse [true, false] - renverser l'alignement ou pas
-@mixin position-row-flex($parent, $child, $reverse: false) {
+@mixin position-flex-row($parent, $child, $reverse: false) {
 	#{$parent} {
 		display: flex;
 	}
@@ -82,7 +82,7 @@
 /// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 /// @param {string} $child [tag, id, class] - selecteur de l'element fils
 /// @param {boolean} $reverse [true, false] - renverser l'alignement ou pas
-@mixin position-col-flex($parent, $child, $reverse: false) {
+@mixin position-flex-col($parent, $child, $reverse: false) {
 	#{$parent} {
 		display: flex;
 	}
@@ -95,8 +95,6 @@
 		}
 	}
 }
-
-//TODO
 
 //------------------------------------------------------------
 
