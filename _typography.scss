@@ -2,25 +2,20 @@
 @use 'sass:math';
 
 //TODO: verified
-//convert pixel to rem
+/// Une fonction qui convertit une valeur en pixel en rem (utile pour avoir une taille de police responsive)
+/// @param {pixel} $size - valeur en pixel a convertir en rem
 @function toRem($size) {
 	@return math.div($size, 16px) * 1rem;
 }
 
 //------------------------------------------------------------
 
-//font-face() -> ce mixin effectue l'importation rapide des polices externes et inclure les proprietEs coherentes.
-
-/*
-USAGE:
-
-@include font-face(firacode-regular, './Firacode/FiraCode-Regular.otf');
-p {
-  font-family: firacode-regular;
-}
-*/
-
 //TODO: verified
+/// Ce mixin effectue l'importation rapide des polices externes et inclure les proprietEs coherentes.
+/// @param {string} $font-name - le nom du font family a utiliser tout au long de votre code
+/// @param {path} $path - font path
+/// @param {string} $weight [normal] - font weight
+/// @param {string} $style [normal] - style par defaut a utiliser
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
 	@font-face {
 		font-family: $font-name;

@@ -1,15 +1,12 @@
-//DESCRIPTION: ensemble des mixins & fonctions pour manipuler les espacements des elements
-
-/*
-USAGE:
-@include padding(1px, null, 3px, 4px);
-@include margin(1px, 2px, null, 4px);
-*/
-
 //NOTE: En utilisant la propriété Sass null, vous pouvez omettre les propriétés de remplissage. Les mêmes règles s'appliquent pour les marges.
 
 //TODO: verified
-//set padding manually
+/// Modifier rapidement le padding d'un element
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {pixel | null} $top - espacement en haut du padding
+/// @param {pixel | null} $right - espacement a droite du padding
+/// @param {pixel | null} $bottom - espacement en bas du padding
+/// @param {pixel | null} $left - espacement a gauche du padding
 @mixin spacing-padding($selector, $top, $right, $bottom, $left) {
 	#{$selector} {
 		padding-top: $top;
@@ -20,7 +17,12 @@ USAGE:
 }
 
 //TODO: verified
-//set margin manually
+/// Modifier rapidement le margin d'un element
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {pixel | null} $top - espacement en haut du margin
+/// @param {pixel | null} $right - espacement a droite du margin
+/// @param {pixel | null} $bottom - espacement en bas du margin
+/// @param {pixel | null} $left - espacement a gauche du margin
 @mixin spacing-margin($selector, $top, $right, $bottom, $left) {
 	#{$selector} {
 		margin-top: $top;
@@ -31,7 +33,9 @@ USAGE:
 }
 
 //TODO: verified
-//spacing quickly
+/// Ajouter rapidement un padding|margin predefini en fonction du gabarit en argument
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {string} $gabarit [small, medium, large] - gabarit d'espacement (petit, moyen, grand) d'un box
 @mixin spacing-quick($selector, $gabarit: medium) {
 	@if ($gabarit == small) {
 		#{$selector} {
