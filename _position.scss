@@ -48,7 +48,7 @@
 // les mixins de manipulation de flex CSS
 
 //TODO: verified
-// Centrer rapidement l'element enfant du selecteur en argument
+/// Centrer rapidement l'element enfant du selecteur en argument
 /// @param {string} $selector [tag, id, class] - selecteur
 @mixin position-center-flex($selector) {
 	#{$selector} {
@@ -59,7 +59,7 @@
 }
 
 //TODO: verified
-// Aligner les elements ligne par ligne
+/// Aligner les elements ligne par ligne
 /// @param {string} $child [tag, id, class] - selecteur de l'element fils
 /// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 @mixin position-row-flex($child, $parent) {
@@ -72,7 +72,7 @@
 }
 
 //TODO: verified
-// Aligner les elements colonne par colonne
+/// Aligner les elements colonne par colonne
 /// @param {string} $child [tag, id, class] - selecteur de l'element fils
 /// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 @mixin position-col-flex($child, $parent) {
