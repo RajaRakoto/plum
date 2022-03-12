@@ -1,3 +1,9 @@
+/*
+----- CMD -----
+[install] -> $ npm install -g sassdoc
+[generate] -> $ sassdoc . [in projet folder]
+
+----- DEMO -----
 /// Centre a block to make it a container
 /// @group helpers
 /// @param {Number} $max-width - Max width for the container
@@ -8,3 +14,4 @@
 	margin: 0 auto $baseline;
 	width: 100%;
 }
+*/
