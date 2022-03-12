@@ -1,18 +1,22 @@
 /*
 ----- CMD -----
 [install] -> $ npm install -g sassdoc @hidoo/sassdoc-to-markdown
-[generate docs] -> $ sassdoc . [in projet folder]
-[generate markdown] -> $ sassdoc2md
+[generate docs] -> $ sassdoc . (in projet folder)
+[generate markdown] -> $ sassdoc2md *.scss -m README.md (in projet folder)
 
------ SYNTAX -----
-/// Centre a block to make it a container
-/// @group helpers
-/// @param {Number} $max-width - Max width for the container
-/// @require $baseline
-/// @output 'max-width', 'margin' and 'width'
-@mixin center($max-width: 1170px) {
-	max-width: $max-width;
-	margin: 0 auto $baseline;
-	width: 100%;
+===============================================================================
+
+----- NOTATION -----
+/// Description ...
+/// @author Raja ...
+/// @param {type} $parameter - description ...
+/// @require $variable
+/// @todo task ...
+/// @deprecated
+/// @example
+///  ex1 ...
+///  ex2 ...
+@mixin name($parameter) {
+code...
 }
 */
