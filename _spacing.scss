@@ -28,7 +28,6 @@
 
 //TODO: verified
 /// Ajouter rapidement un padding|margin predefini en fonction du gabarit en argument
-
 /// @param {string} $gabarit [small, medium, large] - gabarit d'espacement (petit, moyen, grand) d'un container
 @mixin spacing-quick($gabarit: medium) {
 	@if ($gabarit == small) {
