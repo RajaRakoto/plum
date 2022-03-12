@@ -9,11 +9,10 @@
 
 //TODO: test
 /// Définir un thème de couleur (primaire, secondaire) à utiliser sur l'ensemble de votre site permet de gagner du temps en ayant les mêmes parties colorées de CSS sur les mêmes éléments HTML.
-/// @param {string} $selector [tag, id, class] - selecteur
 /// @param {string} $color - couleur primaire (la couleur secondaire sera defini automatiquement)
 /// @param {boolean} $revert [true, false] - renverser la couleur primaire et secondaire
 /// @param {boolean} $bg [true, false] - activer|desactiver l'arriere plan
-@mixin color-theme($selector, $color, $revert: false, $bg: true) {
+@mixin color-theme($color, $revert: false, $bg: true) {
 	//default value
 	$primary: $color;
 	$secondary: color-adjust($color, 30%);
@@ -35,21 +34,15 @@
 	}
 	//create class
 	@if ($revert) {
-		#{$selector} {
-			color: $secondary;
-			background: $primary;
-		}
+		color: $secondary;
+		background: $primary;
 	} @else {
-		#{$selector} {
-			color: $primary;
-			background: $secondary;
-		}
+		color: $primary;
+		background: $secondary;
 	}
 	//background
 	@if ($bg == false) {
-		#{$selector} {
-			background: none;
-		}
+		background: none;
 	}
 }
 
@@ -76,19 +69,6 @@
 	$adjust: lighten(adjust-hue($color, 20), $percent);
 
 	@return $adjust;
-}
-
-//------------------------------------------------------------
-
-//TODO: verified
-/// Une fonction qui permet d'ajuster une couleur en fonction de la contraste d'affichage
-/// @param {string} $color - la couleur a ajuster
-@function color-contrast($colour) {
-	@if (lightness($colour) < 25%) {
-		@return lighten($colour, 10%);
-	} @else {
-		@return darken($colour, 10%);
-	}
 }
 
 //------------------------------------------------------------

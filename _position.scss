@@ -1,28 +1,25 @@
 //TODO: test
 /// Positionner rapidement vos elements par rapport a son element parent
-/// @param {string} $selector [tag, id, class] - selecteur
 /// @param {string} $position [vertical, horizontal, both] - position de l'element
-@mixin position-set($selector, $position) {
-	#{$selector} {
-		position: relative;
+@mixin position-set($position) {
+	position: relative;
 
-		@if $position == 'vertical' {
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-		} @else if $position == 'horizontal' {
-			left: 50%;
-			-webkit-transform: translateX(-50%);
-			-ms-transform: translateX(-50%);
-			transform: translate(-50%);
-		} @else if $position == 'both' {
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-		}
+	@if $position == 'vertical' {
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	} @else if $position == 'horizontal' {
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translate(-50%);
+	} @else if $position == 'both' {
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -33,13 +30,10 @@
 
 //TODO: verified
 /// Centrer rapidement un block
-/// @param {string} $selector [tag, id, class] - selecteur
 @mixin position-block-center($selector) {
-	#{$selector} {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 //------------------------------------------------------------
@@ -49,13 +43,10 @@
 
 //TODO: verified
 /// Centrer rapidement l'element (containers|items) enfant du selecteur en argument
-/// @param {string} $selector [tag, id, class] - selecteur
 @mixin position-flex-center($selector) {
-	#{$selector} {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 //TODO: verified
