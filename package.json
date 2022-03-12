@@ -1,30 +1,31 @@
 {
-  "name": "sass-toolkit",
-  "version": "1.0.0",
-  "description": "Style your website faster using a set of custom SASS-based tools (mixins and function)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RajaRakoto/sass-toolkit.git"
-  },
-  "keywords": [
-    "sass",
-    "tools",
-    "toolkit",
-    "collection",
-    "mixins",
-    "function"
-  ],
-  "author": "Raja",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RajaRakoto/sass-toolkit/issues"
-  },
-  "homepage": "https://github.com/RajaRakoto/sass-toolkit#readme",
-  "dependencies": {
-    "sassdoc": "^2.7.3"
-  }
+	"name": "sass-toolkit",
+	"version": "1.0.0",
+	"description": "Style your website faster using a set of custom SASS-based tools (mixins and function)",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RajaRakoto/sass-toolkit.git"
+	},
+	"keywords": [
+		"sass",
+		"tools",
+		"toolkit",
+		"collection",
+		"mixins",
+		"function"
+	],
+	"author": "Raja",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RajaRakoto/sass-toolkit/issues"
+	},
+	"homepage": "https://github.com/RajaRakoto/sass-toolkit#readme",
+	"dependencies": {
+		"sassdoc": "^2.7.3",
+		"@hidoo/sassdoc-to-markdown": "^0.7.0"
+	}
 }
