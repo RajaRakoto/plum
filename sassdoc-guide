@@ -1,9 +1,10 @@
 /*
 ----- CMD -----
-[install] -> $ npm install -g sassdoc
-[generate] -> $ sassdoc . [in projet folder]
+[install] -> $ npm install -g sassdoc @hidoo/sassdoc-to-markdown
+[generate docs] -> $ sassdoc . [in projet folder]
+[generate markdown] -> $ sassdoc2md
 
------ DEMO -----
+----- SYNTAX -----
 /// Centre a block to make it a container
 /// @group helpers
 /// @param {Number} $max-width - Max width for the container
