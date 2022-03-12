@@ -48,7 +48,7 @@
 // les mixins de manipulation de flex CSS
 
 //TODO: verified
-/// Centrer rapidement l'element enfant du selecteur en argument
+/// Centrer rapidement l'element (containers|items) enfant du selecteur en argument
 /// @param {string} $selector [tag, id, class] - selecteur
 @mixin position-center-flex($selector) {
 	#{$selector} {
@@ -59,7 +59,7 @@
 }
 
 //TODO: verified
-/// Aligner tout les elements efants directes ligne par ligne
+/// Aligner tout les elements efants (containers|items) directes ligne par ligne
 /// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 /// @param {string} $child [tag, id, class] - selecteur de l'element fils
 /// @param {boolean} $reverse [true, false] - renverser l'alignement ou pas
@@ -69,6 +69,7 @@
 	}
 	#{$child} {
 		@if ($reverse) {
+			//TODO: fix ...
 			flex-direction: row-reverse;
 		} @else if ($reverse == false) {
 			flex-direction: row;
@@ -77,7 +78,7 @@
 }
 
 //TODO: verified
-/// Aligner tout les elements efants directes colonne par colonne
+/// Aligner tout les elements efants (containers|items) directes colonne par colonne
 /// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 /// @param {string} $child [tag, id, class] - selecteur de l'element fils
 /// @param {boolean} $reverse [true, false] - renverser l'alignement ou pas
@@ -87,6 +88,7 @@
 	}
 	#{$child} {
 		@if ($reverse) {
+			//TODO: fix ...
 			flex-direction: column-reverse;
 		} @else if ($reverse == false) {
 			flex-direction: column;

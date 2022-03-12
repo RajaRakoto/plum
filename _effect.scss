@@ -10,7 +10,7 @@
 }
 
 //TODO: verified
-/// Ajouter un effet d'ombre sur un box
+/// Ajouter un effet d'ombre sur un container
 @mixin shadow-box {
 	box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
 	-webkit-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
@@ -18,7 +18,7 @@
 }
 
 //TODO: verified
-/// Ajouter un effet d'ombre accentue sur un box
+/// Ajouter un effet d'ombre accentue sur un container
 @mixin shadow-box-hover {
 	box-shadow: 5px 4px 18px 1px rgba(0, 0, 0, 0.59);
 	-webkit-box-shadow: 5px 4px 18px 1px rgba(0, 0, 0, 0.59);
