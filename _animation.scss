@@ -1,9 +1,10 @@
-// DESCRIPTION: ensemble des mixins & fonctions pour des animations pret a employer
-
 //NOTE: Vous devez specifier le selecteur manuellement (syntaxe CSS basique)
 
 //TODO: verified
 //slide(begin)------------------------------------
+/// Ajouter un effet d'animation slide
+/// @param {string} $in-out - entree|sortie de l'animation -> in, out
+/// @param {string} $direction - direction de l'animation -> up, down
 @mixin animation-slide($in-out, $direction) {
 	@if ($in-out == in) {
 		@if ($direction == up) {
@@ -268,6 +269,8 @@
 
 //TODO: verified
 //fade(begin)------------------------------------
+/// Ajouter un effet d'animation slide (fluide)
+/// @param {string} $in-out - entree|sortie de l'animation -> in, out
 @mixin animation-fade($in-out) {
 	@if ($in-out == in) {
 		-webkit-animation-name: fadeIn;
@@ -325,6 +328,8 @@
 
 //TODO: verified
 //zoom(begin)------------------------------------
+/// Ajouter un effet d'animation zoom
+/// @param {string} $in-out - entree|sortie de l'animation -> in, out
 @mixin animation-zoom($in-out) {
 	@if ($in-out == in) {
 		-webkit-animation-name: zoomIn;
@@ -397,6 +402,8 @@
 
 //TODO: verified
 //flip(begin)------------------------------------
+/// Ajouter un effet d'animation flip
+/// @param {string} $in-out - entree|sortie de l'animation -> in, out
 @mixin animation-flip($in-out) {
 	@if ($in-out == in) {
 		-webkit-backface-visibility: visible !important;
@@ -519,6 +526,10 @@
 //TODO: verified (loading...)
 // USAGE: @include animation-rotate(in, up, left) | @include animation-rotate(out, down, right)
 //rotate(begin)----------------------------------
+/// Ajouter un effet d'animation rotation
+/// @param {string} $in-out - entree|sortie de l'animation -> in, out
+/// @param {string} $axeY - direction de l'animation sur l'axeY -> up, down
+/// @param {string} $axeX - direction de l'animation sur l'axeX -> left, right
 @mixin animation-rotate($in-out, $axeY, $axeX) {
 	@if ($in-out == in) {
 		@if ($axeY == up) {
@@ -852,6 +863,8 @@
 
 //TODO: verified
 //notif(begin)------------------------------------
+/// Ajouter un effet d'animation notification
+/// @param {string} $in-out - entree|sortie de l'animation -> in, out
 @mixin animation-notif($in-out) {
 	@if ($in-out == in) {
 		-webkit-animation-name: lightSpeedIn;
@@ -945,6 +958,7 @@
 
 //TODO: verified
 //pulse(begin)------------------------------------
+/// Ajouter un effet d'animation pulsation
 @mixin animation-pulse {
 	-webkit-animation-name: pulse;
 	animation-name: pulse;
@@ -985,6 +999,7 @@
 
 //TODO: verified
 //bounce(begin)----------------------------------
+/// Ajouter un effet d'animation bounce
 @mixin animation-bounce {
 	-webkit-animation-name: bounceIn;
 	animation-name: bounceIn;
@@ -1076,6 +1091,7 @@
 
 //TODO: verified
 //flash(begin)------------------------------------
+/// Ajouter un effet d'animation flash
 @mixin animation-flash {
 	-webkit-animation-name: flash;
 	animation-name: flash;
@@ -1111,29 +1127,3 @@
 	}
 }
 //flash(end)--------------------------------------
-
-
-//TODO: work
-//flash(begin)------------------------------------
-
-//flash(end)------------------------------------
-
-//TODO: work
-//flash(begin)------------------------------------
-
-//flash(end)------------------------------------
-
-//TODO: work
-//flash(begin)------------------------------------
-
-//flash(end)------------------------------------
-
-//TODO: work
-//flash(begin)------------------------------------
-
-//flash(end)------------------------------------
-
-//TODO: work
-//flash(begin)------------------------------------
-
-//flash(end)------------------------------------
