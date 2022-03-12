@@ -1,13 +1,3 @@
-// DESCRIPTION: des mixins & fonctions pour manipuler la couleur d'un element
-
-//color-theme() -> définir un thème de couleur à utiliser sur l'ensemble de votre site permet de gagner du temps en ayant les mêmes parties colorées de CSS sur les mêmes éléments HTML.
-
-// USAGE: @include color-theme(theme-banana, Orange, false, true);
-// arg1: $name -> nom du class (theme) a utiliser dans HTML
-// arg2: $color -> la couleur a utiliser comme theme (colors template)
-// arg3: $revert -> reverser la couleur (true) ou par defaut (false)
-// arg4: $bg -> afficher l'arriere plan (true) ou pas (false)
-
 // --- COLORS template ---
 // Tomato (rouge)
 // Orange (jaune)
@@ -18,6 +8,11 @@
 // Violet (rose)
 
 //TODO: test
+/// Définir un thème de couleur (primaire, secondaire) à utiliser sur l'ensemble de votre site permet de gagner du temps en ayant les mêmes parties colorées de CSS sur les mêmes éléments HTML.
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {string} $color - couleur primaire (la couleur secondaire sera defini automatiquement)
+/// @param {boolean} $revert [true, false] - renverser la couleur primaire et secondaire
+/// @param {boolean} $bg [true, false] - activer|desactiver l'arriere plan
 @mixin color-theme($selector, $color, $revert: false, $bg: true) {
 	//default value
 	$primary: $color;
@@ -60,9 +55,9 @@
 
 //------------------------------------------------------------
 
-
 //TODO: verified
-//une fonction qui retourne la pastel de la couleur en argument
+/// Une fonction qui retourne la pastel de la couleur en argument
+/// @param {string} $color - la couleur a determiner sa valeur en pastel
 @function color-pastel($color) {
 	$hue: hue($color);
 	$sat: 100%;
@@ -75,7 +70,8 @@
 //------------------------------------------------------------
 
 //TODO: verified
-//une fonction qui ajuste la luminosite d'une couleur en argument
+/// Une fonction qui ajuste la luminosite d'une couleur en argument
+/// @param {string} $color - la couleur a ajuster
 @function color-adjust($color, $percent) {
 	$adjust: lighten(adjust-hue($color, 20), $percent);
 
@@ -85,7 +81,8 @@
 //------------------------------------------------------------
 
 //TODO: verified
-//une fonction qui permet d'ajuster une couleur en fonction de la contraste d'affichage
+/// Une fonction qui permet d'ajuster une couleur en fonction de la contraste d'affichage
+/// @param {string} $color - la couleur a ajuster
 @function color-contrast($colour) {
 	@if (lightness($colour) < 25%) {
 		@return lighten($colour, 10%);
@@ -97,7 +94,8 @@
 //------------------------------------------------------------
 
 //TODO: verified
-//une fonction qui retourne le complementaire d'une couleur (charte)
+/// Une fonction qui retourne le complementaire d'une couleur (utile pour determiner une charte graphique)
+/// @param {string} $color - la couleur a determiner son complaimentaire
 @function color-complement($color, $color-primary: $color) {
 	@if (hue($color) >= 135 and hue($color) < 180) {
 		$color: complement($color-primary);
