@@ -1,10 +1,7 @@
-// DESCRIPTION: ensemble des mixins & fonctions dont le but est de positionner des elements plus rapidement et plus polyvalents possibles
-
-// position-set() -> positionner rapidement vos elements par rapport a son element parent
-// USAGE: @include position-set('foo', both);
-//OPTIONS: vertical (gauche), horizontal (haut), both (center)
-
 //TODO: test
+/// Positionner rapidement vos elements par rapport a son element parent
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {string} $position [vertical, horizontal, both] - position de l'element
 @mixin position-set($selector, $position) {
 	#{$selector} {
 		position: relative;
@@ -34,8 +31,9 @@
 /* ### BLOCK ###*/
 // les mixins de manipulation de block CSS
 
-// centrer rapidement un block
 //TODO: verified
+/// Centrer rapidement un block
+/// @param {string} $selector [tag, id, class] - selecteur
 @mixin position-center-block($selector) {
 	#{$selector} {
 		display: block;
@@ -49,8 +47,9 @@
 /* ### FLEX ###*/
 // les mixins de manipulation de flex CSS
 
-// centrer rapidement l'element enfant du selecteur en argument
 //TODO: verified
+// Centrer rapidement l'element enfant du selecteur en argument
+/// @param {string} $selector [tag, id, class] - selecteur
 @mixin position-center-flex($selector) {
 	#{$selector} {
 		display: flex;
@@ -59,8 +58,10 @@
 	}
 }
 
-// aligner les elements ligne par ligne
 //TODO: verified
+// Aligner les elements ligne par ligne
+/// @param {string} $child [tag, id, class] - selecteur de l'element fils
+/// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 @mixin position-row-flex($child, $parent) {
 	#{$parent} {
 		display: flex;
@@ -70,8 +71,10 @@
 	}
 }
 
-// aligner les elements colonne par colonne
 //TODO: verified
+// Aligner les elements colonne par colonne
+/// @param {string} $child [tag, id, class] - selecteur de l'element fils
+/// @param {string} $parent [tag, id, class] - selecteur de l'element parent
 @mixin position-col-flex($child, $parent) {
 	#{$parent} {
 		display: flex;
@@ -83,27 +86,19 @@
 
 //------------------------------------------------------------
 
-// position-center-text () -> centrer rapidement un text
-// USAGE: @include position-center-text()
+/* ### TEXT ###*/
+// les mixins de manipulation de text
 
 //TODO: verified
+/// Centrer rapidement un text
 @mixin position-center-text {
 	text-align: center;
 }
 
 //------------------------------------------------------------
 
-//clearfix() -> Ce mixin sera utile chaque fois que vous avez du contenu flottant à droite ou à gauche et que vous souhaitez effacer l'espace sous l'élément flottant pour insérer un nouveau contenu en dessous.
-/*
-USAGE:
-
-.container-with-floated-children {
-  @extend %clearfix;
-}
-*/
-//OPTIONS: vertical (gauche), horizontal (haut), both (center)
-
 //TODO: verified
+/// Ce mixin sera utile chaque fois que vous avez du contenu flottant à droite ou à gauche et que vous souhaitez effacer l'espace sous l'élément flottant pour insérer un nouveau contenu en dessous.
 %clearfix {
 	*zoom: 1;
 	&:before,
