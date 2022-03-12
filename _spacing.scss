@@ -9,7 +9,8 @@ USAGE:
 //NOTE: En utilisant la propriété Sass null, vous pouvez omettre les propriétés de remplissage. Les mêmes règles s'appliquent pour les marges.
 
 //TODO: verified
-//set padding manually
+// Modifier rapidement le padding d'un element
+/// @param {string} $selector [tag, id, class] - selecteur
 @mixin spacing-padding($selector, $top, $right, $bottom, $left) {
 	#{$selector} {
 		padding-top: $top;
@@ -20,7 +21,8 @@ USAGE:
 }
 
 //TODO: verified
-//set margin manually
+// Modifier rapidement le margin d'un element
+/// @param {string} $selector [tag, id, class] - selecteur
 @mixin spacing-margin($selector, $top, $right, $bottom, $left) {
 	#{$selector} {
 		margin-top: $top;
@@ -31,7 +33,9 @@ USAGE:
 }
 
 //TODO: verified
-//spacing quickly
+// Ajouter rapidement un padding|margin predefini en fonction du gabarit en argument
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {string} $gabarit [small, medium, large] - gabarit d'espacement (petit, moyen, grand) d'un box
 @mixin spacing-quick($selector, $gabarit: medium) {
 	@if ($gabarit == small) {
 		#{$selector} {
