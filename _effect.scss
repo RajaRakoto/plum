@@ -1,7 +1,8 @@
 //DESCRIPTION: ensemble des mixins & fonctions pour manipuler les effets css
 
 //TODO: verified
-//opacity -> @include opacity(10%);
+/// Ajouter un effet d'opacite sur un element (compatible avec IE8)
+/// @param {percent} $percent - pourcentage de l'opacite
 @mixin effect-opacity($percent) {
 	opacity: $percent;
 	$percent-ie: $percent * 100;
@@ -9,6 +10,7 @@
 }
 
 //TODO: verified
+/// Ajouter un effet d'ombre sur un box
 @mixin shadow-box {
 	box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
 	-webkit-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
@@ -16,6 +18,7 @@
 }
 
 //TODO: verified
+/// Ajouter un effet d'ombre accentue sur un box
 @mixin shadow-box-hover {
 	box-shadow: 5px 4px 18px 1px rgba(0, 0, 0, 0.59);
 	-webkit-box-shadow: 5px 4px 18px 1px rgba(0, 0, 0, 0.59);
