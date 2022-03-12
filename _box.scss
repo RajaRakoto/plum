@@ -1,5 +1,3 @@
-// USAGE: @include box--info('.foo', red, true, true);
-
 //TODO: verified
 /// Ajouter rapidement un bordure sur les containers (sert au debogage)
 /// @param {string} $selector [tag, id, class] - selecteur
@@ -22,13 +20,13 @@
 
 //TODO: verified
 @import './effect';
-/// Generateur de box rapide
+/// Generateur de container rapide
 /// @param {string} $selector [tag, id, class] - selecteur
 /// @param {string} $color - couleur de l'arriere plan
-/// @param {pixel} $width - largeur du box
-/// @param {pixel} $height - hauteur du box
+/// @param {pixel} $width - largeur du container
+/// @param {pixel} $height - hauteur du container
 /// @param {pixel} $radius - border radius
-/// @param {boolean} $shadow [true, false] - activer|desactiver l'ombre de la box
+/// @param {boolean} $shadow [true, false] - activer|desactiver l'ombre du container
 @mixin box-generator(
 	$selector,
 	$color,
@@ -51,10 +49,10 @@
 //------------------------------------------------------------
 
 //TODO: verified
-// Modifier rapidement la taille d'un box
+// Modifier rapidement la taille d'un container
 /// @param {string} $selector [tag, id, class] - selecteur
-/// @param {pixel} $width - largeur du box
-/// @param {pixel} $height - hauteur du box
+/// @param {pixel} $width - largeur du container
+/// @param {pixel} $height - hauteur du container
 @mixin box-size($selector, $width, $height) {
 	#{$selector} {
 		width: $width;
