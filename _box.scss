@@ -1,18 +1,12 @@
-// DESCRIPTION: des mixins & fonctions qui regroupe les modeles de box utile lors du developpement front
-
-// box-debug() -> mettre un bordure/couleur d'arriere plan pour un block (utile lors du debogage front)
 // USAGE: @include box--info('.foo', red, true, true);
 
 //TODO: verified
-@mixin box-debug(
-	$selector,
-	//nom du class a generer ou la class a cibler
-	$color,
-	//couleur du bordure
-	$bg-color: false,
-	//activer/desactiver le couleur de l'arriere plan
-	$status: true //activer/desactiver les infos box
-) {
+/// Ajouter rapidement un bordure sur les containers (sert au debogage)
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {string} $color - couleur du bordure
+/// @param {boolean} $bg-color [true, false] - activer|desactiver la couleur de l'arriere plan
+/// @param {boolean} $status [true, false] - activer|desactiver l'info box (debogage)
+@mixin box-debug($selector, $color, $bg-color: false, $status: true) {
 	@if ($status) {
 		#{$selector} {
 			border: solid 1px $color;
@@ -27,11 +21,14 @@
 //------------------------------------------------------------
 
 //TODO: verified
-// box-generator() -> mixin qui genere un box (type, couleur, taille, ombre, bordure ...)
-// USAGE:  box-generator('foo', Orangered, solid, 120px, 200px, false)
-
 @import './effect';
-
+/// Generateur de box rapide
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {string} $color - couleur de l'arriere plan
+/// @param {pixel} $width - largeur du box
+/// @param {pixel} $height - hauteur du box
+/// @param {pixel} $radius - border radius
+/// @param {boolean} $shadow [true, false] - activer|desactiver l'ombre de la box
 @mixin box-generator(
 	$selector,
 	$color,
@@ -54,9 +51,10 @@
 //------------------------------------------------------------
 
 //TODO: verified
-//box-size() -> mixin qui modifie la taille d'un box (width, height)
-// USAGE: box-size('foo', 100px, 45px);
-
+// Modifier rapidement la taille d'un box
+/// @param {string} $selector [tag, id, class] - selecteur
+/// @param {pixel} $width - largeur du box
+/// @param {pixel} $height - hauteur du box
 @mixin box-size($selector, $width, $height) {
 	#{$selector} {
 		width: $width;
