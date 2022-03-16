@@ -6,19 +6,22 @@
 
 </div>
 
-####📌INSTALLATION
+#### 📌INSTALLATION
+
 ```bash
 npm install
 ```
 
-####📌SASSDOC
-**sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil
-*(dans le repertoire sass-eo)*
-```bash
-sassdoc
-``` 
+#### 📌SASSDOC
 
-#####Notation (sassdoc)
+**sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil (executez la commande ci-dessous dans le repertoire sass-eo)
+
+```bash
+sassdoc .
+```
+
+##### Notation (sassdoc)
+
 ```sass
 /// Description ...
 /// @author Raja ...
@@ -32,5 +35,4 @@ sassdoc
 @mixin name($parameter) {
 code...
 }
-*/
 ```
