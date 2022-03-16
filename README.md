@@ -15,11 +15,13 @@ git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && n
 
 #### 📌SASSDOC
 
-**sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil (executez la commande ci-dessous dans le repertoire sass-eo)
+**sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil (executez la commande ci-dessous dans le repertoire sass-eo pour generer sa documentation localement)
 
 ```bash
 sassdoc .
 ```
+
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="200">
 
 ##### Notation (sassdoc)
 
@@ -38,4 +40,4 @@ code...
 }
 ```
 #### 📌FRAMEWORKS vendors
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/css/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/css/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/css/milligram.png?raw=true" width="130">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
