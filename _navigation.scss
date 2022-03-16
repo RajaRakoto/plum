@@ -1,0 +1,41 @@
+@import './color';
+///Creation de bar de navigation rapide
+
+
+/*pour la balise <nav> </nav>*/
+@mixin navigation {
+    background-color: color-complement(rgb(233, 143, 143), $color-primary:white);
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    transition: 0.4s ease;    
+    margin:0 0 100px -10px;
+    padding: 30px 10%;
+    //justify-content: space-between;
+    justify-content:flex-start;
+    align-items: center;
+    display: flex;
+        }
+/*pour la balise <a> </a>*/
+@mixin links {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    color: aliceblue;
+    :hover{
+       color:aquamarine;
+    }
+    :visited{
+        text-decoration: line-through;
+    }
+        }
+
+/*pour la balise <ul> <ul/>*/
+ @mixin links-list{
+    list-style: none;
+ }  
+/*pour la balise <li> <li/>*/
+ @mixin links-list_element{
+    display: inline;
+ }     
+ 
