@@ -1,0 +1,35 @@
+/* ### BLOCK ###*/
+/* ### FLEX ###*/
+/* ### TEXT ###*/
+nav {
+  background-color: #e98fe9;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  transition: 0.4s ease;
+  margin: 0 0 100px -10px;
+  padding: 30px 10%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  color: aliceblue;
+}
+nav a :hover {
+  color: aquamarine;
+}
+nav a :visited {
+  text-decoration: line-through;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+}
+
+/*# sourceMappingURL=style.css.map */
