@@ -8,8 +8,9 @@
 
 #### 📌INSTALLATION
 
+Executer la commande ci-dessous pour installer **sass-eo** ainsi ses dependances
 ```bash
-npm install
+git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && npm install
 ```
 
 #### 📌SASSDOC
