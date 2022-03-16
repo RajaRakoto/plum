@@ -5,3 +5,32 @@
 ![HTML5](https://img.shields.io/badge/-TML5-777?style=flat&logo=html5&logoColor=ffffff&labelColor=E34F26) ![CSS3](https://img.shields.io/badge/-CSS3-777?style=flat&logo=css3&logoColor=ffffff&labelColor=1572B6) ![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![JavaScript](https://img.shields.io/badge/-JavaScript-777?style=flat&logo=javascript&logoColor=dbb332&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff)<br>
 
 </div>
+
+####📌INSTALLATION
+```bash
+npm install
+```
+
+####📌SASSDOC
+**sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil
+*(dans le repertoire sass-eo)*
+```bash
+sassdoc
+``` 
+
+#####Notation (sassdoc)
+```sass
+/// Description ...
+/// @author Raja ...
+/// @param {type} $parameter [default_value] - description ...
+/// @require $variable
+/// @todo task ...
+/// @deprecated
+/// @example
+///  ex1 ...
+///  ex2 ...
+@mixin name($parameter) {
+code...
+}
+*/
+```
