@@ -22,15 +22,13 @@
 /// @param {pixel} $width - largeur du container
 /// @param {pixel} $height - hauteur du container
 /// @param {pixel} $radius - border radius
-/// @param {boolean} $shadow [true, false] - activer|desactiver l'ombre du container
-@mixin box-generator($color, $width, $height: auto, $radius, $shadow: true) {
+@mixin box-generator($color, $width, $height: auto, $radius: 10px) {
 	background-color: $color;
 	width: $width;
-	height: $height; //ajuster la hauteur du container automatiquement 'auto'
+	height: $height; 
 	border-radius: $radius;
-	@if ($shadow) {
-		@include shadow-box();
-	}
+	padding: 10px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
 
 	//pour les images
 	img {
