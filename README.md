@@ -21,7 +21,7 @@ git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && n
 sassdoc .
 ```
 
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="200">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="500">
 
 ##### Notation (sassdoc)
 
