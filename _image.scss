@@ -14,3 +14,10 @@
 		background-size: $width $height;
 	}
 }
+
+//TODO: verified
+/// Mettre une image en reponsive
+@mixin image-responsive {
+	max-width: 100%;
+	height: auto;
+}
