@@ -16,7 +16,7 @@
 /// @param {path} $path - font path
 /// @param {string} $weight [normal] - font weight
 /// @param {string} $style [normal] - style par defaut a utiliser
-@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+@mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
 	@font-face {
 		font-family: $font-name;
 		font-weight: $weight;
