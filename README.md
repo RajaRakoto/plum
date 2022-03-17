@@ -8,7 +8,7 @@
 
 </div>
 
-####📌 INSTALLATION
+#### 📌 INSTALLATION
 
 Executer la commande ci-dessous pour installer **sass-eo** ainsi ses dependances dans votre projet
 ```bash
@@ -25,7 +25,7 @@ mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com
 
 <hr>
 
-####📌 SASSDOC
+#### 📌 SASSDOC
 
 **sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil (executez la commande ci-dessous dans le repertoire sass-eo pour generer sa documentation localement)
 
@@ -54,7 +54,8 @@ code...
 
 <hr>
 
-####📌 FRAMEWORKS vendors
+#### 📌 FRAMEWORKS vendors
+
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
 
 - **Bootstrap:** sass-eo integre le `grid system` de bootstrap 5
