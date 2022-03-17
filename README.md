@@ -32,8 +32,9 @@ mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com
 ```bash
 sassdoc .
 ```
-
+<div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="500">
+</div>
 
 ##### Notation (sassdoc)
 
@@ -56,7 +57,9 @@ code...
 
 #### 📌 FRAMEWORKS vendors
 
+<div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
+</div>
 
 - **Bootstrap:** sass-eo integre le `grid system` de bootstrap 5
 https://getbootstrap.com/docs/5.0/getting-started/introduction/
