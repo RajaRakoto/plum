@@ -15,8 +15,7 @@ Executer la commande ci-dessous pour installer **sass-eo** ainsi ses dependances
 git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && npm install
 ```
 
-**React**
-Pour une application React, executer la commande ci-dessous (dans votre projet)
+**React** - pour une application React, executer la commande ci-dessous (dans votre projet)
 ```bash
 mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && npm install
 ```
