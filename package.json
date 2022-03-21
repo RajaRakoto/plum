@@ -4,6 +4,8 @@
 	"description": "Style your website faster with a minimalist SASS-powered toolset",
 	"main": "index.js",
 	"scripts": {
+		"sass-compile": "sass --watch main.scss:style.css",
+		"sass-compress": "sass --watch main.scss:style.css --style compressed",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
