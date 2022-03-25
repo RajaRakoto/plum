@@ -1,18 +1,19 @@
 //basics
-@import "./animation";
-@import "./bar";
-@import "./box";
-@import "./color";
-@import "./effect";
-@import "./image";
-@import "./input";
-@import "./media";
-@import "./minireset";
-@import "./navigation";
-@import "./normalize";
-@import "./position";
-@import "./spacing";
-@import "./typography";
+@import './animation';
+@import './bar';
+@import './box';
+@import './color';
+@import './effect';
+@import './image';
+@import './input';
+@import './media';
+@import './minireset';
+@import './navigation';
+@import './normalize';
+@import './position';
+@import './spacing';
+@import './typography';
 
-//libs
-@import "./hamburgers/_sass/hamburgers/hamburgers.scss";
+//libs - uncomment an line to use the libraries
+// @import './hamburgers/_sass/hamburgers/hamburgers.scss';
+@import './magic/magic.scss';
