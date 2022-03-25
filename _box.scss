@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 //TODO: verified
 /// Ajouter rapidement un bordure sur les containers (sert au debogage)
 /// @param {string} $color - couleur du bordure
@@ -27,8 +29,6 @@
 	width: $width;
 	height: $height; 
 	border-radius: $radius;
-	padding: 10px 10px 10px 10px;
-	margin: 10px 10px 10px 10px;
 
 	//pour les images
 	img {

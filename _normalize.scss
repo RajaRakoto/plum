@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /// Normalize permet aux navigateurs de rendre tous les éléments de manière plus cohérente et conforme aux normes modernes
 @mixin normalize {
 	/* Document
@@ -11,6 +13,8 @@
 	html {
 		line-height: 1.15; /* 1 */
 		-webkit-text-size-adjust: 100%; /* 2 */
+		height: 100vh;
+		width: 100vw;
 	}
 
 	/* Sections
@@ -22,6 +26,12 @@
 
 	body {
 		margin: 0;
+		font-family: Roboto, "Helvetica Neue", sans-serif;
+	}
+	
+	html,
+	body {
+		height: 100%;
 	}
 
 	/**
