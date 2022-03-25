@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Personnaliser le scolling bar de votre page web
+/// @param {string} $bar-color - couleur de la barre de deroulement
+/// @param {string} $bar-color-hover - couleur de la barre de deroulement (hover)
+/// @param {string} $bg-color - couleur de l'arriere plan 
+@mixin bar-scrolling($bar-color, $bar-color-hover, $bg-color: #eee) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $bg-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $bar-color;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $bar-color-hover;
+  }
+}
