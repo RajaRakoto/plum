@@ -1,7 +1,11 @@
-.tinUpOut {
-  -webkit-animation-name: tinUpOut;
-  animation-name: tinUpOut;
-}
+@charset "UTF-8";
+
+@mixin magic-tinUpOut($duration) {
+	-webkit-animation-name: tinUpOut;
+	animation-name: tinUpOut;
+	animation-duration: $duration;
+	animation-fill-mode: both;
+
 @-webkit-keyframes tinUpOut {
   0%,
   20%,

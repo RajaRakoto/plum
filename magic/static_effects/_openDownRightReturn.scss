@@ -1,7 +1,11 @@
-.openDownRightReturn {
-  -webkit-animation-name: openDownRightReturn;
-  animation-name: openDownRightReturn;
-}
+@charset "UTF-8";
+
+@mixin magic-openDownRightReturn($duration) {
+	-webkit-animation-name: openDownRightReturn;
+	animation-name: openDownRightReturn;
+	animation-duration: $duration;
+	animation-fill-mode: both;
+
 @-webkit-keyframes openDownRightReturn {
   0% {
     -webkit-transform-origin: bottom right;

@@ -1,50 +1,55 @@
-.tinUpIn {
-  -webkit-animation-name: tinUpIn;
-  animation-name: tinUpIn;
-}
-@-webkit-keyframes tinUpIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1, 1) translateY(-900%);
-    transform: scale(1, 1) translateY(-900%);
-  }
+@charset "UTF-8";
 
-  50%,
-  70%,
-  90% {
-    opacity: 1;
-    -webkit-transform: scale(1.1, 1.1) translateY(0);
-    transform: scale(1.1, 1.1) translateY(0);
-  }
+@mixin magic-tinUpIn($duration) {
+	-webkit-animation-name: tinUpIn;
+	animation-name: tinUpIn;
+	animation-duration: $duration;
+	animation-fill-mode: both;
 
-  60%,
-  80%,
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1, 1) translateY(0);
-    transform: scale(1, 1) translateY(0);
-  }
-}
-@keyframes tinUpIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1, 1) translateY(-900%);
-    transform: scale(1, 1) translateY(-900%);
-  }
+	@-webkit-keyframes tinUpIn {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(1, 1) translateY(-900%);
+			transform: scale(1, 1) translateY(-900%);
+		}
 
-  50%,
-  70%,
-  90% {
-    opacity: 1;
-    -webkit-transform: scale(1.1, 1.1) translateY(0);
-    transform: scale(1.1, 1.1) translateY(0);
-  }
+		50%,
+		70%,
+		90% {
+			opacity: 1;
+			-webkit-transform: scale(1.1, 1.1) translateY(0);
+			transform: scale(1.1, 1.1) translateY(0);
+		}
 
-  60%,
-  80%,
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1, 1) translateY(0);
-    transform: scale(1, 1) translateY(0);
-  }
+		60%,
+		80%,
+		100% {
+			opacity: 1;
+			-webkit-transform: scale(1, 1) translateY(0);
+			transform: scale(1, 1) translateY(0);
+		}
+	}
+	@keyframes tinUpIn {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(1, 1) translateY(-900%);
+			transform: scale(1, 1) translateY(-900%);
+		}
+
+		50%,
+		70%,
+		90% {
+			opacity: 1;
+			-webkit-transform: scale(1.1, 1.1) translateY(0);
+			transform: scale(1.1, 1.1) translateY(0);
+		}
+
+		60%,
+		80%,
+		100% {
+			opacity: 1;
+			-webkit-transform: scale(1, 1) translateY(0);
+			transform: scale(1, 1) translateY(0);
+		}
+	}
 }

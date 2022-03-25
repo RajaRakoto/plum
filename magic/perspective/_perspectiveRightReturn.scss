@@ -1,34 +1,39 @@
-.perspectiveRightReturn {
-  -webkit-animation-name: perspectiveRightReturn;
-  animation-name: perspectiveRightReturn;
-}
-@-webkit-keyframes perspectiveRightReturn {
-  0% {
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    -webkit-transform: perspective(800px) rotateY(180deg);
-    transform: perspective(800px) rotateY(180deg);
-  }
+@charset "UTF-8";
 
-  100% {
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    -webkit-transform: perspective(800px) rotateY(0deg);
-    transform: perspective(800px) rotateY(0deg);
-  }
-}
-@keyframes perspectiveRightReturn {
-  0% {
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    -webkit-transform: perspective(800px) rotateY(180deg);
-    transform: perspective(800px) rotateY(180deg);
-  }
+@mixin magic-perspectiveRightReturn($duration) {
+	-webkit-animation-name: perspectiveRightReturn;
+	animation-name: perspectiveRightReturn;
+	animation-duration: $duration;
+	animation-fill-mode: both;
 
-  100% {
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    -webkit-transform: perspective(800px) rotateY(0deg);
-    transform: perspective(800px) rotateY(0deg);
-  }
+	@-webkit-keyframes perspectiveRightReturn {
+		0% {
+			-webkit-transform-origin: 100% 0;
+			transform-origin: 100% 0;
+			-webkit-transform: perspective(800px) rotateY(180deg);
+			transform: perspective(800px) rotateY(180deg);
+		}
+
+		100% {
+			-webkit-transform-origin: 100% 0;
+			transform-origin: 100% 0;
+			-webkit-transform: perspective(800px) rotateY(0deg);
+			transform: perspective(800px) rotateY(0deg);
+		}
+	}
+	@keyframes perspectiveRightReturn {
+		0% {
+			-webkit-transform-origin: 100% 0;
+			transform-origin: 100% 0;
+			-webkit-transform: perspective(800px) rotateY(180deg);
+			transform: perspective(800px) rotateY(180deg);
+		}
+
+		100% {
+			-webkit-transform-origin: 100% 0;
+			transform-origin: 100% 0;
+			-webkit-transform: perspective(800px) rotateY(0deg);
+			transform: perspective(800px) rotateY(0deg);
+		}
+	}
 }

@@ -1,33 +1,37 @@
-.puffIn {
-  animation-name: puffIn;
-}
+@charset "UTF-8";
 
-@-webkit-keyframes puffIn {
-  0% {
-    opacity: 0;
-    transform-origin: 50% 50%;
-    transform: scale(2, 2);
-    filter: blur(2px);
-  }
-  100% {
-    opacity: 1;
-    transform-origin: 50% 50%;
-    transform: scale(1, 1);
-    filter: blur(0px);
-  }
-}
+@mixin magic-puffIn($duration) {
+	animation-name: puffIn;
+	animation-duration: $duration;
+	animation-fill-mode: both;
 
-@keyframes puffIn {
-  0% {
-    opacity: 0;
-    transform-origin: 50% 50%;
-    transform: scale(2, 2);
-    filter: blur(2px);
-  }
-  100% {
-    opacity: 1;
-    transform-origin: 50% 50%;
-    transform: scale(1, 1);
-    filter: blur(0px);
-  }
+	@-webkit-keyframes puffIn {
+		0% {
+			opacity: 0;
+			transform-origin: 50% 50%;
+			transform: scale(2, 2);
+			filter: blur(2px);
+		}
+		100% {
+			opacity: 1;
+			transform-origin: 50% 50%;
+			transform: scale(1, 1);
+			filter: blur(0px);
+		}
+	}
+
+	@keyframes puffIn {
+		0% {
+			opacity: 0;
+			transform-origin: 50% 50%;
+			transform: scale(2, 2);
+			filter: blur(2px);
+		}
+		100% {
+			opacity: 1;
+			transform-origin: 50% 50%;
+			transform: scale(1, 1);
+			filter: blur(0px);
+		}
+	}
 }

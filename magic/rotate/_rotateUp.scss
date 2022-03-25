@@ -1,7 +1,11 @@
-.rotateUp {
-  -webkit-animation-name: rotateUp;
-  animation-name: rotateUp;
-}
+@charset "UTF-8";
+
+@mixin magic-rotateUp($duration) {
+	-webkit-animation-name: rotateUp;
+	animation-name: rotateUp;
+	animation-duration: $duration;
+	animation-fill-mode: both;
+  
 @-webkit-keyframes rotateUp {
   0% {
     opacity: 1;

@@ -1,7 +1,11 @@
-.openUpLeftReturn {
-  -webkit-animation-name: openUpLeftReturn;
-  animation-name: openUpLeftReturn;
-}
+@charset "UTF-8";
+
+@mixin magic-openUpLeftReturn($duration) {
+	-webkit-animation-name: openUpLeftReturn;
+	animation-name: openUpLeftReturn;
+	animation-duration: $duration;
+	animation-fill-mode: both;
+
 @-webkit-keyframes openUpLeftReturn {
   0% {
     -webkit-transform-origin: top left;

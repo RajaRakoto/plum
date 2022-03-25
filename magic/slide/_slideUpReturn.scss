@@ -1,7 +1,11 @@
-.slideUpReturn {
-  -webkit-animation-name: slideUpReturn;
-  animation-name: slideUpReturn;
-}
+@charset "UTF-8";
+
+@mixin magic-slideUpReturn($duration) {
+	-webkit-animation-name: slideUpReturn;
+	animation-name: slideUpReturn;
+	animation-duration: $duration;
+	animation-fill-mode: both;
+
 @-webkit-keyframes slideUpReturn {
   0% {
     -webkit-transform-origin: 0 0;
