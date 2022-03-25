@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@mixin magic-holeOut($duration) {
+	-webkit-animation-name: holeOut;
+	animation-name: holeOut;
+	animation-duration: $duration;
+	animation-fill-mode: both;
+
+	@-webkit-keyframes holeOut {
+		0% {
+			opacity: 1;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transform: scale(1, 1) rotateY(0deg);
+			transform: scale(1, 1) rotateY(0deg);
+		}
+
+		100% {
+			opacity: 0;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transform: scale(0, 0) rotateY(180deg);
+			transform: scale(0, 0) rotateY(180deg);
+		}
+	}
+	@keyframes holeOut {
+		0% {
+			opacity: 1;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transform: scale(1, 1) rotateY(0deg);
+			transform: scale(1, 1) rotateY(0deg);
+		}
+
+		100% {
+			opacity: 0;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transform: scale(0, 0) rotateY(180deg);
+			transform: scale(0, 0) rotateY(180deg);
+		}
+	}
+}
