@@ -8,7 +8,6 @@
 @import './input';
 @import './loader';
 @import './media';
-@import './milligrid';
 @import './minireset';
 @import './navigator';
 @import './normalize';
@@ -17,8 +16,10 @@
 @import './typography';
 
 // FRAMEWORKS
-@import './bootstrap'
+@import './bootstrap';
 
 // LIBRARIES
+@import './milligrid';
+@import './magic/';
 // @import './hamburgers/hamburgers.scss';
 // @import './magic/magic.scss';
