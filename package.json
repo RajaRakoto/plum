@@ -14,19 +14,26 @@
 	},
 	"keywords": [
 		"sass",
+		"scss",
 		"tools",
 		"toolkit",
 		"collection",
 		"mixins",
 		"function",
-		"minimalist"
+		"minimalist",
+		"bootstrap",
+		"grid",
+		"semantic",
+		"ui",
+		"milligram",
+		"milligrid"
 	],
 	"author": "Raja",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/RajaRakoto/sass-toolkit/issues"
+		"url": "https://github.com/RajaRakoto/sass-eo/issues"
 	},
-	"homepage": "https://github.com/RajaRakoto/sass-toolkit#readme",
+	"homepage": "https://github.com/RajaRakoto/sass-eo#readme",
 	"dependencies": {
 		"sassdoc": "^2.7.3",
 		"@hidoo/sassdoc-to-markdown": "^0.7.0"
