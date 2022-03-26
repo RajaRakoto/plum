@@ -76,7 +76,7 @@ Exemple d'application de la syntaxe sassdoc
 Executez la commande ci-dessous dans le repertoire sass-eo pour generer sa documentation localement
 
 ```bash
-sassdoc .
+cd sass-eo && sassdoc .
 ```
 
 <hr>
@@ -99,7 +99,7 @@ sassdoc .
 
 <hr>
 
-#### 📌 LOADERS
+#### 📌 LOADER
 
 Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element
 

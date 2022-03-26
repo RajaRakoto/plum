@@ -1,4 +1,4 @@
-//basics
+// BASICS
 @import './animation';
 @import './bar';
 @import './box';
@@ -8,6 +8,7 @@
 @import './input';
 @import './loader';
 @import './media';
+@import './milligrid';
 @import './minireset';
 @import './navigator';
 @import './normalize';
@@ -15,6 +16,9 @@
 @import './spacing';
 @import './typography';
 
-//libs - uncomment an line to use the libraries
+// FRAMEWORKS
+@import './bootstrap'
+
+// LIBRARIES
 // @import './hamburgers/hamburgers.scss';
 // @import './magic/magic.scss';
