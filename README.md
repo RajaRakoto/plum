@@ -8,6 +8,19 @@
 
 </div>
 
+<div align="center">
+
+| ~ INDEX ~                                 |
+| :---------------------------------------- |
+| [Installation de sass-eo](#installation)  |
+| [Utilisation de sassdoc](#sassdoc)        |
+| [Hamburgers](#hamburgers)                 |
+| [Loader](#loader)                         |
+| [Magic](#magic)                           |
+| [Frameworks vendors](#frameworks-vendors) |
+
+</div>
+
 #### 📌 INSTALLATION
 
 Executer la commande ci-dessous pour installer **sass-eo** ainsi ses dependances dans votre projet
@@ -24,6 +37,9 @@ mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com
 
 > **NOTE:** si vous voulez utiliser les frameworks vendors de sass-eo, ajouter le lien de style (css) et le script (js) correspondant a ce dernier dans le point d'entre -> `./public/index.html`
 
+<div align="right">
+    <b><a href="#installation">↥ Back To Top</a></b>
+</div>
 <hr>
 
 #### 📌 SASSDOC
@@ -80,6 +96,9 @@ Executez la commande ci-dessous dans le repertoire sass-eo pour generer & mettre
 cd sass-eo && sassdoc .
 ```
 
+<div align="right">
+    <b><a href="#installation">↥ Back To Top</a></b>
+</div>
 <hr>
 
 #### 📌 HAMBURGERS
@@ -163,6 +182,9 @@ hamburger.addEventListener('click', function () {
 
 **5.** Vous pouvez modifier les paramètres par défaut de votre hamburger - trouvés dans `_hamburgers.scss`;
 
+<div align="right">
+    <b><a href="#installation">↥ Back To Top</a></b>
+</div>
 <hr>
 
 #### 📌 LOADER
@@ -201,6 +223,9 @@ window.addEventListener('load', () => {
 });
 ```
 
+<div align="right">
+    <b><a href="#installation">↥ Back To Top</a></b>
+</div>
 <hr>
 
 #### 📌 MAGIC
@@ -222,6 +247,9 @@ window.addEventListener('load', () => {
 }
 ```
 
+<div align="right">
+    <b><a href="#installation">↥ Back To Top</a></b>
+</div>
 <hr>
 
 #### 📌 FRAMEWORKS vendors
