@@ -36,7 +36,7 @@ mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com
 ```
 
 <div align="right">
-    <b><a href="#installation">↥ Back To Top</a></b>
+    <b><a href="#-installation">↥ Back To Top</a></b>
 </div>
 <hr>
 
@@ -95,7 +95,7 @@ cd sass-eo && sassdoc .
 ```
 
 <div align="right">
-    <b><a href="#installation">↥ Back To Top</a></b>
+    <b><a href="##-installation">↥ Back To Top</a></b>
 </div>
 <hr>
 
@@ -181,7 +181,7 @@ hamburger.addEventListener('click', function () {
 **5.** Vous pouvez modifier les paramètres par défaut de votre hamburger - trouvés dans `_hamburgers.scss`;
 
 <div align="right">
-    <b><a href="#installation">↥ Back To Top</a></b>
+    <b><a href="##-installation">↥ Back To Top</a></b>
 </div>
 <hr>
 
@@ -222,7 +222,7 @@ window.addEventListener('load', () => {
 ```
 
 <div align="right">
-    <b><a href="#installation">↥ Back To Top</a></b>
+    <b><a href="##-installation">↥ Back To Top</a></b>
 </div>
 <hr>
 
@@ -246,7 +246,7 @@ window.addEventListener('load', () => {
 ```
 
 <div align="right">
-    <b><a href="#installation">↥ Back To Top</a></b>
+    <b><a href="##-installation">↥ Back To Top</a></b>
 </div>
 <hr>
 
