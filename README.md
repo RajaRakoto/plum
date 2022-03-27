@@ -104,7 +104,7 @@ cd sass-eo && sassdoc .
 
 #### 📌 LOADER
 
-Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element
+Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element - Vous pouvez consulter `loaderdoc` situE dans `sass-eo/loaderdoc/index.html` pour avoir un apercu sur chaque loader
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
