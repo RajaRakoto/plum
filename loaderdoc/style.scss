@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@import '../sass-eo.scss';
+
+@include milligrid();
+
+//ref: https://cssloaders.github.io/
+
+//------------ GLOBAL --------------
+
+* {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	font-weight: bolder;
+}
+
+body {
+	background-color: #333;
+
+	h1 {
+		font-size: 80px;
+		text-align: center;
+		color: #eee;
+		@include effect-text-shadow(large);
+	}
+}
+
+section {
+	.box {
+		color: #eee;
+		@include box-generator(rgba(131, 131, 131, 0.466), auto, 150px, 10px);
+		@include spacing-quick();
+		@include effect-box-shadow(small);
+		max-width: 200px;
+		padding-top: 70px;
+		transition: 0.5s;
+
+		&:hover {
+			z-index: 1;
+			@include animation-zoom-fixed(1.03);
+			@include effect-box-shadow(medium);
+		}
+	}
+}
+
+.title {
+	margin-top: 50px;
+}
+
+@mixin loader-properties() {
+	display: block;
+	margin: auto;
+}
+
+//------------ LOADER --------------
+
+//colors
+$primary: gold;
+$secondary: dodgerblue;
+
+#loader-1 {
+	@include loader-1($primary, $secondary);
+	@include loader-properties();
+}
+
+#loader-2 {
+	@include loader-2($primary, $secondary);
+	@include loader-properties();
+}
+
+#loader-3 {
+	@include loader-3($primary, $secondary);
+	@include loader-properties();
+}
+
+#loader-4 {
+	@include loader-4($primary);
+	@include loader-properties();
+}
+
+#loader-5 {
+	@include loader-5($primary);
+	@include loader-properties();
+}
+
+#loader-6 {
+	@include loader-6($primary, $secondary);
+	@include loader-properties();
+}
+
+#loader-7 {
+	@include loader-7($primary);
+	@include loader-properties();
+}
+
+#loader-8 {
+	@include loader-8($primary);
+	@include loader-properties();
+}
+
+#loader-9 {
+	@include loader-9($primary, $secondary);
+	@include loader-properties();
+}
