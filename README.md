@@ -12,12 +12,12 @@
 
 | Table des matières                        |
 | :---------------------------------------- |
-| [Installation de sass-eo](#installation)  |
-| [Utilisation de sassdoc](#sassdoc)        |
-| [Hamburgers](#hamburgers)                 |
-| [Loader](#loader)                         |
-| [Magic](#magic)                           |
-| [Frameworks vendors](#frameworks-vendors) |
+| [Installation de sass-eo](#-installation)  |
+| [Utilisation de sassdoc](#-sassdoc)        |
+| [Hamburgers](#-hamburgers)                 |
+| [Loader](#-loader)                         |
+| [Magic](#-magic)                           |
+| [Frameworks vendors](#-frameworks-vendors) |
 
 </div>
 
