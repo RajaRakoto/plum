@@ -99,6 +99,21 @@ $secondary: dodgerblue;
 }
 
 #loader-9 {
-	@include loader-9($primary, $secondary);
+	@include loader-9($primary);
+	@include loader-properties();
+}
+
+#loader-10 {
+	@include loader-10($primary);
+	@include loader-properties();
+}
+
+#loader-11 {
+	@include loader-11($primary);
+	@include loader-properties();
+}
+
+#loader-12 {
+	@include loader-12($primary, $secondary);
 	@include loader-properties();
 }
