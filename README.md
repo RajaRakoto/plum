@@ -4,7 +4,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/for-dago.svg?raw=true)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/build-by.svg?raw=true)](https://forthebadge.com)
 
- ![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff)<br>
+![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff)<br>
 
 </div>
 
@@ -33,6 +33,7 @@ mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="700">
 </div>
+<br>
 
 ##### Notation (sassdoc)
 
@@ -88,11 +89,13 @@ cd sass-eo && sassdoc .
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
 </div>
+<br>
 
 **Usage:**
 
 ```scss
 .cards {
+	//L'argument de chaque mixin magic correspond a son "animation-delay" exprimE en seconde
 	@include magic-boingInUp(1s);
 }
 ```
@@ -103,11 +106,19 @@ cd sass-eo && sassdoc .
 
 Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element
 
-**Exemple:** Ajouter un effet de chargement de la page
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
+</div>
+<br>
+
+**Note:** Certains loader ne contiennent qu'une seule couleur ,i-e 1 seul argument pour le mixin (Exemple -> `@include loader-10(dodgerblue)`)
+
+**Usage:** Ajouter un effet de chargement de la page
 
 ```scss
 // SCSS
 #my-loader {
+	//utilisation de loader-1 avec 2 couleurs comme argument (primary, secondary)
 	@include loader-1(gold, orangered);
 }
 ```
@@ -118,7 +129,7 @@ Les `loaders` sont des collections de mixins servant a ajouter un effet de charg
 ```
 
 ```js
-// Javascript
+// Javascript - ce script permet de lancer un loder portant l'id "my-loader" comme chargement de la page web
 const loader = document.getElementById('my-loader');
 window.addEventListener('load', () => {
 	loader.style.display = 'none';
@@ -132,6 +143,7 @@ window.addEventListener('load', () => {
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
 </div>
+<br>
 
 - **Bootstrap:** sass-eo integre le `grid system` de bootstrap 5 https://getbootstrap.com/docs/5.0/getting-started/introduction/ <br>
 
