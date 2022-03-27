@@ -11,7 +11,6 @@
 @import './effect';
 @import './image';
 @import './input';
-@import './loader';
 @import './media';
 @import './minireset';
 @import './navigator';
@@ -27,7 +26,7 @@
 -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
 -- Chaque frameworks integrE dans sass-eo sont personnalisables via le fichier principale .scss
 */
-@import './bootstrap';
+// @import './bootstrap';
 
 /*
 *********************
@@ -37,5 +36,6 @@
 -- Chaque bibliotheques integrE dans sass-eo sont personnalisables via le fichier principale .scss
 */
 // @import './hamburgers';
+// @import './loader';
 // @import './magic/';
 // @import './milligrid';
