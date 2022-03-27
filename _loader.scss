@@ -10,7 +10,6 @@ EXAMPLE:
 <span id="my-loader"></span>
 */
 
-//TODO: working
 /// Loader permet d'ajouter une animation de chargement sur n'importe quel element
 /// @param {color} $primary - la couleur primaire
 /// @param {color} $secondary - la couleur secondaire
@@ -445,7 +444,7 @@ EXAMPLE:
 }
 
 //TODO: verified
-@mixin loader-9($primary, $secondary) {
+@mixin loader-9($primary) {
 	width: 47px;
 	height: 47px;
 	position: relative;
@@ -498,6 +497,171 @@ EXAMPLE:
 		75%,
 		100% {
 			transform: translate(0, 0) rotate(180deg);
+		}
+	}
+}
+
+//TODO  verified
+@mixin loader-10($primary) {
+	width: 48px;
+	height: 48px;
+	margin: auto;
+	position: relative;
+
+	&:before {
+		content: '';
+		width: 48px;
+		height: 5px;
+		background: #000;
+		opacity: 0.25;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		border-radius: 50%;
+		animation: shadow 0.5s linear infinite;
+	}
+	&:after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: $primary;
+		animation: bxSpin 0.5s linear infinite;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 4px;
+	}
+	@keyframes bxSpin {
+		17% {
+			border-bottom-right-radius: 3px;
+		}
+		25% {
+			transform: translateY(9px) rotate(22.5deg);
+		}
+		50% {
+			transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+			border-bottom-right-radius: 40px;
+		}
+		75% {
+			transform: translateY(9px) rotate(67.5deg);
+		}
+		100% {
+			transform: translateY(0) rotate(90deg);
+		}
+	}
+
+	@keyframes shadow {
+		0%,
+		100% {
+			transform: scale(1, 1);
+		}
+		50% {
+			transform: scale(1.2, 1);
+		}
+	}
+}
+
+//TODO  verified
+@mixin loader-11($primary) {
+	position: relative;
+	width: 48px;
+	height: 48px;
+	background: $primary;
+	border-radius: 50%;
+	animation: ellipseAnimation 2s linear infinite;
+
+	@keyframes ellipseAnimation {
+		0% {
+			border-radius: 50%;
+		}
+
+		12.5% {
+			border-radius: 0 50% 50% 50%;
+			transform: rotate(45deg);
+		}
+
+		25% {
+			border-radius: 0 0 50% 50%;
+			transform: rotate(90deg);
+		}
+
+		37.5% {
+			border-radius: 0 0 0 50%;
+			transform: rotate(135deg);
+		}
+
+		50% {
+			border-radius: 0;
+			transform: rotate(180deg);
+		}
+
+		62.5% {
+			border-radius: 50% 0 0 0;
+			transform: rotate(225deg);
+		}
+
+		75% {
+			border-radius: 50% 50% 0 0;
+			transform: rotate(270deg);
+		}
+
+		87.5% {
+			border-radius: 50% 50% 50% 0;
+			transform: rotate(315deg);
+		}
+
+		100% {
+			border-radius: 50%;
+			transform: rotate(360deg);
+		}
+	}
+}
+
+//TODO  verified
+@mixin loader-12($primary, $secondary) {
+	width: 48px;
+	height: 40px;
+	margin-top: 30px;
+	display: inline-block;
+	position: relative;
+	background: $primary;
+	border-radius: 15% 15% 35% 35%;
+
+	&::after {
+		content: '';
+		box-sizing: border-box;
+		position: absolute;
+		left: 45px;
+		top: 8px;
+		border: 4px solid $secondary;
+		width: 16px;
+		height: 20px;
+		border-radius: 0 4px 4px 0;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 10px;
+		color: $secondary;
+		top: -15px;
+		left: 11px;
+		box-sizing: border-box;
+		animation: animloader 1s ease infinite;
+	}
+
+	@keyframes animloader {
+		0% {
+			box-shadow: 2px 0px rgba(255, 255, 255, 0),
+				12px 0px rgba(255, 255, 255, 0.3), 20px 0px rgba(255, 255, 255, 0);
+		}
+		50% {
+			box-shadow: 2px -5px rgba(255, 255, 255, 0.5),
+				12px -3px rgba(255, 255, 255, 0.5), 20px -2px rgba(255, 255, 255, 0.6);
+		}
+		100% {
+			box-shadow: 2px -8px rgba(255, 255, 255, 0),
+				12px -5px rgba(255, 255, 255, 0), 20px -5px rgba(255, 255, 255, 0);
 		}
 	}
 }
