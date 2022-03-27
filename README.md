@@ -189,7 +189,7 @@ hamburger.addEventListener('click', function () {
 
 ### `📌 LOADER`
 
-Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element - Vous pouvez consulter `loaderdoc` situE dans `loaderdoc/index.html` pour avoir un apercu sur chaque loader
+Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element - Vous pouvez consulter `loaderdoc` situE dans `DOCS/loaderdoc/index.html` pour avoir un apercu sur chaque loader
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
@@ -230,7 +230,7 @@ window.addEventListener('load', () => {
 
 ### `📌 MAGIC`
 
-`Magic` est un bibliotheque d'animation CSS integrE dans sass-eo, il suffit d'appeler un mixin magic pour animer un element - Vous pouvez consulter `magicdoc` situE dans `magicdoc/index.html` pour avoir un apercu sur chaque effet magic
+`Magic` est un bibliotheque d'animation CSS integrE dans sass-eo, il suffit d'appeler un mixin magic pour animer un element - Vous pouvez consulter `magicdoc` situE dans `DOCS/magicdoc/index.html` pour avoir un apercu sur chaque effet magic
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
@@ -263,8 +263,10 @@ window.addEventListener('load', () => {
 
 <br>
 
-- **Semantic-ui:** je trouve personnellement ce framework la meilleure alternative à BT5, sematic-ui facilite la création de mises en page responsives, l'un des avantages de ce framework est qu'il intègre semantic-ui-react, une collection de composants React de Semantic-ui -> https://semantic-ui.com/introduction/getting-started.html https://react.semantic-ui.com/
+- **Semantic-ui:** je trouve personnellement ce framework la meilleure alternative à BT5, sematic-ui facilite la création de mises en page responsives, l'un des avantages de ce framework est qu'il intègre semantic-ui-react, une collection de composants React de Semantic-ui
+  - semantic-ui -> https://semantic-ui.com/introduction/getting-started.html
+  - semantic-ui-react -> https://react.semantic-ui.com/
 
 <br>
 
-- **Milligrid:** Milligrid est un system de grille CSS flexbox configurable basée sur Milligram (plus facile a utiliser) -> http://bencoveney.github.io/Milligrid/
+- **Milligrid:** Milligrid est un system de grille CSS flexbox configurable et facile a apprendre basée sur Milligram -> http://bencoveney.github.io/Milligrid/
