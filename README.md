@@ -95,7 +95,7 @@ cd sass-eo && sassdoc .
 ```
 
 <div align="right">
-    <b><a href="https://github.com/RajaRakoto/sass-eo#%E1%94%95%E1%97%A9%E1%94%95%E1%94%95-eo">↥ Back To Top</a></b>
+    <b><a href="#-ᔕᗩᔕᔕ--eo">↥ Back To Top</a></b>
 </div>
 <hr>
 
