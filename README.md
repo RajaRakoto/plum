@@ -10,7 +10,7 @@
 
 <div align="center">
 
-| ~ INDEX ~                                 |
+| Table des matières                        |
 | :---------------------------------------- |
 | [Installation de sass-eo](#installation)  |
 | [Utilisation de sassdoc](#sassdoc)        |
@@ -21,7 +21,7 @@
 
 </div>
 
-#### 📌 INSTALLATION
+### `📌 INSTALLATION`
 
 Executer la commande ci-dessous pour installer **sass-eo** ainsi ses dependances dans votre projet
 
@@ -35,14 +35,12 @@ git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && n
 mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && npm install
 ```
 
-> **NOTE:** si vous voulez utiliser les frameworks vendors de sass-eo, ajouter le lien de style (css) et le script (js) correspondant a ce dernier dans le point d'entre -> `./public/index.html`
-
 <div align="right">
     <b><a href="#installation">↥ Back To Top</a></b>
 </div>
 <hr>
 
-#### 📌 SASSDOC
+### `📌 SASSDOC`
 
 **sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil
 
@@ -101,7 +99,7 @@ cd sass-eo && sassdoc .
 </div>
 <hr>
 
-#### 📌 HAMBURGERS
+### `📌 HAMBURGERS`
 
 Hamburgers est une collection de savoureuses icônes de hamburger animées par CSS. La source est également incluse en tant que bibliothèque SASS modulable et personnalisable, alors préparez votre propre hamburger.
 
@@ -187,7 +185,7 @@ hamburger.addEventListener('click', function () {
 </div>
 <hr>
 
-#### 📌 LOADER
+### `📌 LOADER`
 
 Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element - Vous pouvez consulter `loaderdoc` situE dans `loaderdoc/index.html` pour avoir un apercu sur chaque loader
 
@@ -228,7 +226,7 @@ window.addEventListener('load', () => {
 </div>
 <hr>
 
-#### 📌 MAGIC
+### `📌 MAGIC`
 
 `Magic` est un bibliotheque d'animation CSS integrE dans sass-eo, il suffit d'appeler un mixin magic pour animer un element - Vous pouvez consulter `magicdoc` situE dans `magicdoc/index.html` pour avoir un apercu sur chaque effet magic
 
@@ -252,7 +250,7 @@ window.addEventListener('load', () => {
 </div>
 <hr>
 
-#### 📌 FRAMEWORKS vendors
+### `📌 FRAMEWORKS vendors`
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
