@@ -10,13 +10,6 @@ EXAMPLE:
 <span id="my-loader"></span>
 */
 
-/// Loader permet d'ajouter une animation de chargement sur n'importe quel element
-/// @param {color} $primary - la couleur primaire
-/// @param {color} $secondary - la couleur secondaire
-@mixin loader-number($primary, $secondary) {
-	//code ...
-}
-
 //TODO: verified
 @mixin loader-1($primary, $secondary) {
 	width: 48px;
