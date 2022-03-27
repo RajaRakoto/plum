@@ -11,7 +11,6 @@
 @import './effect';
 @import './image';
 @import './input';
-@import './loader';
 @import './media';
 @import './minireset';
 @import './navigator';
@@ -37,5 +36,6 @@
 -- Chaque bibliotheques integrE dans sass-eo sont personnalisables via le fichier principale .scss
 */
 // @import './hamburgers';
+// @import './loader';
 // @import './magic/';
 // @import './milligrid';
