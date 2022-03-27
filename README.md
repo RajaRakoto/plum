@@ -10,8 +10,8 @@
 
 <div align="center">
 
-| Table des matières                        |
-| :---------------------------------------- |
+| Table des matières                         |
+| :----------------------------------------- |
 | [Installation de sass-eo](#-installation)  |
 | [Utilisation de sassdoc](#-sassdoc)        |
 | [Hamburgers](#-hamburgers)                 |
@@ -93,6 +93,8 @@ Executez la commande ci-dessous dans le repertoire sass-eo pour generer & mettre
 ```bash
 cd sass-eo && sassdoc .
 ```
+
+Vous pouvez maintenant consulter la documentation dans `sassdoc/index.html`
 
 <div align="right">
     <b><a href="#-installation">↥ Back To Top</a></b>
@@ -257,12 +259,12 @@ window.addEventListener('load', () => {
 </div>
 <br>
 
-- **Bootstrap:** sass-eo integre le `grid system` de bootstrap 5 https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- **Bootstrap:** sass-eo integre la code source SASS de bootstrap 5 afin d' utiliser partiellement ses fonctionnalitEs -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
 <br>
 
-- **Semantic-ui:** je trouve personnellement ce framework la meilleure alternative à BT5, sematic-ui facilite la création de mises en page responsives, l'un des avantages de ce framework est qu'il intègre semantic-ui-react, une collection de composants React de Semantic-ui. https://semantic-ui.com/introduction/getting-started.html https://react.semantic-ui.com/
+- **Semantic-ui:** je trouve personnellement ce framework la meilleure alternative à BT5, sematic-ui facilite la création de mises en page responsives, l'un des avantages de ce framework est qu'il intègre semantic-ui-react, une collection de composants React de Semantic-ui -> https://semantic-ui.com/introduction/getting-started.html https://react.semantic-ui.com/
 
 <br>
 
-- **Milligram:** vous pouvez egalement utiliser milligram, un framework minimalist CSS, le `grid system` de ce dernier est plus simple a utiliser que celui de BT5 ou semantic-ui https://milligram.io/#getting-started
+- **Milligrid:** Milligrid est un system de grille CSS flexbox configurable basée sur Milligram (plus facile a utiliser) -> http://bencoveney.github.io/Milligrid/
