@@ -9,47 +9,6 @@
 // SlateBlue (violet)
 // Violet (rose)
 
-//TODO: test
-/// Définir un thème de couleur (primaire, secondaire) à utiliser sur l'ensemble de votre site permet de gagner du temps en ayant les mêmes parties colorées de CSS sur les mêmes éléments HTML.
-/// @param {string} $color - couleur primaire (la couleur secondaire sera defini automatiquement)
-/// @param {boolean} $revert [true, false] - renverser la couleur primaire et secondaire
-/// @param {boolean} $bg [true, false] - activer|desactiver l'arriere plan
-@mixin color-theme($color, $revert: false, $bg: true) {
-	//default value
-	$primary: $color;
-	$secondary: color-adjust($color, 30%);
-	//ajustment
-	@if ($color == Tomato) {
-		$secondary: color-adjust($color, 30%);
-	} @else if ($color == Orange) {
-		$secondary: color-adjust($color, 40%);
-	} @else if ($color == DodgerBlue) {
-		$secondary: color-adjust($color, 40%);
-	} @else if ($color == MediumSeaGreen) {
-		$secondary: color-adjust($color, 45%);
-	} @else if ($color == Gray) {
-		$secondary: color-adjust($color, 40%);
-	} @else if ($color == SlateBlue) {
-		$secondary: color-adjust($color, 35%);
-	} @else if ($color == Violet) {
-		$secondary: color-adjust($color, 25%);
-	}
-	//create class
-	@if ($revert) {
-		color: $secondary;
-		background: $primary;
-	} @else {
-		color: $primary;
-		background: $secondary;
-	}
-	//background
-	@if ($bg == false) {
-		background: none;
-	}
-}
-
-//------------------------------------------------------------
-
 //TODO: verified
 /// Une fonction qui retourne la pastel de la couleur en argument
 /// @param {string} $color - la couleur a determiner sa valeur en pastel
