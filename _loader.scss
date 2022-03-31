@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-/*
-EXAMPLE:
-
-#my-loader {
-  @include loader-1();
-}
-
-<span id="my-loader"></span>
-*/
-
 //TODO: verified
 @mixin loader-1($primary, $secondary) {
 	width: 48px;
