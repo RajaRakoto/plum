@@ -1,9 +1,7 @@
-/*
-******************
-***** BASICS *****
-******************
--- Les importations basiques ci-dessous sont visibles dans sassdoc - ces derniers sont basEs sur des mixins et fonctions SASS
-*/
+// ******************
+// ***** BASICS *****
+// ******************
+// -- Les importations basiques ci-dessous sont visibles dans sassdoc - ces derniers sont basEs sur des mixins et fonctions SASS
 @import './animation';
 @import './bar';
 @import './box';
@@ -19,22 +17,22 @@
 @import './spacing';
 @import './typography';
 
-/*
-**********************
-***** FRAMEWORKS *****
-**********************
--- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
--- Chaque frameworks integrE dans sass-eo sont personnalisables via le fichier principale .scss
-*/
+
+// **********************
+// ***** FRAMEWORKS *****
+// **********************
+// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
+// -- Chaque frameworks integrE dans sass-eo sont personnalisables via le fichier principale .scss
+//
 // @import './bootstrap';
 
-/*
-*********************
-***** LIBRARIES *****
-*********************
--- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
--- Chaque bibliotheques integrE dans sass-eo sont personnalisables via le fichier principale .scss
-*/
+
+// *********************
+// ***** LIBRARIES *****
+// *********************
+// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
+// -- Chaque bibliotheques integrE dans sass-eo sont personnalisables via le fichier principale .scss
+
 // @import './hamburgers';
 // @import './loader';
 // @import './magic/';
