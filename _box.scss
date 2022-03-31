@@ -36,13 +36,3 @@
 	}
 }
 
-//------------------------------------------------------------
-
-//TODO: verified
-// Modifier rapidement la taille d'un container
-/// @param {pixel} $width - largeur du container
-/// @param {pixel} $height - hauteur du container
-@mixin box-size($selector, $width, $height) {
-	width: $width;
-	height: $height;
-}

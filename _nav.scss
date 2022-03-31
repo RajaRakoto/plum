@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 //TODO: test
-/// Navigator vous permet d'initialiser rapidement les proprietEs CSS par defaut d'une barre de navigation - il est preferable de declarer ce mixin juste apres le selecteur nav
-@mixin navigator {
+/// nav-top vous permet d'initialiser rapidement les proprietEs CSS par defaut d'une barre de navigation lateral - mixin a declarer juste apres le selecteur nav
+@mixin nav-top() {
 	top: 0;
 	position: fixed;
 	width: 100%;
