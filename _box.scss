@@ -6,7 +6,7 @@
 /// @param {pixel} $size - taille du bordure
 /// @param {boolean} $bg-color [true, false] - activer|desactiver la couleur de l'arriere plan
 /// @param {boolean} $status [true, false] - activer|desactiver l'info box (debogage)
-@mixin box-debug($color, $size: 2px, $bg-color: false, $status: true) {
+@mixin box-debug($color, $size: 3px, $bg-color: false, $status: true) {
 	@if ($status) {
 		border: solid $size $color;
 		@if ($bg-color) {
@@ -28,7 +28,7 @@
 @mixin box-generator($color, $width, $height: auto, $radius: 10px) {
 	background-color: $color;
 	width: $width;
-	height: $height;
+	height: $height; 
 	border-radius: $radius;
 
 	//pour les images
@@ -36,3 +36,4 @@
 		width: 100%;
 	}
 }
+
