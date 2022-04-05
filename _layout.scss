@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Grid - remplisser toute l'espace de l'ecran par l'element parent (grid)
+@mixin layout-grid-full() {
+	width: 100vw;
+	height: 100vh;
+}
+
