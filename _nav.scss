@@ -1,16 +1,11 @@
 @charset "UTF-8";
 
-//TODO: test
-/// nav-top vous permet d'initialiser rapidement les proprietEs CSS par defaut d'une barre de navigation lateral - mixin a declarer juste apres le selecteur nav
-@mixin nav-top() {
-	top: 0;
-	position: fixed;
-	width: 100%;
+//TODO: verified
+/// nav-props permet d'initialiser rapidement les proprietEs CSS par defaut d'une barre de navigation
+@mixin nav-props() {
 	transition: 0.4s ease;
-	justify-content: flex-start;
 	align-items: center;
-	display: flex;
-	//justify-content: space-between;
+	justify-content: space-between;
 
 	a {
 		text-decoration: none;
@@ -18,8 +13,7 @@
 
 	ul {
 		list-style: none;
-		li {
-			display: inline;
-		}
 	}
 }
+
+
