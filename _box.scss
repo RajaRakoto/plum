@@ -3,11 +3,12 @@
 //TODO: verified
 /// Ajouter rapidement un bordure sur les containers (sert au debogage)
 /// @param {string} $color - couleur du bordure
+/// @param {pixel} $size - taille du bordure
 /// @param {boolean} $bg-color [true, false] - activer|desactiver la couleur de l'arriere plan
 /// @param {boolean} $status [true, false] - activer|desactiver l'info box (debogage)
-@mixin box-debug($color, $bg-color: false, $status: true) {
+@mixin box-debug($color, $size: 3px, $bg-color: false, $status: true) {
 	@if ($status) {
-		border: solid 1px $color;
+		border: solid $size $color;
 		@if ($bg-color) {
 			background-color: lighten(adjust-hue($color, 20), 25%);
 			// opacity: 70%;

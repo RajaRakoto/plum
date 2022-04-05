@@ -2,6 +2,7 @@
 // ***** BASICS *****
 // ******************
 // -- Les importations basiques ci-dessous sont visibles dans sassdoc - ces derniers sont basEs sur des mixins et fonctions SASS
+@import './adaptive';
 @import './animation';
 @import './bar';
 @import './box';
@@ -9,7 +10,7 @@
 @import './effect';
 @import './image';
 @import './input';
-@import './media';
+@import './layout';
 @import './minireset';
 @import './nav';
 @import './normalize';
@@ -17,23 +18,31 @@
 @import './spacing';
 @import './typography';
 
+// ****************
+// ***** MAPS *****
+// ****************
+@import 'maps/map-for-breakpoints';
+@import 'maps/map-for-directions';
+@import 'maps/map-for-font-formats';
+@import 'maps/map-for-positions';
+@import 'maps/map-for-smartphones';
+@import 'maps/map-for-tablets';
 
 // **********************
 // ***** FRAMEWORKS *****
 // **********************
-// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
+// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser
 // -- Chaque frameworks integrE dans sass-eo sont personnalisables via le fichier principale .scss
 //
 // @import './bootstrap';
 
-
 // *********************
 // ***** LIBRARIES *****
 // *********************
-// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser 
+// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser
 // -- Chaque bibliotheques integrE dans sass-eo sont personnalisables via le fichier principale .scss
 
 // @import './hamburgers';
 // @import './loader';
-// @import './magic/';
+// @import './magic';
 // @import './milligrid';
