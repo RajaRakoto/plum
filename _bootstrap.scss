@@ -5,48 +5,11 @@
 // * Copyright 2011-2022 Twitter, Inc.
 // * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 
-// Configuration
-@import "./bootstrap/functions";
-@import "./bootstrap/variables";
-@import "./bootstrap/maps";
-@import "./bootstrap/mixins";
-@import "./bootstrap/utilities";
+// * ALL minified
+@import './bootstrap/bootstrap.min.scss';
 
-// Layout & components
-// @import "root";
-// @import "reboot";
-// @import "type";
-// @import "images";
-// @import "containers";
-// @import "grid";
-// @import "tables";
-// @import "forms";
-// @import "buttons";
-// @import "transitions";
-// @import "dropdown";
-// @import "button-group";
-// @import "nav";
-// @import "navbar";
-// @import "card";
-// @import "accordion";
-// @import "breadcrumb";
-// @import "pagination";
-// @import "badge";
-// @import "alert";
-// @import "progress";
-// @import "list-group";
-// @import "close";
-// @import "toasts";
-// @import "modal";
-// @import "tooltip";
-// @import "popover";
-// @import "carousel";
-// @import "spinners";
-// @import "offcanvas";
-// @import "placeholders";
+// * GRID
+// @import './bootstrap/bootstrap-grid.scss';
 
-// Helpers
-// @import "helpers";
-
-// Utilities
-@import "./bootstrap/utilities/api";
+// * UTILITIES
+// @import './bootstrap/bootstrap-utilities.scss';
