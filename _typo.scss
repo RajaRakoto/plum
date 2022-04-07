@@ -1,0 +1,31 @@
+@charset "UTF-8";
+// @use 'sass:math';
+
+//DESCRIPTION: ensemble des mixins & fonctions de manipulation de typographie (family, size, ...)
+
+//TODO: verified
+/// Une fonction qui convertit une valeur en pixel en rem
+/// @param {pixel} $size - valeur en pixel a convertir en rem
+$font-size: 16;
+@function toRem($size, $font-size : $font-size) {
+	$font-size: $font-size + 0px;
+	$remSize: calc($size / $font-size);
+	@return #{$remSize}rem;
+}
+
+//------------------------------------------------------------
+
+//TODO: verified
+/// Ce mixin effectue l'importation rapide des polices externes et inclure les proprietEs coherentes.
+/// @param {string} $font-name - le nom du font family a utiliser tout au long de votre code
+/// @param {path} $path - font path
+/// @param {string} $weight [normal] - font weight
+/// @param {string} $style [normal] - style par defaut a utiliser
+@mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $font-name;
+		font-weight: $weight;
+		font-style: $style;
+		src: url($path);
+	}
+}
