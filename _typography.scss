@@ -1,9 +1,17 @@
 @charset "UTF-8";
+@use 'sass:math';
 
 //DESCRIPTION: ensemble des mixins & fonctions de manipulation de typographie (family, size, ...)
 
 //TODO: verified
-/// Une fonction qui convertit une valeur en pixel en rem (utile pour avoir une taille de police responsive)
+/// Une fonction qui convertit une valeur en pixel en rem
+/// @param {pixel} $value - valeur en pixel a convertir en rem
+@function toRem1($value) {
+	@return math.div($value, 16px) * 1rem;
+}
+
+//TODO: verified
+/// Une fonction qui convertit une valeur en pixel en rem (particulierement compatible avec une application React)
 /// @param {pixel} $value - valeur en pixel a convertir en rem
 $html-font-size: 16px;
 
@@ -11,7 +19,7 @@ $html-font-size: 16px;
 	@return $value / ($value * 0 + 1);
 }
 
-@function toRem($pxValue) {
+@function toRem2($pxValue) {
 	@return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
 }
 
