@@ -8,7 +8,6 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt); // grunt plugins loader
 
 	// all files destination
-	const sassDistDestination = './src/dist/styles/';
 	const backupsDestination = './backups/';
 
 	// node-glob syntax
@@ -48,6 +47,7 @@ module.exports = function (grunt) {
 			},
 		},
 
+		// TODO: verified
 		/**
 		 * Minify HTML
 		 */
@@ -65,23 +65,20 @@ module.exports = function (grunt) {
 			},
 		},
 
+		// TODO: verified
 		/**
 		 * Compile sass to css
 		 */
 		sass: {
-			dist: {
+			test: {
 				options: {
 					style: 'compressed', // output style: compact, expanded, compressed
 				},
 				files: [
 					// scss file list
 					{
-						src: ['./src/index.scss'],
-						dest: sassDistDestination + 'index.min.css',
-					},
-					{
-						src: ['./src/components/editor/editor.scss'],
-						dest: sassDistDestination + 'editor.min.css',
+						src: ['./test/main.scss'],
+						dest: './test/style.css',
 					},
 				],
 			},
@@ -136,12 +133,13 @@ module.exports = function (grunt) {
 			},
 		},
 
+		// TODO: verified
 		/**
 		 * Run predefined tasks whenever watched file patterns are added, changed or deleted
 		 */
 		watch: {
 			sass: {
-				files: ['./src/*.scss', './src/components/**/*.scss'], // src listening
+				files: ['./test/*.scss'], // src listening
 				tasks: ['sass-task'], // default task to execute
 				options: { spawn: false }, // watch optimization
 			},
@@ -152,7 +150,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('concat-task', ['concat:dev']); // manual
 	grunt.registerTask('replace-task', ['replace:dev']); // manual
 	grunt.registerTask('htmlmin-task', ['htmlmin:dist']); // manual
-	grunt.registerTask('sass-task', ['sass:dist']); // watched
+	grunt.registerTask('sass-task', ['sass:test']); // watched
 
 	// grunt mixed tasks
 	grunt.registerTask('compress-all', [
@@ -180,7 +178,7 @@ module.exports = function (grunt) {
 		'concat:dev',
 		'replace:dev',
 		'htmlmin:dist',
-		'sass:dist',
+		'sass:test',
 		'shell:dev',
 	];
 
