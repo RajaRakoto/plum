@@ -11,8 +11,6 @@ $font-size: 16;
 	@return #{$remSize}rem;
 }
 
-//------------------------------------------------------------
-
 //TODO: verified
 /// Ce mixin effectue l'importation rapide des polices externes et inclure les proprietEs coherentes.
 /// @param {string} $font-name - le nom du font family a utiliser tout au long de votre code
