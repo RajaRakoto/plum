@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
+$font-size: 16;
 //TODO: verified
 /// Une fonction qui convertit une valeur en pixel en rem
 /// @param {pixel} $value - valeur en pixel a convertir en rem
-$font-size: 16;
-@function toRem($value, $font-size : $font-size) {
+/// @param {integer} $font-size - pixel base: 16px
+@function toRem($value, $font-size: $font-size) {
 	$font-size: $font-size + 0px;
 	$remSize: calc($value / $font-size);
 	@return #{$remSize}rem;
