@@ -1,7 +1,7 @@
 {
 	"name": "sass-eo",
 	"version": "1.0.0",
-	"description": "Style your website faster with a minimalist SASS-powered toolset",
+	"description": "Customize your website faster with a toolset powered by SASS",
 	"main": "index.js",
 	"scripts": {
 		"sass-compile": "sass --watch main.scss:style.css",
@@ -15,8 +15,8 @@
 	"keywords": [
 		"ui",
 		"style",
-    "css",
-    "css3",
+		"css",
+		"css3",
 		"sass",
 		"scss",
 		"layout",
@@ -29,11 +29,11 @@
 		"bootstrap",
 		"semantic",
 		"milligrid",
-    "sass-mixins",
-    "sass-toolkit",
-    "sass-library",
-    "sass-framework",
-    "sass-tool-set"
+		"sass-mixins",
+		"sass-toolkit",
+		"sass-library",
+		"sass-framework",
+		"sass-tool-set"
 	],
 	"author": "Raja",
 	"license": "MIT",
@@ -44,5 +44,20 @@
 	"dependencies": {
 		"sassdoc": "^2.7.3",
 		"@hidoo/sassdoc-to-markdown": "^0.7.0"
+	},
+	"devDependencies": {
+		"grunt": "^1.4.1",
+		"grunt-babel": "^8.0.0",
+		"grunt-contrib-compress": "^2.0.0",
+		"grunt-contrib-concat": "^2.1.0",
+		"grunt-contrib-htmlmin": "^3.1.0",
+		"grunt-contrib-imagemin": "^4.0.0",
+		"grunt-contrib-jshint": "^3.2.0",
+		"grunt-contrib-sass": "^2.0.0",
+		"grunt-contrib-uglify": "^5.1.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-shell": "^4.0.0",
+		"grunt-text-replace": "^0.4.0",
+		"load-grunt-tasks": "^5.1.0"
 	}
 }
