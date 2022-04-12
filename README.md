@@ -4,113 +4,82 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/for-dago.svg?raw=true)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/build-by.svg?raw=true)](https://forthebadge.com)
 
-![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff)<br>
+![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff) ![Grunt](https://img.shields.io/badge/-Grunt-777?style=flat&logo=grunt&logoColor=orangered&labelColor=ffffff) <br>
+
+| Table des matières             |
+| :----------------------------- |
+| [Installation](#-installation) |
+| [Sassdoc](#-sassdoc)           |
+| [Variables](#-variables)       |
+| [Libraries](#-libraries)       |
+| [Frameworks](#-frameworks)     |
 
 </div>
 
-<div align="center">
+### `📌 Installation`
 
-| Table des matières                         |
-| :----------------------------------------- |
-| [Installation de sass-eo](#-installation)  |
-| [Utilisation de sassdoc](#-sassdoc)        |
-| [Hamburgers](#-hamburgers)                 |
-| [Loader](#-loader)                         |
-| [Magic](#-magic)                           |
-| [Frameworks vendors](#-frameworks-vendors) |
-
-</div>
-
-### `📌 INSTALLATION`
-
-Executer la commande ci-dessous pour installer **sass-eo** ainsi ses dependances dans votre projet
+Executer la commande ci-dessous pour installer **sass-eo**
 
 ```bash
-git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && npm install
+git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git
 ```
 
-**React** - pour une application React, executer la commande ci-dessous (dans votre projet)
-
-```bash
-mkdir -p public/libs && cd public/libs && git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git && cd sass-eo && npm install
-```
-
-<div align="right">
-    <b><a href="#-installation">↥ Back To Top</a></b>
-</div>
 <hr>
+<br>
 
-### `📌 SASSDOC`
+### `📌 Sassdoc`
 
-**sass-eo** utilise sassdoc, un système de documentation pour créer des documents jolis et puissants en un clin d'œil
+**sass-eo** utilise `sassdoc` pour créer sa `documentation` en un clin d'œil en utilisant un `syntaxe particulier`
+
+Executez la commande ci-dessous dans le repertoire racine de **sass-eo** pour `generer & mettre a jour` la documentation localement
+
+```bash
+sassdoc .
+```
+
+Vous pouvez maintenant consulter la documentation dans **sassdoc/index.html**
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="700">
 </div>
 <br>
 
-##### Notation (sassdoc)
+[En savoir plus sur sassdoc](http://sassdoc.com/getting-started/)
 
-La notation ci-dessous vous permet d'interagir avec sassdoc pour generer ou mettre a jour la documentation de sass-eo
-
-```scss
-/// Description ...
-/// @author Raja ...
-/// @param {type} $parameter [default_value] - description ...
-/// @require $variable
-/// @todo task ...
-/// @deprecated
-/// @example
-///  ex1 ...
-///  ex2 ...
-@mixin/function name($parameter) {
-code...
-}
-```
-
-Exemple d'application de la syntaxe sassdoc
-
-```scss
-/// Ajouter des images haute résolution à votre site, avec une solution de rechange pour les appareils qui n'affichent pas d'images haute résolution, lors de l'utilisation de retina image, il est preferable de compresser autant que possible sans détruire l'image source (https://tinypng.com).
-/// @param {path} $image - image path
-/// @param {pixel} $width - largeur de l'image
-/// @param {pixel} $height - hauteur de l'image
-@mixin image-retina($image, $width, $height) {
-	@media (min--moz-device-pixel-ratio: 1.3),
-		(-o-min-device-pixel-ratio: 2.6/2),
-		(-webkit-min-device-pixel-ratio: 1.3),
-		(min-device-pixel-ratio: 1.3),
-		(min-resolution: 1.3dppx) {
-		/* on retina, use image that's scaled by 2 */
-		background-image: url($image);
-		background-size: $width $height;
-	}
-}
-```
-
-Executez la commande ci-dessous dans le repertoire sass-eo pour generer & mettre a jour la documentation localement
-
-```bash
-cd sass-eo && sassdoc .
-```
-
-Vous pouvez maintenant consulter la documentation dans `sassdoc/index.html`
-
-<div align="right">
-    <b><a href="#-installation">↥ Back To Top</a></b>
-</div>
 <hr>
+<br>
 
-### `📌 HAMBURGERS`
+### `📌 Variables`
 
-Hamburgers est une collection de savoureuses icônes de hamburger animées par CSS. La source est également incluse en tant que bibliothèque SASS modulable et personnalisable, alors préparez votre propre hamburger.
+**Sassdoc** ne permet pas de generer la documentaiton concernant `les variables` contenant dans certains mixins, c'est pour cela qu'on les traites dans cette section
+
+##### `📍colors`
+
+Voici les `echantillons de couleur` pret a etre utilisE en juste appelant le nom de la `variable` correspondante:
+
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="500"><br>
+</div>
+
+<hr>
+<br>
+
+### `📌 Libraries`
+
+Voici les listes des `bibliotheques` integrE dans **sass-eo**
+
+> **NOTE**: Toute les documentations reliE aux bibliotheques se trouvent dans le dossier `./docs`
+
+##### `📍Hamburgers`
+
+`Hamburgers` est une collection de savoureuses icônes de hamburger animées par CSS. La source est également incluse en tant que bibliothèque SASS modulable et personnalisable, alors préparez votre propre hamburger.
 
 <div align="center">
 <img src="http://i.imgur.com/t7cUjDu.gif" width="700">
 </div>
 <br>
 
-Voici la liste des classes de type Hamburger que vous pouvez choisir:
+Voici la liste des `classes` de type Hamburger que vous pouvez choisir:
 
 ```
   hamburger--3dx
@@ -148,15 +117,15 @@ Voici la liste des classes de type Hamburger que vous pouvez choisir:
 
 <br>
 
-**Remarque:** `-r` sont des variantes inverse (par exemple `hamburger--spin` dans le sens des aiguilles d'une montre tandis que `hamburger--spin-r` dans le sens anti-horaire.
+> **NOTE**: `-r` sont des variantes inverse (par exemple `hamburger--spin` dans le sens des aiguilles d'une montre tandis que `hamburger--spin-r` dans le sens anti-horaire.
 
 <br>
 
 **Usage:**
 
-**1.** Decommentez la ligne correspondante `@import './hamburgers';` dans le fichier `sass-eo.scss`
+**1.** Importer le fichier `sass-eo-libraries` - decommentez la ligne correspondante `@import './hamburgers'`
 
-**2.** Decommentez le type d'hamburger a utiliser dans le fichier `_hamburgers.scss`
+**2.** Decommentez le type d'hamburger a utiliser dans le fichier `./libs/_hamburgers.scss`
 
 **3.** Ajoutez la class correspondante dans votre page HTML:
 
@@ -180,23 +149,20 @@ hamburger.addEventListener('click', function () {
 });
 ```
 
-**5.** Vous pouvez modifier les paramètres par défaut de votre hamburger - trouvés dans `_hamburgers.scss`;
+**5.** Vous pouvez modifier les paramètres par défaut de votre hamburger - trouvés dans `./libs/_hamburgers.scss`;
 
-<div align="right">
-    <b><a href="#-installation">↥ Back To Top</a></b>
-</div>
-<hr>
+<br>
 
-### `📌 LOADER`
+##### `📍Loaders`
 
-Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element - Vous pouvez consulter `loaderdoc` situE dans `DOCS/loaderdoc/index.html` pour avoir un apercu sur chaque loader
+Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
 </div>
 <br>
 
-**Note:** Certains loader ne contiennent qu'une seule couleur ,i-e 1 seul argument pour le mixin (Exemple -> `@include loader-10(dodgerblue)`)
+> **NOTE**: Certains loader ne contiennent qu'une seule couleur ,i-e 1 seul argument pour le mixin (Exemple -> `@include loader-10(dodgerblue)`)
 
 <br>
 
@@ -223,43 +189,38 @@ window.addEventListener('load', () => {
 });
 ```
 
-<div align="right">
-    <b><a href="#-installation">↥ Back To Top</a></b>
-</div>
-<hr>
+<br>
 
-### `📌 MAGIC`
+##### `📍Magic`
 
-`Magic` est un bibliotheque d'animation CSS integrE dans sass-eo, il suffit d'appeler un mixin magic pour animer un element - Vous pouvez consulter `magicdoc` situE dans `DOCS/magicdoc/index.html` pour avoir un apercu sur chaque effet magic
+`Magic` est un bibliotheque d'animation CSS integrE dans sass-eo, il suffit d'appeler un mixin magic pour animer un element
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
 </div>
 <br>
 
-**Usage:** Appelez le mixin magic a l'interieur d'un selecteur
+**Usage:**
 
 ```scss
-// SCSS
+// SCSS - appelez le mixin magic a l'interieur d'un selecteur
 .cards {
 	//L'argument de chaque mixin magic correspond a son "animation-delay" exprimE en seconde
 	@include magic-boingInUp(1s);
 }
 ```
 
-<div align="right">
-    <b><a href="#-installation">↥ Back To Top</a></b>
-</div>
 <hr>
+<br>
 
-### `📌 FRAMEWORKS vendors`
+### `📌 Frameworks`
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
 </div>
 <br>
 
-- **Bootstrap:** sass-eo integre la code source SASS de bootstrap 5 afin d' utiliser partiellement ses fonctionnalitEs -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- **Bootstrap:** sass-eo integre la code source SASS de bootstrap 5 afin d'utiliser partiellement ses fonctionnalitEs -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
 <br>
 
