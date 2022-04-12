@@ -16,24 +16,3 @@
 	}
 }
 
-//------------------------------------------------------------
-
-//TODO: verified
-@import './effect';
-/// Generateur de container rapide
-/// @param {string} $color - couleur de l'arriere plan
-/// @param {pixel} $width - largeur du container
-/// @param {pixel} $height - hauteur du container
-/// @param {pixel} $radius - border radius
-@mixin box-generator($color, $width, $height: auto, $radius: 10px) {
-	background-color: $color;
-	width: $width;
-	height: $height; 
-	border-radius: $radius;
-
-	//pour les images
-	img {
-		width: 100%;
-	}
-}
-

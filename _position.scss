@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-//TODO: test
+//TODO: verified
 /// Positionner rapidement vos elements par rapport a son element parent
 /// @param {string} $position [vertical, horizontal, both] - position de l'element
 @mixin position-set($position) {
@@ -25,10 +25,6 @@
 	}
 }
 
-//------------------------------------------------------------
-
-// les mixins de manipulation de block CSS
-
 //TODO: verified
 /// Centrer rapidement un block
 @mixin position-block-center {
@@ -37,10 +33,6 @@
 	margin-right: auto;
 }
 
-//------------------------------------------------------------
-
-// les mixins de manipulation de flex CSS
-
 //TODO: verified
 /// Centrer rapidement l'element (containers|items) enfant du selecteur en argument
 @mixin position-flex-center {
@@ -48,56 +40,6 @@
 	align-items: center;
 	justify-content: center;
 }
-
-//TODO: verified
-/// Aligner tout les elements efants (containers|items) directes ligne par ligne
-/// @param {string} $parent [tag, id, class] - selecteur de l'element parent
-/// @param {string} $child [tag, id, class] - selecteur de l'element fils
-/// @param {boolean} $reverse [true, false] - renverser l'alignement ou pas
-@mixin position-flex-row($parent, $child, $reverse: false) {
-	#{$parent} {
-		display: flex;
-	}
-	#{$child} {
-		@if ($reverse) {
-			//TODO: fix ...
-			flex-direction: row-reverse;
-		} @else if ($reverse == false) {
-			flex-direction: row;
-		}
-	}
-}
-
-//TODO: verified
-/// Aligner tout les elements efants (containers|items) directes colonne par colonne
-/// @param {string} $parent [tag, id, class] - selecteur de l'element parent
-/// @param {string} $child [tag, id, class] - selecteur de l'element fils
-/// @param {boolean} $reverse [true, false] - renverser l'alignement ou pas
-@mixin position-flex-col($parent, $child, $reverse: false) {
-	#{$parent} {
-		display: flex;
-	}
-	#{$child} {
-		@if ($reverse) {
-			//TODO: fix ...
-			flex-direction: column-reverse;
-		} @else if ($reverse == false) {
-			flex-direction: column;
-		}
-	}
-}
-
-//------------------------------------------------------------
-
-// les mixins de manipulation de text
-
-//TODO: verified
-/// Centrer rapidement un text
-@mixin position-center-text {
-	text-align: center;
-}
-
-//------------------------------------------------------------
 
 //TODO: verified
 /// Ce mixin sera utile chaque fois que vous avez du contenu flottant à droite ou à gauche et que vous souhaitez effacer l'espace sous l'élément flottant pour insérer un nouveau contenu en dessous.
