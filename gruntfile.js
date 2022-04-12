@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 
 	// node-glob syntax
 	const includeAllFiles = ['**/*', '.*/**/*', '**/.*', '**/.*/**/*'];
-	
+
 	/**
 	 * ~ ALL GRUNT PLUGINS CONFIG ~
 	 */
@@ -59,7 +59,8 @@ module.exports = function (grunt) {
 				},
 				files: {
 					// dest:src
-					'./public/index.html': './public/index.html',
+					'./docs/loader/index.html': './docs/loader/index.html',
+					'./docs/magic/index.html': './docs/magic/index.html',
 				},
 			},
 		},
