@@ -1,8 +1,11 @@
 // ******************************
 // ***** SASS-eo FRAMEWORKS *****
 // ******************************
-// -- Vous pouvez commenter|decommenter la partie que vous voulez utiliser
-// -- Chaque frameworks integrE dans sass-eo sont personnalisables via le fichier principale .scss
-//
-@import './bootstrap';
+// * ALL minified
+@import './bbootstrap/bootstrap.min.scss';
+// * GRID
+// @import './bootstrap/bootstrap-grid.scss';
+// * UTILITIES
+// @import './bootstrap/bootstrap-utilities.scss';
+
 
