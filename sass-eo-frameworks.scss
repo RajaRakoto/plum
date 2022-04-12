@@ -2,11 +2,10 @@
 // ***** SASS-eo FRAMEWORKS *****
 // ******************************
 // * ALL minified
-@import './bootstrap/bootstrap.min.scss';
+@import './frameworks/bootstrap/sass/bootstrap.min.scss';
+@import './frameworks/semantic/sass/semantic.min.scss';
 // * GRID
-// @import './milligrid';
-// @import './bootstrap/bootstrap-grid.scss';
+@import './frameworks/milligrid/sass/milligrid';
+@import './frameworks/bootstrap/sass/bootstrap-grid.scss';
 // * UTILITIES
-// @import './bootstrap/bootstrap-utilities.scss';
-
-
+@import './frameworks/bootstrap/sass/bootstrap-utilities.scss';
