@@ -9,48 +9,17 @@ module.exports = function (grunt) {
 
 	// all files destination
 	const sassDistDestination = './src/dist/styles/';
-	const imageDistDestination = './src/dist/images/';
 	const backupsDestination = './backups/';
 
 	// node-glob syntax
 	const includeAllFiles = ['**/*', '.*/**/*', '**/.*', '**/.*/**/*'];
-
-	// shell cmd script
-	const npmInstallPrefix = 'npm install ';
-	const npmInstallMode = ' --save-dev';
-	const gruntPluginsNames = [
-		'grunt-contrib-jshint',
-		'grunt-contrib-concat',
-		'grunt-contrib-uglify',
-		'grunt-contrib-sass',
-		'grunt-text-replace',
-		'grunt-contrib-htmlmin',
-		'grunt-contrib-compress ',
-		'grunt-contrib-watch',
-		'grunt-babel',
-		'grunt-contrib-imagemin',
-	];
-	function getGruntPluginsArray() {
-		let tmp = [];
-		gruntPluginsNames.forEach(gruntPluginsNames => {
-			tmp.push(
-				`echo -e "\n[${gruntPluginsNames}] installation - please wait ..." && sudo ` +
-					npmInstallPrefix +
-					gruntPluginsNames +
-					npmInstallMode,
-			);
-		});
-		return tmp;
-	}
-	const install_plugins_cmd = getGruntPluginsArray();
-
+	
 	/**
 	 * ~ ALL GRUNT PLUGINS CONFIG ~
 	 */
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
 
-		// TODO: verified
 		/**
 		 * Conatenate files
 		 */
@@ -62,19 +31,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
-		/**
-		 * Validate js files
-		 */
-		jshint: {
-			options: {
-				esversion: 11, // ecmascript version to use
-				strict: false, // strict mode
-			},
-			dev: ['./gruntfile.js', './src/index.js', './src/components/**/*.js'], // js files to verify
-		},
-
-		// TODO: verified
 		/**
 		 * Replace text in files using strings, regexs or functions.
 		 */
@@ -92,41 +48,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
-		/**
-		 * Minify & optimize all images
-		 */
-		imagemin: {
-			dynamic: {
-				files: [
-					{
-						expand: true,
-						cwd: './src/assets/images/', // img source
-						src: ['**/*.{png,jpg,gif,svg}'], // img extension
-						dest: imageDistDestination, // img destination
-					},
-				],
-			},
-		},
-
-		// TODO: verified
-		/**
-		 * Minify & optimize js files
-		 */
-		uglify: {
-			options: {
-				mangle: false, // variable minification
-			},
-			dist: {
-				files: {
-					// dest:src
-					'./src/components/editor/textTemplate.js':
-						'./src/components/editor/textTemplate.js',
-				},
-			},
-		},
-
-		// TODO: verified
 		/**
 		 * Minify HTML
 		 */
@@ -143,7 +64,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
 		/**
 		 * Compile sass to css
 		 */
@@ -166,31 +86,15 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
-		babel: {
-			// example
-			options: {
-				sourceMap: false,
-				presets: ['@babel/preset-react'], // for react env
-			},
-			dist: {
-				files: {
-					'test/myfile.js': 'dist/myfiles.js',
-				},
-			},
-		},
-
-		// TODO: verified
 		/**
 		 * Run shell commands
 		 */
-		shell: {
-			install_deps: {
-				command: install_plugins_cmd.join('&&'),
-			},
-		},
+		// shell: {
+		// 	install_deps: {
+		// 		command: install_plugins_cmd.join('&&'),
+		// 	},
+		// },
 
-		// TODO: verified
 		/**
 		 * Compress files and folders (incremental backup)
 		 */
@@ -231,7 +135,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
 		/**
 		 * Run predefined tasks whenever watched file patterns are added, changed or deleted
 		 */
@@ -246,13 +149,9 @@ module.exports = function (grunt) {
 
 	// grunt basics tasks
 	grunt.registerTask('concat-task', ['concat:dev']); // manual
-	grunt.registerTask('jshint-task', ['jshint:dev']); // manual
 	grunt.registerTask('replace-task', ['replace:dev']); // manual
-	grunt.registerTask('imagemin-task', ['imagemin']); // manual
-	grunt.registerTask('uglify-task', ['uglify:dist']); // manual
 	grunt.registerTask('htmlmin-task', ['htmlmin:dist']); // manual
 	grunt.registerTask('sass-task', ['sass:dist']); // watched
-	grunt.registerTask('babel-task', ['babel:dist']); // manual
 
 	// grunt mixed tasks
 	grunt.registerTask('compress-all', [
@@ -271,24 +170,16 @@ module.exports = function (grunt) {
 	// arrays basics tasks
 	const basicsTaskNames = [
 		'concat-task',
-		'jshint-task',
 		'replace-task',
-		'imagemin-task',
-		'uglify-task',
 		'htmlmin-task',
 		'sass-task',
-		'babel-task',
 		'shell-task',
 	];
 	const basicsTaskStatus = [
 		'concat:dev',
-		'jshint:dev',
 		'replace:dev',
-		'imagemin',
-		'uglify:dist',
 		'htmlmin:dist',
 		'sass:dist',
-		'babel:dist',
 		'shell:dev',
 	];
 
