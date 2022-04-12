@@ -10,6 +10,7 @@
 | :----------------------------- |
 | [Installation](#-installation) |
 | [Sassdoc](#-sassdoc)           |
+| [Variables](#-variables)       |
 | [Libraries](#-libraries)       |
 | [Frameworks](#-frameworks)     |
 
@@ -44,6 +45,21 @@ Vous pouvez maintenant consulter la documentation dans **sassdoc/index.html**
 <br>
 
 [En savoir plus sur sassdoc](http://sassdoc.com/getting-started/)
+
+<hr>
+<br>
+
+### `📌 Variables`
+
+**Sassdoc** ne permet pas de generer la documentaiton concernant `les variables` contenant dans certains mixins, c'est pour cela qu'on les traites dans cette section
+
+##### `📍colors`
+
+Voici les `echantillons de couleur` pret a etre utilisE en juste appelant le nom de la `variable` correspondante:
+
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="500"><br>
+</div>
 
 <hr>
 <br>
