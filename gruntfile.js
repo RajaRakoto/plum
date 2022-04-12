@@ -19,6 +19,7 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
 
+		// TODO: inused
 		/**
 		 * Conatenate files
 		 */
@@ -30,6 +31,7 @@ module.exports = function (grunt) {
 			},
 		},
 
+		// TODO: inused
 		/**
 		 * Replace text in files using strings, regexs or functions.
 		 */
@@ -84,6 +86,7 @@ module.exports = function (grunt) {
 			},
 		},
 
+		// TODO: inused
 		/**
 		 * Run shell commands
 		 */
@@ -93,6 +96,7 @@ module.exports = function (grunt) {
 		// 	},
 		// },
 
+		// TODO: verified
 		/**
 		 * Compress files and folders (incremental backup)
 		 */
@@ -113,23 +117,50 @@ module.exports = function (grunt) {
 				src: includeAllFiles,
 				dest: 'node_modules',
 			},
-			src: {
+			test: {
 				options: {
-					archive: backupsDestination + 'src.tar.gz',
+					archive: backupsDestination + 'test.tar.gz',
 				},
 				expand: true,
-				cwd: './src/',
+				cwd: './test/',
 				src: includeAllFiles,
-				dest: 'src',
+				dest: 'test',
 			},
-			public: {
+			docs: {
 				options: {
-					archive: backupsDestination + 'public.tar.gz',
+					archive: backupsDestination + 'docs.tar.gz',
 				},
 				expand: true,
-				cwd: './public/',
+				cwd: './docs/',
 				src: includeAllFiles,
-				dest: 'public',
+				dest: 'docs',
+			},
+			frameworks: {
+				options: {
+					archive: backupsDestination + 'frameworks.tar.gz',
+				},
+				expand: true,
+				cwd: './frameworks/',
+				src: includeAllFiles,
+				dest: 'frameworks',
+			},
+			libs: {
+				options: {
+					archive: backupsDestination + 'libs.tar.gz',
+				},
+				expand: true,
+				cwd: './libs/',
+				src: includeAllFiles,
+				dest: 'libs',
+			},
+			maps: {
+				options: {
+					archive: backupsDestination + 'maps.tar.gz',
+				},
+				expand: true,
+				cwd: './maps/',
+				src: includeAllFiles,
+				dest: 'maps',
 			},
 		},
 
@@ -155,15 +186,18 @@ module.exports = function (grunt) {
 	// grunt mixed tasks
 	grunt.registerTask('compress-all', [
 		'compress:main',
-		'compress:public',
-		'compress:src',
+		'compress:modules',
+		'compress:test',
+		'compress:docs',
+		'compress:frameworks',
+		'compress:libs',
+		'compress:maps',
 	]);
 
 	// grunt watched tasks
 	grunt.registerTask('watch-sass', ['watch:sass']);
 
 	// grunt shell & others tasks
-	grunt.registerTask('compress-modules'), ['compress:modules'];
 	grunt.registerTask('grunt-deps', ['shell:install_deps']);
 
 	// arrays basics tasks
@@ -184,15 +218,17 @@ module.exports = function (grunt) {
 
 	// arrays mixed tasks
 	const mixedTaskNames = ['compress-all'];
-	const mixedTaskStatus = ['(compress:main | compress:public | compress:src)'];
+	const mixedTaskStatus = [
+		'(compress:main | compress:modules | compress:test | compress:docs | compress:frameworks | compress:libs | compress:maps)',
+	];
 
 	// arrays watched tasks
 	const watchedTaskNames = ['watch-sass'];
 	const watchedTaskStatus = ['watch:sass'];
 
 	// arrays others tasks
-	const othersTaskNames = ['compress-modules', 'grunt-deps'];
-	const othersTaskStatus = ['compress:modules', 'shell:install_deps'];
+	const othersTaskNames = [];
+	const othersTaskStatus = [];
 
 	// default tasks
 	grunt.registerTask('default', () => {
