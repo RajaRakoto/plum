@@ -7,7 +7,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RajaRakoto/sass-toolkit.git"
+		"url": "git+https://github.com/RajaRakoto/sass-eo.git"
 	},
 	"keywords": [
 		"ui",
