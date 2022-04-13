@@ -83,11 +83,29 @@ module.exports = function (grunt) {
 					'xdg-open index.html',
 				].join('&&'),
 			},
+			loader: {
+				// to get loader docs
+				command: [
+					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd docs/loader',
+					'xdg-open index.html',
+				].join('&&'),
+			},
+			magic: {
+				// to get magic docs
+				command: [
+					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd docs/magic',
+					'xdg-open index.html',
+				].join('&&'),
+			},
 		},
 	});
 
 	grunt.registerTask('watch-sass', ['watch:sass']);
-	grunt.registerTask('sassdoc', ['shell:sassdoc']);
+	grunt.registerTask('basics-docs', ['shell:sassdoc']);
+	grunt.registerTask('loader-docs', ['shell:loader']);
+	grunt.registerTask('magic-docs', ['shell:magic']);
 };
 ```
 
@@ -129,14 +147,14 @@ grunt watch-sass
 
 **sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax` to document its basics modules
 
-Run the command below in the root directory of **sass-eo** to `generate & update` the documentation locally (your browser should automatically open the documentation)
+Run the command below in the root directory of **sass-eo** to "generate" the basics modules documentation (your browser should automatically open the documentation)
 
 ```bash
-grunt sassdoc
+grunt basics-docs
 ```
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="700">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
 </div>
 <br>
 
@@ -249,6 +267,12 @@ hamburger.addEventListener('click', function () {
 
 `loaders` are collections of mixins used to add a loading effect to each element
 
+Type this command to get an example loader (in the root directory)
+
+```bash
+grunt loader-docs
+```
+
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
 </div>
@@ -288,6 +312,12 @@ window.addEventListener('load', () => {
 ##### `📍Magic`
 
 `Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
+
+Type this command to get an example magic (in the root directory)
+
+```bash
+grunt magic-docs
+```
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
