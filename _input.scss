@@ -2,9 +2,9 @@
 
 //TODO: verified
 /// Scale zoom effect input
-/// @param {color} $bg-color [#eee] - couleur de l'arriere plan
-/// @param {color} $border-color [#eee] - couleur de bordure
-/// @param {color} $text-color [#444] - couleur du texte
+/// @param {color} $bg-color [#eee] - background color
+/// @param {color} $border-color [#eee] - border color
+/// @param {color} $text-color [#444] - text color
 @mixin input-scale($bg-color: #eee, $border-color: #eee, $text-color: #444) {
   padding: 3px 5px 3px 5px;
   color: $text-color;

@@ -42,7 +42,7 @@
 }
 
 //TODO: verified
-/// Ce mixin sera utile chaque fois que vous avez du contenu flottant à droite ou à gauche et que vous souhaitez effacer l'espace sous l'élément flottant pour insérer un nouveau contenu en dessous.
+/// This mixin will be useful whenever you have content floating to the right or left and want to clear the space below the floating element to insert new content below.
 %clearfix {
 	*zoom: 1;
 	&:before,
