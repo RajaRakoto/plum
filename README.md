@@ -18,7 +18,13 @@
 
 ### `📌 Installation`
 
-Executer la commande ci-dessous pour installer **sass-eo**
+Executer la commande ci-dessous pour installer **sass-eo** via `npm`:
+
+```bash
+npm i @raja_rakotonirina/sass-eo
+```
+
+Si vous n'avez pas `npm`, vous pouvez cloner **sass-eo**:
 
 ```bash
 git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git
