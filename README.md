@@ -358,9 +358,9 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 </div>
 <br>
 
-- **Bootstrap:** sass-eo integrates the SASS source code of bootstrap 5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- **Bootstrap:** sass-eo integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
-> **You have 3 choices to use boostrap with sass-eo**
+> **You have 3 choices to use bootstrap with sass-eo**
 
      sass-eo-bootstrap: to use bootstrap minifier version
      sass-eo-bootstrap-grid: to use only the boostrap grid system
