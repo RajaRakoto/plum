@@ -3,7 +3,6 @@
 //NOTE: You must specify the selector manually (basics syntaxe CSS)
 
 //TODO: verified
-//scale(begin)------------------------------------
 /// Add a scale animation (mini slide)
 /// @param {string} $direction [left, right] - animation direction
 @mixin animation-scale($direction) {
@@ -81,10 +80,8 @@
 		}
 	}
 }
-//scale(end)--------------------------------------
 
 //TODO: verified
-//slide(begin)------------------------------------
 /// Add an slide animation effect - ideal for a Sidebar
 /// @param {string} $in-out [in, out] - input|output animation
 /// @param {string} $direction [up, down, right, left] - animation direction
@@ -348,10 +345,8 @@
 		}
 	}
 }
-//slide(end)--------------------------------------
 
 //TODO: verified
-//fade(begin)------------------------------------
 /// Add a slide animation effect (fluid)
 /// @param {string} $in-out [in, out] - input|output animation
 @mixin animation-fade($in-out) {
@@ -407,19 +402,15 @@
 		}
 	}
 }
-//fade(end)--------------------------------------
 
 //TODO: verified
-//zoom-fixed(begin)----------------------------------
 /// Add a fixed zoom animation effect - often uses for a button or cardlist
 /// @param {float} $scaleValue [0.5 ~ 1.5] - scale value (zoom)
 @mixin animation-zoom-fixed($scaleValue: 1.1) {
 	transform: scale($scaleValue);
 }
-//zoom-fixed(end)------------------------------------
 
 //TODO: verified
-//zoom(begin)------------------------------------
 /// Add an temporary zoom animation effect - often uses for an animation effect in entrance
 /// @param {string} $in-out [in, out] - input|output animation
 @mixin animation-zoom($in-out) {
@@ -490,10 +481,8 @@
 		}
 	}
 }
-//zoom(end)--------------------------------------
 
 //TODO: verified
-//flip(begin)------------------------------------
 /// Add a flip animation effect
 /// @param {string} $in-out [in, out] - input|output animation
 @mixin animation-flip($in-out) {
@@ -613,11 +602,8 @@
 		}
 	}
 }
-//flip(end)--------------------------------------
 
 //TODO: verified (loading...)
-// USAGE: @include animation-rotate(in, up, left) | @include animation-rotate(out, down, right)
-//rotate(begin)----------------------------------
 /// Add an rotation animation effect
 /// @param {string} $in-out [in, out] - input|output animation
 /// @param {string} $axeY [up, down] - animation direction sur l'axeY
@@ -951,10 +937,8 @@
 		}
 	}
 }
-//rotate(end)------------------------------------
 
 //TODO: verified
-//notif(begin)------------------------------------
 /// Add an notification animation effect
 /// @param {string} $in-out [in, out] - input|output animation
 @mixin animation-notif($in-out) {
@@ -1046,10 +1030,8 @@
 		}
 	}
 }
-//notif(end)--------------------------------------
 
 //TODO: verified
-//pulse(begin)------------------------------------
 /// Add an pulsation animation effect
 @mixin animation-pulse {
 	-webkit-animation-name: pulse;
@@ -1087,10 +1069,8 @@
 		}
 	}
 }
-//pulse(end)--------------------------------------
 
 //TODO: verified
-//bounce(begin)----------------------------------
 /// Add an bounce animation effect
 @mixin animation-bounce {
 	-webkit-animation-name: bounceIn;
@@ -1179,10 +1159,8 @@
 		}
 	}
 }
-//bounce(end)------------------------------------
 
 //TODO: verified
-//flash(begin)------------------------------------
 /// Add an flash animation effect
 @mixin animation-flash {
 	-webkit-animation-name: flash;
@@ -1218,4 +1196,3 @@
 		}
 	}
 }
-//flash(end)--------------------------------------
