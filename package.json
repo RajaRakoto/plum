@@ -1,6 +1,6 @@
 {
 	"name": "@raja_rakotonirina/sass-eo",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Customize your website faster with a toolset powered by SASS",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
