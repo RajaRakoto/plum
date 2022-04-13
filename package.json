@@ -1,6 +1,6 @@
 {
 	"name": "@raja_rakotonirina/sass-eo",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"description": "Customize your website faster with a toolset powered by SASS",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -39,8 +39,10 @@
 	},
 	"homepage": "https://github.com/RajaRakoto/sass-eo#readme",
 	"devDependencies": {
+		"grunt-contrib-compress": "^2.0.0"
+	},
+	"dependencies": {
 		"grunt": "^1.5.2",
-		"grunt-contrib-compress": "^2.0.0",
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
 		"grunt-shell": "^4.0.0",
