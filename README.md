@@ -9,8 +9,8 @@
 | Table of Contents          |
 | :------------------------- |
 | [Install](#-install)       |
-| [Sassdoc](#-sassdoc)       |
-| [Variables](#-variables)   |
+| [Use](#-use)               |
+| [Basics](#-basics)         |
 | [Libraries](#-libraries)   |
 | [Frameworks](#-frameworks) |
 
@@ -24,18 +24,95 @@ Run the command below to install **sass-eo** with `npm`:
 npm i @raja_rakotonirina/sass-eo
 ```
 
-If you don't have `npm`, you can clone **sass-eo**:
+<hr>
+<br>
+
+### `📌 Use`
+
+Here's how to use **sass-eo** in a project ...
+
+**sass-eo** uses `grunt` as its task runner to make it easy to import its modules from `node_modules`. Thanks to this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
+
+After installing **sass-eo**, configure `gruntfile.js` as follows:
+
+- Create `gruntfile.js` in your project root directory
+
+- Copy this configuration template to `gruntfile.js` - you can also change the path (input/output) of your sass file according to your project structure
+
+```js
+module.exports = function (grunt) {
+	require('load-grunt-tasks')(grunt); // grunt plugins loader
+
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('./package.json'),
+
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed', // or expanded or compact
+					loadPath: ['./node_modules/@raja_rakotonirina/sass-eo'], // never change this path
+				},
+				files: {
+					// destination: source (example)
+					'main.css': 'main.scss',
+				},
+			},
+		},
+
+		watch: {
+			sass: {
+				// src listening
+				files: ['*.scss'],
+				// default task to execute
+				tasks: ['sass:dist'],
+				// watch optimization
+				options: { spawn: false },
+			},
+		},
+	});
+
+	// cmd -> grunt watch-sass
+	grunt.registerTask('watch-sass', ['watch:sass']);
+};
+```
+
+> **NOTE**: You can change the output style to `expanded` or `compact`, but we suggest `compressed` mode.
+
+[Learn more about Grunt](https://gruntjs.com/getting-started) -> To help you how to use grunt
+
+[grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) -> To help you adapt this configuration file to your own project
+
+- Once the grunt configuration is complete, you can run the command below to `"watch"` changes to the `.scss files` (equivalent to sass --watch `<input_file>.scss`:`<output_file>.css`):
 
 ```bash
-git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git
+grunt watch-sass
 ```
+
+- Here are the lists of `modules` available in **sass-eo** (for now):
+
+> **NOTE**: To import a module, use the following syntax in the .scss file -> **@import '<module_name>'** (Eg: @import 'sass-eo-basics')
+
+      **basics modules**
+     sass-eo-basics
+
+      **frameworks modules**
+     sass-eo-bootstrap
+     sass-eo-bootstrap-grid
+     sass-eo-bootstrap-utils
+     sass-eo-semantic
+     sass-eo-milligrid
+
+      **libraries modules**
+     sass-eo-lib-hamburgers
+     sass-eo-lib-loader
+     sass-eo-lib-magic
 
 <hr>
 <br>
 
-### `📌 Sassdoc`
+### `📌 Basics`
 
-**sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax`
+**sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax` to document its basics modules
 
 Run the command below in the root directory of **sass-eo** to `generate & update` the documentation locally
 
@@ -55,11 +132,11 @@ You can now view the documentation in **sassdoc/index.html**
 <hr>
 <br>
 
-### `📌 Variables`
+##### `📍 Variables`
 
-**Sassdoc** does not allow to generate the documentation concerning `variables` containing in certain mixins, that is why we treat them in this section
+**sassdoc** does not allow to generate the documentation concerning `variables` containing in certain mixins, that is why we treat them in this section
 
-##### `📍colors`
+###### `colors`
 
 Here are the `color swatches` ready to be used by just calling the name of the corresponding `variable`:
 
@@ -129,11 +206,9 @@ Here is the list of Hamburger-like `classes` you can choose from:
 
 **Use:**
 
-**1.** Import the `sass-eo-libraries` file - uncomment the corresponding line `@import './hamburgers'`
+**1.** Import hamburgers modules `@import 'sass-eo-lib-hamburgers'`
 
-**2.** Uncomment the type of hamburger to use in the file `./libs/_hamburgers.scss`
-
-**3.** Add the corresponding class in your HTML page:
+**2.** Add the corresponding class in your HTML page:
 
 ```html
 <!-- Trigger the active state by adding the class name `is-active`, just remove it for the inactive state -->
@@ -144,7 +219,7 @@ Here is the list of Hamburger-like `classes` you can choose from:
 </button>
 ```
 
-**4.** Since the class name should be toggled with JavaScript:
+**3.** Since the class name should be toggled with JavaScript:
 
 ```js
 var hamburger = document.querySelector('.hamburger');
@@ -154,8 +229,6 @@ hamburger.addEventListener('click', function () {
 	hamburger.classList.toggle('is-active');
 });
 ```
-
-**5.** You can change your burger's default settings - found in `./libs/_hamburgers.scss`;
 
 <br>
 
@@ -173,6 +246,8 @@ hamburger.addEventListener('click', function () {
 <br>
 
 **Use:**
+
+Import loader modules `@import 'sass-eo-lib-loader'`
 
 ```scss
 // SCSS
@@ -208,6 +283,8 @@ window.addEventListener('load', () => {
 
 **Use:**
 
+Import loader modules `@import 'sass-eo-lib-magic'`
+
 ```scss
 // SCSS - call the magic mixin inside a selector
 .cards {
@@ -228,12 +305,23 @@ window.addEventListener('load', () => {
 
 - **Bootstrap:** sass-eo integrates the SASS source code of bootstrap 5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
+> **You have 3 choices to use boostrap with sass-eo**
+
+     sass-eo-bootstrap: to use bootstrap minifier version
+     sass-eo-bootstrap-grid: to use only the boostrap grid system
+     sass-eo-bootstrap-utils: to use only bootstrap utilities
+
 <br>
 
 - **Semantic-ui:** I personally find this framework the best alternative to BT5, sematic-ui facilitates the creation of responsive layouts, one of the advantages of this framework is that it integrates semantic-ui-react , a collection of React components from Semantic-ui
+
   - semantic-ui -> https://semantic-ui.com/introduction/getting-started.html
   - semantic-ui-react -> https://react.semantic-ui.com/
+
+> sass-eo-semantic: to use the minifier version of semantic-ui
 
 <br>
 
 - **Milligrid:** Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
+
+> sass-eo-milligrid: to use the minifier version of milligrid
