@@ -2,10 +2,7 @@
 	"name": "sass-eo",
 	"version": "1.0.0",
 	"description": "Customize your website faster with a toolset powered by SASS",
-	"main": "index.js",
 	"scripts": {
-		"sass-compile": "sass --watch main.scss:style.css",
-		"sass-compress": "sass --watch main.scss:style.css --style compressed",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
