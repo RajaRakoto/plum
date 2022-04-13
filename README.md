@@ -21,9 +21,18 @@
 Run the command below to install **sass-eo** with `npm`:
 
 ```bash
-npm i @raja_rakotonirina/sass-eo --save-dev && npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
+npm i @raja_rakotonirina/sass-eo --save-dev
 ```
 
+Run the following command to use **sass-eo** dependencies:
+
+```bash
+npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
+```
+
+<div align="right">
+    <b><a href="#codebase">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
@@ -140,6 +149,9 @@ grunt watch-sass
      sass-eo-lib-loader
      sass-eo-lib-magic
 
+<div align="right">
+    <b><a href="#codebase">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
@@ -160,9 +172,6 @@ grunt basics-docs
 
 [Learn more about sassdoc](http://sassdoc.com/getting-started/)
 
-<hr>
-<br>
-
 ##### `📍 Variables`
 
 **sassdoc** does not allow to generate the documentation concerning `variables` containing in certain mixins, that is why we treat them in this section
@@ -175,6 +184,9 @@ Here are the `color swatches` ready to be used by just calling the name of the c
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="500"><br>
 </div>
 
+<div align="right">
+    <b><a href="#codebase">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
@@ -336,6 +348,9 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 }
 ```
 
+<div align="right">
+    <b><a href="#codebase">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
