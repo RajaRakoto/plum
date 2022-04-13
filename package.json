@@ -39,8 +39,7 @@
 	},
 	"homepage": "https://github.com/RajaRakoto/sass-eo#readme",
 	"dependencies": {
-		"sassdoc": "^2.7.3",
-		"@hidoo/sassdoc-to-markdown": "^0.7.0"
+		"sassdoc": "^2.7.3"
 	},
 	"devDependencies": {
 		"grunt": "^1.4.1",
