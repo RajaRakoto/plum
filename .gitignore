@@ -1,0 +1,6 @@
+tmp
+tmp/*
+node_modules
+sassdoc
+test
+backups
