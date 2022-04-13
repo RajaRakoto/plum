@@ -606,8 +606,8 @@
 //TODO: verified (loading...)
 /// Add an rotation animation effect
 /// @param {string} $in-out [in, out] - input|output animation
-/// @param {string} $axeY [up, down] - animation direction sur l'axeY
-/// @param {string} $axeX [left, right] - animation direction sur l'axeX
+/// @param {string} $axeY [up, down] - axeY animation direction
+/// @param {string} $axeX [left, right] - axeX animation direction
 @mixin animation-rotate($in-out, $axeY, $axeX) {
 	@if ($in-out == in) {
 		@if ($axeY == up) {

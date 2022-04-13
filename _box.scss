@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Ajouter rapidement un bordure sur les containers (sert au debogage)
-/// @param {string} $color - couleur du bordure
-/// @param {pixel} $size - taille du bordure
-/// @param {boolean} $bg-color [true, false] - activer|desactiver la couleur de l'arriere plan
-/// @param {boolean} $status [true, false] - activer|desactiver l'info box (debogage)
+/// Quickly add a border on the containers (util at debugging)
+/// @param {string} $color - border color
+/// @param {pixel} $size - border size
+/// @param {boolean} $bg-color [true, false] - Activate | Disable the color of the background
+/// @param {boolean} $status [true, false] - Activate | Disable Info Box (Debogging)
 @mixin box-debug($color, $size: 3px, $bg-color: false, $status: true) {
 	@if ($status) {
 		border: solid $size $color;
