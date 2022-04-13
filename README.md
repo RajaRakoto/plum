@@ -69,10 +69,25 @@ module.exports = function (grunt) {
 				options: { spawn: false },
 			},
 		},
+
+		/**
+		 * Run shell commands
+		 */
+		shell: {
+			sassdoc: {
+				// to generate sassdoc
+				command: [
+					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'sassdoc .',
+					'cd sassdoc',
+					'xdg-open index.html',
+				].join('&&'),
+			},
+		},
 	});
 
-	// cmd -> grunt watch-sass
 	grunt.registerTask('watch-sass', ['watch:sass']);
+	grunt.registerTask('sassdoc', ['shell:sassdoc']);
 };
 ```
 
@@ -114,13 +129,11 @@ grunt watch-sass
 
 **sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax` to document its basics modules
 
-Run the command below in the root directory of **sass-eo** to `generate & update` the documentation locally
+Run the command below in the root directory of **sass-eo** to `generate & update` the documentation locally (your browser should automatically open the documentation)
 
 ```bash
-sassdoc .
+grunt sassdoc
 ```
-
-You can now view the documentation in **sassdoc/index.html**
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="700">
