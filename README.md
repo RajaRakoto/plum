@@ -30,9 +30,6 @@ Run the following command to use **sass-eo** dependencies:
 npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
 ```
 
-<div align="right">
-    <b><a href="#codebase">↥ Back To Top</a></b>
-</div>
 <hr>
 <br>
 
@@ -150,7 +147,7 @@ grunt watch-sass
      sass-eo-lib-magic
 
 <div align="right">
-    <b><a href="#codebase">↥ Back To Top</a></b>
+    <b><a href="#-install">↥ Back To Top</a></b>
 </div>
 <hr>
 <br>
@@ -185,7 +182,7 @@ Here are the `color swatches` ready to be used by just calling the name of the c
 </div>
 
 <div align="right">
-    <b><a href="#codebase">↥ Back To Top</a></b>
+    <b><a href="#-install">↥ Back To Top</a></b>
 </div>
 <hr>
 <br>
@@ -349,7 +346,7 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 ```
 
 <div align="right">
-    <b><a href="#codebase">↥ Back To Top</a></b>
+    <b><a href="#-install">↥ Back To Top</a></b>
 </div>
 <hr>
 <br>
