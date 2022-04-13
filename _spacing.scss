@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Modifier rapidement le padding d'un element
-/// @param {pixel | null} $top - espacement en haut du padding
-/// @param {pixel | null} $right - espacement a droite du padding
-/// @param {pixel | null} $bottom - espacement en bas du padding
-/// @param {pixel | null} $left - espacement a gauche du padding
+/// Quickly modify the padding of an element
+/// @param {pixel | null} $top - spacing at the top of the padding
+/// @param {pixel | null} $right - spacing at the right of the padding
+/// @param {pixel | null} $bottom - spacing at the bottom of the padding
+/// @param {pixel | null} $left - spacing at the left of the padding
 @mixin spacing-padding($top, $right, $bottom, $left) {
 	padding-top: $top;
 	padding-right: $right;
@@ -14,11 +14,11 @@
 }
 
 //TODO: verified
-/// Modifier rapidement le margin d'un element
-/// @param {pixel | null} $top - espacement en haut du margin
-/// @param {pixel | null} $right - espacement a droite du margin
-/// @param {pixel | null} $bottom - espacement en bas du margin
-/// @param {pixel | null} $left - espacement a gauche du margin
+/// Quickly modify the margin of an element
+/// @param {pixel | null} $top - spacing at the top of the padding
+/// @param {pixel | null} $right - spacing at the right of the padding
+/// @param {pixel | null} $bottom - spacing at the bottom of the padding
+/// @param {pixel | null} $left - spacing at the left of the padding
 @mixin spacing-margin($top, $right, $bottom, $left) {
 	margin-top: $top;
 	margin-right: $right;
@@ -27,8 +27,8 @@
 }
 
 //TODO: verified
-/// Ajouter rapidement un padding|margin predefini en fonction du gabarit en argument
-/// @param {string} $gabarit [small, medium, large] - gabarit d'espacement (petit, moyen, grand) d'un container
+/// Quickly add a predefined padding|margin based on the template argument
+/// @param {string} $gabarit [small, medium, large] - spacing gabarit of container
 @mixin spacing-quick($gabarit: medium) {
 	@if ($gabarit == small) {
 		padding: 10px 10px 10px 10px;
