@@ -244,9 +244,9 @@ Here is the list of Hamburger-like `classes` you can choose from:
 
 **Use:**
 
-**1.** Import hamburgers modules `@import 'sass-eo-lib-hamburgers'`
+- Import hamburgers modules `@import 'sass-eo-lib-hamburgers'`
 
-**2.** Add the corresponding class in your HTML page:
+- Add the corresponding class in your HTML page:
 
 ```html
 <!-- Trigger the active state by adding the class name `is-active`, just remove it for the inactive state -->
@@ -257,7 +257,7 @@ Here is the list of Hamburger-like `classes` you can choose from:
 </button>
 ```
 
-**3.** Since the class name should be toggled with JavaScript:
+- Since the class name should be toggled with JavaScript:
 
 ```js
 var hamburger = document.querySelector('.hamburger');
