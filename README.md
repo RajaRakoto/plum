@@ -191,8 +191,6 @@ Here are the `color swatches` ready to be used by just calling the name of the c
 
 Here are the lists of built-in `libraries` in **sass-eo**
 
-> **NOTE**: All the documentation related to the libraries can be found in the `./docs` folder
-
 ##### `📍Hamburgers`
 
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable SASS library, so make your own Hamburgers.
