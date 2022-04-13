@@ -178,7 +178,7 @@ grunt basics-docs
 Here are the `color swatches` ready to be used by just calling the name of the corresponding `variable`:
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="500"><br>
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="350"><br>
 </div>
 
 <div align="right">
@@ -196,7 +196,7 @@ Here are the lists of built-in `libraries` in **sass-eo**
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable SASS library, so make your own Hamburgers.
 
 <div align="center">
-<img src="http://i.imgur.com/t7cUjDu.gif" width="700">
+<img src="http://i.imgur.com/t7cUjDu.gif" width="450">
 </div>
 <br>
 
@@ -281,7 +281,7 @@ grunt loader-docs
 ```
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="450">
 </div>
 <br>
 
@@ -327,7 +327,7 @@ grunt magic-docs
 ```
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="450">
 </div>
 <br>
 
@@ -352,7 +352,7 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 ### `📌 Frameworks`
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="80"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="70"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
 </div>
 <br>
 
