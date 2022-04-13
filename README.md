@@ -21,7 +21,13 @@
 Run the command below to install **sass-eo** with `npm`:
 
 ```bash
-npm i @raja_rakotonirina/sass-eo
+npm i @raja_rakotonirina/sass-eo --save-dev
+```
+
+Run the following command to use **sass-eo** dependencies:
+
+```bash
+npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
 ```
 
 <hr>
@@ -69,10 +75,43 @@ module.exports = function (grunt) {
 				options: { spawn: false },
 			},
 		},
+
+		/**
+		 * Run shell commands
+		 */
+		shell: {
+			sassdoc: {
+				// to generate sassdoc
+				command: [
+					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'sassdoc .',
+					'cd sassdoc',
+					'xdg-open index.html',
+				].join('&&'),
+			},
+			loader: {
+				// to get loader docs
+				command: [
+					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd docs/loader',
+					'xdg-open index.html',
+				].join('&&'),
+			},
+			magic: {
+				// to get magic docs
+				command: [
+					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd docs/magic',
+					'xdg-open index.html',
+				].join('&&'),
+			},
+		},
 	});
 
-	// cmd -> grunt watch-sass
 	grunt.registerTask('watch-sass', ['watch:sass']);
+	grunt.registerTask('basics-docs', ['shell:sassdoc']);
+	grunt.registerTask('loader-docs', ['shell:loader']);
+	grunt.registerTask('magic-docs', ['shell:magic']);
 };
 ```
 
@@ -107,6 +146,9 @@ grunt watch-sass
      sass-eo-lib-loader
      sass-eo-lib-magic
 
+<div align="right">
+    <b><a href="#-install">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
@@ -114,23 +156,18 @@ grunt watch-sass
 
 **sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax` to document its basics modules
 
-Run the command below in the root directory of **sass-eo** to `generate & update` the documentation locally
+Run the command below in the root directory of **sass-eo** to "generate" the basics modules documentation (your browser should automatically open the documentation)
 
 ```bash
-sassdoc .
+grunt basics-docs
 ```
 
-You can now view the documentation in **sassdoc/index.html**
-
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="700">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
 </div>
 <br>
 
 [Learn more about sassdoc](http://sassdoc.com/getting-started/)
-
-<hr>
-<br>
 
 ##### `📍 Variables`
 
@@ -141,9 +178,12 @@ You can now view the documentation in **sassdoc/index.html**
 Here are the `color swatches` ready to be used by just calling the name of the corresponding `variable`:
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="500"><br>
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="350"><br>
 </div>
 
+<div align="right">
+    <b><a href="#-install">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
@@ -151,14 +191,12 @@ Here are the `color swatches` ready to be used by just calling the name of the c
 
 Here are the lists of built-in `libraries` in **sass-eo**
 
-> **NOTE**: All the documentation related to the libraries can be found in the `./docs` folder
-
 ##### `📍Hamburgers`
 
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable SASS library, so make your own Hamburgers.
 
 <div align="center">
-<img src="http://i.imgur.com/t7cUjDu.gif" width="700">
+<img src="http://i.imgur.com/t7cUjDu.gif" width="450">
 </div>
 <br>
 
@@ -236,8 +274,14 @@ hamburger.addEventListener('click', function () {
 
 `loaders` are collections of mixins used to add a loading effect to each element
 
+Type this command to get an example loader (in the root directory)
+
+```bash
+grunt loader-docs
+```
+
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="450">
 </div>
 <br>
 
@@ -276,8 +320,14 @@ window.addEventListener('load', () => {
 
 `Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
 
+Type this command to get an example magic (in the root directory)
+
+```bash
+grunt magic-docs
+```
+
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="450">
 </div>
 <br>
 
@@ -293,19 +343,22 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 }
 ```
 
+<div align="right">
+    <b><a href="#-install">↥ Back To Top</a></b>
+</div>
 <hr>
 <br>
 
 ### `📌 Frameworks`
 
 <div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="100"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="130">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="80"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="70"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
 </div>
 <br>
 
-- **Bootstrap:** sass-eo integrates the SASS source code of bootstrap 5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- **Bootstrap:** sass-eo integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
-> **You have 3 choices to use boostrap with sass-eo**
+> **You have 3 choices to use bootstrap with sass-eo**
 
      sass-eo-bootstrap: to use bootstrap minifier version
      sass-eo-bootstrap-grid: to use only the boostrap grid system
