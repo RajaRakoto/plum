@@ -1,10 +1,8 @@
 @charset "UTF-8";
 
-//DESCRIPTION: ensemble des mixins & fonctions pour manipuler les effets css
-
 //TODO: verified
-/// Ajouter un effet d'opacite sur un element (compatible avec IE8)
-/// @param {percent} $percent - pourcentage de l'opacite
+/// Add an opacity effect on an element (compatible with IE8)
+/// @param {percent} $percent - opacity (percent)
 @mixin effect-opacity($percent) {
 	opacity: $percent;
 	$percent-ie: $percent * 100;
@@ -12,8 +10,8 @@
 }
 
 //TODO: verified
-/// Ajouter un effet d'ombre exterieur sur un container
-/// @param {string} $opacity [solid, small, medium, large, none] - opacite de l'ombre
+/// Add an outdoor shadow effect on a container
+/// @param {string} $opacity [solid, small, medium, large, none] - opacity values
 @mixin effect-box-shadow($opacity: solid) {
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
@@ -43,8 +41,8 @@
 }
 
 //TODO: verified
-/// Ajouter un effet d'ombre interieur sur un container
-/// @param {string} $opacity [small, medium, large, none] - opacite de l'ombre
+/// Add an interior shadow effect on a container
+/// @param {string} $opacity [small, medium, large, none] - opacity values
 @mixin effect-box-shadow-inset($opacity: medium) {
 	@if ($opacity == small) {
 		box-shadow: 1px 1px 2px #111 inset;
@@ -64,8 +62,8 @@
 }
 
 //TODO: verified
-/// Ajouter un effet d'ombre interieur sur un text
-/// @param {string} $opacity [small, medium, large, none] - opacite de l'ombre
+/// Add an internal shadow effect on a text
+/// @param {string} $opacity [small, medium, large, none] - opacity values
 @mixin effect-text-shadow($opacity: medium, $color: #222) {
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
@@ -85,9 +83,9 @@
 }
 
 //TODO: verified
-/// Ajouter un lueur (effet de lumiere) externe sur un text
-/// @param {string} $opacity [small, medium, large, none] - opacite du lueur
-/// @param {string} $color - couleur du lueur
+/// Add a glimmer (light effect) external to a text
+/// @param {string} $opacity [small, medium, large, none] - opacity values
+/// @param {string} $color - glimmer color
 @mixin effect-text-light($opacity: medium, $color: #eee) {
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
@@ -107,9 +105,9 @@
 }
 
 //TODO: verified
-/// Ajouter un lueur (effet de lumiere) externe sur un container
-/// @param {string} $opacity [small, medium, large, none] - opacite du lueur
-/// @param {string} $color - couleur du lueur
+/// Add a glimmer (light effect) external to a container
+/// @param {string} $opacity [small, medium, large, none] - opacity values
+/// @param {string} $color - glimmer color
 @mixin effect-box-light($opacity: medium, $color: #eee) {
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px $color;

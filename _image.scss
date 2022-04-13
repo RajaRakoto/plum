@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Ajouter des images haute résolution à votre site, avec une solution de rechange pour les appareils qui n'affichent pas d'images haute résolution, lors de l'utilisation de retina image, il est preferable de compresser autant que possible sans détruire l'image source (https://tinypng.com).
+/// Add high resolution images to your site, with a replacement solution for devices that do not display high resolution images when using Retina Image, it is preferable to compress as much as possible without destroying the image source (https://tinypng.com).
 /// @param {path} $image - image path
-/// @param {pixel} $width - largeur de l'image
-/// @param {pixel} $height - hauteur de l'image
+/// @param {pixel} $width - width of image
+/// @param {pixel} $height - height of image
 @mixin image-retina($image, $width, $height) {
 	@media (min--moz-device-pixel-ratio: 1.3),
 		(-o-min-device-pixel-ratio: 2.6/2),
@@ -18,7 +18,7 @@
 }
 
 //TODO: verified
-/// Mettre une image en reponsive
+/// Put an image in response
 @mixin image-responsive {
 	max-width: 100%;
 	height: auto;
