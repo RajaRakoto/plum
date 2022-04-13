@@ -19,54 +19,6 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
 
-		// TODO: inused
-		/**
-		 * Conatenate files
-		 */
-		concat: {
-			dev: {
-				// example
-				src: ['./src/file-a', './src/file-b'], // all files to concat
-				dest: './src/file-c', // output
-			},
-		},
-
-		// TODO: inused
-		/**
-		 * Replace text in files using strings, regexs or functions.
-		 */
-		replace: {
-			// example
-			dev: {
-				src: ['./src/test-replace'], // working file
-				overwrite: true,
-				replacements: [
-					{
-						from: 'red',
-						to: 'blue',
-					},
-				],
-			},
-		},
-
-		// TODO: verified
-		/**
-		 * Minify HTML
-		 */
-		htmlmin: {
-			dist: {
-				options: {
-					removeComments: true,
-					collapseWhitespace: true,
-				},
-				files: {
-					// dest:src
-					'./docs/loader/index.html': './docs/loader/index.html',
-					'./docs/magic/index.html': './docs/magic/index.html',
-				},
-			},
-		},
-
 		// TODO: verified
 		/**
 		 * Compile sass to css
@@ -178,9 +130,6 @@ module.exports = function (grunt) {
 	});
 
 	// grunt basics tasks
-	grunt.registerTask('concat-task', ['concat:dev']); // manual
-	grunt.registerTask('replace-task', ['replace:dev']); // manual
-	grunt.registerTask('htmlmin-task', ['htmlmin:dist']); // manual
 	grunt.registerTask('sass-task', ['sass:test']); // watched
 
 	// grunt mixed tasks
@@ -202,16 +151,10 @@ module.exports = function (grunt) {
 
 	// arrays basics tasks
 	const basicsTaskNames = [
-		'concat-task',
-		'replace-task',
-		'htmlmin-task',
 		'sass-task',
 		'shell-task',
 	];
 	const basicsTaskStatus = [
-		'concat:dev',
-		'replace:dev',
-		'htmlmin:dist',
 		'sass:test',
 		'shell:dev',
 	];
