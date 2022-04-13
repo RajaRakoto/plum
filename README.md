@@ -6,25 +6,25 @@
 
 ![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff) ![Grunt](https://img.shields.io/badge/-Grunt-777?style=flat&logo=grunt&logoColor=orangered&labelColor=ffffff) <br>
 
-| Table des matières             |
-| :----------------------------- |
-| [Installation](#-installation) |
-| [Sassdoc](#-sassdoc)           |
-| [Variables](#-variables)       |
-| [Libraries](#-libraries)       |
-| [Frameworks](#-frameworks)     |
+| Table of Contents          |
+| :------------------------- |
+| [Install](#-install)       |
+| [Sassdoc](#-sassdoc)       |
+| [Variables](#-variables)   |
+| [Libraries](#-libraries)   |
+| [Frameworks](#-frameworks) |
 
 </div>
 
-### `📌 Installation`
+### `📌 Install`
 
-Executer la commande ci-dessous pour installer **sass-eo** via `npm`:
+Run the command below to install **sass-eo** with `npm`:
 
 ```bash
 npm i @raja_rakotonirina/sass-eo
 ```
 
-Si vous n'avez pas `npm`, vous pouvez cloner **sass-eo**:
+If you don't have `npm`, you can clone **sass-eo**:
 
 ```bash
 git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git
@@ -35,33 +35,33 @@ git clone --depth 1 https://github.com/RajaRakoto/sass-eo.git
 
 ### `📌 Sassdoc`
 
-**sass-eo** utilise `sassdoc` pour créer sa `documentation` en un clin d'œil en utilisant un `syntaxe particulier`
+**sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax`
 
-Executez la commande ci-dessous dans le repertoire racine de **sass-eo** pour `generer & mettre a jour` la documentation localement
+Run the command below in the root directory of **sass-eo** to `generate & update` the documentation locally
 
 ```bash
 sassdoc .
 ```
 
-Vous pouvez maintenant consulter la documentation dans **sassdoc/index.html**
+You can now view the documentation in **sassdoc/index.html**
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.png?raw=true" width="700">
 </div>
 <br>
 
-[En savoir plus sur sassdoc](http://sassdoc.com/getting-started/)
+[Learn more about sassdoc](http://sassdoc.com/getting-started/)
 
 <hr>
 <br>
 
 ### `📌 Variables`
 
-**Sassdoc** ne permet pas de generer la documentaiton concernant `les variables` contenant dans certains mixins, c'est pour cela qu'on les traites dans cette section
+**Sassdoc** does not allow to generate the documentation concerning `variables` containing in certain mixins, that is why we treat them in this section
 
 ##### `📍colors`
 
-Voici les `echantillons de couleur` pret a etre utilisE en juste appelant le nom de la `variable` correspondante:
+Here are the `color swatches` ready to be used by just calling the name of the corresponding `variable`:
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="500"><br>
@@ -72,20 +72,20 @@ Voici les `echantillons de couleur` pret a etre utilisE en juste appelant le nom
 
 ### `📌 Libraries`
 
-Voici les listes des `bibliotheques` integrE dans **sass-eo**
+Here are the lists of built-in `libraries` in **sass-eo**
 
-> **NOTE**: Toute les documentations reliE aux bibliotheques se trouvent dans le dossier `./docs`
+> **NOTE**: All the documentation related to the libraries can be found in the `./docs` folder
 
 ##### `📍Hamburgers`
 
-`Hamburgers` est une collection de savoureuses icônes de hamburger animées par CSS. La source est également incluse en tant que bibliothèque SASS modulable et personnalisable, alors préparez votre propre hamburger.
+`Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable SASS library, so make your own Hamburgers.
 
 <div align="center">
 <img src="http://i.imgur.com/t7cUjDu.gif" width="700">
 </div>
 <br>
 
-Voici la liste des `classes` de type Hamburger que vous pouvez choisir:
+Here is the list of Hamburger-like `classes` you can choose from:
 
 ```
   hamburger--3dx
@@ -123,20 +123,20 @@ Voici la liste des `classes` de type Hamburger que vous pouvez choisir:
 
 <br>
 
-> **NOTE**: `-r` sont des variantes inverse (par exemple `hamburger--spin` dans le sens des aiguilles d'une montre tandis que `hamburger--spin-r` dans le sens anti-horaire.
+> **NOTE**: `-r` are reverse variants (e.g. `hamburger--spin` clockwise while `hamburger--spin-r` counter-clockwise.
 
 <br>
 
-**Usage:**
+**Use:**
 
-**1.** Importer le fichier `sass-eo-libraries` - decommentez la ligne correspondante `@import './hamburgers'`
+**1.** Import the `sass-eo-libraries` file - uncomment the corresponding line `@import './hamburgers'`
 
-**2.** Decommentez le type d'hamburger a utiliser dans le fichier `./libs/_hamburgers.scss`
+**2.** Uncomment the type of hamburger to use in the file `./libs/_hamburgers.scss`
 
-**3.** Ajoutez la class correspondante dans votre page HTML:
+**3.** Add the corresponding class in your HTML page:
 
 ```html
-<!-- Déclencher l'état actif en ajoutant le nom de la classe `is-active`, il suffit de l'enlever pour l'etat inactif -->
+<!-- Trigger the active state by adding the class name `is-active`, just remove it for the inactive state -->
 <button class="hamburger hamburger--collapse is-active" type="button">
 	<span class="hamburger-box">
 		<span class="hamburger-inner"></span>
@@ -144,7 +144,7 @@ Voici la liste des `classes` de type Hamburger que vous pouvez choisir:
 </button>
 ```
 
-**4.** Étant donné que le nom de la classe devrait être basculé via JavaScript:
+**4.** Since the class name should be toggled with JavaScript:
 
 ```js
 var hamburger = document.querySelector('.hamburger');
@@ -155,40 +155,40 @@ hamburger.addEventListener('click', function () {
 });
 ```
 
-**5.** Vous pouvez modifier les paramètres par défaut de votre hamburger - trouvés dans `./libs/_hamburgers.scss`;
+**5.** You can change your burger's default settings - found in `./libs/_hamburgers.scss`;
 
 <br>
 
 ##### `📍Loaders`
 
-Les `loaders` sont des collections de mixins servant a ajouter un effet de chargement pour chaque element
+`loaders` are collections of mixins used to add a loading effect to each element
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="700">
 </div>
 <br>
 
-> **NOTE**: Certains loader ne contiennent qu'une seule couleur ,i-e 1 seul argument pour le mixin (Exemple -> `@include loader-10(dodgerblue)`)
+> **NOTE**: Some loader contains only one color, i-e only 1 argument for the mixin (Example -> `@include loader-10(dodgerblue)`)
 
 <br>
 
-**Usage:**
+**Use:**
 
 ```scss
 // SCSS
 #my-loader {
-	//utilisation de loader-1 avec 2 couleurs comme argument (primary, secondary)
+	//use loader-1 with 2 colors as argument (primary, secondary)
 	@include loader-1(gold, orangered);
 }
 ```
 
 ```html
-<!-- HTML - Juste apres la balise ouvrante <body> -->
+<!-- HTML - Right after the opening tag <body> -->
 <div id="my-loader"></div>
 ```
 
 ```js
-// Javascript - ce script permet de lancer un loder portant l'id "my-loader" comme chargement de la page web
+// Javascript - this script allows to launch a loder with the id "my-loader" as loading of the web page
 const loader = document.getElementById('my-loader');
 window.addEventListener('load', () => {
 	loader.style.display = 'none';
@@ -199,19 +199,19 @@ window.addEventListener('load', () => {
 
 ##### `📍Magic`
 
-`Magic` est un bibliotheque d'animation CSS integrE dans sass-eo, il suffit d'appeler un mixin magic pour animer un element
+`Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="700">
 </div>
 <br>
 
-**Usage:**
+**Use:**
 
 ```scss
-// SCSS - appelez le mixin magic a l'interieur d'un selecteur
+// SCSS - call the magic mixin inside a selector
 .cards {
-	//L'argument de chaque mixin magic correspond a son "animation-delay" exprimE en seconde
+	//The argument of each magic mixin corresponds to its "animation-delay" expressed in seconds
 	@include magic-boingInUp(1s);
 }
 ```
@@ -226,14 +226,14 @@ window.addEventListener('load', () => {
 </div>
 <br>
 
-- **Bootstrap:** sass-eo integre la code source SASS de bootstrap 5 afin d'utiliser partiellement ses fonctionnalitEs -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- **Bootstrap:** sass-eo integrates the SASS source code of bootstrap 5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
 <br>
 
-- **Semantic-ui:** je trouve personnellement ce framework la meilleure alternative à BT5, sematic-ui facilite la création de mises en page responsives, l'un des avantages de ce framework est qu'il intègre semantic-ui-react, une collection de composants React de Semantic-ui
+- **Semantic-ui:** I personally find this framework the best alternative to BT5, sematic-ui facilitates the creation of responsive layouts, one of the advantages of this framework is that it integrates semantic-ui-react , a collection of React components from Semantic-ui
   - semantic-ui -> https://semantic-ui.com/introduction/getting-started.html
   - semantic-ui-react -> https://react.semantic-ui.com/
 
 <br>
 
-- **Milligrid:** Milligrid est un system de grille CSS flexbox configurable et facile a apprendre basée sur Milligram -> http://bencoveney.github.io/Milligrid/
+- **Milligrid:** Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
