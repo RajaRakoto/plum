@@ -42,11 +42,11 @@
 		"grunt": "^1.5.2",
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
+		"grunt-shell": "^4.0.0",
 		"load-grunt-tasks": "^5.1.0",
 		"sassdoc": "^2.7.3"
 	},
 	"devDependencies": {
-		"grunt-contrib-compress": "^2.0.0",
-		"grunt-shell": "^4.0.0"
+		"grunt-contrib-compress": "^2.0.0"
 	}
 }
