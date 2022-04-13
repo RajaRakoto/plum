@@ -21,7 +21,7 @@
 Run the command below to install **sass-eo** with `npm`:
 
 ```bash
-npm i @raja_rakotonirina/sass-eo
+npm i @raja_rakotonirina/sass-eo --save-dev && npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
 ```
 
 <hr>
