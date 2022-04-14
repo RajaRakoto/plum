@@ -3,6 +3,102 @@
 @import '../utilities/convert-to-rem';
 
 //TODO: verified
+/// Image-background mixin allows you to apply background images to the selected element(s).
+/// @param {path} $image - image path
+/// @param {color, list} $filter-color - the color or the list of colors you may want to apply as a filter over the background image
+/// @param {string} $filter-direction [top, top-right,  right, bottom-right, bottom, bottom-left, left, top-left] - the angle of gradient's direction
+/// @example
+///  /* example 1 */
+///
+///  .containing-element{
+///    @include image-background("./src/assets/images/my-img.png");
+///  }
+///
+///  /* example 2 - apply one filter */
+///
+///  .containing-element{
+///    @include image-background("./src/assets/images/my-img.png", rgba(255, 204, 153, 0.5));
+///  }
+///
+///  /* example 3 - apply two filter */
+///
+///  .containing-element{
+///    @include image-background("./src/assets/images/my-img.png", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
+///  }
+///
+///  /* example 4 - apply filter direction */
+///
+///  .containing-element{
+///    @include image-background("./src/assets/images/my-img.png", rgba(0, 128, 128, 0.7) rgba(255, 192, 203, 0.8), left);
+///  }
+@mixin image-background(
+	$image-url: null,
+	$filter-color: null,
+	$filter-direction: null
+) {
+	@if $image-url {
+		@if $filter-color {
+			@if length($filter-color) == 1 {
+				background-image: linear-gradient(to top, $filter-color, $filter-color),
+					url($image-url);
+			} @else if length($filter-color) > 1 {
+				$color-list: ();
+				@for $i from 1 through length($filter-color) {
+					$color-list: append($color-list, nth($filter-color, $i), comma);
+				}
+				@if $filter-direction {
+					@if map-has-key($map-for-directions, $filter-direction) {
+						background-image: linear-gradient(
+								map-get($map-for-directions, $filter-direction),
+								$color-list
+							),
+							url($image-url);
+					} @else {
+						@if index('deg', unit($filter-direction)) {
+							background-image: linear-gradient($filter-direction, $color-list),
+								url($image-url);
+						} @else {
+							@error "#{$filter-direction} is a wrong value for the $filter-direction parameter. The value must be either a number followed by the 'deg' unit or one of the following pre-defined values: #{quote(map-keys($map-for-directions))}.";
+						}
+					}
+				} @else {
+					background-image: linear-gradient(to top, $color-list),
+						url($image-url);
+				}
+			}
+		} @else {
+			background-image: url($image-url);
+		}
+	} @else {
+		position: relative;
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			@if length($filter-color) == 1 {
+				background: $filter-color;
+			} @else if length($filter-color) > 1 {
+				@include gls-linear-gradient(
+					if(not $filter-direction, 'top', $filter-direction),
+					$filter-color
+				);
+			}
+		}
+		& > * {
+			position: relative;
+			z-index: 1;
+		}
+	}
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+//TODO: verified
 /// Add high resolution images to your site, with a replacement solution for devices that do not display high resolution images when using Retina Image, it is preferable to compress as much as possible without destroying the image source (https://tinypng.com).
 /// @param {path} $image - image path
 /// @param {pixel} $width - width of image

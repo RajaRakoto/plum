@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+/* lists */
 @import './modules/lists/list-of-anchor-pseudo-classes';
 @import './modules/lists/list-of-buttons';
 @import './modules/lists/list-of-counter-styles';
@@ -5,6 +8,7 @@
 @import './modules/lists/list-of-length-units';
 @import './modules/lists/list-of-text-inputs';
 
+/* maps */
 @import './modules/maps/map-for-breakpoints';
 @import './modules/maps/map-for-directions';
 @import './modules/maps/map-for-font-formats';
@@ -12,6 +16,7 @@
 @import './modules/maps/map-for-smartphones';
 @import './modules/maps/map-for-tablets';
 
+/* utilities */
 @import './modules/utilities/clear-unit';
 @import './modules/utilities/clear-whitespace';
 @import './modules/utilities/color';
@@ -34,8 +39,10 @@
 @import './modules/utilities/validate-length';
 @import './modules/utilities/validate-scissors';
 
+/* basics */
 @import './modules/basics/adaptive';
 @import './modules/basics/animation';
+@import './modules/basics/antialias';
 @import './modules/basics/bar';
 @import './modules/basics/box';
 @import './modules/basics/button';

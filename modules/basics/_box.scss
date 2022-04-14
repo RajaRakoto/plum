@@ -3,6 +3,50 @@
 @import '../utilities/convert-to-rem';
 
 //TODO: verified
+/// Box-sizing mixin sets the box-sizing CSS property value to border-box for selected HTML element(s). Thus the padding and the border will be inside of the selected element.
+/// @param {string} $value [null, only] - only -> it is used only when it wants to be applied for one specific HTML element.
+/// @example
+///  /* example 1 */
+///
+///  .containing-element {
+///  	@include box-sizing();
+///  }
+///
+///  /* example 2 */
+///
+///  .containing-element {
+///  	@include box-sizing('only');
+///  }
+///
+///  /* example 3 - include star selector "*" */
+///
+///  @include box-sizing();
+@mixin box-sizing($value: null) {
+	@if not & and $value == null {
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+	} @else if & and $value == 'only' {
+		&,
+		&::before,
+		&::after {
+			box-sizing: border-box;
+		}
+	} @else if & and $value == null {
+		&,
+		&::before,
+		&::after,
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+	}
+}
+
+//TODO: verified
 /// Quickly add a border on the containers (util at debugging)
 /// @param {string} $color [red] - border color
 /// @param {pixel} $size [3px] - border size
@@ -36,7 +80,7 @@
 ///
 @mixin box-debugging(
 	$color: red,
-	$size: __convertToRem(3px),
+	$size: 0.188rem,
 	$bg-color: false,
 	$status: true
 ) {

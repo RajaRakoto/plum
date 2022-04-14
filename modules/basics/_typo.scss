@@ -8,11 +8,11 @@
 ///
 ///  /* example 1 */
 ///
-///  @imnport typo-fontface('Quicksand-regular', './src/assets/fonts/Quicksand-regular.ttf')
+///  @include typo-fontface('Quicksand-regular', './src/assets/fonts/Quicksand-regular.ttf')
 ///
 ///  /* example 2 */
 ///
-///  @imnport typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
+///  @include typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
 @mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
 	@if (
 		($weight == normal) or
