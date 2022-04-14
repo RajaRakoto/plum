@@ -5,6 +5,10 @@
 /// @param {path} $image - image path
 /// @param {pixel} $width - width of image
 /// @param {pixel} $height - height of image
+/// @example
+///  .containing-element {
+///	  @include image-retina('./src/assets/images/my-img.png', 350px, 200px);
+///  }
 @mixin image-retina($image, $width, $height) {
 	@media (min--moz-device-pixel-ratio: 1.3),
 		(-o-min-device-pixel-ratio: 2.6/2),
@@ -19,6 +23,10 @@
 
 //TODO: verified
 /// Put an image in response
+/// @example
+///  .img {
+///	  @include image-responsive();
+///  }
 @mixin image-responsive {
 	max-width: 100%;
 	height: auto;
