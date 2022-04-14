@@ -8,8 +8,6 @@
 ///	  @include position-set(both);
 ///  }
 @mixin position-set($position) {
-	$list: 'vertical', 'horizontal', 'both';
-
 	position: relative;
 
 	@if $position == 'vertical' {
@@ -29,7 +27,7 @@
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	} @else {
-		@error "The argument must be one of the followings: #{quote($list)}.";
+		@error "The argument must be `vertical` or `horizontal` or `both`";
 	}
 }
 

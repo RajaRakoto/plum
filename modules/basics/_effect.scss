@@ -21,8 +21,6 @@
 ///	  @include effect-box-shadow(small);
 ///  }
 @mixin effect-box-shadow($opacity: solid) {
-	$list: 'small', 'medium', 'large', 'none';
-
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
 	} @else if ($opacity == small) {
@@ -40,7 +38,7 @@
 	} @else if ($opacity == none) {
 		box-shadow: none;
 	} @else {
-		@error "The argument must be `solid` or one of the followings: #{quote($list)}.";
+		@error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
 	}
 }
 
@@ -52,8 +50,6 @@
 ///	  @include effect-box-shadow-inset(large);
 ///  }
 @mixin effect-box-shadow-inset($opacity: medium) {
-	$list: 'small', 'large', 'none';
-
 	@if ($opacity == small) {
 		box-shadow: 1px 1px 2px #111 inset;
 	} @else if ($opacity == medium) {
@@ -63,7 +59,7 @@
 	} @else if ($opacity == none) {
 		box-shadow: none;
 	} @else {
-		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
+		@error "The argument must be `small` or `medium` or `large` or `none`";
 	}
 }
 
@@ -86,7 +82,7 @@
 	} @else if ($opacity == none) {
 		text-shadow: none;
 	} @else {
-		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
+		@error "The argument must be `small` or `medium` or `large` or `none`";
 	}
 }
 
@@ -108,8 +104,6 @@
 ///	  @include effect-text-light(large, $sun-flower);
 ///  }
 @mixin effect-text-light($opacity: medium, $color: #eee) {
-	$list: 'small', 'large', 'none';
-
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
 	} @else if ($opacity == medium) {
@@ -119,21 +113,19 @@
 	} @else if ($opacity == none) {
 		text-shadow: none;
 	} @else {
-		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
+		@error "The argument must be `small` or `medium` or `large` or `none`";
 	}
 }
 
 //TODO: verified
 /// Add a glimmer (light effect) external to a container
-/// @param {string} $opacity [small, medium, large, none] - opacity values
+/// @param {string} $opacity [solid, small, medium, large, none] - opacity values
 /// @param {string} $color [#eee] - glimmer color
 /// @example
 ///  .containing-element {
 ///	  @include effect-box-light(medium);
 ///  }
 @mixin effect-box-light($opacity: medium, $color: #eee) {
-	$list: 'solid', 'small', 'large', 'none';
-
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px $color;
 	} @else if ($opacity == small) {
@@ -151,6 +143,6 @@
 	} @else if ($opacity == none) {
 		box-shadow: none;
 	} @else {
-		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
+		@error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
 	}
 }

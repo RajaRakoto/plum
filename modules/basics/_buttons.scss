@@ -37,7 +37,6 @@
 ///   }
 /// }
 @mixin buttons-all($pseudo: null) {
-	$list: 'hover', 'focus', 'active', 'disabled';
 	@if not $pseudo {
 		#{$list-of-buttons} {
 			@content;
@@ -48,6 +47,6 @@
 			@content;
 		}
 	} @else {
-		@error "The argument must be `null` or one of the followings: #{quote($list)}.";
+		@error "The argument must be `null` or `hover` or `focus` or `active` or `disabled`";
 	}
 }
