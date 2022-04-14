@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import '../utilities/convert-to-rem';
+
 //TODO: verified
 /// Quickly add a border on the containers (util at debugging)
 /// @param {string} $color [red] - border color
@@ -32,9 +34,14 @@
 ///	 	@include box-debugging(yellow, 5px, true, false);
 ///  }
 ///
-@mixin box-debugging($color: red, $size: 3px, $bg-color: false, $status: true) {
+@mixin box-debugging(
+	$color: red,
+	$size: __convertToRem(3px),
+	$bg-color: false,
+	$status: true
+) {
 	@if ($status) {
-		border: solid $size $color;
+		border: solid __convertToRem($size) $color;
 		@if ($bg-color) {
 			background-color: lighten(adjust-hue($color, 20), 25%);
 			// opacity: 70%;

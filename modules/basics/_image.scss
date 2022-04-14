@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import '../utilities/convert-to-rem';
+
 //TODO: verified
 /// Add high resolution images to your site, with a replacement solution for devices that do not display high resolution images when using Retina Image, it is preferable to compress as much as possible without destroying the image source (https://tinypng.com).
 /// @param {path} $image - image path
@@ -17,7 +19,7 @@
 		(min-resolution: 1.3dppx) {
 		/* on retina, use image that's scaled by 2 */
 		background-image: url($image);
-		background-size: $width $height;
+		background-size: __convertToRem($width) __convertToRem($height);
 	}
 }
 
