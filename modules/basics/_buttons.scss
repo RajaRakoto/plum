@@ -5,7 +5,7 @@
 /// @param {string} $pseudo [hover, focus,  active, disabled] - sets the pseudo-class selector of the selected button elements.
 /// @example
 ///
-/// /* Example 1 */
+/// /* example 1 */
 ///
 ///  @include buttons-all {
 ///    background-color: teal;
@@ -28,7 +28,7 @@
 ///    color: black;
 ///  }
 ///
-/// /* Example 2 */
+/// /* example 2 */
 ///
 /// .containing-element {
 ///   @include all-buttons {
