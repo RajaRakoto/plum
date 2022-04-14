@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Normalize allows browsers to render all elements more consistently and in line with modern standards
+/// Normalize allows browsers to render all elements more consistently and in line with modern standards - call only once
+/// @example
+///  @include normalize();
 @mixin normalize {
 	/* Document
    ========================================================================== */
@@ -27,9 +29,9 @@
 
 	body {
 		margin: 0;
-		font-family: Roboto, "Helvetica Neue", sans-serif;
+		font-family: Roboto, 'Helvetica Neue', sans-serif;
 	}
-	
+
 	html,
 	body {
 		height: 100%;

@@ -1,22 +1,58 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Scale zoom effect input
+/// Input-all mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules.
+/// @param {string} $pseudo [null, hover, focus, active, invalid, required, disabled]
+/// @example
+///
+///  /* example 1 */
+///
+///  @include input-all {
+///   background-color: $carrot;
+///  }
+///
+///  /* example 2 */
+///
+///  @include input-all(hover) {
+///   background-color: orangered;
+///  }
+@mixin input-all($pseudo: null) {
+	$list: 'hover', 'focus', 'active', 'invalid', 'required', 'disabled';
+	@if not $pseudo {
+		#{$list-of-text-inputs} {
+			@content;
+		}
+	} @else if index($list, $pseudo) {
+		$allInputs: __pseudoSelector($list-of-text-inputs, $pseudo);
+		#{$allInputs} {
+			@content;
+		}
+	} @else {
+		@error "The argument must be `null` or `hover` or `focus` or `active` or `invalid` or `required` or `disabled`";
+	}
+}
+
+//TODO: verified
+/// Scale zoom effect for input
 /// @param {color} $bg-color [#eee] - background color
 /// @param {color} $border-color [#eee] - border color
 /// @param {color} $text-color [#444] - text color
+/// @example
+///  input {
+///	  @include input-scale();
+///  }
 @mixin input-scale($bg-color: #eee, $border-color: #eee, $text-color: #444) {
-  padding: 3px 5px 3px 5px;
-  color: $text-color;
-  background-color: $bg-color;
-  border: 2px solid $border-color;
-  border-radius: 10px;
-  transition: 0.2s;
+	padding: 3px 5px 3px 5px;
+	color: $text-color;
+	background-color: $bg-color;
+	border: 2px solid $border-color;
+	border-radius: 10px;
+	transition: 0.2s;
 
-  &:focus {
-    color: $text-color;
-    border-radius: 5px;
-    border: 2px solid $border-color;
-    transform: scale(1.05);
-  }
+	&:focus {
+		color: $text-color;
+		border-radius: 5px;
+		border: 2px solid $border-color;
+		transform: scale(1.05);
+	}
 }

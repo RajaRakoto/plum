@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+$list-of-buttons: (
+  "button",
+  "[type='button']",
+  "[type='reset']",
+  "[type='submit']"
+) !default;

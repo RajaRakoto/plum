@@ -3,6 +3,10 @@
 //TODO: verified
 /// Add an opacity effect on an element (compatible with IE8)
 /// @param {percent} $percent - opacity (percent)
+/// @example
+///  .containing-element {
+///	  @include effect-opacity(10%);
+///  }
 @mixin effect-opacity($percent) {
 	opacity: $percent;
 	$percent-ie: $percent * 100;
@@ -12,126 +16,133 @@
 //TODO: verified
 /// Add an outdoor shadow effect on a container
 /// @param {string} $opacity [solid, small, medium, large, none] - opacity values
+/// @example
+///  .containing-element {
+///	  @include effect-box-shadow(small);
+///  }
 @mixin effect-box-shadow($opacity: solid) {
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
-	}
-
-	@if ($opacity == small) {
+	} @else if ($opacity == small) {
 		box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
 		-webkit-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
 		-moz-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
 		-webkit-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
 		-moz-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
 		-webkit-box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
 		-moz-box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		box-shadow: none;
+	} @else {
+		@error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
 	}
 }
 
 //TODO: verified
 /// Add an interior shadow effect on a container
 /// @param {string} $opacity [small, medium, large, none] - opacity values
+/// @example
+///  .containing-element {
+///	  @include effect-box-shadow-inset(large);
+///  }
 @mixin effect-box-shadow-inset($opacity: medium) {
 	@if ($opacity == small) {
 		box-shadow: 1px 1px 2px #111 inset;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		box-shadow: 1px 1px 8px #111 inset;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		box-shadow: 1px 1px 20px #111 inset;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		box-shadow: none;
+	} @else {
+		@error "The argument must be `small` or `medium` or `large` or `none`";
 	}
 }
 
 //TODO: verified
 /// Add an internal shadow effect on a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
+/// @example
+///  .p {
+///	  @include effect-text-shadow(small);
+///  }
 @mixin effect-text-shadow($opacity: medium, $color: #222) {
+	$list: 'small', 'large', 'none';
+
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		text-shadow: 0px 1px 8px $color;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		text-shadow: 0px 1px 20px $color;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		text-shadow: none;
+	} @else {
+		@error "The argument must be `small` or `medium` or `large` or `none`";
 	}
 }
 
 //TODO: verified
 /// Add a glimmer (light effect) external to a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
-/// @param {string} $color - glimmer color
+/// @param {string} $color [#eee] - glimmer color
+/// @example
+///
+/// /* example 1*/
+///
+///  .p {
+///	  @include effect-text-light(medium);
+///  }
+///
+/// /* example 2*/
+///
+///  .p {
+///	  @include effect-text-light(large, $sun-flower);
+///  }
 @mixin effect-text-light($opacity: medium, $color: #eee) {
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		text-shadow: 0px 1px 8px $color;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		text-shadow: 0px 1px 20px $color;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		text-shadow: none;
+	} @else {
+		@error "The argument must be `small` or `medium` or `large` or `none`";
 	}
 }
 
 //TODO: verified
 /// Add a glimmer (light effect) external to a container
-/// @param {string} $opacity [small, medium, large, none] - opacity values
-/// @param {string} $color - glimmer color
+/// @param {string} $opacity [solid, small, medium, large, none] - opacity values
+/// @param {string} $color [#eee] - glimmer color
+/// @example
+///  .containing-element {
+///	  @include effect-box-light(medium);
+///  }
 @mixin effect-box-light($opacity: medium, $color: #eee) {
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px $color;
-	}
-
-	@if ($opacity == small) {
+	} @else if ($opacity == small) {
 		box-shadow: 1px 2px 10px 1px $color;
 		-webkit-box-shadow: 1px 2px 10px 1px $color;
 		-moz-box-shadow: 1px 2px 10px 1px $color;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		box-shadow: 1px 3px 15px 1px $color;
 		-webkit-box-shadow: 1px 3px 15px 1px $color;
 		-moz-box-shadow: 1px 3px 15px 1px $color;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		box-shadow: 7px 5px 20px 2px $color;
 		-webkit-box-shadow: 7px 5px 20px 2px $color;
 		-moz-box-shadow: 7px 5px 20px 2px $color;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		box-shadow: none;
+	} @else {
+		@error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
 	}
 }

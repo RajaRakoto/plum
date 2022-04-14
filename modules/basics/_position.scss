@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Positionner rapidement vos elements par rapport a son element parent
-/// @param {string} $position [vertical, horizontal, both] - position de l'element
+/// Quickly position your elements relative to its parent element
+/// @param {string} $position [vertical, horizontal, both] - element position
+/// @example
+///  .containing-element {
+///	  @include position-set(both);
+///  }
 @mixin position-set($position) {
 	position: relative;
 
@@ -22,11 +26,17 @@
 		-webkit-transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
+	} @else {
+		@error "The argument must be `vertical` or `horizontal` or `both`";
 	}
 }
 
 //TODO: verified
-/// Centrer rapidement un block
+/// Quickly center a block
+/// @example
+///  .containing-element {
+///	  @include position-block-center();
+///  }
 @mixin position-block-center {
 	display: block;
 	margin-left: auto;
@@ -34,14 +44,18 @@
 }
 
 //TODO: verified
-/// Centrer rapidement l'element (containers|items) enfant du selecteur en argument
+/// Quickly center child item
+/// @example
+///  .containing-element {
+///	  @include position-flex-center();
+///  }
 @mixin position-flex-center {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-//TODO: verified
+//TODO: test
 /// This mixin will be useful whenever you have content floating to the right or left and want to clear the space below the floating element to insert new content below.
 %clearfix {
 	*zoom: 1;

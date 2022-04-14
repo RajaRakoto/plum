@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// nav-props allows to quickly initialize the default CSS properties of a navigation bar
+/// Nav-props mixin allows to quickly initialize the default CSS properties of a navigation bar
+/// @example
+///  nav {
+///   @include nav-props();
+///  }
 @mixin nav-props() {
-	transition: 0.4s ease;
 	align-items: center;
 	justify-content: space-between;
 
@@ -15,5 +18,3 @@
 		list-style: none;
 	}
 }
-
-

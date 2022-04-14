@@ -5,6 +5,10 @@
 //TODO: verified
 /// Add a scale animation (mini slide)
 /// @param {string} $direction [left, right] - animation direction
+/// @example
+/// .containing-element{
+///		@include animation-scale(left);
+/// }
 @mixin animation-scale($direction) {
 	@if ($direction == left) {
 		-webkit-animation: scale-up-hor-left
@@ -85,6 +89,10 @@
 /// Add an slide animation effect - ideal for a Sidebar
 /// @param {string} $in-out [in, out] - input|output animation
 /// @param {string} $direction [up, down, right, left] - animation direction
+/// @example
+/// .containing-element{
+///		@include animation-slide(in, down);
+/// }
 @mixin animation-slide($in-out, $direction) {
 	@if ($in-out == in) {
 		@if ($direction == up) {
@@ -349,6 +357,10 @@
 //TODO: verified
 /// Add a slide animation effect (fluid)
 /// @param {string} $in-out [in, out] - input|output animation
+/// @example
+/// .containing-element{
+///		@include animation-fade(in);
+/// }
 @mixin animation-fade($in-out) {
 	@if ($in-out == in) {
 		-webkit-animation-name: fadeIn;
@@ -406,6 +418,10 @@
 //TODO: verified
 /// Add a fixed zoom animation effect - often uses for a button or cardlist
 /// @param {float} $scaleValue [0.5 ~ 1.5] - scale value (zoom)
+/// @example
+/// .containing-element{
+///		@include animation-zoom-fixed(1.2);
+/// }
 @mixin animation-zoom-fixed($scaleValue: 1.1) {
 	transform: scale($scaleValue);
 }
@@ -413,6 +429,10 @@
 //TODO: verified
 /// Add an temporary zoom animation effect - often uses for an animation effect in entrance
 /// @param {string} $in-out [in, out] - input|output animation
+/// @example
+/// .containing-element{
+///		@include animation-zoom(out);
+/// }
 @mixin animation-zoom($in-out) {
 	@if ($in-out == in) {
 		-webkit-animation-name: zoomIn;
@@ -485,6 +505,10 @@
 //TODO: verified
 /// Add a flip animation effect
 /// @param {string} $in-out [in, out] - input|output animation
+/// @example
+/// .containing-element{
+///		@include animation-flip(in);
+/// }
 @mixin animation-flip($in-out) {
 	@if ($in-out == in) {
 		-webkit-backface-visibility: visible !important;
@@ -608,6 +632,10 @@
 /// @param {string} $in-out [in, out] - input|output animation
 /// @param {string} $axeY [up, down] - axeY animation direction
 /// @param {string} $axeX [left, right] - axeX animation direction
+/// @example
+/// .containing-element{
+///		@include animation-rotate(in, up, right);
+/// }
 @mixin animation-rotate($in-out, $axeY, $axeX) {
 	@if ($in-out == in) {
 		@if ($axeY == up) {
@@ -941,6 +969,10 @@
 //TODO: verified
 /// Add an notification animation effect
 /// @param {string} $in-out [in, out] - input|output animation
+/// @example
+/// .containing-element{
+///		@include animation-notif(in);
+/// }
 @mixin animation-notif($in-out) {
 	@if ($in-out == in) {
 		-webkit-animation-name: lightSpeedIn;
@@ -1033,6 +1065,10 @@
 
 //TODO: verified
 /// Add an pulsation animation effect
+/// @example
+/// .containing-element{
+///		@include animation-pulse();
+/// }
 @mixin animation-pulse {
 	-webkit-animation-name: pulse;
 	animation-name: pulse;
@@ -1072,6 +1108,9 @@
 
 //TODO: verified
 /// Add an bounce animation effect
+/// .containing-element{
+///		@include animation-bouce();
+/// }
 @mixin animation-bounce {
 	-webkit-animation-name: bounceIn;
 	animation-name: bounceIn;
@@ -1162,6 +1201,9 @@
 
 //TODO: verified
 /// Add an flash animation effect
+/// .containing-element{
+///		@include animation-flash();
+/// }
 @mixin animation-flash {
 	-webkit-animation-name: flash;
 	animation-name: flash;

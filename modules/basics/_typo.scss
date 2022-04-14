@@ -1,27 +1,34 @@
-@charset "UTF-8";
-
-$font-size: 16;
-//TODO: verified
-/// A function that converts a pixel value to rem
-/// @param {pixel} $value - pixel value to convert to rem
-/// @param {integer} $font-size - pixel base: 16px
-@function toRem($value, $font-size: $font-size) {
-	$font-size: $font-size + 0px;
-	$remSize: calc($value / $font-size);
-	@return #{$remSize}rem;
-}
-
 //TODO: verified
 /// This mixin performs fast import of external fonts and include consistent properties.
 /// @param {string} $font-name - the name of the font family to use throughout your code
 /// @param {path} $path - font path
-/// @param {string} $weight [normal] - font weight
-/// @param {string} $style [normal] - default style to use
+/// @param {string} $weight [normal, lighter, bold, bolder] - font weight
+/// @param {string} $style [normal, italic] - style to use
+/// @example
+///
+///  /* example 1 */
+///
+///  @imnport typo-fontface('Quicksand-regular', './src/assets/fonts/Quicksand-regular.ttf')
+///
+///  /* example 2 */
+///
+///  @imnport typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
 @mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
-	@font-face {
-		font-family: $font-name;
-		font-weight: $weight;
-		font-style: $style;
-		src: url($path);
+	@if (
+		($weight == normal) or
+			($weight == lighter) or
+			($weight == bold) or
+			($weight == bolder) and
+			($style == normal) or
+			($style == italic)
+	) {
+		@font-face {
+			font-family: $font-name;
+			font-weight: $weight;
+			font-style: $style;
+			src: url($path);
+		}
+	} @else {
+		@error "The argument of weight must be `solid` or `small` or `medium` or `large` or `none` | The argument of style must be `normal` or `italic`";
 	}
 }

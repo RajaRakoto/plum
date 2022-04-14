@@ -1,26 +1,30 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Customize the Scoling bar of your web page
+/// Customize the scolling bar of your web page
 /// @param {string} $bar-color - scrolling bar color
 /// @param {string} $bar-color-hover - scrolling bar color (hover)
-/// @param {string} $bg-color - background scrolling bar color
+/// @param {string} $bg-color [#eee] - background scrolling bar color
+/// @example
+///  body{
+///	 	@include bar-scrolling($amethyst, $wisteria);
+///  }
 @mixin bar-scrolling($bar-color, $bar-color-hover, $bg-color: #eee) {
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
 
-  ::-webkit-scrollbar-track {
-    background: $bg-color;
-  }
+	::-webkit-scrollbar-track {
+		background: $bg-color;
+	}
 
-  ::-webkit-scrollbar-thumb {
-    background: $bar-color;
-    border-radius: 10px;
-  }
+	::-webkit-scrollbar-thumb {
+		background: $bar-color;
+		border-radius: 10px;
+	}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: $bar-color-hover;
-  }
+	::-webkit-scrollbar-thumb:hover {
+		background: $bar-color-hover;
+	}
 }
