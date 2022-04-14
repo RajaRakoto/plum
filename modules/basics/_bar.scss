@@ -4,7 +4,7 @@
 /// Customize the scolling bar of your web page
 /// @param {string} $bar-color - scrolling bar color
 /// @param {string} $bar-color-hover - scrolling bar color (hover)
-/// @param {string} $bg-color - background scrolling bar color
+/// @param {string} $bg-color [#eee] - background scrolling bar color
 /// @example
 ///  body{
 ///	 	@include bar-scrolling($amethyst, $wisteria);
