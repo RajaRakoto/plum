@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Antialias mixin provides smooth font rendering which means smooth the font on the level of pixel and prevents the subpixels-rendering.
+/// @param {string} $value [null, only] - only -> it is used only when it wants to be applied for one specific HTML element.
+/// @example
+///
+///  /* example 1 - include star selector "*" */
+///
+///  @include antialias()
+///
+///  /* example 2 */
+///
+///  .containing-element {
+///   @include antialias()
+///  }
+///
+///  /* example 3 - specific HTML element */
+///
+///  .containing-element {
+///   @include antialias(only)
+///  }
+@mixin antialias($value: null) {
+	@if not & and $value == null {
+		*,
+		*::before,
+		*::after {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	} @else if & and $value == 'only' {
+		&,
+		&::before,
+		&::after {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	} @else if & and $value == null {
+		&,
+		&::before,
+		&::after,
+		*,
+		*::before,
+		*::after {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	}
+}
