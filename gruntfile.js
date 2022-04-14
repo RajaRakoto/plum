@@ -42,11 +42,11 @@ module.exports = function (grunt) {
 		/**
 		 * Run shell commands
 		 */
-		// shell: {
-		// 	install_deps: {
-		// 		command: install_plugins_cmd.join('&&'),
-		// 	},
-		// },
+		shell: {
+			sassdoc: {
+				command: ['sassdoc .', 'cd sassdoc', 'xdg-open index.html'].join('&&'),
+			},
+		},
 
 		// TODO: verified
 		/**
@@ -147,17 +147,11 @@ module.exports = function (grunt) {
 	grunt.registerTask('watch-sass', ['watch:sass']);
 
 	// grunt shell & others tasks
-	grunt.registerTask('grunt-deps', ['shell:install_deps']);
+	grunt.registerTask('sassdoc', ['shell:sassdoc']);
 
 	// arrays basics tasks
-	const basicsTaskNames = [
-		'sass-task',
-		'shell-task',
-	];
-	const basicsTaskStatus = [
-		'sass:test',
-		'shell:dev',
-	];
+	const basicsTaskNames = ['sass-task'];
+	const basicsTaskStatus = ['sass:test'];
 
 	// arrays mixed tasks
 	const mixedTaskNames = ['compress-all'];
@@ -170,8 +164,8 @@ module.exports = function (grunt) {
 	const watchedTaskStatus = ['watch:sass'];
 
 	// arrays others tasks
-	const othersTaskNames = [];
-	const othersTaskStatus = [];
+	const othersTaskNames = ['sassdoc'];
+	const othersTaskStatus = ['shell:sassdoc'];
 
 	// default tasks
 	grunt.registerTask('default', () => {
