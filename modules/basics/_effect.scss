@@ -21,30 +21,26 @@
 ///	  @include effect-box-shadow(small);
 ///  }
 @mixin effect-box-shadow($opacity: solid) {
+	$list: 'small', 'medium', 'large', 'none';
+
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
-	}
-
-	@if ($opacity == small) {
+	} @else if ($opacity == small) {
 		box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
 		-webkit-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
 		-moz-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
 		-webkit-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
 		-moz-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
 		-webkit-box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
 		-moz-box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		box-shadow: none;
+	} @else {
+		@error "The argument must be `solid` or one of the followings: #{quote($list)}.";
 	}
 }
 
@@ -56,20 +52,18 @@
 ///	  @include effect-box-shadow-inset(large);
 ///  }
 @mixin effect-box-shadow-inset($opacity: medium) {
+	$list: 'small', 'large', 'none';
+
 	@if ($opacity == small) {
 		box-shadow: 1px 1px 2px #111 inset;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		box-shadow: 1px 1px 8px #111 inset;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		box-shadow: 1px 1px 20px #111 inset;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		box-shadow: none;
+	} @else {
+		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
 	}
 }
 
@@ -81,20 +75,18 @@
 ///	  @include effect-text-shadow(small);
 ///  }
 @mixin effect-text-shadow($opacity: medium, $color: #222) {
+	$list: 'small', 'large', 'none';
+
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		text-shadow: 0px 1px 8px $color;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		text-shadow: 0px 1px 20px $color;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		text-shadow: none;
+	} @else {
+		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
 	}
 }
 
@@ -116,20 +108,18 @@
 ///	  @include effect-text-light(large, $sun-flower);
 ///  }
 @mixin effect-text-light($opacity: medium, $color: #eee) {
+	$list: 'small', 'large', 'none';
+
 	@if ($opacity == small) {
 		text-shadow: 0px 1px 2px $color;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		text-shadow: 0px 1px 8px $color;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		text-shadow: 0px 1px 20px $color;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		text-shadow: none;
+	} @else {
+		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
 	}
 }
 
@@ -142,29 +132,25 @@
 ///	  @include effect-box-light(medium);
 ///  }
 @mixin effect-box-light($opacity: medium, $color: #eee) {
+	$list: 'solid', 'small', 'large', 'none';
+
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px $color;
-	}
-
-	@if ($opacity == small) {
+	} @else if ($opacity == small) {
 		box-shadow: 1px 2px 10px 1px $color;
 		-webkit-box-shadow: 1px 2px 10px 1px $color;
 		-moz-box-shadow: 1px 2px 10px 1px $color;
-	}
-
-	@if ($opacity == medium) {
+	} @else if ($opacity == medium) {
 		box-shadow: 1px 3px 15px 1px $color;
 		-webkit-box-shadow: 1px 3px 15px 1px $color;
 		-moz-box-shadow: 1px 3px 15px 1px $color;
-	}
-
-	@if ($opacity == large) {
+	} @else if ($opacity == large) {
 		box-shadow: 7px 5px 20px 2px $color;
 		-webkit-box-shadow: 7px 5px 20px 2px $color;
 		-moz-box-shadow: 7px 5px 20px 2px $color;
-	}
-
-	@if ($opacity == none) {
+	} @else if ($opacity == none) {
 		box-shadow: none;
+	} @else {
+		@error "The argument must be `medium` or one of the followings: #{quote($list)}.";
 	}
 }

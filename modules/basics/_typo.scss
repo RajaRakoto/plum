@@ -14,10 +14,24 @@
 ///
 ///  @imnport typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
 @mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
-	@font-face {
-		font-family: $font-name;
-		font-weight: $weight;
-		font-style: $style;
-		src: url($path);
+	$list: '[weight]: normal', '[weight]: lighter', '[weight]: bold',
+		'[weight]: bolder', '[style]:normal', '[style]:italic';
+
+	@if (
+		($weight == normal) or
+			($weight == lighter) or
+			($weight == bold) or
+			($weight == bolder) and
+			($style == normal) or
+			($style == italic)
+	) {
+		@font-face {
+			font-family: $font-name;
+			font-weight: $weight;
+			font-style: $style;
+			src: url($path);
+		}
+	} @else {
+		@error "The argument must be one of the followings: #{quote($list)}.";
 	}
 }

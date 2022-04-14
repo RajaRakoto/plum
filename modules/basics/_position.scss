@@ -8,6 +8,8 @@
 ///	  @include position-set(both);
 ///  }
 @mixin position-set($position) {
+	$list: 'vertical', 'horizontal', 'both';
+
 	position: relative;
 
 	@if $position == 'vertical' {
@@ -26,6 +28,8 @@
 		-webkit-transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
+	} @else {
+		@error "The argument must be one of the followings: #{quote($list)}.";
 	}
 }
 
