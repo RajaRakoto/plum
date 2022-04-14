@@ -58,13 +58,13 @@
 /// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
 /// @example
 ///
-/// /* example 1*/
+/// /* example 1 */
 ///
 ///  .containing-element {
 ///	  @include spacing-padding-gabarit(medium);
 ///  }
 ///
-/// /* example 2*/
+/// /* example 2 */
 ///
 ///  .containing-element {
 ///	  @include spacing-padding-gabarit(small);
@@ -104,13 +104,13 @@
 /// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
 /// @example
 ///
-/// /* example 1*/
+/// /* example 1 */
 ///
 ///  .containing-element {
 ///	  @include spacing-margin-gabarit(large);
 ///  }
 ///
-/// /* example 2*/
+/// /* example 2 */
 ///
 ///  .containing-element {
 ///	  @include spacing-margin-gabarit(xx-small);
@@ -150,13 +150,13 @@
 /// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
 /// @example
 ///
-/// /* example 1*/
+/// /* example 1 */
 ///
 ///  .containing-element {
 ///	  @include spacing-all-gabarit(x-large);
 ///  }
 ///
-/// /* example 2*/
+/// /* example 2 */
 ///
 ///  .containing-element {
 ///	  @include spacing-all-gabarit(smaller);
