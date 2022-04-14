@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// buttons-all mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules.
+/// @param {string} $pseudo [hover, focus,  active, disabled] - sets the pseudo-class selector of the selected button elements.
+/// @example
+///  @include buttons-all {
+///    background-color: teal;
+///    color: white;
+///  }
+///  @include buttons-all(hover) {
+///    background-color: teal;
+///    color: white;
+///  }
+///  @include buttons-all(focus) {
+///    background-color: purple;
+///    color: white;
+///  }
+///  @include buttons-all(active) {
+///    background-color: blue;
+///    color: white;
+///  }
+///  @include buttons-all(disabled) {
+///    background-color: gray;
+///    color: black;
+///  }
+@mixin buttons-all($pseudo: null) {
+	$list: 'hover', 'focus', 'active', 'disabled';
+	@if not $pseudo {
+		#{$list-of-buttons} {
+			@content;
+		}
+	} @else if index($list, $pseudo) {
+		$all-buttons: __pseudoSelector($list-of-buttons, $pseudo);
+		#{$all-buttons} {
+			@content;
+		}
+	} @else {
+		@error "The argument must be `null` or one of the followings: #{quote($list)}.";
+	}
+}
