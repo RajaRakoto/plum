@@ -2,8 +2,17 @@
 /// This mixin performs fast import of external fonts and include consistent properties.
 /// @param {string} $font-name - the name of the font family to use throughout your code
 /// @param {path} $path - font path
-/// @param {string} $weight [normal] - font weight
-/// @param {string} $style [normal] - default style to use
+/// @param {string} $weight [normal, lighter, bold, bolder] - font weight
+/// @param {string} $style [normal, italic] - style to use
+/// @example
+///
+///  /* example 1 */
+///
+///  @imnport typo-fontface('Quicksand-regular', './src/assets/fonts/Quicksand-regular.ttf')
+///
+///  /* example 2 */
+///
+///  @imnport typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
 @mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
 	@font-face {
 		font-family: $font-name;
