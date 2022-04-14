@@ -4,6 +4,9 @@
 /// buttons-all mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules.
 /// @param {string} $pseudo [hover, focus,  active, disabled] - sets the pseudo-class selector of the selected button elements.
 /// @example
+///
+/// /* Example 1 */
+///
 ///  @include buttons-all {
 ///    background-color: teal;
 ///    color: white;
@@ -24,6 +27,15 @@
 ///    background-color: gray;
 ///    color: black;
 ///  }
+///
+/// /* Example 2 */
+///
+/// .containing-element {
+///   @include all-buttons {
+///     background-color: teal;
+///     color: white;
+///   }
+/// }
 @mixin buttons-all($pseudo: null) {
 	$list: 'hover', 'focus', 'active', 'disabled';
 	@if not $pseudo {
