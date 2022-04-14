@@ -80,7 +80,7 @@
 ///
 @mixin box-debugging(
 	$color: red,
-	$size: __convertToRem(3px),
+	$size: 0.188rem,
 	$bg-color: false,
 	$status: true
 ) {
