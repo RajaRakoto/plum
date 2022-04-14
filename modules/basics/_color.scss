@@ -24,6 +24,10 @@ $asbestos: #7f8c8d;
 //TODO: verified
 /// A function that returns the pastel of the color in argument
 /// @param {string} $color - The color to determine its pastel value
+/// @example
+///  .containing-element {
+///	  color: color-pastel($carrot);
+///  }
 @function color-pastel($color) {
 	$hue: hue($color);
 	$sat: 100%;
@@ -36,6 +40,10 @@ $asbestos: #7f8c8d;
 //TODO: verified
 /// A function that adjusts the brightness of an argument color
 /// @param {string} $color - The color to adjust
+/// @example
+///  .containing-element {
+///	  color: color-adjust($emerald);
+///  }
 @function color-adjust($color, $percent) {
 	$adjust: lighten(adjust-hue($color, 20), $percent);
 
@@ -45,6 +53,10 @@ $asbestos: #7f8c8d;
 //TODO: verified
 /// A function that returns the complementary of a color (uses to determine a graphic chart)
 /// @param {string} $color - The color to determine its complementary
+/// @example
+///  .containing-element {
+///	  color: color-complement($peter-river);
+///  }
 @function color-complement($color, $color-primary: $color) {
 	@if (hue($color) >= 135 and hue($color) < 180) {
 		$color: complement($color-primary);
