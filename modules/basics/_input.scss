@@ -1,6 +1,38 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Input-all mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules.
+/// @param {string} $pseudo [null, hover, focus, active, invalid, required, disabled]
+/// @example
+///
+///  /* example 1 */
+///
+///  @include input-all {
+///   background-color: $carrot;
+///  }
+///
+///  /* example 2 */
+///
+///  @include input-all(hover) {
+///   background-color: orangered;
+///  }
+@mixin input-all($pseudo: null) {
+	$list: 'hover', 'focus', 'active', 'invalid', 'required', 'disabled';
+	@if not $pseudo {
+		#{$list-of-text-inputs} {
+			@content;
+		}
+	} @else if index($list, $pseudo) {
+		$allInputs: __pseudoSelector($list-of-text-inputs, $pseudo);
+		#{$allInputs} {
+			@content;
+		}
+	} @else {
+		@error "The argument must be `null` or `hover` or `focus` or `active` or `invalid` or `required` or `disabled`";
+	}
+}
+
+//TODO: verified
 /// Scale zoom effect for input
 /// @param {color} $bg-color [#eee] - background color
 /// @param {color} $border-color [#eee] - border color
