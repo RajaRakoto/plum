@@ -2,11 +2,37 @@
 
 //TODO: verified
 /// Quickly add a border on the containers (util at debugging)
-/// @param {string} $color - border color
-/// @param {pixel} $size - border size
+/// @param {string} $color [red] - border color
+/// @param {pixel} $size [3px] - border size
 /// @param {boolean} $bg-color [true, false] - Activate | Disable the color of the background
 /// @param {boolean} $status [true, false] - Activate | Disable Info Box (Debogging)
-@mixin box-debug($color, $size: 3px, $bg-color: false, $status: true) {
+/// @example
+///
+/// /* example 1 */
+///
+///  .containing-element{
+///	 	@include box-debugging;
+///  }
+///
+/// /* example 2 - set box size */
+///
+///  .containing-element{
+///	 	@include box-debugging(green, 2px);
+///  }
+///
+/// /* example 3 - enable bg color */
+///
+///  .containing-element{
+///	 	@include box-debugging(purple, 5px, true);
+///  }
+///
+/// /* example 4 - disable status*/
+///
+///  .containing-element{
+///	 	@include box-debugging(yellow, 5px, true, false);
+///  }
+///
+@mixin box-debugging($color: red, $size: 3px, $bg-color: false, $status: true) {
 	@if ($status) {
 		border: solid $size $color;
 		@if ($bg-color) {
@@ -15,4 +41,3 @@
 		}
 	}
 }
-
