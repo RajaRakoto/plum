@@ -1,6 +1,33 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Effect-gradient mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
+/// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the gradient line’s direction of angle
+/// @param {color list} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
+/// @example
+///  body {
+///  	@include effect-gradient(left, #43c6ac #191654);
+///  }
+@mixin effect-gradient($direction, $colors) {
+	$list: ();
+	@for $i from 1 through length($colors) {
+		$list: append($list, nth($colors, $i), comma);
+	}
+	@if map-has-key($map-for-directions, $direction) {
+		background: linear-gradient(
+			map-get($map-for-directions, $direction),
+			$list
+		);
+	} @else if not map-has-key($map-for-directions, $direction) {
+		@if not index('deg', unit($direction)) {
+			@error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
+		} @else {
+			background: linear-gradient($direction, $list);
+		}
+	}
+}
+
+//TODO: verified
 /// Simply call the effect-hide mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
 /// @param {string} $toggle [hide, unhide] - default value is set to hide, use unhide to reserve the affect
 /// @example
