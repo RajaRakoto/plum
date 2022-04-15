@@ -1,10 +1,53 @@
 @charset "UTF-8";
 
 @import '../utilities/convert-to-rem';
+@import '../utilities/stretched-link';
+
+//TODO: verified
+/// Image-logo mixin helps you to create an SEO-friendly logo component for your brand’s website by using CSS best practices.
+/// @param {path} $image - image path (url)
+/// @param {pixel} $width - sets the width value of the logo image
+/// @param {pixel} $height - sets the height value of the logo image
+/// @example
+///  /* html */
+///
+///  <h1 class="official-logo">
+///    <a href="#">Coolors</a>
+///  </h1>
+///
+///  /* scss */
+///
+///  .official-logo {
+///  	@include image-logo(
+///  		$width: 200px,
+///  		$height: 60px,
+///  		$image-url: 'https://coolors.co/assets/img/logo.svg'
+///  	);
+///  }
+@mixin image-logo($width, $height, $image-url: null) {
+	display: inline-block;
+	position: relative;
+	width: $width;
+	height: $height;
+	@if $image-url {
+		background-image: url($image-url);
+	}
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	a {
+		display: block;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		text-indent: 100%;
+		@include __stretched-link(after);
+	}
+}
 
 //TODO: verified
 /// Image-background mixin allows you to apply background images to the selected element(s).
-/// @param {path} $image - image path
+/// @param {path} $image - image path (url)
 /// @param {color, list} $filter-color - the color or the list of colors you may want to apply as a filter over the background image
 /// @param {string} $filter-direction [top, top-right,  right, bottom-right, bottom, bottom-left, left, top-left] - the angle of gradient's direction
 /// @example
@@ -100,7 +143,7 @@
 
 //TODO: verified
 /// Add high resolution images to your site, with a replacement solution for devices that do not display high resolution images when using Retina Image, it is preferable to compress as much as possible without destroying the image source (https://tinypng.com).
-/// @param {path} $image - image path
+/// @param {path} $image - image path (url)
 /// @param {pixel} $width - width of image
 /// @param {pixel} $height - height of image
 /// @example
