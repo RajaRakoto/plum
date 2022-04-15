@@ -1,32 +1,59 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Quickly position your elements relative to its parent element
-/// @param {string} $position [vertical, horizontal, both] - element position
+/// Position-set mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
+/// @param {string} $axis [vertical, horizontal, both] - sets the axis of the alingment (element position)
 /// @example
-///  .containing-element {
-///	  @include position-set(both);
+///  /* example 1 - both */
+///
+///  .parent-element {
+///  	position: relative;
+///  	.element {
+///  		position: absolute;
+///  		/* (top: 50%, left: 50%) */
+///  		@include position-set(both);
+///  	}
 ///  }
-@mixin position-set($position) {
-	position: relative;
-
-	@if $position == 'vertical' {
+///
+///  /* example 2 - horizontal */
+///
+///  .parent-element {
+///  	position: relative;
+///  	.element {
+///  		position: absolute;
+///  		/* (left: 50%) */
+///  		@include center(horizontal);
+///  	}
+///  }
+///
+///  /* example 3 - vertical */
+///
+///  .parent-element {
+///  	position: relative;
+///  	.element {
+///  		position: absolute;
+///  		/* (top: 50%) */
+///  		@include center(vertical);
+///  	}
+///  }
+@mixin position-set($axis: 'both') {
+	@if $axis == 'both' or $axis == 'vertical' {
 		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-	} @else if $position == 'horizontal' {
+	}
+	@if $axis == 'both' or $axis == 'horizontal' {
 		left: 50%;
-		-webkit-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		transform: translate(-50%);
-	} @else if $position == 'both' {
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	} @else {
+	}
+	transform: if(
+			$axis == 'horizontal',
+			translateX(-50%),
+			if($axis == 'both', translateX(-50%), null)
+		)
+		if(
+			$axis == 'vertical',
+			translateY(-50%),
+			if($axis == 'both', translateY(-50%), null)
+		);
+	@if not($axis == 'both' or $axis == 'vertical' or $axis == 'horizontal') {
 		@error "The argument must be `vertical` or `horizontal` or `both`";
 	}
 }
