@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import '../utilities/convert-to-rem';
-
 @mixin getAllGabarit($size) {
 	padding: __convertToRem($size) __convertToRem($size) __convertToRem($size)
 		__convertToRem($size);
