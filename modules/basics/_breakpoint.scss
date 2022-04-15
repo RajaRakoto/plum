@@ -3,7 +3,7 @@
 //TODO: verified
 /// Breakpoint mixin helps you to create scalable media queries and breakpoints by using the @media CSS at-rule in SCSS.
 /// @param {string} $mode [only, min, max, beetween] - sets the width media feature
-/// @param {pixel, string} $value [small, medium, large, xlarge] - the width value to which your styles will be applied
+/// @param {pixel, string} $value [xsmall, small, medium, large, xlarge] - the width value to which your styles will be applied
 /// @example
 ///  /* example 1 - if you set the $mode option to only, the code below will apply styles only if your browser’s viewport is equal to 1200px. */
 ///
