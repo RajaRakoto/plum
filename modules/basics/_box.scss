@@ -1,6 +1,18 @@
 @charset "UTF-8";
 
-@import '../utilities/convert-to-rem';
+//TODO: verified
+/// Box-circle mixin helps you to easily create perfect circle shapes.
+/// @param {pixel} $size - size of circle
+/// @example
+///  .containing-element{
+///    @include circle(200px);
+///  }
+@mixin box-circle($size) {
+	width: __convertToRem($size);
+	height: __convertToRem($size);
+	display: inline-block;
+	border-radius: 100%;
+}
 
 //TODO: verified
 /// Box-radius mixin helps you to rounds the corner(s) of a selected element by using the border-radius CSS property. You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently - the advantage of using this mixin is that each value when entering is transformed into REM which gives a more responsive effect

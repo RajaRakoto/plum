@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Columnize mixin helps you to create evenly divided hypothetical columns (based on flexbox) in a containing element, as many as the value you pass for the $columns argument. Thus, you can show all the children inside the parent element like they are lined up in a column - [WARNING]: must be aplied to the parent element to align the children inside of it!
+/// @param {number} $columns - sets the number of the hypothetical columns
+/// @param {pixel} $gutter - sets the value of the space between the columns
+/// @param {boolean} $fill [true, false] - it is for orphans to fill the remaining gap at the end of the list. This argument is optional and should always be at the end. The default value is set to false
+/// @example
+///  /* HTML */
+///   <div class="parent-element">
+///     <div class="item">01</div>
+///     <div class="item">02</div>
+///     <div class="item">03</div>
+///     <div class="item">04</div>
+///     <div class="item">05</div>
+///     <div class="item">06</div>
+///     <div class="item">07</div>
+///     <div class="item">08</div>
+///   </div>
+///
+///  /* example 1 - basic usage */
+///
+///  .parent-element {
+///  	@include columnize(4);
+///  	.item {
+///  		background-color: silver;
+///  	}
+///  }
+///
+///  /* example 2 - separate every item from each other (add margin) */
+///
+///  .parent-element {
+///  	@include columnize(3, 30px);
+///  	.item {
+///  		background-color: silver;
+///  	}
+///  }
+///
+///  /* example 3 - to make the orphans fill the gap */
+///
+///  .parent-element {
+///  	@include columnize(3, 30px, true);
+///  	.item {
+///  		background-color: silver;
+///  	}
+///  }
+///
+///  /* example 4 - now let’s try it with the breakpoint mixin to show you how these mixins work harmoniously together */
+///
+///  .parent-element {
+///  	@include columnizer(2, 10px, true);
+///  	@include breakpoint(min, large) {
+///  		@include columnizer(4, 20px, false);
+///  	}
+///  	.item {
+///  		background-color: silver;
+///  	}
+///  }
+@mixin columnize($params...) {
+	$columns: nth($params, 1);
+	$gutter: null;
+	$fill: false;
+	display: flex;
+	flex-wrap: wrap;
+	@include __border-box;
+	> * {
+		@if length($params) == 1 {
+			flex: 0 0 calc(100% / #{$columns});
+			margin-bottom: 0;
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		} @else if length($params) == 2 {
+			@if type-of(nth($params, 2)) == bool {
+				$fill: nth($params, length($params));
+				flex-grow: #{if($fill == true, 1, 0)};
+				flex-shrink: 0;
+				flex-basis: calc(100% / #{$columns});
+				margin-bottom: 0;
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+			} @else if type-of(nth($params, 2)) == number {
+				$gutter: nth($params, length($params));
+				flex-grow: 0;
+				flex-shrink: 0;
+				flex-basis: calc((100% - (#{$columns} - 1) * #{$gutter}) / #{$columns});
+				margin-bottom: __convertToRem($gutter);
+				&:not(:last-child) {
+					margin-right: __convertToRem($gutter);
+				}
+				&:nth-child(#{$columns}n) {
+					margin-right: 0;
+				}
+			}
+		} @else if length($params) == 3 {
+			$gutter: nth($params, 2);
+			$fill: nth($params, length($params));
+			flex-grow: if($fill == true, 1, 0);
+			flex-shrink: 0;
+			flex-basis: calc((100% - (#{$columns} - 1) * #{$gutter}) / #{$columns});
+			margin-bottom: __convertToRem($gutter);
+			&:not(:last-child) {
+				margin-right: __convertToRem($gutter);
+			}
+			&:nth-child(#{$columns}n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

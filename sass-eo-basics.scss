@@ -17,11 +17,13 @@
 @import './modules/maps/map-for-tablets';
 
 /* utilities */
+@import './modules/utilities/border-box';
 @import './modules/utilities/clear-unit';
 @import './modules/utilities/clear-whitespace';
 @import './modules/utilities/color';
 @import './modules/utilities/convert-to-em';
 @import './modules/utilities/convert-to-number';
+@import './modules/utilities/convert-to-rem';
 @import './modules/utilities/darken';
 @import './modules/utilities/font-sizer';
 @import './modules/utilities/font-source';
@@ -35,6 +37,7 @@
 @import './modules/utilities/pseudo-selector';
 @import './modules/utilities/remify';
 @import './modules/utilities/shorthand-property';
+@import './modules/utilities/stretched-link';
 @import './modules/utilities/validate-breakpoint';
 @import './modules/utilities/validate-length';
 @import './modules/utilities/validate-scissors';
@@ -48,7 +51,10 @@
 @import './modules/basics/breakpoint';
 @import './modules/basics/breakpointer';
 @import './modules/basics/button';
+@import './modules/basics/clearfix';
+@import './modules/basics/columnize';
 @import './modules/basics/effect';
+@import './modules/basics/except';
 @import './modules/basics/image';
 @import './modules/basics/input';
 @import './modules/basics/minireset';
