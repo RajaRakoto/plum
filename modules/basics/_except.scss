@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Except mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list.
+/// @param {string} $arg [selector(id, class), first, last, odd, even] - child element to exclude
+/// @param {number} $arg - child index
+/// @example
+///  /* HTML */
+///  <div class="wrapper">
+///    <div class="item">01</div>
+///    <div class="item">02</div>
+///    <div class="item">03</div>
+///    <div class="item">04</div>
+///    <div class="item">05</div>
+///    <div class="item">06</div>
+///  </div>
+///
+///  /* example 1 - exclude the first child element (item) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include except(first) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /* example 2 - exclude the last child element (item) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include except(last) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /* example 3 - exclude those elements whose numeric position is even (e.g: 2, 4, 6, …) OR odd (eg: 1, 3, 5, …) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include except(even) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /* example 4 - exclude multiple items with index child element (item) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include except(1, 2, 5) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /*  example 5 - now suppose you don’t know the number of the items that will appear in the list, and that you want to exclude the third item from the very end. How can you achieve that? It’s easy! */
+///
+///  .wrapper {
+///  	.item {
+///  		@include except(-3) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+@mixin except($params...) {
+	@if length($params) == 0 {
+		@error "Please pass an argument. The argument must be either a negative or positive number or selector (id, class) or list of numbers. Or pass one of the following predefined string values: 'first', 'last', 'odd', 'even'.";
+	} @else if length($params) == 1 {
+		$value: nth($params, 1);
+		@if type-of($value) == 'number' {
+			@if $value < 0 {
+				&:not(:nth-last-of-type(#{$value * -1})) {
+					@content;
+				}
+			} @else {
+				&:not(:nth-of-type(#{$value})) {
+					@content;
+				}
+			}
+		} @else if type-of($value) == 'string' {
+			@if $value == 'odd' {
+				&:not(:nth-of-type(odd)) {
+					@content;
+				}
+			} @else if $value == 'even' {
+				&:not(:nth-of-type(even)) {
+					@content;
+				}
+			} @else if $value == 'first' {
+				&:not(:first-of-type) {
+					@content;
+				}
+			} @else if $value == 'last' {
+				&:not(:last-of-type) {
+					@content;
+				}
+			} @else {
+				&:not(#{$value}) {
+					@content;
+				}
+			}
+		}
+	} @else if length($params) > 1 {
+		$items: '';
+		@for $i from 1 through length($params) {
+			$items: $items +
+				if(
+					nth($params, $i) < 0,
+					unquote(':not(:nth-last-of-type(#{nth($params, $i) * -1}))'),
+					unquote(':not(:nth-of-type(#{nth($params, $i)}))')
+				);
+		}
+		&#{$items} {
+			@content;
+		}
+	}
+}
