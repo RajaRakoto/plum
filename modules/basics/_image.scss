@@ -162,13 +162,16 @@
 	}
 }
 
-//TODO: verified
-/// Put an image in response
+//TODO: beta
+/// Put an image in response (this mixin is still in beta)
+/// @param {pixel} $height - set height of image
 /// @example
 ///  img {
 ///	  @include image-responsive();
 ///  }
-@mixin image-responsive {
+@mixin image-responsive($height: auto) {
 	max-width: 100%;
-	height: auto;
+	height: $height;
+	object-fit: cover;
+	object-position: center;
 }
