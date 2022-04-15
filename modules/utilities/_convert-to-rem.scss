@@ -6,7 +6,11 @@ $font-size: 16;
 /// @param {pixel} $value - pixel value to convert to rem
 /// @param {integer} $font-size - pixel base: 16px
 @function __convertToRem($value, $font-size: $font-size) {
-	$font-size: $font-size + 0px;
-	$remSize: calc($value / $font-size);
-	@return #{$remSize}rem;
+	@if not($value == null) {
+		$font-size: $font-size + 0px;
+		$remSize: calc($value / $font-size);
+		@return #{$remSize}rem;
+	} @else {
+		@return 0;
+	}
 }
