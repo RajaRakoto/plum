@@ -60,24 +60,6 @@ module.exports = function (grunt) {
 				files: [{ src: ['./*', './.*'] }],
 				filter: 'isFile',
 			},
-			modules: {
-				options: {
-					archive: backupsDestination + 'node_modules.tar.gz',
-				},
-				expand: true,
-				cwd: './node_modules/',
-				src: includeAllFiles,
-				dest: 'node_modules',
-			},
-			test: {
-				options: {
-					archive: backupsDestination + 'test.tar.gz',
-				},
-				expand: true,
-				cwd: './test/',
-				src: includeAllFiles,
-				dest: 'test',
-			},
 			docs: {
 				options: {
 					archive: backupsDestination + 'docs.tar.gz',
@@ -87,32 +69,41 @@ module.exports = function (grunt) {
 				src: includeAllFiles,
 				dest: 'docs',
 			},
-			frameworks: {
+			modules: {
 				options: {
-					archive: backupsDestination + 'frameworks.tar.gz',
+					archive: backupsDestination + 'modules.tar.gz',
 				},
 				expand: true,
-				cwd: './modules/frameworks/',
+				cwd: './modules/',
 				src: includeAllFiles,
-				dest: 'frameworks',
+				dest: 'modules',
 			},
-			libs: {
+			node_modules: {
 				options: {
-					archive: backupsDestination + 'libs.tar.gz',
+					archive: backupsDestination + 'node_modules.tar.gz',
 				},
 				expand: true,
-				cwd: './modules/libs/',
+				cwd: './node_modules/',
 				src: includeAllFiles,
-				dest: 'libs',
+				dest: 'node_modules',
 			},
-			maps: {
+			scripts: {
 				options: {
-					archive: backupsDestination + 'maps.tar.gz',
+					archive: backupsDestination + 'scripts.tar.gz',
 				},
 				expand: true,
-				cwd: './modules/maps/',
+				cwd: './scripts/',
 				src: includeAllFiles,
-				dest: 'maps',
+				dest: 'scripts',
+			},
+			test: {
+				options: {
+					archive: backupsDestination + 'test.tar.gz',
+				},
+				expand: true,
+				cwd: './test/',
+				src: includeAllFiles,
+				dest: 'test',
 			},
 		},
 
@@ -135,12 +126,11 @@ module.exports = function (grunt) {
 	// grunt mixed tasks
 	grunt.registerTask('compress-all', [
 		'compress:main',
-		'compress:modules',
-		'compress:test',
 		'compress:docs',
-		'compress:frameworks',
-		'compress:libs',
-		'compress:maps',
+		'compress:modules',
+		'compress:node_modules',
+		'compress:scripts',
+		'compress:test',
 	]);
 
 	// grunt watched tasks
@@ -156,7 +146,7 @@ module.exports = function (grunt) {
 	// arrays mixed tasks
 	const mixedTaskNames = ['compress-all'];
 	const mixedTaskStatus = [
-		'(compress:main | compress:modules | compress:test | compress:docs | compress:frameworks | compress:libs | compress:maps)',
+		'(compress:main | compress:docs | compress:modules | compress:node_modules | compress:scripts | compress:test',
 	];
 
 	// arrays watched tasks

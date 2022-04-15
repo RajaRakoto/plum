@@ -3,6 +3,94 @@
 @import '../utilities/convert-to-rem';
 
 //TODO: verified
+/// Box-radius mixin helps you to rounds the corner(s) of a selected element by using the border-radius CSS property. You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently - the advantage of using this mixin is that each value when entering is transformed into REM which gives a more responsive effect
+/// @param {string} $corner [null, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, cross-left, cross-right, all] - it allows you to choose the corners of an element that you want to apply style rules
+/// @param {pixel} $value - size of the border radius that will be applied
+/// @example
+///  /* example 1 - simply pass a value to target all the corners of an element and style them equally */
+///
+///  .containing-element {
+///  	@include box-radius(all, 50px);
+///  }
+///
+///  /* example 2 - now, let’s pass two values: first one is top to target only top corners of a selected element */
+///
+///  .containing-element {
+///  	@include box-radius(top, 35px);
+///  	@include box-radius(right, 50px);
+///  }
+///
+///  /* example 3 - now let’s try the cross-left or cross-right values ​​so that you can target the corners diagonally */
+///
+///  .containing-element {
+///  	@include box-radius(cross-right, 40px);
+///  	@include box-radius(cross-left, 80px);
+///  }
+///
+///  /* example 4 - custom corners */
+///
+///  .containing-element {
+///  	/* order of values -> top-left top-right bottom-right bottom-left */
+///  	@include box-radius(25px, 50px, 100px, 150px);
+///  }
+///
+///  /* example 5 - use "null" to skip a corner */
+///
+///  .containing-element {
+///  	/* order of values -> top-left top-right bottom-right bottom-left */
+///  	@include box-radius(null, null, 100px, 100px);
+///  }
+@mixin box-radius($args...) {
+	$list: join($list-of-directions, ('cross-left', 'cross-right', 'all'));
+	@if length($args) == 1 {
+		$value: nth($args, 1);
+		border-radius: __null($value, space);
+	} @else if length($args) == 2 {
+		$corner: nth($args, 1);
+		$value: nth($args, 2);
+		@if index($list, $corner) {
+			@if $corner == 'top' {
+				border-top-left-radius: __convertToRem($value);
+				border-top-right-radius: __convertToRem($value);
+			} @else if $corner == 'top-right' {
+				border-top-right-radius: __convertToRem($value);
+			} @else if $corner == 'right' {
+				border-top-right-radius: __convertToRem($value);
+				border-bottom-right-radius: __convertToRem($value);
+			} @else if $corner == 'bottom-right' {
+				border-bottom-right-radius: __convertToRem($value);
+			} @else if $corner == 'bottom' {
+				border-bottom-left-radius: __convertToRem($value);
+				border-bottom-right-radius: __convertToRem($value);
+			} @else if $corner == 'bottom-left' {
+				border-bottom-left-radius: __convertToRem($value);
+			} @else if $corner == 'left' {
+				border-top-left-radius: __convertToRem($value);
+				border-bottom-left-radius: __convertToRem($value);
+			} @else if $corner == 'top-left' {
+				border-top-left-radius: __convertToRem($value);
+			} @else if $corner == 'all' {
+				border-radius: __convertToRem($value);
+			} @else if $corner == 'cross-left' {
+				border-top-left-radius: __convertToRem($value);
+				border-bottom-right-radius: __convertToRem($value);
+			} @else if $corner == 'cross-right' {
+				border-top-right-radius: __convertToRem($value);
+				border-bottom-left-radius: __convertToRem($value);
+			}
+		} @else {
+			@error "Corner value must be `null` or `top` or `top-right` or `right` or `bottom-right` or `bottom` or `bottom-left` or `left` or `top-left` or `cross-left` or `cross-right` or `all`";
+		}
+	} @else if length($args) == 4 {
+		$args: __null($args, space, true);
+		border-top-left-radius: __convertToRem(nth($args, 1));
+		border-top-right-radius: __convertToRem(nth($args, 2));
+		border-bottom-right-radius: __convertToRem(nth($args, 3));
+		border-bottom-left-radius: __convertToRem(nth($args, 4));
+	}
+}
+
+//TODO: verified
 /// Box-sizing mixin sets the box-sizing CSS property value to border-box for selected HTML element(s). Thus the padding and the border will be inside of the selected element.
 /// @param {string} $value [null, only] - only -> it is used only when it wants to be applied for one specific HTML element.
 /// @example
@@ -85,7 +173,11 @@
 	$status: true
 ) {
 	@if ($status) {
-		border: solid __convertToRem($size) $color;
+		@if not($size == 0.188rem) {
+			border: solid __convertToRem($size) $color;
+		} @else {
+			border: solid $size $color;
+		}
 		@if ($bg-color) {
 			background-color: lighten(adjust-hue($color, 20), 25%);
 			// opacity: 70%;

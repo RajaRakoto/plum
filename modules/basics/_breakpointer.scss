@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Breakpointer mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific screen size.
+/// @param {string} $selector [body] - help you to target one specific selector, default it is targeting the ::before pseudo-element of the <body> tag.
+/// @example
+///  /* example 1 - call the mixin at the root level of your style sheet without passing any argument (<body> tag used) */
+///
+///  @include breakpointer();
+///
+///  /* example 2 - you can pass a CSS declaration block to customize the looking */
+///
+///  @include breakpointer {
+///  	position: fixed;
+///  	top: 0;
+///  	right: 0;
+///  	color: grey;
+///  	padding: 5px 10px;
+///  	z-index: 10;
+///  }
+///
+/// /* example 3 - specific selector */
+///
+///  @include breakpointer('.containing-element');
+@mixin breakpointer($selector: null) {
+	@if & {
+		&::before {
+			@content;
+			@each $key, $value in $map-for-breakpoints {
+				@media (min-width: #{$value}) {
+					content: '#{$key}';
+				}
+			}
+		}
+	} @else {
+		@if $selector {
+			#{$selector}::before {
+				@content;
+				@each $key, $value in $map-for-breakpoints {
+					@media (min-width: #{$value}) {
+						content: '#{$key}';
+					}
+				}
+			}
+		} @else {
+			body::before {
+				@content;
+				@each $key, $value in $map-for-breakpoints {
+					@media (min-width: #{$value}) {
+						content: '#{$key}';
+					}
+				}
+			}
+		}
+	}
+}
