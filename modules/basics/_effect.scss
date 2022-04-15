@@ -1,6 +1,46 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Simply call the effect-hide mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
+/// @param {string} $toggle [hide, unhide] - default value is set to hide, use unhide to reserve the affect
+/// @example
+///
+///  /* example 1 - hide */
+///
+///  .containing-element {
+///  	@include effect-hide();
+///  }
+///
+///  /* example 2 - unhide */
+///
+///  .containing-element {
+///  	@include effect-hide(unhide);
+///  }
+@mixin effect-hide($toggle: 'hide') {
+	@if $toggle == 'hide' {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		clip: rect(1px, 1px, 1px, 1px);
+		clip-path: inset(100%);
+		white-space: nowrap;
+	} @else if $toggle == 'unhide' {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		clip: auto;
+		clip-path: none;
+		white-space: inherit;
+	} @else if not index ('hide' 'unhide', $toggle) {
+		@error "#{$toggle} is not a valid value for the `$toggle` argument. The value must be either `hide` or `unhide`.";
+	}
+}
+
+//TODO: verified
 /// Add an opacity effect on an element (compatible with IE8)
 /// @param {percent} $percent - opacity (percent)
 /// @example
