@@ -159,16 +159,17 @@
 	}
 }
 
-//TODO: beta
-/// Put an image in response (this mixin is still in beta)
+//TODO: verified
+/// Image-responsive mixin helps you to make images responsive and change the default display CSS property value from inline to block in order to remove the extra space below them.
 /// @param {pixel} $height - set height of image
 /// @example
 ///  img {
 ///	  @include image-responsive();
 ///  }
 @mixin image-responsive($height: auto) {
-	max-width: 100%;
+	width: 100%;
 	height: $height;
 	object-fit: cover;
 	object-position: center;
+	display: block;
 }
