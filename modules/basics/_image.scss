@@ -159,16 +159,46 @@
 	}
 }
 
-//TODO: beta
-/// Put an image in response (this mixin is still in beta)
+//TODO: verified
+/// Image-resolution mixin helps you to target elements based on the various screen resolutions.
+/// @param {string} $resolution [x1, x2, x3] - accepts only one argument and three different values which targets the screen resolution
+/// @example
+///  .containing-element {
+///  	@include image-resolution('2x') {
+///  		background-image: url(https://picsum.photos/500/300?random=1);
+///  	}
+///  }
+@mixin image-resolution($resolution: 'x1') {
+	@if $resolution == '1x' {
+		@media (min-resolution: 96dpi) {
+			@content;
+		}
+	} @else if $resolution == '2x' {
+		@media (min-resolution: 192dpi) {
+			@content;
+		}
+	} @else if $resolution == '3x' {
+		@media (min-resolution: 288dpi) {
+			@content;
+		}
+	} @else {
+		@media (min-resolution: #{$resolution}) {
+			@content;
+		}
+	}
+}
+
+//TODO: verified
+/// Image-responsive mixin helps you to make images responsive and change the default display CSS property value from inline to block in order to remove the extra space below them.
 /// @param {pixel} $height - set height of image
 /// @example
 ///  img {
 ///	  @include image-responsive();
 ///  }
 @mixin image-responsive($height: auto) {
-	max-width: 100%;
+	width: 100%;
 	height: $height;
 	object-fit: cover;
 	object-position: center;
+	display: block;
 }

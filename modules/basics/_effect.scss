@@ -1,12 +1,42 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Effect-gradient-text mixin (also know as CSS Gradient Text) helps you to add a gradient overlay to a text element. Provides a one-line method to set the gradient line’s angle of direction, color values and the color-stop positions very easily.
+/// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the gradient line’s direction of angle
+/// @param {color} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
+/// @example
+///  h1 {
+///  	@include effect-gradient-text($direction: top-right, $colors: teal dodgerblue);
+///  }
+@mixin effect-gradient-text($direction, $colors) {
+	$list: ();
+	@for $i from 1 through length($colors) {
+		$list: append($list, nth($colors, $i), comma);
+	}
+	@if map-has-key($map-for-directions, $direction) {
+		background: linear-gradient(
+			map-get($map-for-directions, $direction),
+			$list
+		);
+	} @else if not map-has-key($map-for-directions, $direction) {
+		@if not index('deg', unit($direction)) {
+			@error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
+		} @else {
+			background: linear-gradient($direction, $list);
+		}
+	}
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+}
+
+//TODO: verified
 /// Effect-gradient-radial mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property.
 /// @param {string} $shape [null, circle, ellipse] - this option sets the shape of the gradient
 /// @param {string} $position [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, center, closest-side, farthest-side, closest-corner, farthest-corner] - sets the position of the gradient’s shape
 /// @param {color} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
 /// @example
-///
 ///  /* example 1 - circle shape */
 ///
 ///  .containing-element {
@@ -73,10 +103,35 @@
 }
 
 //TODO: verified
+/// Effect-text-image mixin helps you to clip the background image of a selected element to the shape of its foreground text.
+/// @param {path} $image - the URL of a clipping image
+/// @example
+///  /* HTML */
+///
+///  <h1 class="img-bg">SASS is Awesome!</h1>
+///
+///  /* apply image into text */
+///
+///  .img-bg {
+///  	@include effect-text-image('https://picsum.photos/500/300?random=1
+///  	');
+///  }
+@mixin effect-text-image($image: null) {
+	@if $image {
+		background-image: url($image);
+	}
+	background-size: cover;
+	background-position: center;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+}
+
+//TODO: verified
 /// Simply call the effect-hide mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
 /// @param {string} $toggle [hide, unhide] - default value is set to hide, use unhide to reserve the affect
 /// @example
-///
 ///  /* example 1 - hide */
 ///
 ///  .containing-element {
@@ -203,7 +258,6 @@
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @param {string} $color [#eee] - glimmer color
 /// @example
-///
 /// /* example 1*/
 ///
 ///  .p {

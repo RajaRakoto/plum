@@ -1,0 +1,21 @@
+@charset "UTF-8";
+//TODO: verified
+/// Sizer mixin helps you to size elements with one statement (or two). Size elements or create square or recangle shapes very easily.
+/// @param {pixel} $width - sets the width of the selected element(s)
+/// @param {pixel} $height - sets the height of the selected element(s)
+/// @example
+///  /* example 1 - call the mixin to adjust the $width and the $height of an element (width = height) */
+///
+///  .containing-element {
+///  	@include sizer(400px);
+///  }
+///
+///  /* example 2 - customize width and height of an element */
+///
+///  .containing-element {
+///  	@include sizer(250px, auto);
+///  }
+@mixin sizer($width, $height: $width) {
+	width: __convertToRem($width);
+	height: __convertToRem($height);
+}

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// There will be times when you need to style elements only for one particular smartphone model. mobile mixin helps you to achieve that.
+/// @param {string} $device [iPhone4, iPhone-SE, iPhone5-SE, iPhone6, iPhone6-Plus, iPhone7, iPhone7-Plus, iPhone8, iPhone8-Plus, iPhone11, iPhone11-Pro, iPhone11-Pro-Max, iPhoneX, Galaxy-S7, Galaxy-S8, Galaxy-S8-Plus, Galaxy-S10] - smartphone model
+/// @param {string} $orientation [portrait, landscape] - orientation of screen
+/// @example
+///  .containing-element {
+///    @include mobile(iPhoneX) {
+///      background-color: teal;
+///    }
+///  }
+@mixin mobile($device, $orientation: null) {
+	@if map-has-key($map-for-smartphones, $device) {
+		@if $orientation == portrait or $orientation == null {
+			@media only screen and (device-width: __mapDeepGet($map-for-smartphones, $device, 'width')) and (device-height: __mapDeepGet($map-for-smartphones, $device, 'height')) and (orientation: portrait) {
+				@content;
+			}
+		} @else if $orientation == landscape {
+			@media only screen and (device-width: __mapDeepGet($map-for-smartphones, $device, 'height')) and (device-height: __mapDeepGet($map-for-smartphones, $device, 'width')) and (orientation: landscape) {
+				@content;
+			}
+		}
+	} @else {
+		@warn "#{$device} is a wrong device name! The argument must be one of the followings: #{map-keys($map-for-smartphones)}";
+	}
+}
