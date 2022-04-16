@@ -1,6 +1,43 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Input-placeholder mixin will help you to style the placeholder text in an "input" or "textarea" element and generate cross-browser compatible CSS code.
+/// @example
+///
+///  /* example 1 - basic usage */
+///
+///  .containing-element {
+///  	@include input-placeholder() {
+///  		color: orangered;
+///  	}
+///  }
+///
+///  /* example 2 - all input placeholder style */
+///
+///  @include input-all() {
+///  	@include input-placeholder() {
+///  		color: dodgerblue;
+///  	}
+///  }
+@mixin input-placeholder() {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::placeholder {
+		@content;
+	}
+}
+
+//TODO: verified
 /// Input-all mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules.
 /// @param {string} $pseudo [null, hover, focus, active, invalid, required, disabled]
 /// @example
