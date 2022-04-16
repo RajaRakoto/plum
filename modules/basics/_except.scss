@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Except mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list.
+/// Except mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list (inverse of "only" mixin).
 /// @param {string} $arg [selector(id, class), first, last, odd, even] - child element to exclude
 /// @param {number} $arg - child index
 /// @example

@@ -1,7 +1,52 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Position-set mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
+/// Position-set mixin provides a one-line method to rapidly set both the position and the offset properties of a selected element.
+/// @param {string} $position [static, relative, fixed, absolute, sticky] - this option sets the position property of a selected element(s)
+/// @param {list (top, right, bottom, left)} $offsets [0] - accepts a list of values to set the offset of the edges of the box. Uses CSS shorthand method
+/// @example
+///
+///  /* example 1 */
+///
+///  .containing-element {
+///  	@include position-set(absolute);
+///  }
+///
+///  /* example 2 */
+///
+///  .containing-element {
+///  	@include position-set(fixed);
+///  }
+///
+///  /* example 3 - with offsets values */
+///
+///  .containing-element {
+///  	@include position-set(relative, 20px 30px 20px 30px);
+///  }
+///
+///  /* example 4 - omit a value with "null" */
+///
+///  .containing-element {
+///  	@include position-set(sticky, null 30px null 30px);
+///  }
+@mixin position-set($position: absolute, $offsets: 0) {
+	$offsets: __shorthandProperty($offsets);
+	$positioning-offsets: (
+		top: nth($offsets, 1),
+		right: nth($offsets, 2),
+		bottom: nth($offsets, 3),
+		left: nth($offsets, 4),
+	);
+	position: $position;
+	@each $offset, $value in $positioning-offsets {
+		@if __validateLength($value) {
+			#{$offset}: $value;
+		}
+	}
+}
+
+//TODO: verified
+/// Position-center mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
 /// @param {string} $axis [vertical, horizontal, both] - sets the axis of the alingment (element position)
 /// @example
 ///  /* example 1 - both */
@@ -11,7 +56,7 @@
 ///  	.element {
 ///  		position: absolute;
 ///  		/* (top: 50%, left: 50%) */
-///  		@include position-set(both);
+///  		@include position-center(both);
 ///  	}
 ///  }
 ///
@@ -33,10 +78,10 @@
 ///  	.element {
 ///  		position: absolute;
 ///  		/* (top: 50%) */
-///  		@include center(vertical);
+///  		@include position-center(vertical);
 ///  	}
 ///  }
-@mixin position-set($axis: 'both') {
+@mixin position-center($axis: 'both') {
 	@if $axis == 'both' or $axis == 'vertical' {
 		top: 50%;
 	}
