@@ -254,6 +254,169 @@
 }
 
 //TODO: verified
+/// Effect-text-supershadow mixin helps you to add shadow to text elements. Accepts comma-separated list of shadows or a single shadow value that can be multiplied optionally. It provides an easy-to-use one-line method - unlike "effect-text-shadow" mixin, this one is more customizable and more powerful in terms of functionality
+/// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the direction of the shadow
+/// @param {color} $color [rgba(black, 0.3)] - sets the color of the shadow
+/// @param {pixel} $size - sets how far the shadow will be from the text. When used with $fill, it also determines how many times the shadow will be multiplied
+/// @param {pixel} $blur [null] - the $blur argument is optional, sets the blur value of the shadow
+/// @param {boolean} $fill [true, false] - this makes shadow fill the gap between the text and the shadow, it is optional and should always be at the end, the default value is set to false.
+/// @example
+///  /* example 1 - basic usage */
+///
+///  h1 {
+///  	@include effect-text-supershadow(bottom rgba(black, 0.3) 3px);
+///  }
+///
+///  /* example 2 - add some blur */
+///
+///  h1 {
+///  	@include effect-text-supershadow(bottom rgba(black, 0.3) 3px 4px);
+///  }
+///
+///  /* example 3 - set $fill to true value */
+///
+///  h1 {
+///  	@include effect-text-supershadow(bottom rgba(black, 0.3) 30px true);
+///  }
+///
+///  /* example 4 - 3D effect */
+///
+///  h1 {
+///  	color: pink;
+///  	@include effect-text-supershadow(top-right crimson 10px true);
+///  }
+@mixin effect-text-supershadow($params...) {
+	$value: ();
+
+	@for $i from 1 through length($params) {
+		// Takes each items come from $params.
+		$item: nth($params, $i);
+
+		// The first value comes from the $item is direction.
+		// This will be used in the @if, @else statements with $size to control the offset of the shadows.
+		$direction: nth($item, 1);
+
+		// Second value is the color.
+		$color: nth($item, 2);
+
+		// The third value is the actual offset value of the shadows.
+		$size: nth($item, 3);
+
+		// Takes the unit of the $size value to use it later to increment the amount of shadow based on the unit.
+		$sizeUnit: unit($size);
+
+		// The $blur argument is optional. It controls the size of the blur.
+		$blur: null;
+
+		// The $fill argument is optional. This makes shadow fill the gap between the actual text and shadow's end-point. The default value is set to false.
+		$fill: null;
+
+		// Assigns the optional sub-arguments to the actual argument.
+		@if length($item) == 4 and type-of(nth($item, 4)) == number {
+			$blur: nth($item, length($item));
+		} @else if length($item) == 4 and type-of(nth($item, 4)) == bool {
+			$fill: nth($item, length($item));
+		} @else if length($item) == 5 {
+			$blur: nth($item, 4);
+			$fill: nth($item, length($item));
+		}
+
+		// The code below changes the angle of $direction of the shadow based on the predefined values.
+		@if $direction == 'top' {
+			@if $fill == true {
+				// The __clearUnit(); function is used here due to it is not possible to count $size with a unit. First, it clears the unit from the $size argument and then adds it back again in the @for loop.
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: 0 -#{$increase} $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: 0 -#{$size} $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'top-left' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: -#{$increase} -#{$increase} $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: -#{$size} -#{$size} $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'top-right' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: #{$increase} -#{$increase} $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: #{$size} -#{$size} $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'bottom' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: 0 #{$increase} $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: 0 #{$size} $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'bottom-left' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: -#{$increase} #{$increase} $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: -#{$size} #{$size} $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'bottom-right' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: #{$increase} #{$increase} $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: #{$size} #{$size} $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'left' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: -#{$increase} 0 $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: -#{$size} 0 $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		} @else if $direction == 'right' {
+			@if $fill == true {
+				@for $i from 1 through __clearUnit($size) {
+					$increase: $i * 1 + $sizeUnit;
+					$shadow: #{$increase} 0 $blur $color;
+					$value: append($value, $shadow, comma);
+				}
+			} @else {
+				$shadow: #{$size} 0 $blur $color;
+				$value: append($value, $shadow, comma);
+			}
+		}
+	}
+	text-shadow: $value;
+}
+
+//TODO: verified
 /// Add a glimmer (light effect) external to a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @param {string} $color [#eee] - glimmer color
