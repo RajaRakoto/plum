@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Position-set mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
+/// Position-center mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
 /// @param {string} $axis [vertical, horizontal, both] - sets the axis of the alingment (element position)
 /// @example
 ///  /* example 1 - both */
@@ -11,7 +11,7 @@
 ///  	.element {
 ///  		position: absolute;
 ///  		/* (top: 50%, left: 50%) */
-///  		@include position-set(both);
+///  		@include position-center(both);
 ///  	}
 ///  }
 ///
@@ -33,10 +33,10 @@
 ///  	.element {
 ///  		position: absolute;
 ///  		/* (top: 50%) */
-///  		@include center(vertical);
+///  		@include position-center(vertical);
 ///  	}
 ///  }
-@mixin position-set($axis: 'both') {
+@mixin position-center($axis: 'both') {
 	@if $axis == 'both' or $axis == 'vertical' {
 		top: 50%;
 	}
