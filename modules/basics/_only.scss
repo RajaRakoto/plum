@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Only mixin helps you to filter elements that match based on their position among a group of siblings and apply your style rules to only those elements. This mixin uses :first-of-type, :last-of-type, and :nth-of-type CSS pseudo-classes (inverse of "except" mixin).
+/// @param {string} $arg [selector(id, class), first, last, odd, even] - child element to include
+/// @param {number} $arg - child index
+/// @example
+///  /* HTML */
+///  <div class="wrapper">
+///    <div class="item">01</div>
+///    <div class="item">02</div>
+///    <div class="item">03</div>
+///    <div class="item">04</div>
+///    <div class="item">05</div>
+///    <div class="item">06</div>
+///  </div>
+///
+///  /* example 1 - include the first child element (item) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include only(first) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /* example 2 - include the last child element (item) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include only(last) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /* example 3 - include those elements whose numeric position is even (e.g: 2, 4, 6, …) OR odd (eg: 1, 3, 5, …) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include only(odd) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /* example 4 - include multiple items with index child element (item) */
+///
+///  .wrapper {
+///  	.item {
+///  		@include only(4, 5, 6) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+///
+///  /*  example 5 - now suppose you don’t know the number of the items that will appear in the list, and that you want to include the third item from the very end. How can you achieve that? It’s easy! */
+///
+///  .wrapper {
+///  	.item {
+///  		@include only(-3) {
+///  			background-color: dodgerblue;
+///  			color: #eee;
+///  		}
+///  	}
+///  }
+@mixin only($params...) {
+  @if length($params) == 0 {
+    @error "Please pass an argument. The argument must be either a negative or positive number or list of numbers. Or pass one of the following predefined string values: 'first', 'last', 'odd', 'even'.";
+  } @else if length($params) == 1 {
+    $value: nth($params, 1);
+    @if type-of($value) == "number" {
+      @if $value < 0 {
+        &:nth-last-of-type(#{$value * -1}) {
+          @content;
+        }
+      } @else {
+        &:nth-of-type(#{$value}) {
+          @content;
+        }
+      }
+    } @else if type-of($value) == "string" {
+      @if $value == "odd" {
+        &:nth-of-type(odd) {
+          @content;
+        }
+      } @else if $value == "even" {
+        &:nth-of-type(even) {
+          @content;
+        }
+      } @else if $value == "first" {
+        &:first-of-type {
+          @content;
+        }
+      } @else if $value == "last" {
+        &:last-of-type {
+          @content;
+        }
+      } @else {
+        // For class, id or attribute selectors.
+        &#{$value} {
+          @content;
+        }
+      }
+    }
+  } @else if length($params) > 1 {
+    $list: ();
+    @for $i from 1 through length($params) {
+      $list: append($list, if(nth($params, $i) < 0, unquote("&:nth-last-of-type(#{nth($params, $i) * -1})"), unquote("&:nth-of-type(#{nth($params, $i)})")), comma);
+    }
+    #{$list} {
+      @content;
+    }
+  }
+}
