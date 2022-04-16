@@ -5,8 +5,16 @@
 /// @param {string} $direction [none, both, vertical, horizontal] - this option sets the direction of the resize property.
 /// @param {string} $overflow [auto, overflow] - this option adjust the overflow property.
 /// @example
+///  /* example 1 - basic usage (vertical and horizontal resizable) */
+///
 ///  .containing-element{
 ///    @include resizable();
+///  }
+///
+///  /* example 2 - vertical only resizable) */
+///
+///  .containing-element{
+///    @include resizable(vertical);
 ///  }
 @mixin resizable($direction: both, $overflow: auto) {
 	resize: $direction;
