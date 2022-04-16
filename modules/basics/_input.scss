@@ -70,7 +70,7 @@
 }
 
 //TODO: verified
-/// Scale zoom effect for input
+/// Input-style-scale add zoom effect style for input
 /// @param {color} $bg-color [#eee] - background color
 /// @param {color} $border-color [#eee] - border color
 /// @param {color} $text-color [#444] - text color
@@ -78,7 +78,11 @@
 ///  input {
 ///	  @include input-scale();
 ///  }
-@mixin input-scale($bg-color: #eee, $border-color: #eee, $text-color: #444) {
+@mixin input-style-scale(
+	$bg-color: #eee,
+	$border-color: #eee,
+	$text-color: #444
+) {
 	padding: 3px 5px 3px 5px;
 	color: $text-color;
 	background-color: $bg-color;
