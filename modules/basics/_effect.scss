@@ -417,6 +417,33 @@
 }
 
 //TODO: verified
+///  Effect-text-stroke mixin helps you to add stroke to a text element and style it very easily.
+/// @param {color} $color [transparent] - sets color of a text
+/// @param {color} $stroke-color [black] - sets the stroke color of a text, the default stroke color value is black
+/// @param {color} $fallback-color [black] - this option is for non-supporting browsers, it will prevent text to disappear entirely in non-supporting browsers, the default value is black.
+/// @param {pixel} $stroke-width [thin, medium, thick] - sets the width of the stroke
+/// @example
+///  h1 {
+///  	@include effect-text-stroke(
+///  		$color: azure,
+///  		$stroke-color: cadetblue,
+///  		$fallback-color: cadetblue,
+///  		$stroke-width: 1px
+///  	);
+///  }
+@mixin effect-text-stroke(
+	$fallback-color: black,
+	$color: transparent,
+	$stroke-color: black,
+	$stroke-width: 1px
+) {
+	color: $fallback-color;
+	-webkit-text-fill-color: $color;
+	-webkit-text-stroke-color: $stroke-color;
+	-webkit-text-stroke-width: $stroke-width;
+}
+
+//TODO: verified
 /// Add a glimmer (light effect) external to a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @param {string} $color [#eee] - glimmer color
