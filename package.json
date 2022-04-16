@@ -1,5 +1,5 @@
 {
-  "name": "@raja/sass-eo",
+  "name": "@raja_rakoto/sass-eo",
   "version": "1.0.0",
   "description": "Customize your website faster with a toolset powered by SASS",
   "directories": {
@@ -47,9 +47,7 @@
     "grunt-contrib-sass": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-shell": "^4.0.0",
-    "i": "^0.3.7",
     "load-grunt-tasks": "^5.1.0",
-    "npm": "^8.7.0",
     "sassdoc": "^2.7.3"
   },
   "devDependencies": {
