@@ -6,7 +6,6 @@
 /// @param {string} $position [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, center, closest-side, farthest-side, closest-corner, farthest-corner] - sets the position of the gradient’s shape
 /// @param {color} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
 /// @example
-///
 ///  /* example 1 - circle shape */
 ///
 ///  .containing-element {
@@ -76,7 +75,6 @@
 /// Simply call the effect-hide mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
 /// @param {string} $toggle [hide, unhide] - default value is set to hide, use unhide to reserve the affect
 /// @example
-///
 ///  /* example 1 - hide */
 ///
 ///  .containing-element {
@@ -203,7 +201,6 @@
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @param {string} $color [#eee] - glimmer color
 /// @example
-///
 /// /* example 1*/
 ///
 ///  .p {
