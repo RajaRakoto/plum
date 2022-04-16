@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+
+//TODO: verified
+/// Resizable mixin helps you to make an element resizable on both horizontal or vertical directions.
+/// @param {string} $direction [none, both, vertical, horizontal] - this option sets the direction of the resize property.
+/// @param {string} $overflow [auto, overflow] - this option adjust the overflow property.
+/// @example
+///  .containing-element{
+///    @include resizable();
+///  }
+@mixin resizable($direction: both, $overflow: auto) {
+	resize: $direction;
+	overflow: $overflow;
+	max-width: 100%;
+}
