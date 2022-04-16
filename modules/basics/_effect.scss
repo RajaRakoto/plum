@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 //TODO: verified
-/// Effect-gradient mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
+/// Effect-gradient-linear mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
 /// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the gradient line’s direction of angle
 /// @param {color list} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
 /// @example
 ///  body {
-///  	@include effect-gradient(left, #43c6ac #191654);
+///  	@include effect-gradient-linear(left, #43c6ac #191654);
 ///  }
-@mixin effect-gradient($direction, $colors) {
+@mixin effect-gradient-linear($direction, $colors) {
 	$list: ();
 	@for $i from 1 through length($colors) {
 		$list: append($list, nth($colors, $i), comma);
