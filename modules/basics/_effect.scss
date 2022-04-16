@@ -1,6 +1,51 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Effect-gradient-radial mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property.
+/// @param {string} $shape [null, circle, ellipse] - this option sets the shape of the gradient
+/// @param {string} $position [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, center, closest-side, farthest-side, closest-corner, farthest-corner] - sets the position of the gradient’s shape
+/// @param {color} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
+/// @example
+///
+///  /* example 1 - circle shape */
+///
+///  .containing-element {
+///  	@include effect-gradient-radial(circle, center, red orange);
+///  }
+///
+///  /* example 2 - ellipse shape */
+///
+///  .containing-element {
+///  	@include effect-gradient-radial(ellipse, center, red orange);
+///  }
+///
+///  /* example 3 - use named arguments */
+///
+///  .containing-element {
+///  	@include effect-gradient-radial(
+///  		$shape: circle,
+///  		$position: top,
+///  		$colors: pink crimson
+///  	);
+///  }
+@mixin effect-gradient-radial($shape, $position, $colors) {
+	$list: ();
+	$shape: unquote($shape);
+	$position: unquote($position);
+	@for $i from 1 through length($colors) {
+		$list: append($list, nth($colors, $i), comma);
+	}
+	@if map-has-key($map-for-positions, $position) {
+		background: radial-gradient(
+			$shape map-get($map-for-positions, $position),
+			$list
+		);
+	} @else if not map-has-key($map-for-positions, $position) {
+		background: radial-gradient($shape $position, $list);
+	}
+}
+
+//TODO: verified
 /// Effect-gradient-linear mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
 /// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the gradient line’s direction of angle
 /// @param {color list} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
