@@ -579,7 +579,7 @@
 
 	"__color-adjust": {
 		"prefix": "sseo-func-color-adjust",
-		"body": ["__color-adjust($$colors: ${1:color});"],
+		"body": ["__color-adjust($$colors: ${1:color}, $$percent: ${2:percent});"],
 		"description": "Une fonction qui ajuste la luminosité d'une couleur d'argument."
 	},
 
