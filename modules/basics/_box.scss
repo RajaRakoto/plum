@@ -148,7 +148,7 @@
 
 //TODO: verified
 /// Quickly add a border on the containers (util at debugging)
-/// @param {string} $color [red] - border color
+/// @param {string} $colors [red] - border color
 /// @param {pixel} $size [3px] - border size
 /// @param {boolean} $bg-color [true, false] - Activate | Disable the color of the background
 /// @param {boolean} $status [true, false] - Activate | Disable Info Box (Debogging)
@@ -179,19 +179,19 @@
 ///  }
 ///
 @mixin box-debugging(
-	$color: red,
+	$colors: red,
 	$size: 0.188rem,
 	$bg-color: false,
 	$status: true
 ) {
 	@if ($status) {
 		@if not($size == 0.188rem) {
-			border: solid __convertToRem($size) $color;
+			border: solid __convertToRem($size) $colors;
 		} @else {
-			border: solid $size $color;
+			border: solid $size $colors;
 		}
 		@if ($bg-color) {
-			background-color: lighten(adjust-hue($color, 20), 25%);
+			background-color: lighten(adjust-hue($colors, 20), 25%);
 			// opacity: 70%;
 		}
 	}
