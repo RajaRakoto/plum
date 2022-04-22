@@ -498,5 +498,100 @@
 			"@include resizable($$direction: ${1:none, both, vertical, horizontal}, $$overflow: ${2:auto, overflow});"
 		],
 		"description": "Le mixin resizable vous aide à rendre un élément redimensionnable dans les directions horizontale ou verticale."
+	},
+
+	"sizer": {
+		"prefix": "sseo-specs-sizer",
+		"body": [
+			"@include sizer($$width: ${1:pixel}, $$overflow: ${2:auto, overflow});"
+		],
+		"description": "Sizer mixin vous aide à dimensionner les éléments avec une déclaration (ou deux). Redimensionnez les éléments ou créez très facilement des formes carrées ou rectangulaires."
+	},
+
+	"spacing-padding": {
+		"prefix": "sseo-spacing-padding",
+		"body": [
+			"@include spacing-padding($$top: ${1:pixel}, $$right ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel},);"
+		],
+		"description": "Modifier rapidement le rembourrage d'un élément"
+	},
+
+	"spacing-margin": {
+		"prefix": "sseo-spacing-margin",
+		"body": [
+			"@include spacing-margin($$top: ${1:pixel}, $$right ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel},);"
+		],
+		"description": "Modifier rapidement la marge d'un élément"
+	},
+
+	"spacing-padding-gabarit": {
+		"prefix": "sseo-spacing-padding-gabarit",
+		"body": [
+			"@include spacing-padding-gabarit($$gabarit: ${1:xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large});"
+		],
+		"description": "Ajoutez rapidement un rembourrage prédéfini basé sur l'argument gabarit"
+	},
+
+	"spacing-margin-gabarit": {
+		"prefix": "sseo-spacing-margin-gabarit",
+		"body": [
+			"@include spacing-margin-gabarit($$gabarit: ${1:xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large});"
+		],
+		"description": "Ajoutez rapidement une marge prédéfinie basée sur l'argument gabarit"
+	},
+
+	"spacing-all-gabarit": {
+		"prefix": "sseo-spacing-all-gabarit",
+		"body": [
+			"@include spacing-all-gabarit($$gabarit: ${1:xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large});"
+		],
+		"description": "Ajoutez rapidement un padding|margin prédéfini basé sur l'argument gabarit"
+	},
+
+	"tablet": {
+		"prefix": "sseo-specs-tablet",
+		"body": [
+			"@include tablet($$device: ${1:xx-small, iPadMini, iPad, iPadAir, iPadPro, Nexus7, Nexus9, Nexus10}, $$orientation: ${2: portrait, landscape});"
+		],
+		"description": "Il y aura des moments où vous devrez styliser des éléments uniquement pour un modèle de tablette particulier. Tablet mixin vous aide à y parvenir."
+	},
+
+	"typo-fontface": {
+		"prefix": "sseo-typo-fontface",
+		"body": [
+			"@include typo-fontface($$font-name: ${1:string}, $$path: ${2:url}, $$weight: ${3:normal, lighter, bold, bolder",
+			"}, $$style: ${4:normal, italic});"
+		],
+		"description": "Ce mixin effectue une importation rapide de polices externes et inclut des propriétés cohérentes."
+	},
+
+	"video-responsive": {
+		"prefix": "sseo-video-responsive",
+		"body": ["@include video-responsive($$ratio: ${1:16/9, 4/3});"],
+		"description": "Le mixin vidéo réactif vous aide à créer des éléments contenant réactifs avec un rapport d'aspect fixe que vous définissez. Ceci est particulièrement utile lorsque vous intégrez des vidéos provenant de YouTube ou de sources similaires."
+	},
+
+	"__color-pastel": {
+		"prefix": "sseo-func-color-pastel",
+		"body": ["__color-pastel($$colors: ${1:color});"],
+		"description": "Une fonction qui retourne le pastel de la couleur en argument"
+	},
+
+	"__color-adjust": {
+		"prefix": "sseo-func-color-adjust",
+		"body": ["__color-adjust($$colors: ${1:color});"],
+		"description": "Une fonction qui ajuste la luminosité d'une couleur d'argument"
+	},
+
+	"__color-complement": {
+		"prefix": "sseo-func-color-complement",
+		"body": ["__color-complement($$colors: ${1:color});"],
+		"description": "Une fonction qui renvoie la complémentaire d'une couleur (sert à déterminer une charte graphique)"
+	},
+
+	"__convertToRem": {
+		"prefix": "sseo-func-convertToRem",
+		"body": ["__convertToRem($$value: ${1:pixel});"],
+		"description": "Une fonction qui convertit une valeur de pixel en rem"
 	}
 }
