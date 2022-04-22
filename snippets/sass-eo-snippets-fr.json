@@ -210,7 +210,7 @@
 	"box-debugging": {
 		"prefix": "sseo-box-debugging",
 		"body": [
-			"@include box-debugging($$color: ${1:color->red}, $$size: ${2:pixel->3px}, $$bg-color: ${3:boolean->false}, $$status: ${4:boolean->true});"
+			"@include box-debugging($$colors: ${1:color->red}, $$size: ${2:pixel->3px}, $$bg-color: ${3:boolean->false}, $$status: ${4:boolean->true});"
 		],
 		"description": "Ajouter rapidement une bordure sur les conteneurs (utile au débogage)."
 	},
