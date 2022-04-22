@@ -14,7 +14,7 @@
 			"/// /* example 3 */",
 			"///"
 		],
-		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc"
+		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc."
 	},
 	"sassdoc (1 arg)": {
 		"prefix": "sseo-docs*1",
@@ -32,7 +32,7 @@
 			"/// /* example 3 */",
 			"///"
 		],
-		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc"
+		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc."
 	},
 	"sassdoc (2 args)": {
 		"prefix": "sseo-docs*2",
@@ -51,7 +51,7 @@
 			"/// /* example 3 */",
 			"///"
 		],
-		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc"
+		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc."
 	},
 	"sassdoc (3 args)": {
 		"prefix": "sseo-docs*3",
@@ -71,7 +71,7 @@
 			"/// /* example 3 */",
 			"///"
 		],
-		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc"
+		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc."
 	},
 	"sassdoc (4 args)": {
 		"prefix": "sseo-docs*4",
@@ -92,19 +92,19 @@
 			"/// /* example 3 */",
 			"///"
 		],
-		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc"
+		"description": "Permet d'écrire rapidement les codes necessaires pour générer une docs par sassdoc."
 	},
 
 	"adaptive": {
 		"prefix": "sseo-specs-adaptive",
 		"body": ["@include adaptive($$gutter: ${1:pixel->30px});"],
-		"description": "Le mixin adaptatif vous aide à définir la valeur max-width pour les éléments contenants en fonction des valeurs de point d'arrêt définies dans le fichier _map-for-breakpoints.scss, et spécifie également une valeur $gutter, où les bords d'un écran de navigateur peuvent se rapprocher le plus aux bords de l'élément sélectionné. (Astuce : le mixin adaptatif fonctionne mieux avec les valeurs en pourcentage.)"
+		"description": "Le mixin adaptatif vous aide à définir la valeur max-width pour les éléments contenants en fonction des valeurs de point d'arrêt définies dans le fichier _map-for-breakpoints.scss, et spécifie également une valeur $gutter, où les bords d'un écran de navigateur peuvent se rapprocher le plus aux bords de l'élément sélectionné. (Astuce : le mixin adaptatif fonctionne mieux avec les valeurs en pourcentage.)."
 	},
 
 	"animation-scale": {
 		"prefix": "sseo-anim-scale",
 		"body": ["@include animation-scale($$direction: ${1:left, right});"],
-		"description": "Ajouter une animation d'échelle (mini slide)"
+		"description": "Ajouter une animation d'échelle (mini slide)."
 	},
 
 	"animation-slide": {
@@ -112,13 +112,13 @@
 		"body": [
 			"@include animation-slide($$in-out: ${1:in, out}, $$direction: ${2:up, down, right, left});"
 		],
-		"description": "Ajouter un effet d'animation de diapositive - idéal pour une barre latérale"
+		"description": "Ajouter un effet d'animation de diapositive - idéal pour une barre latérale."
 	},
 
 	"animation-fade": {
 		"prefix": "sseo-anim-fade",
 		"body": ["@include animation-fade($$in-out: ${1:in, out});"],
-		"description": "Ajouter un effet d'animation de diapositive (fluide)"
+		"description": "Ajouter un effet d'animation de diapositive (fluide)."
 	},
 
 	"animation-zoom-fixed": {
@@ -126,19 +126,19 @@
 		"body": [
 			"@include animation-zoom-fixed($$scaleValue: ${1:foat->0.5~1.5});"
 		],
-		"description": "Ajouter un effet d'animation de zoom fixe - souvent utilisé pour un bouton ou une liste de cartes"
+		"description": "Ajouter un effet d'animation de zoom fixe - souvent utilisé pour un bouton ou une liste de cartes."
 	},
 
 	"animation-zoom": {
 		"prefix": "sseo-anim-zoom",
 		"body": ["@include animation-zoom($$in-out: ${1:in, out});"],
-		"description": "Ajouter un effet d'animation de zoom temporaire - souvent utilisé pour un effet d'animation à l'entrée"
+		"description": "Ajouter un effet d'animation de zoom temporaire - souvent utilisé pour un effet d'animation à l'entrée."
 	},
 
 	"animation-flip": {
 		"prefix": "sseo-anim-flip",
 		"body": ["@include animation-flip($$in-out: ${1:in, out});"],
-		"description": "Ajouter un effet d'animation flip"
+		"description": "Ajouter un effet d'animation flip."
 	},
 
 	"animation-rotate": {
@@ -146,31 +146,31 @@
 		"body": [
 			"@include animation-rotate($$in-out: ${1:in, out}, $$axeY: ${2:up, down}, $$axeX: ${3:left, right});"
 		],
-		"description": "Ajouter un effet d'animation de rotation"
+		"description": "Ajouter un effet d'animation de rotation."
 	},
 
 	"animation-notif": {
 		"prefix": "sseo-anim-notif",
 		"body": ["@include animation-notif($$in-out: ${1:in, out});"],
-		"description": "Ajouter un effet d'animation de notification"
+		"description": "Ajouter un effet d'animation de notification."
 	},
 
 	"animation-pulse": {
 		"prefix": "sseo-anim-pulse",
 		"body": ["@include animation-pulse();"],
-		"description": "Ajouter un effet d'animation de pulsation"
+		"description": "Ajouter un effet d'animation de pulsation."
 	},
 
 	"animation-bounce": {
 		"prefix": "sseo-anim-bounce",
 		"body": ["@include animation-bounce();"],
-		"description": "Ajoutez un effet d'animation de rebond"
+		"description": "Ajoutez un effet d'animation de rebond."
 	},
 
 	"animation-flash": {
 		"prefix": "sseo-anim-flash",
 		"body": ["@include animation-flash();"],
-		"description": "Ajouter un effet d'animation flash"
+		"description": "Ajouter un effet d'animation flash."
 	},
 
 	"antialias": {
@@ -184,7 +184,7 @@
 		"body": [
 			"@include bar-scrolling($$bar-color: ${1:color}, $$bar-color-hover: ${2:color}, $$bg-color: ${3:color->#eee});"
 		],
-		"description": "Personnalisez la barre de défilement de votre page Web"
+		"description": "Personnalisez la barre de défilement de votre page Web."
 	},
 
 	"box-circle": {
@@ -198,7 +198,7 @@
 		"body": [
 			"@include box-radius($$corner: ${1:null, top, top-right, right, bottom-right, bottom, botton-left, left, top-left, cross-left, cross-right, all}, $$value:  ${2:pixel});"
 		],
-		"description": "Le mixin Box-radius vous aide à arrondir le ou les coins d'un élément sélectionné en utilisant la propriété CSS border-radius . Vous pouvez passer une valeur (avec l'unité) pour styliser tous les coins de la même manière ou vous pouvez utiliser la propriété abrégée CSS pour styliser chaque coin différemment - l'avantage d'utiliser ce mixin est que chaque valeur lors de la saisie est transformée en REM, ce qui donne un style plus réactif effet"
+		"description": "Le mixin Box-radius vous aide à arrondir le ou les coins d'un élément sélectionné en utilisant la propriété CSS border-radius . Vous pouvez passer une valeur (avec l'unité) pour styliser tous les coins de la même manière ou vous pouvez utiliser la propriété abrégée CSS pour styliser chaque coin différemment - l'avantage d'utiliser ce mixin est que chaque valeur lors de la saisie est transformée en REM, ce qui donne un style plus réactif effet."
 	},
 
 	"box-sizing": {
@@ -234,7 +234,7 @@
 		"body": [
 			"@include button-all($$pseudo: ${1:hover, focus, active, disabled});"
 		],
-		"description": "button-all mixin vous aide à cibler tous les éléments de bouton HTML dans le DOM afin que vous puissiez facilement appliquer vos règles de style."
+		"description": "Button-all mixin vous aide à cibler tous les éléments de bouton HTML dans le DOM afin que vous puissiez facilement appliquer vos règles de style."
 	},
 
 	"clearfix": {
@@ -248,7 +248,7 @@
 		"body": [
 			"@include columnize($$columns: ${1:number}, $$gutter: ${2:pixel}, $$fill: ${3:boolean->false});"
 		],
-		"description": "Columnize mixin vous aide à créer des colonnes hypothétiques uniformément divisées (basées sur flexbox) dans un élément contenant, autant que la valeur que vous transmettez pour l'argument $columns . Ainsi, vous pouvez afficher tous les enfants à l'intérieur de l'élément parent comme s'ils étaient alignés dans une colonne - [ATTENTION] : doit être appliqué à l'élément parent pour aligner les enfants à l'intérieur de celui-ci !"
+		"description": "Columnize mixin vous aide à créer des colonnes hypothétiques uniformément divisées (basées sur flexbox) dans un élément contenant, autant que la valeur que vous transmettez pour l'argument $columns . Ainsi, vous pouvez afficher tous les enfants à l'intérieur de l'élément parent comme s'ils étaient alignés dans une colonne - [ATTENTION] : doit être appliqué à l'élément parent pour aligner les enfants à l'intérieur de celui-ci !."
 	},
 
 	"effect-gradient-text": {
@@ -290,7 +290,7 @@
 	"effect-opacity": {
 		"prefix": "sseo-effect-opacity",
 		"body": ["@include effect-opacity($$percent: ${1:percent});"],
-		"description": "Ajouter un effet d'opacité sur un élément (compatible avec IE8)"
+		"description": "Ajouter un effet d'opacité sur un élément (compatible avec IE8)."
 	},
 
 	"effect-box-shadow": {
@@ -298,7 +298,7 @@
 		"body": [
 			"@include effect-box-shadow($$opacity: ${1:solid, small, medium, large, none});"
 		],
-		"description": "Ajouter un effet d'ombre extérieur sur un conteneur"
+		"description": "Ajouter un effet d'ombre extérieur sur un conteneur."
 	},
 
 	"effect-box-shadow-inset": {
@@ -306,7 +306,7 @@
 		"body": [
 			"@include effect-box-shadow-inset($$opacity: ${1:small, medium, large, none});"
 		],
-		"description": "Ajouter un effet d'ombre intérieur sur un conteneur"
+		"description": "Ajouter un effet d'ombre intérieur sur un conteneur."
 	},
 
 	"effect-text-shadow": {
@@ -314,7 +314,7 @@
 		"body": [
 			"@include effect-text-shadow($$opacity: ${1:small, medium, large, none});"
 		],
-		"description": "Ajouter un effet d'ombre interne sur un texte"
+		"description": "Ajouter un effet d'ombre interne sur un texte."
 	},
 
 	"effect-text-supershadow": {
@@ -322,7 +322,7 @@
 		"body": [
 			"@include effect-text-supershadow($$direction: ${1:top, top-right, right, bottom-right, bottom, bottom-left, left, top-left}, $$colors: ${2:color->rgba(black, 0.3)}, $$size: ${3:pixel}, $$blur: ${4:pixel->null}, $$fill: ${5:boolean->false});"
 		],
-		"description": "Le mixin effet-text-supershadow vous aide à ajouter de l'ombre aux éléments de texte. Accepte une liste d'ombres séparées par des virgules ou une seule valeur d'ombre qui peut éventuellement être multipliée. Il fournit une méthode en une ligne facile à utiliser - contrairement au mixin 'effet-texte-ombre', celui-ci est plus personnalisable et plus puissant en termes de fonctionnalités"
+		"description": "Le mixin effet-text-supershadow vous aide à ajouter de l'ombre aux éléments de texte. Accepte une liste d'ombres séparées par des virgules ou une seule valeur d'ombre qui peut éventuellement être multipliée. Il fournit une méthode en une ligne facile à utiliser - contrairement au mixin 'effet-texte-ombre', celui-ci est plus personnalisable et plus puissant en termes de fonctionnalités."
 	},
 
 	"effect-text-stroke": {
@@ -338,7 +338,7 @@
 		"body": [
 			"@include effect-text-light($$opacity: ${1:small, medium, large, none}, $$solors: ${2:color->#eee});"
 		],
-		"description": "Ajouter une lueur (effet de lumière) externe à un texte"
+		"description": "Ajouter une lueur (effet de lumière) externe à un texte."
 	},
 
 	"effect-box-light": {
@@ -346,7 +346,7 @@
 		"body": [
 			"@include effect-box-light($$opacity: ${1:solid, small, medium, large, none}, $$solors: ${2:color->#eee});"
 		],
-		"description": "Ajouter une lueur (effet de lumière) externe à un conteneur"
+		"description": "Ajouter une lueur (effet de lumière) externe à un conteneur."
 	},
 
 	"except": {
@@ -418,7 +418,7 @@
 		"body": [
 			"@include input-style-scale($$bg-color: ${1:color->#eee}, $$border-color: ${2:color->#eee}, $$text-color: ${3:#444});"
 		],
-		"description": "Input-style-scale ajoute un style d'effet de zoom pour l'entrée"
+		"description": "Input-style-scale ajoute un style d'effet de zoom pour l'entrée."
 	},
 
 	"loadify": {
@@ -432,7 +432,7 @@
 	"minireset": {
 		"prefix": "sseo-specs-minireset",
 		"body": ["@include minireset();"],
-		"description": "Le minireset est une technique qui consiste à remettre à 0 la valeur de certains éléments HTML afin d'éviter certaines différences"
+		"description": "Le minireset est une technique qui consiste à remettre à 0 la valeur de certains éléments HTML afin d'éviter certaines différences."
 	},
 
 	"mobile": {
@@ -447,13 +447,13 @@
 	"nav-props": {
 		"prefix": "sseo-nav-props",
 		"body": ["@include nav-props();"],
-		"description": "Nav-props mixin permet d'initialiser rapidement les propriétés CSS par défaut d'une barre de navigation"
+		"description": "Nav-props mixin permet d'initialiser rapidement les propriétés CSS par défaut d'une barre de navigation."
 	},
 
 	"normalize": {
 		"prefix": "sseo-specs-normalize",
 		"body": ["@include normalize();"],
-		"description": "Normalize permet aux navigateurs de rendre tous les éléments de manière plus cohérente et conforme aux normes modernes - appelez une seule fois"
+		"description": "Normalize permet aux navigateurs de rendre tous les éléments de manière plus cohérente et conforme aux normes modernes - appelez une seule fois."
 	},
 
 	"only": {
@@ -483,13 +483,13 @@
 	"position-block-center": {
 		"prefix": "sseo-position-block-center",
 		"body": ["@include position-block-center();"],
-		"description": "Centrer rapidement un bloc"
+		"description": "Centrer rapidement un bloc."
 	},
 
 	"position-flex-center": {
 		"prefix": "sseo-position-flex-center",
 		"body": ["@include position-flex-center();"],
-		"description": "Centrer rapidement l'élément enfant"
+		"description": "Centrer rapidement l'élément enfant."
 	},
 
 	"resizable": {
@@ -513,7 +513,7 @@
 		"body": [
 			"@include spacing-padding($$top: ${1:pixel}, $$right ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel},);"
 		],
-		"description": "Modifier rapidement le rembourrage d'un élément"
+		"description": "Modifier rapidement le rembourrage d'un élément."
 	},
 
 	"spacing-margin": {
@@ -521,7 +521,7 @@
 		"body": [
 			"@include spacing-margin($$top: ${1:pixel}, $$right ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel},);"
 		],
-		"description": "Modifier rapidement la marge d'un élément"
+		"description": "Modifier rapidement la marge d'un élément."
 	},
 
 	"spacing-padding-gabarit": {
@@ -529,7 +529,7 @@
 		"body": [
 			"@include spacing-padding-gabarit($$gabarit: ${1:xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large});"
 		],
-		"description": "Ajoutez rapidement un rembourrage prédéfini basé sur l'argument gabarit"
+		"description": "Ajoutez rapidement un rembourrage prédéfini basé sur l'argument gabarit."
 	},
 
 	"spacing-margin-gabarit": {
@@ -537,7 +537,7 @@
 		"body": [
 			"@include spacing-margin-gabarit($$gabarit: ${1:xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large});"
 		],
-		"description": "Ajoutez rapidement une marge prédéfinie basée sur l'argument gabarit"
+		"description": "Ajoutez rapidement une marge prédéfinie basée sur l'argument gabarit."
 	},
 
 	"spacing-all-gabarit": {
@@ -545,7 +545,7 @@
 		"body": [
 			"@include spacing-all-gabarit($$gabarit: ${1:xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large});"
 		],
-		"description": "Ajoutez rapidement un padding|margin prédéfini basé sur l'argument gabarit"
+		"description": "Ajoutez rapidement un padding|margin prédéfini basé sur l'argument gabarit."
 	},
 
 	"tablet": {
@@ -574,19 +574,19 @@
 	"__color-pastel": {
 		"prefix": "sseo-func-color-pastel",
 		"body": ["__color-pastel($$colors: ${1:color});"],
-		"description": "Une fonction qui retourne le pastel de la couleur en argument"
+		"description": "Une fonction qui retourne le pastel de la couleur en argument."
 	},
 
 	"__color-adjust": {
 		"prefix": "sseo-func-color-adjust",
 		"body": ["__color-adjust($$colors: ${1:color});"],
-		"description": "Une fonction qui ajuste la luminosité d'une couleur d'argument"
+		"description": "Une fonction qui ajuste la luminosité d'une couleur d'argument."
 	},
 
 	"__color-complement": {
 		"prefix": "sseo-func-color-complement",
 		"body": ["__color-complement($$colors: ${1:color});"],
-		"description": "Une fonction qui renvoie la complémentaire d'une couleur (sert à déterminer une charte graphique)"
+		"description": "Une fonction qui renvoie la complémentaire d'une couleur (sert à déterminer une charte graphique)."
 	},
 
 	"__convertToRem": {
