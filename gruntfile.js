@@ -1,8 +1,7 @@
 /**
  * @author: Raja
- * @description: a gruntfile.js template for setting up a basic GRUNT task runner based environment to quickly integrate and use in a project
- * @requires: npm install grunt load-grunt-tasks grunt-shell --save-dev
- * @dependencies: grunt shell:install_deps
+ * @description: a gruntfile.js template setting up a basic GRUNT task runner for sass-eo
+ * @requires: grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc
  */
 module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt); // grunt plugins loader
@@ -38,7 +37,7 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: inused
+		// TODO: verified
 		/**
 		 * Run shell commands
 		 */
@@ -96,6 +95,15 @@ module.exports = function (grunt) {
 				src: includeAllFiles,
 				dest: 'scripts',
 			},
+			snippets: {
+				options: {
+					archive: backupsDestination + 'snippets.tar.gz',
+				},
+				expand: true,
+				cwd: './snippets/',
+				src: includeAllFiles,
+				dest: 'snippets',
+			},
 			test: {
 				options: {
 					archive: backupsDestination + 'test.tar.gz',
@@ -120,42 +128,27 @@ module.exports = function (grunt) {
 		},
 	});
 
-	// grunt basics tasks
-	grunt.registerTask('sass-task', ['sass:test']); // watched
-
-	// grunt mixed tasks
+	// all grunt register tasks
 	grunt.registerTask('compress-all', [
 		'compress:main',
 		'compress:docs',
 		'compress:modules',
 		'compress:node_modules',
 		'compress:scripts',
+		'compress:snippets',
 		'compress:test',
 	]);
-
-	// grunt watched tasks
+	grunt.registerTask('sass-task', ['sass:test']);
 	grunt.registerTask('watch-sass', ['watch:sass']);
-
-	// grunt shell & others tasks
 	grunt.registerTask('sassdoc', ['shell:sassdoc']);
 
-	// arrays basics tasks
-	const basicsTaskNames = ['sass-task'];
-	const basicsTaskStatus = ['sass:test'];
-
-	// arrays mixed tasks
-	const mixedTaskNames = ['compress-all'];
-	const mixedTaskStatus = [
-		'(compress:main | compress:docs | compress:modules | compress:node_modules | compress:scripts | compress:test',
+	// all tasks lists
+	const sasseoTaskNames = ['compress-all', 'watch-sass', 'sassdoc'];
+	const sasseoTaskStatus = [
+		'compress: main | docs | modules | node_modules | scripts | snippets | test',
+		'auto compile sass',
+		'generate & open sassdoc',
 	];
-
-	// arrays watched tasks
-	const watchedTaskNames = ['watch-sass'];
-	const watchedTaskStatus = ['watch:sass'];
-
-	// arrays others tasks
-	const othersTaskNames = ['sassdoc'];
-	const othersTaskStatus = ['shell:sassdoc'];
 
 	// default tasks
 	grunt.registerTask('default', () => {
@@ -203,15 +196,12 @@ module.exports = function (grunt) {
 			}
 		}
 
-		// all tasks resume
-		getTaskResume('basics tasks', basicsTaskNames, basicsTaskStatus, 'cyan');
-		getTaskResume('mixed tasks', mixedTaskNames, mixedTaskStatus, 'magenta');
-		getTaskResume('watched tasks', watchedTaskNames, watchedTaskStatus, 'blue');
+		// task resume
 		getTaskResume(
-			'shell & others tasks',
-			othersTaskNames,
-			othersTaskStatus,
-			'yellow',
+			'SASS-EO tasks',
+			sasseoTaskNames,
+			sasseoTaskStatus,
+			'magenta',
 		);
 	});
 };
