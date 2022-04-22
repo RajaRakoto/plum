@@ -102,13 +102,13 @@
 	},
 
 	"animation-scale": {
-		"prefix": "sseo-anim-scale",
+		"prefix": "sseo-animation-scale",
 		"body": ["@include animation-scale($$direction: ${1:left, right});"],
 		"description": "Ajouter une animation d'échelle (mini slide)."
 	},
 
 	"animation-slide": {
-		"prefix": "sseo-anim-slide",
+		"prefix": "sseo-animation-slide",
 		"body": [
 			"@include animation-slide($$in-out: ${1:in, out}, $$direction: ${2:up, down, right, left});"
 		],
@@ -116,13 +116,13 @@
 	},
 
 	"animation-fade": {
-		"prefix": "sseo-anim-fade",
+		"prefix": "sseo-animation-fade",
 		"body": ["@include animation-fade($$in-out: ${1:in, out});"],
 		"description": "Ajouter un effet d'animation de diapositive (fluide)."
 	},
 
 	"animation-zoom-fixed": {
-		"prefix": "sseo-anim-zoom-fixed",
+		"prefix": "sseo-animation-zoom-fixed",
 		"body": [
 			"@include animation-zoom-fixed($$scaleValue: ${1:foat->0.5~1.5});"
 		],
@@ -130,19 +130,19 @@
 	},
 
 	"animation-zoom": {
-		"prefix": "sseo-anim-zoom",
+		"prefix": "sseo-animation-zoom",
 		"body": ["@include animation-zoom($$in-out: ${1:in, out});"],
 		"description": "Ajouter un effet d'animation de zoom temporaire - souvent utilisé pour un effet d'animation à l'entrée."
 	},
 
 	"animation-flip": {
-		"prefix": "sseo-anim-flip",
+		"prefix": "sseo-animation-flip",
 		"body": ["@include animation-flip($$in-out: ${1:in, out});"],
 		"description": "Ajouter un effet d'animation flip."
 	},
 
 	"animation-rotate": {
-		"prefix": "sseo-anim-rotate",
+		"prefix": "sseo-animation-rotate",
 		"body": [
 			"@include animation-rotate($$in-out: ${1:in, out}, $$axeY: ${2:up, down}, $$axeX: ${3:left, right});"
 		],
@@ -150,25 +150,25 @@
 	},
 
 	"animation-notif": {
-		"prefix": "sseo-anim-notif",
+		"prefix": "sseo-animation-notif",
 		"body": ["@include animation-notif($$in-out: ${1:in, out});"],
 		"description": "Ajouter un effet d'animation de notification."
 	},
 
 	"animation-pulse": {
-		"prefix": "sseo-anim-pulse",
+		"prefix": "sseo-animation-pulse",
 		"body": ["@include animation-pulse();"],
 		"description": "Ajouter un effet d'animation de pulsation."
 	},
 
 	"animation-bounce": {
-		"prefix": "sseo-anim-bounce",
+		"prefix": "sseo-animation-bounce",
 		"body": ["@include animation-bounce();"],
 		"description": "Ajoutez un effet d'animation de rebond."
 	},
 
 	"animation-flash": {
-		"prefix": "sseo-anim-flash",
+		"prefix": "sseo-animation-flash",
 		"body": ["@include animation-flash();"],
 		"description": "Ajouter un effet d'animation flash."
 	},
@@ -230,7 +230,7 @@
 	},
 
 	"button-all": {
-		"prefix": "sseo-btn-button-all",
+		"prefix": "sseo-button-all",
 		"body": [
 			"@include button-all($$pseudo: ${1:hover, focus, active, disabled});"
 		],
