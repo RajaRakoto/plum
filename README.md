@@ -231,7 +231,7 @@ Here's how to use this extension:
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Basics`
 
@@ -249,13 +249,11 @@ grunt sseo-docs
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Libraries`
 
 Here are the lists of built-in `libraries` in **sass-eo**
-
-<!-- TODO: test -->
 
 ##### `📍Hamburgers`
 
@@ -266,7 +264,7 @@ Here are the lists of built-in `libraries` in **sass-eo**
 </div>
 <br>
 
-Here is the list of Hamburger-like `classes` you can choose from:
+Here is the list of Hamburger-like `class` you can choose from:
 
 ```
   hamburger--3dx
@@ -310,7 +308,7 @@ Here is the list of Hamburger-like `classes` you can choose from:
 
 **Use:**
 
-- Import hamburgers modules `@import 'sass-eo-lib-hamburgers'`
+- Import hamburgers module `@import 'sass-eo-lib-hamburgers'`
 
 - Add the corresponding class in your HTML page:
 
@@ -336,8 +334,6 @@ hamburger.addEventListener('click', function () {
 
 <br>
 
-<!-- TODO: test -->
-
 ##### `📍Loaders`
 
 `loaders` are collections of mixins used to add a loading effect to each element
@@ -359,7 +355,7 @@ grunt loader-docs
 
 **Use:**
 
-Import loader modules `@import 'sass-eo-lib-loader'`
+Import loaders module `@import 'sass-eo-lib-loaders'`
 
 ```scss
 // SCSS
@@ -384,8 +380,6 @@ window.addEventListener('load', () => {
 
 <br>
 
-<!-- TODO: test -->
-
 ##### `📍Magic`
 
 `Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
@@ -403,7 +397,7 @@ grunt magic-docs
 
 **Use:**
 
-Import loader modules `@import 'sass-eo-lib-magic'`
+Import magic module `@import 'sass-eo-lib-magic'`
 
 ```scss
 // SCSS - call the magic mixin inside a selector
@@ -417,7 +411,7 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Frameworks`
 
