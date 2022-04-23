@@ -3,7 +3,7 @@
 	"publisher": "raja-rakoto7",
 	"displayName": "sass-eo",
 	"description": "List of vscode snippets for SASS-EO",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"icon": "sseo-ico.png",
 	"engines": {
 		"vscode": "^1.66.0"
