@@ -12,15 +12,15 @@
 
 <br>
 
-| Table of Contents            |
-| :--------------------------- |
-| [Description](#-description) |
-| [Install](#-install)         |
-| [Use](#-use)                 |
-| [Extension](#-extension)     |
-| [Basics](#-basics)           |
-| [Libraries](#-libraries)     |
-| [Frameworks](#-frameworks)   |
+| Table of Contents                     |
+| :------------------------------------ |
+| [Description](#-description)          |
+| [Install & update](#-install--update) |
+| [Use](#-use)                          |
+| [Extension](#-extension)              |
+| [Basics](#-basics)                    |
+| [Libraries](#-libraries)              |
+| [Frameworks](#-frameworks)            |
 
 </div>
 
@@ -37,14 +37,15 @@ The difference between gerillass and **sass-eo**:
 > - Use `milligrid` for easier CSS flexbox manipulation
 > - More flexible use thanks to `vscode extensions`
 
+<br>
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
-### `📌 Install`
+### `📌 Install & update`
 
-Run the command below to install **sass-eo** with `npm`:
+Run the command below to install **sass-eo**:
 
 ```bash
 npm i @raja_rakoto/sass-eo --save-dev
@@ -56,10 +57,17 @@ Run the following command to use **sass-eo** dependencies:
 npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
 ```
 
+Run the following command to update **sass-eo**:
+
+```bash
+npm update @raja_rakoto/sass-eo
+```
+
+<br>
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Use`
 
@@ -160,18 +168,23 @@ grunt watch-sass
      sass-eo-semantic
      sass-eo-milligrid
 
+<br>
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Extension`
 
-**sass-eo** has a `vscode` extension to facilitate its use, this extension includes a set of snippets allowing to quickly generate a code to call a mixin or a function of basic modules, libraries or frameworks...
+**sass-eo** has a `vscode` extension to facilitate its use, this extension includes a set of snippets allowing to quickly generate a code to call a mixin or a function of basic modules, libraries or frameworks ...
+
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/extension-demo.gif?raw=true" width="500">
+</div>
 
 Here's how to use this extension:
 
-- **`Installation of the extension`**
+- **`Installation`**
 
   You can install it by typing "sass-eo" in the extension tab of your IDE
 
@@ -184,7 +197,7 @@ Here's how to use this extension:
   Basic syntax for using the extension:
 
   ```sass
-  sseo-[category]-[name] (ex: sseo-func-color-pastel)
+  sseo-[category]-[name] (e.g: sseo-func-color-pastel)
   ```
 
   **[category]**: represents keywords to quickly identify the snippets to use, here are the lists of keywords
@@ -197,8 +210,10 @@ Here's how to use this extension:
   - `effect` (box, gradient, opacity, text)
   - `func` (all functions)
   - `image` (background, logo, resolution, responsive, retina)
+  - `import` (sass-eo modules)
   - `input` (all, placeholder, style)
   - `layout` (clearfix, columnize)
+  - `lib` (magic, loaders, ...)
   - `media` (media queries)
   - `nav` (navigation bars)
   - `palette` (list color palette as sass variable)
@@ -212,6 +227,7 @@ Here's how to use this extension:
 
   > **NOTE**: you can retain `[category]` or `[name]` to use snippets, the base keyword `sseo` also allows you to list all available snippets for **sass-eo **
 
+<br>
 <hr>
 <br>
 
@@ -229,6 +245,7 @@ grunt sseo-docs
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
 </div>
 
+<br>
 <hr>
 <br>
 
@@ -396,6 +413,7 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 }
 ```
 
+<br>
 <hr>
 <br>
 

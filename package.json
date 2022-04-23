@@ -43,14 +43,19 @@
   },
   "homepage": "https://github.com/RajaRakoto/sass-eo#readme",
   "dependencies": {
-    "grunt": "^1.5.2",
     "grunt-contrib-sass": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-shell": "^4.0.0",
-    "load-grunt-tasks": "^5.1.0",
     "sassdoc": "^2.7.3"
   },
   "devDependencies": {
-    "grunt-contrib-compress": "^2.0.0"
+    "@raja_rakoto/minificator": "^1.0.3",
+    "grunt": "^1.5.2",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-uglify": "^5.2.1",
+    "grunt-shell": "^4.0.0",
+    "load-grunt-tasks": "^5.1.0"
   }
 }
