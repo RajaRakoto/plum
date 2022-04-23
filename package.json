@@ -1,61 +1,61 @@
 {
-  "name": "@raja_rakoto/sass-eo",
-  "version": "1.1.0",
-  "description": "Customize your website faster with a toolset powered by SASS",
-  "directories": {
-    "doc": "docs",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RajaRakoto/sass-eo.git"
-  },
-  "keywords": [
-    "ui",
-    "style",
-    "css",
-    "css3",
-    "sass",
-    "scss",
-    "layout",
-    "tools",
-    "toolkit",
-    "mixins",
-    "function",
-    "collection",
-    "minimalist",
-    "bootstrap",
-    "semantic",
-    "milligrid",
-    "sass-mixins",
-    "sass-toolkit",
-    "sass-library",
-    "sass-framework",
-    "sass-tool-set"
-  ],
-  "author": "Raja Rakotonirina",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/RajaRakoto/sass-eo/issues"
-  },
-  "homepage": "https://github.com/RajaRakoto/sass-eo#readme",
-  "dependencies": {
-    "grunt-contrib-sass": "^2.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "sassdoc": "^2.7.3"
-  },
-  "devDependencies": {
-    "@raja_rakoto/minificator": "^1.0.3",
-    "grunt": "^1.5.2",
-    "grunt-contrib-compress": "^2.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-imagemin": "^4.0.0",
-    "grunt-contrib-uglify": "^5.2.1",
-    "grunt-shell": "^4.0.0",
-    "load-grunt-tasks": "^5.1.0"
-  }
+	"name": "@raja_rakoto/sass-eo",
+	"version": "1.1.1",
+	"description": "Customize your website faster with a toolset powered by SASS (Syntactically Awesome Style Sheets) 💜",
+	"directories": {
+		"doc": "docs",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RajaRakoto/sass-eo.git"
+	},
+	"keywords": [
+		"ui",
+		"style",
+		"css",
+		"css3",
+		"sass",
+		"scss",
+		"layout",
+		"tools",
+		"toolkit",
+		"mixins",
+		"function",
+		"collection",
+		"minimalist",
+		"bootstrap",
+		"semantic",
+		"milligrid",
+		"sass-mixins",
+		"sass-toolkit",
+		"sass-library",
+		"sass-framework",
+		"sass-tool-set"
+	],
+	"author": "Raja Rakotonirina",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/RajaRakoto/sass-eo/issues"
+	},
+	"homepage": "https://github.com/RajaRakoto/sass-eo#readme",
+	"dependencies": {
+		"grunt-contrib-sass": "^2.0.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"sassdoc": "^2.7.3"
+	},
+	"devDependencies": {
+		"@raja_rakoto/minificator": "^1.0.3",
+		"grunt": "^1.5.2",
+		"grunt-contrib-compress": "^2.0.0",
+		"grunt-contrib-cssmin": "^4.0.0",
+		"grunt-contrib-htmlmin": "^3.1.0",
+		"grunt-contrib-imagemin": "^4.0.0",
+		"grunt-contrib-uglify": "^5.2.1",
+		"grunt-shell": "^4.0.0",
+		"load-grunt-tasks": "^5.1.0"
+	}
 }
