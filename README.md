@@ -172,15 +172,19 @@ grunt watch-sass
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Extension`
 
 **sass-eo** has a `vscode` extension to facilitate its use, this extension includes a set of snippets allowing to quickly generate a code to call a mixin or a function of basic modules, libraries or frameworks ...
 
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/extension-demo.gif?raw=true" width="500">
+</div>
+
 Here's how to use this extension:
 
-- **`Installation of the extension`**
+- **`Installation`**
 
   You can install it by typing "sass-eo" in the extension tab of your IDE
 
