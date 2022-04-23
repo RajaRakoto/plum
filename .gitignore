@@ -4,3 +4,5 @@ node_modules
 sassdoc
 test
 backups
+
+minificator/gruntfile.js
