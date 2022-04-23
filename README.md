@@ -2,34 +2,52 @@
 
 # ᔕᗩᔕᔕ-EO
 
-<div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/dago.gif?raw=true" width=40>
-</div>
 
 <br>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/for-dago.svg?raw=true)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/build-by.svg?raw=true)](https://forthebadge.com)
 
-![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff) ![Grunt](https://img.shields.io/badge/-Grunt-777?style=flat&logo=grunt&logoColor=orangered&labelColor=ffffff) <br>
+![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![Javascript](https://img.shields.io/badge/-Javascript-777?style=flat&logo=javascript&logoColor=dbb332&labelColor=ffffff) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff) ![Grunt](https://img.shields.io/badge/-Grunt-777?style=flat&logo=grunt&logoColor=orangered&labelColor=ffffff)
 
-| Table of Contents          |
-| :------------------------- |
-| [Install](#-install)       |
-| [Use](#-use)               |
-| [Basics](#-basics)         |
-| [Libraries](#-libraries)   |
-| [Frameworks](#-frameworks) |
+<br>
+
+| Table of Contents            |
+| :--------------------------- |
+| [Description](#-description) |
+| [Install](#-install)         |
+| [Use](#-use)                 |
+| [Extension](#-extension)     |
+| [Basics](#-basics)           |
+| [Libraries](#-libraries)     |
+| [Frameworks](#-frameworks)   |
 
 </div>
 
+<!-- TODO: verified -->
+
 ### `📌 Description`
+
+**sass-eo** is a library of SASS (Syntactically Awesome Style Sheets) mixins and functions, it's a fork of the gerillass project with some changes to make it easier to use, **sass-eo** offers flexibility, speed, performance and creativity in frontend development.
+
+The difference between gerillass and **sass-eo**:
+
+> - Allows faster integration of popular frameworks like `bootstrap` and its alternative `semantic-ui`
+> - Also contains library collection interface like `magic` for animations, `loaders`, `hamburgers` menu and many more ...
+> - Use `milligrid` for easier CSS flexbox manipulation
+> - More flexible use thanks to `vscode extensions`
+
+<hr>
+<br>
+
+<!-- TODO: test -->
 
 ### `📌 Install`
 
 Run the command below to install **sass-eo** with `npm`:
 
 ```bash
-npm i @raja_rakotonirina/sass-eo --save-dev
+npm i @raja_rakoto/sass-eo --save-dev
 ```
 
 Run the following command to use **sass-eo** dependencies:
@@ -41,21 +59,22 @@ npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks 
 <hr>
 <br>
 
+<!-- TODO: test -->
+
 ### `📌 Use`
 
 Here's how to use **sass-eo** in a project ...
 
 **sass-eo** uses `grunt` as its task runner to make it easy to import its modules from `node_modules`. Thanks to this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
 
-After installing **sass-eo**, configure `gruntfile.js` as follows:
+Follow these steps after installing **sass-eo**:
 
 - Create `gruntfile.js` in your project root directory
-
-- Copy this configuration template to `gruntfile.js` - you can also change the path (input/output) of your sass file according to your project structure
+- Copy this configuration template to `gruntfile.js`, you can also change the path (input/output) of your sass file according to your project structure
 
 ```js
 module.exports = function (grunt) {
-	require('load-grunt-tasks')(grunt); // grunt plugins loader
+	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
@@ -63,8 +82,8 @@ module.exports = function (grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed', // or expanded or compact
-					loadPath: ['./node_modules/@raja_rakotonirina/sass-eo'], // never change this path
+					style: 'compressed',
+					loadPath: ['./node_modules/@raja_rakoto/sass-eo'],
 				},
 				files: {
 					// destination: source (example)
@@ -75,40 +94,31 @@ module.exports = function (grunt) {
 
 		watch: {
 			sass: {
-				// src listening
 				files: ['*.scss'],
-				// default task to execute
 				tasks: ['sass:dist'],
-				// watch optimization
 				options: { spawn: false },
 			},
 		},
 
-		/**
-		 * Run shell commands
-		 */
 		shell: {
 			sassdoc: {
-				// to generate sassdoc
 				command: [
-					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'sassdoc .',
 					'cd sassdoc',
 					'xdg-open index.html',
 				].join('&&'),
 			},
 			loader: {
-				// to get loader docs
 				command: [
-					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd docs/loader',
 					'xdg-open index.html',
 				].join('&&'),
 			},
 			magic: {
-				// to get magic docs
 				command: [
-					'cd ./node_modules/@raja_rakotonirina/sass-eo/',
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd docs/magic',
 					'xdg-open index.html',
 				].join('&&'),
@@ -117,7 +127,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('watch-sass', ['watch:sass']);
-	grunt.registerTask('basics-docs', ['shell:sassdoc']);
+	grunt.registerTask('sseo-docs', ['shell:sassdoc']);
 	grunt.registerTask('loader-docs', ['shell:loader']);
 	grunt.registerTask('magic-docs', ['shell:magic']);
 };
@@ -125,83 +135,114 @@ module.exports = function (grunt) {
 
 > **NOTE**: You can change the output style to `expanded` or `compact`, but we suggest `compressed` mode.
 
-[Learn more about Grunt](https://gruntjs.com/getting-started) -> To help you how to use grunt
-
-[grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) -> To help you adapt this configuration file to your own project
-
-- Once the grunt configuration is complete, you can run the command below to `"watch"` changes to the `.scss files` (equivalent to sass --watch `<input_file>.scss`:`<output_file>.css`):
+- Once the grunt configuration is complete, you can run the command below to `"watch"` changes to the `.scss files`:
 
 ```bash
 grunt watch-sass
 ```
 
-- Here are the lists of `modules` available in **sass-eo** (for now):
+- Here are the lists of `modules` available in **sass-eo**:
 
-> **NOTE**: To import a module, use the following syntax in the .scss file -> **@import '<module_name>'** (Eg: @import 'sass-eo-basics')
+=> To import a module, use the following syntax in `.scss file` -> **@import '<module_name>'** (e.g: `@import 'sass-eo-basics'`)
 
-      **basics modules**
+    **basics modules**
      sass-eo-basics
 
-      **frameworks modules**
+    **libraries modules**
+     sass-eo-lib-hamburgers
+     sass-eo-lib-loader
+     sass-eo-lib-magic
+
+    **frameworks modules**
      sass-eo-bootstrap
      sass-eo-bootstrap-grid
      sass-eo-bootstrap-utils
      sass-eo-semantic
      sass-eo-milligrid
 
-      **libraries modules**
-     sass-eo-lib-hamburgers
-     sass-eo-lib-loader
-     sass-eo-lib-magic
-
-<div align="right">
-    <b><a href="#-install">↥ Back To Top</a></b>
-</div>
 <hr>
 <br>
 
+<!-- TODO: test -->
+
+### `📌 Extension`
+
+**sass-eo** has a `vscode` extension to facilitate its use, this extension includes a set of snippets allowing to quickly generate a code to call a mixin or a function of basic modules, libraries or frameworks...
+
+Here's how to use this extension:
+
+- **`Installation of the extension`**
+
+  You can install it by typing "sass-eo" in the extension tab of your IDE
+
+> **NOTE**: You have 2 extension versions, one in English and one in French (sass-eo-fr)
+
+- **`Prefix`**
+
+  The extension of **sass-eo** includes a particular "prefix" to better organize and classify its snippets
+
+  Basic syntax for using the extension:
+
+  ```sass
+  sseo-[category]-[name] (ex: sseo-func-color-pastel)
+  ```
+
+  **[category]**: represents keywords to quickly identify the snippets to use, here are the lists of keywords
+
+  - `animation`
+  - `bar` (scroll)
+  - `box` (circle, debug, radius, sizing)
+  - `button`
+  - `docs` (only useful in development environment)
+  - `effect` (box, gradient, opacity, text)
+  - `func` (all functions)
+  - `image` (background, logo, resolution, responsive, retina)
+  - `input` (all, placeholder, style)
+  - `layout` (clearfix, columnize)
+  - `media` (media queries)
+  - `nav` (navigation bars)
+  - `palette` (list color palette as sass variable)
+  - `position` (block, center, flex, set)
+  - `spacing` (pattern, margin, padding)
+  - `specs` (special or unclassified mixins)
+  - `typo` (font)
+  - `video` (reactive)
+
+  **[name]**: represents the name of a mixin, a function, a library or a framework (ex: normalize, except, ...)
+
+  > **NOTE**: you can retain `[category]` or `[name]` to use snippets, the base keyword `sseo` also allows you to list all available snippets for **sass-eo **
+
+<hr>
+<br>
+
+<!-- TODO: test -->
+
 ### `📌 Basics`
 
-**sass-eo** uses `sassdoc` to create its `documentation` in a snap using `special syntax` to document its basics modules
-
-Run the command below in the root directory of **sass-eo** to "generate" the basics modules documentation (your browser should automatically open the documentation)
+Run the command below in the root directory to generate the `basics modules documentation` (your browser should automatically open the documentation)
 
 ```bash
-grunt basics-docs
+grunt sseo-docs
 ```
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
 </div>
-<br>
 
-[Learn more about sassdoc](http://sassdoc.com/getting-started/)
-
-##### `📍 Variables`
-
-**sassdoc** does not allow to generate the documentation concerning `variables` containing in certain mixins, that is why we treat them in this section
-
-###### `colors`
-
-Here are the `color swatches` ready to be used by just calling the name of the corresponding `variable`:
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/4web/colors.png?raw=true" width="350"><br>
-</div>
-
-<div align="right">
-    <b><a href="#-install">↥ Back To Top</a></b>
-</div>
 <hr>
 <br>
+
+<!-- TODO: test -->
 
 ### `📌 Libraries`
 
 Here are the lists of built-in `libraries` in **sass-eo**
 
+<!-- TODO: test -->
+
 ##### `📍Hamburgers`
 
-`Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable SASS library, so make your own Hamburgers.
+`Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable Sass library, so make your own Hamburgers.
 
 <div align="center">
 <img src="http://i.imgur.com/t7cUjDu.gif" width="450">
@@ -246,7 +287,7 @@ Here is the list of Hamburger-like `classes` you can choose from:
 
 <br>
 
-> **NOTE**: `-r` are reverse variants (e.g. `hamburger--spin` clockwise while `hamburger--spin-r` counter-clockwise.
+> **NOTE**: `-r` are reverse variants (e.g: `hamburger--spin` clockwise while `hamburger--spin-r` counter-clockwise).
 
 <br>
 
@@ -265,7 +306,7 @@ Here is the list of Hamburger-like `classes` you can choose from:
 </button>
 ```
 
-- Since the class name should be toggled with JavaScript:
+- Since the class name should be toggled with Javascript:
 
 ```js
 var hamburger = document.querySelector('.hamburger');
@@ -277,6 +318,8 @@ hamburger.addEventListener('click', function () {
 ```
 
 <br>
+
+<!-- TODO: test -->
 
 ##### `📍Loaders`
 
@@ -293,7 +336,7 @@ grunt loader-docs
 </div>
 <br>
 
-> **NOTE**: Some loader contains only one color, i-e only 1 argument for the mixin (Example -> `@include loader-10(dodgerblue)`)
+> **NOTE**: Some loader contains only one color, i-e only 1 argument for the mixin (e.g: @include loader-10(dodgerblue))
 
 <br>
 
@@ -324,6 +367,8 @@ window.addEventListener('load', () => {
 
 <br>
 
+<!-- TODO: test -->
+
 ##### `📍Magic`
 
 `Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
@@ -351,11 +396,10 @@ Import loader modules `@import 'sass-eo-lib-magic'`
 }
 ```
 
-<div align="right">
-    <b><a href="#-install">↥ Back To Top</a></b>
-</div>
 <hr>
 <br>
+
+<!-- TODO: test -->
 
 ### `📌 Frameworks`
 
