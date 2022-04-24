@@ -73,83 +73,15 @@ npm update @raja_rakoto/sass-eo
 
 Here's how to use **sass-eo** in a project ...
 
-**sass-eo** uses `grunt` as its task runner to make it easy to import its modules from `node_modules`. Thanks to this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
+**sass-eo** uses `grunt` as a task runner to display various documentation regarding its third-party libraries or to use certain applications. Grunt therefore makes it easy to import its modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
 
 Follow these steps after installing **sass-eo**:
 
-- Create `gruntfile.js` in your project root directory
-- Copy this configuration template to `gruntfile.js`, you can also change the path (input/output) of your sass file according to your project structure
+- Generate `gruntfile.js` in root directory of your project by running the following command:
 
-```js
-module.exports = function (grunt) {
-	require('load-grunt-tasks')(grunt);
-
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('./package.json'),
-
-		sass: {
-			dist: {
-				options: {
-					style: 'compressed',
-					loadPath: ['./node_modules/@raja_rakoto/sass-eo'],
-				},
-				files: {
-					// destination: source (example)
-					'main.css': 'main.scss',
-				},
-			},
-		},
-
-		watch: {
-			sass: {
-				files: ['*.scss'],
-				tasks: ['sass:dist'],
-				options: { spawn: false },
-			},
-		},
-
-		shell: {
-			sassdoc: {
-				command: [
-					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'sassdoc .',
-					'cd sassdoc',
-					'xdg-open index.html',
-				].join('&&'),
-			},
-			loader: {
-				command: [
-					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd docs/loader',
-					'xdg-open index.html',
-				].join('&&'),
-			},
-			magic: {
-				command: [
-					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd docs/magic',
-					'xdg-open index.html',
-				].join('&&'),
-			},
-			hamburgers: {
-				command: [
-					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd modules/libs',
-					'xdg-open _hamburgers.scss',
-				],
-			},
-		},
-	});
-
-	grunt.registerTask('watch-sass', ['watch:sass']);
-	grunt.registerTask('sseo-docs', ['shell:sassdoc']);
-	grunt.registerTask('loader-docs', ['shell:loader']);
-	grunt.registerTask('magic-docs', ['shell:magic']);
-	grunt.registerTask('config-hamburgers', ['shell:hamburgers']);
-};
+```bash
+grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/init.js sass-eo-init
 ```
-
-> **NOTE**: You can change the output style to `expanded` or `compact`, but we suggest `compressed` mode.
 
 - Once the grunt configuration is complete, you can run the command below to `"watch"` changes to the `.scss files`:
 
