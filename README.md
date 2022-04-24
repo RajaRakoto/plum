@@ -12,15 +12,15 @@
 
 <br>
 
-| Table of Contents                     |
-| :------------------------------------ |
-| [Description](#-description)          |
-| [Install & update](#-install--update) |
-| [Use](#-use)                          |
-| [Extension](#-extension)              |
-| [Basics](#-basics)                    |
-| [Libraries](#-libraries)              |
-| [Frameworks](#-frameworks)            |
+| Table of Contents                               |
+| :---------------------------------------------- |
+| [Description](#-description)                    |
+| [Installation & update](#-installation--update) |
+| [Use](#-use)                                    |
+| [Extension](#-extension)                        |
+| [Basics](#-basics)                              |
+| [Libraries](#-libraries)                        |
+| [Frameworks](#-frameworks)                      |
 
 </div>
 
@@ -44,7 +44,9 @@ The difference between gerillass and **sass-eo**:
 
 <!-- TODO: verified -->
 
-### `📌 Install & update`
+### `📌 Installion & update`
+
+##### `⚫ Installation`
 
 Run the command below to install **sass-eo**:
 
@@ -57,6 +59,8 @@ Run the following command to use **sass-eo** dependencies:
 ```bash
 npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
 ```
+
+##### `⚫ Update`
 
 Run the following command to update **sass-eo**:
 
@@ -74,7 +78,7 @@ npm update @raja_rakoto/sass-eo
 
 Here's how to use **sass-eo** in a project ...
 
-#### **`sass-eo-cli`**
+##### `⚫ sass-eo-cli`
 
 **sass-eo-cli** is a command line interface to manage third-party features (sass-watch, generate docs, apps, ...) of **sass-eo**, the latter is based on the `Grunt` task runner, to use it, please run the following command to generate `sass-eo-cli.js` in root directory of your project:
 
@@ -90,7 +94,7 @@ grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sas
 grunt --gruntfile sass-eo-cli.js watch-sass
 ```
 
-#### **`modules`**
+##### `⚫ modules`
 
 - Here are the lists of `modules` available in **sass-eo**:
 
@@ -127,48 +131,48 @@ grunt --gruntfile sass-eo-cli.js watch-sass
 
 Here's how to use this extension:
 
-- **`Installation`**
+##### `⚫ Installation`
 
-  You can install it by typing "sass-eo" in the extension tab of your IDE
+You can install it by typing "sass-eo" in the extension tab of your IDE
 
 > **NOTE**: You have 2 extension versions, one in English and one in French (sass-eo-fr)
 
-- **`Prefix`**
+##### `⚫ Prefix`
 
-  The extension of **sass-eo** includes a particular "prefix" to better organize and classify its snippets
+The extension of **sass-eo** includes a particular "prefix" to better organize and classify its snippets
 
-  Basic syntax for using the extension:
+Basic syntax for using the extension:
 
-  ```sass
-  sseo-[category]-[name] (e.g: sseo-func-color-pastel)
-  ```
+```sass
+sseo-[category]-[name] (e.g: sseo-func-color-pastel)
+```
 
-  **[category]**: represents keywords to quickly identify the snippets to use, here are the lists of keywords
+**[category]**: represents keywords to quickly identify the snippets to use, here are the lists of keywords
 
-  - `animation`
-  - `bar` (scroll)
-  - `box` (circle, debug, radius, sizing)
-  - `button`
-  - `docs` (only useful in development environment)
-  - `effect` (box, gradient, opacity, text)
-  - `func` (all functions)
-  - `image` (background, logo, resolution, responsive, retina)
-  - `import` (sass-eo modules)
-  - `input` (all, placeholder, style)
-  - `layout` (clearfix, columnize)
-  - `lib` (magic, loaders, ...)
-  - `media` (media queries)
-  - `nav` (navigation bars)
-  - `palette` (list color palette as sass variable)
-  - `position` (block, center, flex, set)
-  - `spacing` (pattern, margin, padding)
-  - `specs` (special or unclassified mixins)
-  - `typo` (font)
-  - `video` (reactive)
+- `animation`
+- `bar` (scroll)
+- `box` (circle, debug, radius, sizing)
+- `button`
+- `docs` (only useful in development environment)
+- `effect` (box, gradient, opacity, text)
+- `func` (all functions)
+- `image` (background, logo, resolution, responsive, retina)
+- `import` (sass-eo modules)
+- `input` (all, placeholder, style)
+- `layout` (clearfix, columnize)
+- `lib` (magic, loaders, ...)
+- `media` (media queries)
+- `nav` (navigation bars)
+- `palette` (list color palette as sass variable)
+- `position` (block, center, flex, set)
+- `spacing` (pattern, margin, padding)
+- `specs` (special or unclassified mixins)
+- `typo` (font)
+- `video` (reactive)
 
-  **[name]**: represents the name of a mixin, a function, a library or a framework (ex: normalize, except, ...)
+**[name]**: represents the name of a mixin, a function, a library or a framework (ex: normalize, except, ...)
 
-  > **NOTE**: you can retain `[category]` or `[name]` to use snippets, the base keyword `sseo` also allows you to list all available snippets for **sass-eo **
+> **NOTE**: you can retain `[category]` or `[name]` to use snippets, the base keyword `sseo` also allows you to list all available snippets for **sass-eo **
 
 <br>
 <hr>
@@ -198,7 +202,7 @@ grunt --gruntfile sass-eo-cli.js sseo-docs
 
 Here are the lists of built-in `libraries` in **sass-eo**
 
-#### `Hamburgers`
+##### `⚫ Hamburgers`
 
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable Sass library, so make your own Hamburgers.
 
@@ -283,7 +287,7 @@ hamburger.addEventListener('click', function () {
 
 <br>
 
-#### `Loaders`
+##### `⚫ Loaders`
 
 `loaders` are collections of mixins used to add a loading effect to each element
 
@@ -329,7 +333,7 @@ window.addEventListener('load', () => {
 
 <br>
 
-#### `Magic`
+##### `⚫ Magic`
 
 `Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
 
@@ -364,12 +368,13 @@ Import magic module `@import 'sass-eo-lib-magic'`
 
 ### `📌 Frameworks`
 
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="80"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="70"><img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
-</div>
-<br>
+##### `⚫ Bootstrap`
 
-- **Bootstrap:** sass-eo integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100">
+</div>
+
+sass-eo integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
 > **You have 3 choices to use bootstrap with sass-eo**
 
@@ -379,15 +384,27 @@ Import magic module `@import 'sass-eo-lib-magic'`
 
 <br>
 
-- **Semantic-ui:** I personally find this framework the best alternative to BT5, sematic-ui facilitates the creation of responsive layouts, one of the advantages of this framework is that it integrates semantic-ui-react , a collection of React components from Semantic-ui
+##### `⚫ Semantic-ui`
 
-  - semantic-ui -> https://semantic-ui.com/introduction/getting-started.html
-  - semantic-ui-react -> https://react.semantic-ui.com/
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="70">
+</div>
+
+I personally find this framework the best alternative to BT5, sematic-ui facilitates the creation of responsive layouts, one of the advantages of this framework is that it integrates semantic-ui-react , a collection of React components from Semantic-ui
+
+- semantic-ui -> https://semantic-ui.com/introduction/getting-started.html
+- semantic-ui-react -> https://react.semantic-ui.com/
 
 > sass-eo-semantic: to use the minifier version of semantic-ui
 
 <br>
 
-- **Milligrid:** Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
+##### `⚫ Milligrid`
+
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
+</div>
+
+Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
 
 > sass-eo-milligrid: to use the minifier version of milligrid
