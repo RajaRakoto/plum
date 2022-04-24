@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 		},
 
 		shell: {
-			sassdoc: {
+			sseo_docs: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'sassdoc .',
@@ -34,49 +34,64 @@ module.exports = function (grunt) {
 					'xdg-open index.html',
 				].join('&&'),
 			},
-			loader: {
+			loader_docs: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd docs/loader',
 					'xdg-open index.html',
 				].join('&&'),
 			},
-			magic: {
+			magic_docs: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd docs/magic',
 					'xdg-open index.html',
 				].join('&&'),
 			},
-			hamburgers: {
-				command: [
-					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd modules/libs',
-					'xdg-open _hamburgers.scss',
-				].join('&&'),
-			},
-			grid: {
-				command: [
-					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd modules/libs/grid-maker',
-					'xdg-open index.html',
-				].join('&&'),
-			},
-			milligrid: {
+			milligrid_docs: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd docs/milligrid',
 					'xdg-open index.html',
 				].join('&&'),
 			},
+			hamburgers_config: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd modules/libs',
+					'xdg-open _hamburgers.scss',
+				].join('&&'),
+			},
+			grid_maker: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd modules/libs/grid-maker',
+					'xdg-open index.html',
+				].join('&&'),
+			},
+			flexbox_maker: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd modules/libs/flexbox-maker',
+					'xdg-open index.html',
+				].join('&&'),
+			},
 		},
 	});
 
+	// watch
 	grunt.registerTask('watch-sass', ['watch:sass']);
-	grunt.registerTask('sseo-docs', ['shell:sassdoc']);
-	grunt.registerTask('loader-docs', ['shell:loader']);
-	grunt.registerTask('magic-docs', ['shell:magic']);
-	grunt.registerTask('config-hamburgers', ['shell:hamburgers']);
-	grunt.registerTask('grid-maker', ['shell:grid']);
-	grunt.registerTask('milligrid-docs', ['shell:milligrid']);
+
+	// docs
+	grunt.registerTask('sseo-docs', ['shell:sseo_docs']);
+	grunt.registerTask('loader-docs', ['shell:loader_docs']);
+	grunt.registerTask('magic-docs', ['shell:magic_docs']);
+	grunt.registerTask('milligrid-docs', ['shell:milligrid_docs']);
+
+	// config
+	grunt.registerTask('hamburgers-config', ['shell:hamburgers_config']);
+
+	//maker
+	grunt.registerTask('grid-maker', ['shell:grid_maker']);
+	grunt.registerTask('flexbox-maker', ['shell:flexbox_maker']);
 };
