@@ -72,7 +72,7 @@ npm update @raja_rakoto/sass-eo
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Use`
 
@@ -184,7 +184,7 @@ sseo-[category]-[name] (e.g: sseo-func-color-pastel)
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Basics`
 
@@ -202,7 +202,7 @@ grunt --gruntfile sass-eo-cli.js sseo-docs
 <hr>
 <br>
 
-<!-- TODO: test -->
+<!-- TODO: verified -->
 
 ### `📌 Libraries`
 
@@ -212,7 +212,7 @@ Here are the lists of built-in `libraries` in **sass-eo**
 
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable Sass library, so make your own Hamburgers.
 
-You can also customize the style (padding, wigth, height, spacing, color, border,opacity, ...) of your `hamburgers` by typing this command:
+You can also customize the style (padding, wigth, height, spacing, color, border, opacity, ...) of your `hamburgers` by typing this command:
 
 ```bash
 grunt --gruntfile sass-eo-cli.js hamburgers-config
@@ -341,7 +341,7 @@ window.addEventListener('load', () => {
 
 ##### `⚫ Magic`
 
-`Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
+`Magic` is a built-in CSS animation library in **sass-eo**, just call a magic mixin to animate an element
 
 Type this command to get an example magic (in the root directory)
 
@@ -380,7 +380,7 @@ Import magic module `@import 'sass-eo-lib-magic'`
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100">
 </div>
 
-sass-eo integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+**sass-eo** integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
 > **You have 3 choices to use bootstrap with sass-eo**
 
