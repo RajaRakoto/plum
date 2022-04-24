@@ -117,7 +117,7 @@ module.exports = function (grunt) {
 	// default tasks
 	grunt.registerTask('default', () => {
 		console.log(
-			'\nHere are the lists of plugins (tasks) you can run with grunt:'.green,
+			'\nHere are the lists of executable commands with sass-eo-cli:'.green,
 		);
 
 		/**
@@ -160,11 +160,19 @@ module.exports = function (grunt) {
 			}
 		}
 
-		// task resume
+		// command resume
 		getTaskResume(
-			'~ ᔕᗩᔕᔕ-EO CLI ~',
+			'~ SASS-EO CLI ~',
 			sasseoCommandList,
 			sasseoCommandStatus,
+			'magenta',
+		);
+
+		// synopsis
+		getTaskResume(
+			'\n~ SYNOPSIS ~',
+			'grunt --gruntfile sass-eo-cli.js [command]',
+			'e.g: grunt --gruntfile sass-eo-cli.js watch-sass',
 			'magenta',
 		);
 	});
