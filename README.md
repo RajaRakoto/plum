@@ -95,7 +95,7 @@ grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sas
 grunt --gruntfile sass-eo-cli.js
 ```
 
-- For example, you can run the command below to `"watch"` changes to the `.scss files`:
+- For example, you can run the command below to observe changes into `.scss files`:
 
 ```bash
 grunt --gruntfile sass-eo-cli.js watch-sass
@@ -135,8 +135,6 @@ grunt --gruntfile sass-eo-cli.js watch-sass
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/extension-demo.gif?raw=true" width="500">
 </div>
-
-Here's how to use this extension:
 
 ##### `⚫ Installation`
 
