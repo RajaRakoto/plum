@@ -44,7 +44,7 @@ The difference between gerillass and **sass-eo**:
 
 <!-- TODO: verified -->
 
-### `📌 Installion & update`
+### `📌 Installation & update`
 
 ##### `⚫ Installation`
 
