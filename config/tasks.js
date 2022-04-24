@@ -53,14 +53,14 @@ module.exports = function (grunt) {
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd modules/libs',
 					'xdg-open _hamburgers.scss',
-				],
+				].join('&&'),
 			},
 			grid: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
 					'cd modules/libs/grid-maker',
 					'xdg-open index.html',
-				],
+				].join('&&'),
 			},
 		},
 	});
