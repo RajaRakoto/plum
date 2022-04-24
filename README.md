@@ -83,7 +83,7 @@ Here's how to use **sass-eo** in a project ...
 
 **sass-eo-cli** is a command line interface to manage third-party features (sass-watch, generate docs, apps, ...) of **sass-eo**, the latter is based on the `Grunt` task runner, to use it, please run the following command to generate `sass-eo-cli.js` in root directory of your project:
 
-> **NOTE**: Grunt therefore makes it easy to import its modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
+> **NOTE**: Grunt makes it easy to import modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
 
 ```bash
 grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli
