@@ -34,6 +34,7 @@ The difference between gerillass and **sass-eo**:
 
 > - Allows faster integration of popular frameworks like `bootstrap` and its alternative `semantic-ui`
 > - Also contains library collection interface like `magic` for animations, `loaders`, `hamburgers` menu and many more ...
+> - Has an offline web application such as `GRID maker` and `FLEXBOX maker` to manipulate layouts
 > - Use `milligrid` for easier CSS flexbox manipulation
 > - More flexible use thanks to `vscode extensions`
 
@@ -67,27 +68,29 @@ npm update @raja_rakoto/sass-eo
 <hr>
 <br>
 
-<!-- TODO: verified -->
+<!-- TODO: test -->
 
 ### `📌 Use`
 
 Here's how to use **sass-eo** in a project ...
 
-**sass-eo** uses `grunt` as a task runner to display various documentation regarding its third-party libraries or to use certain applications. Grunt therefore makes it easy to import its modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
+#### **`sass-eo-cli`**
 
-Follow these steps after installing **sass-eo**:
+**sass-eo-cli** is a command line interface to manage third-party features (sass-watch, generate docs, apps, ...) of **sass-eo**, the latter is based on the `Grunt` task runner, to use it, please run the following command to generate `sass-eo-cli.js` in root directory of your project:
 
-- Generate `gruntfile.js` in root directory of your project by running the following command:
+> **NOTE**: Grunt therefore makes it easy to import its modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
 
 ```bash
-grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/init.js sass-eo-init
+grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli
 ```
 
 - Once the grunt configuration is complete, you can run the command below to `"watch"` changes to the `.scss files`:
 
 ```bash
-grunt watch-sass
+grunt --gruntfile sass-eo-cli.js watch-sass
 ```
+
+#### **`modules`**
 
 - Here are the lists of `modules` available in **sass-eo**:
 
@@ -171,14 +174,14 @@ Here's how to use this extension:
 <hr>
 <br>
 
-<!-- TODO: verified -->
+<!-- TODO: test -->
 
 ### `📌 Basics`
 
 Run the command below in the root directory to generate the `basics modules documentation` (your browser should automatically open the documentation)
 
 ```bash
-grunt sseo-docs
+grunt --gruntfile sass-eo-cli.js sseo-docs
 ```
 
 <div align="center">
@@ -189,20 +192,20 @@ grunt sseo-docs
 <hr>
 <br>
 
-<!-- TODO: verified -->
+<!-- TODO: test -->
 
 ### `📌 Libraries`
 
 Here are the lists of built-in `libraries` in **sass-eo**
 
-##### `📍Hamburgers`
+#### `Hamburgers`
 
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable Sass library, so make your own Hamburgers.
 
 You can also customize the style (padding, wigth, height, spacing, color, border,opacity, ...) of your `hamburgers` by typing this command:
 
 ```bash
-grunt config-hamburgers
+grunt --gruntfile sass-eo-cli.js hamburgers-config
 ```
 
 <div align="center">
@@ -280,14 +283,14 @@ hamburger.addEventListener('click', function () {
 
 <br>
 
-##### `📍Loaders`
+#### `Loaders`
 
 `loaders` are collections of mixins used to add a loading effect to each element
 
 Type this command to get an example loader (in the root directory)
 
 ```bash
-grunt loader-docs
+grunt --gruntfile sass-eo-cli.js loaders-docs
 ```
 
 <div align="center">
@@ -326,14 +329,14 @@ window.addEventListener('load', () => {
 
 <br>
 
-##### `📍Magic`
+#### `Magic`
 
 `Magic` is a built-in CSS animation library in sass-eo, just call a magic mixin to animate an element
 
 Type this command to get an example magic (in the root directory)
 
 ```bash
-grunt magic-docs
+grunt --gruntfile sass-eo-cli.js magic-docs
 ```
 
 <div align="center">
@@ -357,7 +360,7 @@ Import magic module `@import 'sass-eo-lib-magic'`
 <hr>
 <br>
 
-<!-- TODO: verified -->
+<!-- TODO: test -->
 
 ### `📌 Frameworks`
 
