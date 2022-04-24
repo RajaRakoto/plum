@@ -62,6 +62,13 @@ module.exports = function (grunt) {
 					'xdg-open index.html',
 				].join('&&'),
 			},
+			milligrid: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd docs/milligrid',
+					'xdg-open index.html',
+				].join('&&'),
+			},
 		},
 	});
 
@@ -71,4 +78,5 @@ module.exports = function (grunt) {
 	grunt.registerTask('magic-docs', ['shell:magic']);
 	grunt.registerTask('config-hamburgers', ['shell:hamburgers']);
 	grunt.registerTask('grid-maker', ['shell:grid']);
+	grunt.registerTask('milligrid-docs', ['shell:milligrid']);
 };
