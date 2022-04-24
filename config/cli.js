@@ -65,14 +65,14 @@ module.exports = function (grunt) {
 			grid_maker: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd modules/libs/grid-maker',
+					'cd modules/apps/grid-maker',
 					'xdg-open index.html',
 				].join('&&'),
 			},
 			flexbox_maker: {
 				command: [
 					'cd ./node_modules/@raja_rakoto/sass-eo/',
-					'cd modules/libs/flexbox-maker',
+					'cd modules/apps/flexbox-maker',
 					'xdg-open index.html',
 				].join('&&'),
 			},
