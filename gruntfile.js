@@ -59,6 +59,15 @@ module.exports = function (grunt) {
 				files: [{ src: ['./*', './.*'] }],
 				filter: 'isFile',
 			},
+			config: {
+				options: {
+					archive: backupsDestination + 'config.tar.gz',
+				},
+				expand: true,
+				cwd: './config/',
+				src: includeAllFiles,
+				dest: 'config',
+			},
 			docs: {
 				options: {
 					archive: backupsDestination + 'docs.tar.gz',
@@ -131,6 +140,7 @@ module.exports = function (grunt) {
 	// all grunt register tasks
 	grunt.registerTask('compress-all', [
 		'compress:main',
+		'compress:config',
 		'compress:docs',
 		'compress:modules',
 		'compress:node_modules',
@@ -145,7 +155,7 @@ module.exports = function (grunt) {
 	// all tasks lists
 	const sasseoTaskNames = ['compress-all', 'watch-sass', 'sassdoc'];
 	const sasseoTaskStatus = [
-		'compress: main | docs | extension | modules | node_modules | scripts | test',
+		'compress: main | config | docs | extension | modules | node_modules | scripts | test',
 		'auto compile sass',
 		'generate & open sassdoc',
 	];
