@@ -1,11 +1,8 @@
 module.exports = function (grunt) {
-
 	grunt.initConfig({
 		shell: {
 			init: {
-				command: [
-					'cat tasks.js > ../../../../gruntfile.js',
-				].join('&&'),
+				command: ['cat cli.js > ../../../../sass-eo-cli.js'].join('&&'),
 			},
 		},
 	});
