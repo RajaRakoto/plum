@@ -88,7 +88,13 @@ Here's how to use **sass-eo** in a project ...
 grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli
 ```
 
-- Once the grunt configuration is complete, you can run the command below to `"watch"` changes to the `.scss files`:
+- Type this command to see all lists of executable commands with **sass-eo-cli**:
+
+```bash
+grunt --gruntfile sass-eo-cli.js
+```
+
+- For example, you can run the command below to `"watch"` changes to the `.scss files`:
 
 ```bash
 grunt --gruntfile sass-eo-cli.js watch-sass
