@@ -131,6 +131,13 @@ module.exports = function (grunt) {
 					'xdg-open index.html',
 				].join('&&'),
 			},
+			hamburgers: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd modules/libs',
+					'xdg-open _hamburgers.scss',
+				],
+			},
 		},
 	});
 
@@ -138,6 +145,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('sseo-docs', ['shell:sassdoc']);
 	grunt.registerTask('loader-docs', ['shell:loader']);
 	grunt.registerTask('magic-docs', ['shell:magic']);
+	grunt.registerTask('config-hamburgers', ['shell:hamburgers']);
 };
 ```
 
@@ -258,6 +266,12 @@ Here are the lists of built-in `libraries` in **sass-eo**
 ##### `📍Hamburgers`
 
 `Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable Sass library, so make your own Hamburgers.
+
+You can also customize the style (padding, wigth, height, spacing, color, border,opacity, ...) of your `hamburgers` by typing this command:
+
+```bash
+grunt config-hamburgers
+```
 
 <div align="center">
 <img src="http://i.imgur.com/t7cUjDu.gif" width="450">
