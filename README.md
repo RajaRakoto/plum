@@ -33,10 +33,10 @@
 
 The difference between gerillass and **sass-eo**:
 
-> - Allows faster integration of popular frameworks like `bootstrap` and its alternative `semantic-ui`
-> - Also contains library collection interface like `magic` for animations, `loaders`, `hamburgers` menu and many more ...
+> - Allows faster integration of popular frameworks like `Bootstrap` and its alternative `Semantic-ui`
+> - Also contains library collection like `Magic` for animations, `Loaders`, `Hamburgers` menu and many more ...
 > - Has an offline web application such as `GRID maker` and `FLEXBOX maker` to manipulate layouts
-> - Use `milligrid` for easier CSS flexbox manipulation
+> - Use `Milligrid` for easier CSS layout manipulation (a better alternative to bootstrap grid)
 > - More flexible use thanks to `vscode extensions`
 
 <br>
