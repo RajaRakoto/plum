@@ -45,10 +45,10 @@
 	"dependencies": {
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
-		"sassdoc": "^2.7.3"
+		"sassdoc": "^2.7.4"
 	},
 	"devDependencies": {
-		"@raja_rakoto/minificator": "^1.0.3",
+		"@raja_rakoto/minificator": "^1.0.4",
 		"grunt": "^1.5.2",
 		"grunt-contrib-compress": "^2.0.0",
 		"grunt-contrib-cssmin": "^4.0.0",
