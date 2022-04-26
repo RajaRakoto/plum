@@ -48,7 +48,7 @@
 		"sassdoc": "^2.7.4"
 	},
 	"devDependencies": {
-		"@raja_rakoto/minificator": "^1.0.4",
+		"@raja_rakoto/minificator": "^1.1.1",
 		"grunt": "^1.5.2",
 		"grunt-contrib-compress": "^2.0.0",
 		"grunt-contrib-cssmin": "^4.0.0",
