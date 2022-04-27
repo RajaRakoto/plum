@@ -1,6 +1,9 @@
 module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
+	// node-glob syntax
+	const includeAllSassFiles = ['./src/*.scss', './src/components/**/*.scss'];
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
 
@@ -11,15 +14,16 @@ module.exports = function (grunt) {
 					loadPath: ['./node_modules/@raja_rakoto/sass-eo'],
 				},
 				files: {
-					// destination: source (example)
-					'main.css': 'main.scss',
+					// destination: source
+					'./src/dist/index.min.css': './src/index.scss',
+					'./src/dist/app.min.css': './src/components/app/App.scss',
 				},
 			},
 		},
 
 		watch: {
 			sass: {
-				files: ['*.scss'],
+				files: includeAllSassFiles,
 				tasks: ['sass:dist'],
 				options: { spawn: false },
 			},
@@ -165,14 +169,6 @@ module.exports = function (grunt) {
 			'~ SASS-EO CLI ~',
 			sasseoCommandList,
 			sasseoCommandStatus,
-			'magenta',
-		);
-
-		// synopsis
-		getTaskResume(
-			'\n~ SYNOPSIS ~',
-			'grunt --gruntfile sass-eo-cli.js [command]',
-			'e.g: grunt --gruntfile sass-eo-cli.js watch-sass',
 			'magenta',
 		);
 	});
