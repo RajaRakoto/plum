@@ -237,15 +237,15 @@
 ///  .p {
 ///	  @include effect-text-shadow(small);
 ///  }
-@mixin effect-text-shadow($opacity: medium, $color: #222) {
+@mixin effect-text-shadow($opacity: medium, $colors: #222) {
 	$list: 'small', 'large', 'none';
 
 	@if ($opacity == small) {
-		text-shadow: 0px 1px 2px $color;
+		text-shadow: 0px 1px 2px $colors;
 	} @else if ($opacity == medium) {
-		text-shadow: 0px 1px 8px $color;
+		text-shadow: 0px 1px 8px $colors;
 	} @else if ($opacity == large) {
-		text-shadow: 0px 1px 20px $color;
+		text-shadow: 0px 1px 20px $colors;
 	} @else if ($opacity == none) {
 		text-shadow: none;
 	} @else {
@@ -256,7 +256,7 @@
 //TODO: verified
 /// Effect-text-supershadow mixin helps you to add shadow to text elements. Accepts comma-separated list of shadows or a single shadow value that can be multiplied optionally. It provides an easy-to-use one-line method - unlike "effect-text-shadow" mixin, this one is more customizable and more powerful in terms of functionality
 /// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the direction of the shadow
-/// @param {color} $color [rgba(black, 0.3)] - sets the color of the shadow
+/// @param {color} $colors [rgba(black, 0.3)] - sets the color of the shadow
 /// @param {pixel} $size - sets how far the shadow will be from the text. When used with $fill, it also determines how many times the shadow will be multiplied
 /// @param {pixel} $blur [null] - the $blur argument is optional, sets the blur value of the shadow
 /// @param {boolean} $fill [true, false] - this makes shadow fill the gap between the text and the shadow, it is optional and should always be at the end, the default value is set to false.
@@ -297,7 +297,7 @@
 		$direction: nth($item, 1);
 
 		// Second value is the color.
-		$color: nth($item, 2);
+		$colors: nth($item, 2);
 
 		// The third value is the actual offset value of the shadows.
 		$size: nth($item, 3);
@@ -327,88 +327,88 @@
 				// The __clearUnit(); function is used here due to it is not possible to count $size with a unit. First, it clears the unit from the $size argument and then adds it back again in the @for loop.
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: 0 -#{$increase} $blur $color;
+					$shadow: 0 -#{$increase} $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: 0 -#{$size} $blur $color;
+				$shadow: 0 -#{$size} $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'top-left' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: -#{$increase} -#{$increase} $blur $color;
+					$shadow: -#{$increase} -#{$increase} $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: -#{$size} -#{$size} $blur $color;
+				$shadow: -#{$size} -#{$size} $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'top-right' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: #{$increase} -#{$increase} $blur $color;
+					$shadow: #{$increase} -#{$increase} $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: #{$size} -#{$size} $blur $color;
+				$shadow: #{$size} -#{$size} $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'bottom' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: 0 #{$increase} $blur $color;
+					$shadow: 0 #{$increase} $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: 0 #{$size} $blur $color;
+				$shadow: 0 #{$size} $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'bottom-left' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: -#{$increase} #{$increase} $blur $color;
+					$shadow: -#{$increase} #{$increase} $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: -#{$size} #{$size} $blur $color;
+				$shadow: -#{$size} #{$size} $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'bottom-right' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: #{$increase} #{$increase} $blur $color;
+					$shadow: #{$increase} #{$increase} $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: #{$size} #{$size} $blur $color;
+				$shadow: #{$size} #{$size} $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'left' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: -#{$increase} 0 $blur $color;
+					$shadow: -#{$increase} 0 $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: -#{$size} 0 $blur $color;
+				$shadow: -#{$size} 0 $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		} @else if $direction == 'right' {
 			@if $fill == true {
 				@for $i from 1 through __clearUnit($size) {
 					$increase: $i * 1 + $sizeUnit;
-					$shadow: #{$increase} 0 $blur $color;
+					$shadow: #{$increase} 0 $blur $colors;
 					$value: append($value, $shadow, comma);
 				}
 			} @else {
-				$shadow: #{$size} 0 $blur $color;
+				$shadow: #{$size} 0 $blur $colors;
 				$value: append($value, $shadow, comma);
 			}
 		}
@@ -418,14 +418,14 @@
 
 //TODO: verified
 ///  Effect-text-stroke mixin helps you to add stroke to a text element and style it very easily.
-/// @param {color} $color [transparent] - sets color of a text
+/// @param {color} $colors [transparent] - sets color of a text
 /// @param {color} $stroke-color [black] - sets the stroke color of a text, the default stroke color value is black
 /// @param {color} $fallback-color [black] - this option is for non-supporting browsers, it will prevent text to disappear entirely in non-supporting browsers, the default value is black.
 /// @param {pixel} $stroke-width [thin, medium, thick] - sets the width of the stroke
 /// @example
 ///  h1 {
 ///  	@include effect-text-stroke(
-///  		$color: azure,
+///  		$colors: azure,
 ///  		$stroke-color: cadetblue,
 ///  		$fallback-color: cadetblue,
 ///  		$stroke-width: 1px
@@ -433,12 +433,12 @@
 ///  }
 @mixin effect-text-stroke(
 	$fallback-color: black,
-	$color: transparent,
+	$colors: transparent,
 	$stroke-color: black,
 	$stroke-width: 1px
 ) {
 	color: $fallback-color;
-	-webkit-text-fill-color: $color;
+	-webkit-text-fill-color: $colors;
 	-webkit-text-stroke-color: $stroke-color;
 	-webkit-text-stroke-width: $stroke-width;
 }
@@ -446,7 +446,7 @@
 //TODO: verified
 /// Add a glimmer (light effect) external to a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
-/// @param {string} $color [#eee] - glimmer color
+/// @param {string} $colors [#eee] - glimmer color
 /// @example
 /// /* example 1*/
 ///
@@ -459,13 +459,13 @@
 ///  .p {
 ///	  @include effect-text-light(large, $sun-flower);
 ///  }
-@mixin effect-text-light($opacity: medium, $color: #eee) {
+@mixin effect-text-light($opacity: medium, $colors: #eee) {
 	@if ($opacity == small) {
-		text-shadow: 0px 1px 2px $color;
+		text-shadow: 0px 1px 2px $colors;
 	} @else if ($opacity == medium) {
-		text-shadow: 0px 1px 8px $color;
+		text-shadow: 0px 1px 8px $colors;
 	} @else if ($opacity == large) {
-		text-shadow: 0px 1px 20px $color;
+		text-shadow: 0px 1px 20px $colors;
 	} @else if ($opacity == none) {
 		text-shadow: none;
 	} @else {
@@ -476,26 +476,26 @@
 //TODO: verified
 /// Add a glimmer (light effect) external to a container
 /// @param {string} $opacity [solid, small, medium, large, none] - opacity values
-/// @param {string} $color [#eee] - glimmer color
+/// @param {string} $colors [#eee] - glimmer color
 /// @example
 ///  .containing-element {
 ///	  @include effect-box-light(medium);
 ///  }
-@mixin effect-box-light($opacity: medium, $color: #eee) {
+@mixin effect-box-light($opacity: medium, $colors: #eee) {
 	@if ($opacity == solid) {
-		box-shadow: 1px 1px 2px 1px $color;
+		box-shadow: 1px 1px 2px 1px $colors;
 	} @else if ($opacity == small) {
-		box-shadow: 1px 2px 10px 1px $color;
-		-webkit-box-shadow: 1px 2px 10px 1px $color;
-		-moz-box-shadow: 1px 2px 10px 1px $color;
+		box-shadow: 1px 2px 10px 1px $colors;
+		-webkit-box-shadow: 1px 2px 10px 1px $colors;
+		-moz-box-shadow: 1px 2px 10px 1px $colors;
 	} @else if ($opacity == medium) {
-		box-shadow: 1px 3px 15px 1px $color;
-		-webkit-box-shadow: 1px 3px 15px 1px $color;
-		-moz-box-shadow: 1px 3px 15px 1px $color;
+		box-shadow: 1px 3px 15px 1px $colors;
+		-webkit-box-shadow: 1px 3px 15px 1px $colors;
+		-moz-box-shadow: 1px 3px 15px 1px $colors;
 	} @else if ($opacity == large) {
-		box-shadow: 7px 5px 20px 2px $color;
-		-webkit-box-shadow: 7px 5px 20px 2px $color;
-		-moz-box-shadow: 7px 5px 20px 2px $color;
+		box-shadow: 7px 5px 20px 2px $colors;
+		-webkit-box-shadow: 7px 5px 20px 2px $colors;
+		-moz-box-shadow: 7px 5px 20px 2px $colors;
 	} @else if ($opacity == none) {
 		box-shadow: none;
 	} @else {
