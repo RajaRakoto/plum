@@ -312,7 +312,7 @@
 	"effect-text-shadow": {
 		"prefix": "sseo-effect-text-shadow",
 		"body": [
-			"@include effect-text-shadow($$opacity: ${1:small, medium, large, none});"
+			"@include effect-text-shadow($$opacity: ${1:small, medium, large, none}, $$colors: ${2:color->#222});"
 		],
 		"description": "Ajouter un effet d'ombre interne sur un texte."
 	},
@@ -336,7 +336,7 @@
 	"effect-text-light": {
 		"prefix": "sseo-effect-text-light",
 		"body": [
-			"@include effect-text-light($$opacity: ${1:small, medium, large, none}, $$solors: ${2:color->#eee});"
+			"@include effect-text-light($$opacity: ${1:small, medium, large, none}, $$colors: ${2:color->#eee});"
 		],
 		"description": "Ajouter une lueur (effet de lumière) externe à un texte."
 	},
@@ -344,7 +344,7 @@
 	"effect-box-light": {
 		"prefix": "sseo-effect-box-light",
 		"body": [
-			"@include effect-box-light($$opacity: ${1:solid, small, medium, large, none}, $$solors: ${2:color->#eee});"
+			"@include effect-box-light($$opacity: ${1:solid, small, medium, large, none}, $$colors: ${2:color->#eee});"
 		],
 		"description": "Ajouter une lueur (effet de lumière) externe à un conteneur."
 	},
