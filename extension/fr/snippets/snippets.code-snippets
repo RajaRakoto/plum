@@ -196,7 +196,7 @@
 	"box-radius": {
 		"prefix": "sseo-box-radius",
 		"body": [
-			"@include box-radius($$corner: ${1:null, top, top-right, right, bottom-right, bottom, botton-left, left, top-left, cross-left, cross-right, all}, $$value:  ${2:pixel});"
+			"@include box-radius(${1:null, top, top-right, right, bottom-right, bottom, botton-left, left, top-left, cross-left, cross-right, all}, ${2:pixel});"
 		],
 		"description": "Le mixin Box-radius vous aide à arrondir le ou les coins d'un élément sélectionné en utilisant la propriété CSS border-radius . Vous pouvez passer une valeur (avec l'unité) pour styliser tous les coins de la même manière ou vous pouvez utiliser la propriété abrégée CSS pour styliser chaque coin différemment - l'avantage d'utiliser ce mixin est que chaque valeur lors de la saisie est transformée en REM, ce qui donne un style plus réactif effet."
 	},
@@ -218,7 +218,7 @@
 	"breakpoint": {
 		"prefix": "sseo-media-breakpoint",
 		"body": [
-			"@include breakpoint($$mode: ${1:only, min, max, beetween}, $$value: ${2:xsmall, small, medium, large, xlarge | pixel});"
+			"@include breakpoint(${1:$$mode: only, min, max, beetween}, ${2:$$value: xsmall, small, medium, large, xlarge | pixel});"
 		],
 		"description": "Breakpoint mixin vous aide à créer des requêtes multimédias et des points d'arrêt évolutifs en utilisant la règle @media CSS dans SCSS."
 	},
@@ -246,7 +246,7 @@
 	"columnize": {
 		"prefix": "sseo-layout-columnize",
 		"body": [
-			"@include columnize($$columns: ${1:number}, $$gutter: ${2:pixel}, $$fill: ${3:boolean->false});"
+			"@include columnize(${1:$$columns: number}, ${2:$$gutter: :pixel}, ${3:$$fill: boolean->false});"
 		],
 		"description": "Columnize mixin vous aide à créer des colonnes hypothétiques uniformément divisées (basées sur flexbox) dans un élément contenant, autant que la valeur que vous transmettez pour l'argument $columns . Ainsi, vous pouvez afficher tous les enfants à l'intérieur de l'élément parent comme s'ils étaient alignés dans une colonne - [ATTENTION] : doit être appliqué à l'élément parent pour aligner les enfants à l'intérieur de celui-ci !."
 	},
@@ -502,9 +502,7 @@
 
 	"sizer": {
 		"prefix": "sseo-specs-sizer",
-		"body": [
-			"@include sizer($$width: ${1:pixel}, $$overflow: ${2:auto, overflow});"
-		],
+		"body": ["@include sizer($$width: ${1:pixel}, $$height: ${2:pixel});"],
 		"description": "Sizer mixin vous aide à dimensionner les éléments avec une déclaration (ou deux). Redimensionnez les éléments ou créez très facilement des formes carrées ou rectangulaires."
 	},
 

@@ -196,7 +196,7 @@
 	"box-radius": {
 		"prefix": "sseo-box-radius",
 		"body": [
-			"@include box-radius($$corner: ${1:null, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, cross-left, cross-right, all }, $$value: ${2:pixel});"
+			"@include box-radius(${1:null, top, top-right, right, bottom-right, bottom, botton-left, left, top-left, cross-left, cross-right, all}, ${2:pixel});"
 		],
 		"description": "The Box-radius mixin helps you round the corner(s) of a selected element using the CSS border-radius property. You can pass a value (along with the unit) to style all the corners of the same way or you can use the CSS shorthand property to style each corner differently - the benefit of using this mixin is that each value as you type is transformed into REM giving a more responsive styling effect."
 	},
@@ -218,7 +218,7 @@
 	"breakpoint": {
 		"prefix": "sseo-media-breakpoint",
 		"body": [
-			"@include breakpoint($$mode: ${1:only, min, max, beetween}, $$value: ${2:xsmall, small, medium, large, xlarge | pixel});"
+			"@include breakpoint(${1:$$mode: only, min, max, beetween}, ${2:$$value: xsmall, small, medium, large, xlarge | pixel});"
 		],
 		"description": "Breakpoint mixin helps you create scalable media queries and breakpoints using @media CSS rule in SCSS."
 	},
@@ -246,7 +246,7 @@
 	"columnize": {
 		"prefix": "sseo-layout-columnize",
 		"body": [
-			"@include columnize($$columns: ${1:number}, $$gutter: ${2:pixel}, $$fill: ${3:boolean->false});"
+			"@include columnize(${1:$$columns: number}, ${2:$$gutter: :pixel}, ${3:$$fill: boolean->false});"
 		],
 		"description": "Columnize mixin helps you create hypothetical evenly divided columns (based on flexbox) in a containing element, as much as the value you pass for the $columns argument. So you can display all children at the same time. 'inside parent element as if aligned in a column - [WARNING]: must be applied to parent element to align children inside of it!."
 	},
@@ -502,9 +502,7 @@
 
 	"sizer": {
 		"prefix": "sseo-specs-sizer",
-		"body": [
-			"@include sizer($$width: ${1:pixel}, $$overflow: ${2:auto, overflow});"
-		],
+		"body": ["@include sizer($$width: ${1:pixel}, $$height: ${2:pixel});"],
 		"description": "Sizer mixin helps you size items with a statement (or two). Resize items or create square or rectangular shapes very easily."
 	},
 
