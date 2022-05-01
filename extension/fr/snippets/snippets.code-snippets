@@ -296,7 +296,7 @@
 	"effect-box-shadow": {
 		"prefix": "sseo-effect-box-shadow",
 		"body": [
-			"@include effect-box-shadow($$opacity: ${1:solid, small, medium, large, none});"
+			"@include effect-box-shadow($$opacity: ${1:solid, small, medium, large, smooth, none});"
 		],
 		"description": "Ajouter un effet d'ombre extérieur sur un conteneur."
 	},
