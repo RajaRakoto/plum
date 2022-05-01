@@ -182,30 +182,32 @@
 
 //TODO: verified
 /// Add an outdoor shadow effect on a container
-/// @param {string} $opacity [solid, small, medium, large, none] - opacity values
+/// @param {string} $opacity [solid, small, medium, large, smooth, none] - opacity values
 /// @example
 ///  .containing-element {
-///	  @include effect-box-shadow(small);
+///	  @include effect-box-shadow(smooth);
 ///  }
 @mixin effect-box-shadow($opacity: solid) {
 	@if ($opacity == solid) {
 		box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
 	} @else if ($opacity == small) {
-		box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
-		-webkit-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
-		-moz-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.59);
+		box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
+		-webkit-box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
+		-moz-box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
 	} @else if ($opacity == medium) {
-		box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
-		-webkit-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
-		-moz-box-shadow: 1px 3px 15px 1px rgba(0, 0, 0, 0.59);
+		box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
+		-webkit-box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
+		-moz-box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
 	} @else if ($opacity == large) {
-		box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
-		-webkit-box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
-		-moz-box-shadow: 7px 5px 20px 2px rgba(0, 0, 0, 0.59);
+		box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
+		-webkit-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
+		-moz-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
+	} @else if ($opacity == smooth) {
+		box-shadow: 4px 4px 15px rgba(rgb(61, 61, 61), 0.15);
 	} @else if ($opacity == none) {
 		box-shadow: none;
 	} @else {
-		@error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
+		@error "The argument must be `solid` or `small` or `medium` or `large` or `smooth` or `none`";
 	}
 }
 
