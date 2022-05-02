@@ -101,6 +101,18 @@
 		"description": "Le mixin adaptatif vous aide à définir la valeur max-width pour les éléments contenants en fonction des valeurs de point d'arrêt définies dans le fichier _map-for-breakpoints.scss, et spécifie également une valeur $gutter, où les bords d'un écran de navigateur peuvent se rapprocher le plus aux bords de l'élément sélectionné. (Astuce : le mixin adaptatif fonctionne mieux avec les valeurs en pourcentage.)."
 	},
 
+	"animation-rotateX": {
+		"prefix": "sseo-animation-rotateX",
+		"body": ["@include animation-rotateX($$duration: ${second});"],
+		"description": "Add rotate X animation."
+	},
+
+	"animation-rotateY": {
+		"prefix": "sseo-animation-rotateY",
+		"body": ["@include animation-rotateY($$duration: ${second});"],
+		"description": "Add rotate Y animation."
+	},
+
 	"animation-scale": {
 		"prefix": "sseo-animation-scale",
 		"body": ["@include animation-scale($$direction: ${1:left, right});"],
@@ -509,7 +521,7 @@
 	"spacing-padding": {
 		"prefix": "sseo-spacing-padding",
 		"body": [
-			"@include spacing-padding($$top: ${1:pixel}, $$right ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel},);"
+			"@include spacing-padding($$top: ${1:pixel}, $$right: ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel});"
 		],
 		"description": "Modifier rapidement le rembourrage d'un élément."
 	},
@@ -517,7 +529,7 @@
 	"spacing-margin": {
 		"prefix": "sseo-spacing-margin",
 		"body": [
-			"@include spacing-margin($$top: ${1:pixel}, $$right ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel},);"
+			"@include spacing-margin($$top: ${1:pixel}, $$right: ${2:pixel}, $$bottom: ${3:pixel}, $$left: ${4:pixel});"
 		],
 		"description": "Modifier rapidement la marge d'un élément."
 	},
