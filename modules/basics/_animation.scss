@@ -9,10 +9,10 @@
 /// }
 @mixin animation-rotateX($duration) {
 	-webkit-animation: rotating $duration linear infinite;
-  -moz-animation: rotating $duration linear infinite;
-  -ms-animation: rotating $duration linear infinite;
-  -o-animation: rotating $duration linear infinite;
-  animation: rotating $duration linear infinite;
+	-moz-animation: rotating $duration linear infinite;
+	-ms-animation: rotating $duration linear infinite;
+	-o-animation: rotating $duration linear infinite;
+	animation: rotating $duration linear infinite;
 
 	@-webkit-keyframes rotating /* Safari and Chrome */ {
 		from {
@@ -41,6 +41,7 @@
 			-o-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
+	}
 }
 
 //TODO: verified
