@@ -1,6 +1,69 @@
 @charset "UTF-8";
 
 //TODO: verified
+/// Add a rotation X animation
+/// @param {second} $duration - animation duration
+/// @example
+/// .containing-element{
+///		@include animation-rotationX(10s);
+/// }
+@mixin animation-rotateX($duration) {
+	-webkit-animation: rotating $duration linear infinite;
+  -moz-animation: rotating $duration linear infinite;
+  -ms-animation: rotating $duration linear infinite;
+  -o-animation: rotating $duration linear infinite;
+  animation: rotating $duration linear infinite;
+
+	@-webkit-keyframes rotating /* Safari and Chrome */ {
+		from {
+			-webkit-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes rotating {
+		from {
+			-ms-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		to {
+			-ms-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-webkit-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+}
+
+//TODO: verified
+/// Add a rotation Y animation
+/// @param {second} $duration - animation duration
+/// @example
+/// .containing-element{
+///		@include animation-rotationY(10s);
+/// }
+@mixin animation-rotateY($duration) {
+	animation: ver-rotate $duration infinite linear;
+
+	@keyframes ver-rotate {
+		from {
+			transform: rotateY(0deg);
+		}
+		to {
+			transform: rotateY(360deg);
+		}
+	}
+}
+
+//TODO: verified
 /// Add a scale animation (mini slide)
 /// @param {string} $direction [left, right] - animation direction
 /// @example
