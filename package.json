@@ -1,6 +1,6 @@
 {
 	"name": "@raja_rakoto/sass-eo",
-	"version": "1.3.4",
+	"version": "1.4.0",
 	"description": "Customize your website faster with a toolset powered by SASS (Syntactically Awesome Style Sheets) 💜",
 	"directories": {
 		"doc": "docs",
