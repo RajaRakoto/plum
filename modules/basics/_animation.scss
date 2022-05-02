@@ -65,86 +65,14 @@
 }
 
 //TODO: verified
-/// Add a scale animation (mini slide)
-/// @param {string} $direction [left, right] - animation direction
+/// Add a scale animation (mini zoom effect)
+/// @param {float} $scaleValue [0.5 ~ 1.5] - scale value (zoom)
 /// @example
 /// .containing-element{
-///		@include animation-scale(left);
+///		@include animation-scale(1.2);
 /// }
-@mixin animation-scale($direction) {
-	@if ($direction == left) {
-		-webkit-animation: scale-up-hor-left
-			0.4s
-			cubic-bezier(0.39, 0.575, 0.565, 1)
-			both;
-		animation: scale-up-hor-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-
-		@-webkit-keyframes scale-up-hor-left {
-			0% {
-				-webkit-transform: scaleX(0.4);
-				transform: scaleX(0.4);
-				-webkit-transform-origin: 0% 0%;
-				transform-origin: 0% 0%;
-			}
-			100% {
-				-webkit-transform: scaleX(1);
-				transform: scaleX(1);
-				-webkit-transform-origin: 0% 0%;
-				transform-origin: 0% 0%;
-			}
-		}
-		@keyframes scale-up-hor-left {
-			0% {
-				-webkit-transform: scaleX(0.4);
-				transform: scaleX(0.4);
-				-webkit-transform-origin: 0% 0%;
-				transform-origin: 0% 0%;
-			}
-			100% {
-				-webkit-transform: scaleX(1);
-				transform: scaleX(1);
-				-webkit-transform-origin: 0% 0%;
-				transform-origin: 0% 0%;
-			}
-		}
-	}
-
-	@if ($direction == right) {
-		-webkit-animation: scale-up-hor-right
-			0.4s
-			cubic-bezier(0.39, 0.575, 0.565, 1)
-			both;
-		animation: scale-up-hor-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-
-		@-webkit-keyframes scale-up-hor-right {
-			0% {
-				-webkit-transform: scaleX(0.4);
-				transform: scaleX(0.4);
-				-webkit-transform-origin: 100% 100%;
-				transform-origin: 100% 100%;
-			}
-			100% {
-				-webkit-transform: scaleX(1);
-				transform: scaleX(1);
-				-webkit-transform-origin: 100% 100%;
-				transform-origin: 100% 100%;
-			}
-		}
-		@keyframes scale-up-hor-right {
-			0% {
-				-webkit-transform: scaleX(0.4);
-				transform: scaleX(0.4);
-				-webkit-transform-origin: 100% 100%;
-				transform-origin: 100% 100%;
-			}
-			100% {
-				-webkit-transform: scaleX(1);
-				transform: scaleX(1);
-				-webkit-transform-origin: 100% 100%;
-				transform-origin: 100% 100%;
-			}
-		}
-	}
+@mixin animation-scale($scaleValue: 1.1) {
+	transform: scale($scaleValue);
 }
 
 //TODO: verified
@@ -475,17 +403,6 @@
 			}
 		}
 	}
-}
-
-//TODO: verified
-/// Add a fixed zoom animation effect - often uses for a button or cardlist
-/// @param {float} $scaleValue [0.5 ~ 1.5] - scale value (zoom)
-/// @example
-/// .containing-element{
-///		@include animation-zoom-fixed(1.2);
-/// }
-@mixin animation-zoom-fixed($scaleValue: 1.1) {
-	transform: scale($scaleValue);
 }
 
 //TODO: verified
