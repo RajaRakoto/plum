@@ -115,8 +115,8 @@
 
 	"animation-scale": {
 		"prefix": "sseo-animation-scale",
-		"body": ["@include animation-scale($$direction: ${1:left, right});"],
-		"description": "Add scale animation (mini slide)."
+		"body": ["@include animation-scale($$scaleValue: ${1:foat->0.5~1.5};"],
+		"description": "Add scale animation (mini zoom effect)."
 	},
 
 	"animation-slide": {
@@ -131,14 +131,6 @@
 		"prefix": "sseo-animation-fade",
 		"body": ["@include animation-fade($$in-out: ${1:in, out});"],
 		"description": "Add Slide Animation Effect (Fluid)."
-	},
-
-	"animation-zoom-fixed": {
-		"prefix": "sseo-animation-zoom-fixed",
-		"body": [
-			"@include animation-zoom-fixed($$scaleValue: ${1:foat->0.5~1.5});"
-		],
-		"description": "Add fixed zoom animation effect - often used for button or card list."
 	},
 
 	"zoom-animation": {
