@@ -65,7 +65,7 @@
 }
 
 //TODO: verified
-/// Add a scale animation (mini zoom effect)
+/// Add a scale animation (mini zoom effect) - TIPS: it is better to put a transition to scale animation
 /// @param {float} $scaleValue [0.5 ~ 1.5] - scale value (zoom)
 /// @example
 /// .containing-element{
