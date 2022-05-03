@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+//TODO: verified
+/// Add a badge with an animated linear gradient
+/// @param {string} $type [gold, silver, ...] - badge theme
+/// @param {pixel} $height [4px] - badge height
+/// @param {pixel} $width [10px] - badge width
+/// @param {second} $gradient-speed [3s] - gradient speed
+/// @param {string} $gradient-direction [normal, reverse] - gradient direction
+/// @param {degre} $gradient-orientation [60deg, 90deg] - gradient orientation (degre)
+/// @param {pixel} $border-radius [10px] - badge border radius
+/// @param {boolean} $border [false, true] - badge border
+/// @param {pixel} $font-size [12px] - font size of badge
+/// @param {pixel} $font-color [#444, #eee] - text color of badge
+/// @param {pixel} $font-weight [bolder, normal, lighter] - font weight of badge
+/// @example
+///  /* HTML */
+///
+///  <div class="highlight-badge">solde</div>
+///
+///  /* basic usage */
+///
+///  .highlight-badge{
+///	 	@include badge-linear("gold");
+///  }
+@mixin badge-linear(
+	$type: 'silver',
+	$height: 4px,
+	$width: 10px,
+	$gradient-speed: 3s,
+	$gradient-direction: 'normal',
+	$gradient-orientation: 60deg,
+	$border-radius: 10px,
+	$border: false,
+	$font-size: 12px,
+	$font-color: #444,
+	$font-weight: bolder
+) {
+	text-align: center;
+	padding: __convertToRem($value: $height) __convertToRem($value: $width);
+	appearance: none;
+	-webkit-appearance: none;
+	border-radius: __convertToRem($value: $border-radius);
+	font-size: $font-size;
+	color: $font-color;
+	font-weight: $font-weight;
+	background-size: 200% 100%;
+	animation: highlightAnimation $gradient-speed linear infinite;
+
+	// border
+	@if ($border and $type == 'gold') {
+		border: solid 3px rgba(221, 194, 120, 0.815);
+	}
+
+	// type
+	@if ($type == 'gold') {
+		background-image: repeating-linear-gradient(
+			$gradient-orientation,
+			gold,
+			rgb(255, 226, 60) 20%,
+			rgba(255, 246, 115, 0.603) 40%,
+			#fdfdded2 50%,
+			rgba(255, 246, 115, 0.603) 60%,
+			rgb(255, 226, 60) 80%,
+			gold 100%
+		);
+	}
+
+	@if ($type == 'silver') {
+		background-image: repeating-linear-gradient(
+			$gradient-orientation,
+			silver,
+			rgb(199, 199, 199) 20%,
+			rgba(230, 230, 230, 0.952) 40%,
+			#ffffffec 50%,
+			rgba(230, 230, 230, 0.952) 60%,
+			rgb(199, 199, 199) 80%,
+			silver 100%
+		);
+	}
+
+	// animation
+	@if ($gradient-direction == 'normal') {
+		@keyframes highlightAnimation {
+			0% {
+				background-position: 200% 50%;
+			}
+			100% {
+				background-position: 0 50%;
+			}
+		}
+	}
+
+	@if ($gradient-direction == 'reverse') {
+		@keyframes highlightAnimation {
+			0% {
+				background-position: 0 50%;
+			}
+			100% {
+				background-position: 200% 50%;
+			}
+		}
+	}
+}
