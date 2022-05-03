@@ -183,6 +183,14 @@
 		"description": "Le mixin Antialias fournit un rendu de police fluide, ce qui signifie lisser la police au niveau du pixel et empêcher le rendu des sous-pixels."
 	},
 
+	"badge-linear": {
+		"prefix": "sseo-badge-linear",
+		"body": [
+			"@include badge-linear($$type: \"${1:gold, silver}\", $$height: ${2:pixel->4px}, $$width: ${3:pixel->10px}, $$gradient-speed: ${4:second->3s}, $$gradient-direction: ${5:normal, reverse->normal}, $$gradient-orientation: ${6:60deg, 90deg->60deg}, $$border-radius: ${7:pixel->10px}, $$border: ${8:boolean->false}, $$font-size: ${9:pixel->12px}, $$font-color: ${10:color->#444, #eee->#444}, $$font-weight: ${12:bolder, normal, lighter->bolder});"
+		],
+		"description": "Ajouter un badge avec un dégradé linéaire animé"
+	},
+
 	"bar-scrolling": {
 		"prefix": "sseo-bar-scrolling",
 		"body": [
