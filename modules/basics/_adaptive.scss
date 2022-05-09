@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-// TODO: verified
 /// Adaptive mixin helps you to set max-width value to the containing elements based on the breakpoint values defined in the _map-for-breakpoints.scss file, and also specifies a $gutter value, where the edges of a browser screen can most closely get to the edges of the selected element. (tip: adaptive mixin works best with the percentage values.)
 /// @param {pixel, percentage} $gutter [30px] - accepts only one value and sets it for all the breakpoints.
 /// @example

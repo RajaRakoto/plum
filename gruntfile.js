@@ -18,7 +18,6 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
 
-		// TODO: verified
 		/**
 		 * Compile sass to css
 		 */
@@ -37,7 +36,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
 		/**
 		 * Run shell commands
 		 */
@@ -47,7 +45,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
 		/**
 		 * Compress files and folders (incremental backup)
 		 */
@@ -124,7 +121,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		// TODO: verified
 		/**
 		 * Run predefined tasks whenever watched file patterns are added, changed or deleted
 		 */

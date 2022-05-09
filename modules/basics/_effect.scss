@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Effect-gradient-text mixin (also know as CSS Gradient Text) helps you to add a gradient overlay to a text element. Provides a one-line method to set the gradient line’s angle of direction, color values and the color-stop positions very easily.
 /// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the gradient line’s direction of angle
 /// @param {color} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
@@ -31,7 +30,6 @@
 	color: transparent;
 }
 
-//TODO: verified
 /// Effect-gradient-radial mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property.
 /// @param {string} $shape [null, circle, ellipse] - this option sets the shape of the gradient
 /// @param {string} $position [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, center, closest-side, farthest-side, closest-corner, farthest-corner] - sets the position of the gradient’s shape
@@ -75,7 +73,6 @@
 	}
 }
 
-//TODO: verified
 /// Effect-gradient-linear mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
 /// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the gradient line’s direction of angle
 /// @param {color list} $colors - accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want
@@ -102,7 +99,6 @@
 	}
 }
 
-//TODO: verified
 /// Effect-text-image mixin helps you to clip the background image of a selected element to the shape of its foreground text.
 /// @param {path} $image - the URL of a clipping image
 /// @example
@@ -128,7 +124,6 @@
 	color: transparent;
 }
 
-//TODO: verified
 /// Simply call the effect-hide mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
 /// @param {string} $toggle [hide, unhide] - default value is set to hide, use unhide to reserve the affect
 /// @example
@@ -167,7 +162,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an opacity effect on an element (compatible with IE8)
 /// @param {percent} $percent - opacity (percent)
 /// @example
@@ -180,7 +174,6 @@
 	filter: alpha(opacity=$percent-ie); //IE8
 }
 
-//TODO: verified
 /// Add an outdoor shadow effect on a container
 /// @param {string} $opacity [solid, small, medium, large, smooth, none] - opacity values
 /// @example
@@ -211,7 +204,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an interior shadow effect on a container
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @example
@@ -232,7 +224,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an internal shadow effect on a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @example
@@ -255,7 +246,6 @@
 	}
 }
 
-//TODO: verified
 /// Effect-text-supershadow mixin helps you to add shadow to text elements. Accepts comma-separated list of shadows or a single shadow value that can be multiplied optionally. It provides an easy-to-use one-line method - unlike "effect-text-shadow" mixin, this one is more customizable and more powerful in terms of functionality
 /// @param {string} $direction [top, top-right, right, bottom-right, bottom, bottom-left, left, top-left] - sets the direction of the shadow
 /// @param {color} $colors [rgba(black, 0.3)] - sets the color of the shadow
@@ -418,7 +408,6 @@
 	text-shadow: $value;
 }
 
-//TODO: verified
 ///  Effect-text-stroke mixin helps you to add stroke to a text element and style it very easily.
 /// @param {color} $colors [transparent] - sets color of a text
 /// @param {color} $stroke-color [black] - sets the stroke color of a text, the default stroke color value is black
@@ -445,7 +434,6 @@
 	-webkit-text-stroke-width: $stroke-width;
 }
 
-//TODO: verified
 /// Add a glimmer (light effect) external to a text
 /// @param {string} $opacity [small, medium, large, none] - opacity values
 /// @param {string} $colors [#eee] - glimmer color
@@ -475,7 +463,6 @@
 	}
 }
 
-//TODO: verified
 /// Add a glimmer (light effect) external to a container
 /// @param {string} $opacity [solid, small, medium, large, none] - opacity values
 /// @param {string} $colors [#eee] - glimmer color

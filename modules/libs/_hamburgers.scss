@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 // Settings
 // ==================================================
 $hamburger-padding-x: 20px !default;
@@ -21,7 +20,6 @@ $hamburger-hover-use-filter: false !default;
 $hamburger-hover-filter: opacity(50%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
-//TODO: verified
 // Types
 // ==================================================
 $hamburger-types: (
@@ -58,47 +56,44 @@ $hamburger-types: (
 	vortex-r
 ) !default;
 
-//TODO: verified
 // Base Hamburger (We need this)
 // ==================================================
 @import './hamburgers/base';
 
-//TODO: verified
 // Hamburger types (Remove or comment out what you don’t need)
 // ==================================================
-@import "./hamburgers/types/3dx";
-@import "./hamburgers/types/3dx-r";
-@import "./hamburgers/types/3dy";
-@import "./hamburgers/types/3dy-r";
-@import "./hamburgers/types/3dxy";
-@import "./hamburgers/types/3dxy-r";
-@import "./hamburgers/types/arrow";
-@import "./hamburgers/types/arrow-r";
-@import "./hamburgers/types/arrowalt";
-@import "./hamburgers/types/arrowalt-r";
-@import "./hamburgers/types/arrowturn";
-@import "./hamburgers/types/arrowturn-r";
-@import "./hamburgers/types/boring";
-@import "./hamburgers/types/collapse";
-@import "./hamburgers/types/collapse-r";
-@import "./hamburgers/types/elastic";
-@import "./hamburgers/types/elastic-r";
-@import "./hamburgers/types/emphatic";
-@import "./hamburgers/types/emphatic-r";
-@import "./hamburgers/types/minus";
-@import "./hamburgers/types/slider";
-@import "./hamburgers/types/slider-r";
-@import "./hamburgers/types/spin";
-@import "./hamburgers/types/spin-r";
-@import "./hamburgers/types/spring";
-@import "./hamburgers/types/spring-r";
-@import "./hamburgers/types/stand";
-@import "./hamburgers/types/stand-r";
-@import "./hamburgers/types/squeeze";
-@import "./hamburgers/types/vortex";
-@import "./hamburgers/types/vortex-r";
+@import './hamburgers/types/3dx';
+@import './hamburgers/types/3dx-r';
+@import './hamburgers/types/3dy';
+@import './hamburgers/types/3dy-r';
+@import './hamburgers/types/3dxy';
+@import './hamburgers/types/3dxy-r';
+@import './hamburgers/types/arrow';
+@import './hamburgers/types/arrow-r';
+@import './hamburgers/types/arrowalt';
+@import './hamburgers/types/arrowalt-r';
+@import './hamburgers/types/arrowturn';
+@import './hamburgers/types/arrowturn-r';
+@import './hamburgers/types/boring';
+@import './hamburgers/types/collapse';
+@import './hamburgers/types/collapse-r';
+@import './hamburgers/types/elastic';
+@import './hamburgers/types/elastic-r';
+@import './hamburgers/types/emphatic';
+@import './hamburgers/types/emphatic-r';
+@import './hamburgers/types/minus';
+@import './hamburgers/types/slider';
+@import './hamburgers/types/slider-r';
+@import './hamburgers/types/spin';
+@import './hamburgers/types/spin-r';
+@import './hamburgers/types/spring';
+@import './hamburgers/types/spring-r';
+@import './hamburgers/types/stand';
+@import './hamburgers/types/stand-r';
+@import './hamburgers/types/squeeze';
+@import './hamburgers/types/vortex';
+@import './hamburgers/types/vortex-r';
 
-//TODO: verified
 // ==================================================
 // Cooking up additional types:
 //

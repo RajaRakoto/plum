@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// There will be times when you need to style elements only for one particular smartphone model. mobile mixin helps you to achieve that.
 /// @param {string} $device [iPhone4, iPhone-SE, iPhone5-SE, iPhone6, iPhone6-Plus, iPhone7, iPhone7-Plus, iPhone8, iPhone8-Plus, iPhone11, iPhone11-Pro, iPhone11-Pro-Max, iPhoneX, Galaxy-S7, Galaxy-S8, Galaxy-S8-Plus, Galaxy-S10] - smartphone model
 /// @param {string} $orientation [portrait, landscape] - orientation of screen

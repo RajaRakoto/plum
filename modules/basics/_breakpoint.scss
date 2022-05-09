@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Breakpoint mixin helps you to create scalable media queries and breakpoints by using the @media CSS at-rule in SCSS.
 /// @param {string} $mode [only, min, max, beetween] - sets the width media feature
 /// @param {pixel, string} $value [xsmall, small, medium, large, xlarge] - the width value to which your styles will be applied

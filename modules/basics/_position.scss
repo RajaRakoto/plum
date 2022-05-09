@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Position-set mixin provides a one-line method to rapidly set both the position and the offset properties of a selected element.
 /// @param {string} $position [static, relative, fixed, absolute, sticky] - this option sets the position property of a selected element(s)
 /// @param {list (top, right, bottom, left)} $offsets [0] - accepts a list of values to set the offset of the edges of the box. Uses CSS shorthand method
@@ -45,7 +44,6 @@
 	}
 }
 
-//TODO: verified
 /// Position-center mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
 /// @param {string} $axis [vertical, horizontal, both] - sets the axis of the alingment (element position)
 /// @example
@@ -103,7 +101,6 @@
 	}
 }
 
-//TODO: verified
 /// Quickly center a block
 /// @example
 ///  .containing-element {
@@ -115,7 +112,6 @@
 	margin-right: auto;
 }
 
-//TODO: verified
 /// Quickly center child item
 /// @example
 ///  .containing-element {

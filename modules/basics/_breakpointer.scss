@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Breakpointer mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific screen size.
 /// @param {string} $selector [body] - help you to target one specific selector, default it is targeting the ::before pseudo-element of the <body> tag.
 /// @example

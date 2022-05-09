@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Add a rotation X animation
 /// @param {second} $duration - animation duration
 /// @example
@@ -44,7 +43,6 @@
 	}
 }
 
-//TODO: verified
 /// Add a rotation Y animation
 /// @param {second} $duration - animation duration
 /// @example
@@ -64,7 +62,6 @@
 	}
 }
 
-//TODO: verified
 /// Add a scale animation (mini zoom effect) - TIPS: it is better to put a transition to scale animation
 /// @param {float} $scaleValue [0.5 ~ 1.5] - scale value (zoom)
 /// @example
@@ -75,7 +72,6 @@
 	transform: scale($scaleValue);
 }
 
-//TODO: verified
 /// Add an slide animation effect - ideal for a Sidebar
 /// @param {string} $in-out [in, out] - input|output animation
 /// @param {string} $direction [up, down, right, left] - animation direction
@@ -344,7 +340,6 @@
 	}
 }
 
-//TODO: verified
 /// Add a slide animation effect (fluid)
 /// @param {string} $in-out [in, out] - input|output animation
 /// @example
@@ -405,7 +400,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an temporary zoom animation effect - often uses for an animation effect in entrance
 /// @param {string} $in-out [in, out] - input|output animation
 /// @example
@@ -481,7 +475,6 @@
 	}
 }
 
-//TODO: verified
 /// Add a flip animation effect
 /// @param {string} $in-out [in, out] - input|output animation
 /// @example
@@ -606,7 +599,6 @@
 	}
 }
 
-//TODO: verified (loading...)
 /// Add an rotation animation effect
 /// @param {string} $in-out [in, out] - input|output animation
 /// @param {string} $axeY [up, down] - axeY animation direction
@@ -790,7 +782,7 @@
 	@if ($in-out == out) {
 		@if ($axeY == up) {
 			@if ($axeX == left) {
-				//TODO: loading...
+				// ...
 			}
 			@if ($axeX == right) {
 				-webkit-animation-name: rotateOutUpRight;
@@ -945,7 +937,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an notification animation effect
 /// @param {string} $in-out [in, out] - input|output animation
 /// @example
@@ -1042,7 +1033,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an pulsation animation effect
 /// @example
 /// .containing-element{
@@ -1085,7 +1075,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an bounce animation effect
 /// @example
 /// .containing-element{
@@ -1179,7 +1168,6 @@
 	}
 }
 
-//TODO: verified
 /// Add an flash animation effect
 /// @example
 /// .containing-element{

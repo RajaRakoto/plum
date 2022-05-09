@@ -21,7 +21,6 @@ $silver: #bdc3c7;
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
-//TODO: verified
 /// A function that returns the pastel of the color in argument
 /// @param {string} $colors - The color to determine its pastel value
 /// @example
@@ -37,7 +36,6 @@ $asbestos: #7f8c8d;
 	@return $pastel;
 }
 
-//TODO: verified
 /// A function that adjusts the brightness of an argument color
 /// @param {string} $colors - The color to adjust
 /// @param {percent} $percent - lighten percentage
@@ -51,7 +49,6 @@ $asbestos: #7f8c8d;
 	@return $adjust;
 }
 
-//TODO: verified
 /// A function that returns the complementary of a color (uses to determine a graphic chart)
 /// @param {string} $colors - The color to determine its complementary
 /// @example

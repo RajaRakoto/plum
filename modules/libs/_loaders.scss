@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 @mixin loader-1($primary, $secondary) {
 	width: 48px;
 	height: 48px;
@@ -47,7 +46,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-2($primary, $secondary) {
 	width: 48px;
 	height: 48px;
@@ -87,7 +85,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-3($primary, $secondary) {
 	width: 48px;
 	height: 48px;
@@ -135,7 +132,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-4($primary) {
 	color: $primary;
 	font-size: 10px;
@@ -185,7 +181,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-5($primary) {
 	color: $primary;
 	font-size: 45px;
@@ -240,7 +235,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-6($primary, $secondary) {
 	transform: rotateZ(45deg);
 	perspective: 1000px;
@@ -315,7 +309,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-7($primary) {
 	&,
 	&:before,
@@ -361,7 +354,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-8($primary) {
 	height: 5px;
 	width: 5px;
@@ -426,7 +418,6 @@
 	}
 }
 
-//TODO: verified
 @mixin loader-9($primary, $secondary) {
 	width: 47px;
 	height: 47px;

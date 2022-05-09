@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Box-circle mixin helps you to easily create perfect circle shapes.
 /// @param {pixel} $size - size of circle
 /// @example
@@ -14,7 +13,6 @@
 	border-radius: 100%;
 }
 
-//TODO: verified
 /// Box-radius mixin helps you to rounds the corner(s) of a selected element by using the border-radius CSS property. You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently - the advantage of using this mixin is that each value when entering is transformed into REM which gives a more responsive effect
 /// @param {string} $corner [null, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left, cross-left, cross-right, all] - it allows you to choose the corners of an element that you want to apply style rules
 /// @param {pixel} $value - size of the border radius that will be applied
@@ -102,7 +100,6 @@
 	}
 }
 
-//TODO: verified
 /// Box-sizing mixin sets the box-sizing CSS property value to border-box for selected HTML element(s). Thus the padding and the border will be inside of the selected element.
 /// @param {string} $value [null, only] - only -> it is used only when it wants to be applied for one specific HTML element.
 /// @example
@@ -146,7 +143,6 @@
 	}
 }
 
-//TODO: verified
 /// Quickly add a border on the containers (util at debugging)
 /// @param {string} $colors [red] - border color
 /// @param {pixel} $size [3px] - border size

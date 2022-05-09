@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Columnize mixin helps you to create evenly divided hypothetical columns (based on flexbox) in a containing element, as many as the value you pass for the $columns argument. Thus, you can show all the children inside the parent element like they are lined up in a column - [WARNING]: must be aplied to the parent element to align the children inside of it!
 /// @param {number} $columns - sets the number of the hypothetical columns
 /// @param {pixel} $gutter - sets the value of the space between the columns

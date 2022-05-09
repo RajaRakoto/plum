@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-//TODO: verified
 /// Input-placeholder mixin will help you to style the placeholder text in an "input" or "textarea" element and generate cross-browser compatible CSS code.
 /// @example
 ///  /* example 1 - basic usage (input, textarea) */
@@ -36,7 +35,6 @@
 	}
 }
 
-//TODO: verified
 /// Input-placeholder-shown mixin helps you to style "input" or "textarea" element that is currently displaying placeholder text. As soon as the placeholder text disappears (that is, when the user starts typing), the applied style rules will also go away.
 /// @example
 ///  /* example 1 - basic usage (input, textarea) */
@@ -60,7 +58,6 @@
 	}
 }
 
-//TODO: verified
 /// Input-all mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules.
 /// @param {string} $pseudo [null, hover, focus, active, invalid, required, disabled]
 /// @example
@@ -92,7 +89,6 @@
 	}
 }
 
-//TODO: verified
 /// Input-style-scale add zoom effect style for input
 /// @param {color} $bg-color [#eee] - background color
 /// @param {color} $border-color [#eee] - border color

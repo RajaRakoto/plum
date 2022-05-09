@@ -1,30 +1,25 @@
 @charset "UTF-8";
 
-//TODO: verified
 // bling
 @import './magic/bling/puffIn';
 @import './magic/bling/puffOut';
 @import './magic/bling/vanishIn';
 @import './magic/bling/vanishOut';
 
-//TODO: verified
 // boing
 @import './magic/boing/boingInUp';
 @import './magic/boing/boingOutDown';
 
-//TODO: verified
 // bomb
 @import './magic/bomb/bombLeftOut';
 @import './magic/bomb/bombRightOut';
 
-//TODO: verified
 // magic_effects
 @import './magic/magic_effects/magic';
 @import './magic/magic_effects/swap';
 @import './magic/magic_effects/twisterInDown';
 @import './magic/magic_effects/twisterInUp';
 
-//TODO: verified
 // math
 @import './magic/math/foolishIn';
 @import './magic/math/foolishOut';
@@ -32,7 +27,6 @@
 @import './magic/math/swashIn';
 @import './magic/math/swashOut';
 
-//TODO: verified
 // on_the_space
 @import './magic/on_the_space/spaceInDown';
 @import './magic/on_the_space/spaceInLeft';
@@ -43,7 +37,6 @@
 @import './magic/on_the_space/spaceOutRight';
 @import './magic/on_the_space/spaceOutUp';
 
-//TODO: verified
 // perspective
 @import './magic/perspective/perspectiveDown';
 @import './magic/perspective/perspectiveDownReturn';
@@ -54,14 +47,12 @@
 @import './magic/perspective/perspectiveUp';
 @import './magic/perspective/perspectiveUpReturn';
 
-//TODO: verified
 // rotate
 @import './magic/rotate/rotateDown';
 @import './magic/rotate/rotateLeft';
 @import './magic/rotate/rotateRight';
 @import './magic/rotate/rotateUp';
 
-//TODO: verified
 // slide
 @import './magic/slide/slideDown';
 @import './magic/slide/slideDownReturn';
@@ -72,7 +63,6 @@
 @import './magic/slide/slideUp';
 @import './magic/slide/slideUpReturn';
 
-//TODO: verified
 // static_effects
 @import './magic/static_effects/openDownLeft';
 @import './magic/static_effects/openDownLeftReturn';
@@ -83,14 +73,12 @@
 @import './magic/static_effects/openUpRight';
 @import './magic/static_effects/openUpRightReturn';
 
-//TODO: verified
 // static_effects_out
 @import './magic/static_effects_out/openDownLeftOut';
 @import './magic/static_effects_out/openDownRightOut';
 @import './magic/static_effects_out/openUpLeftOut';
 @import './magic/static_effects_out/openUpRightOut';
 
-//TODO: verified
 // tin
 @import './magic/tin/tinDownIn';
 @import './magic/tin/tinDownOut';

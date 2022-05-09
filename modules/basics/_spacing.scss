@@ -17,7 +17,6 @@
 		__convertToRem($size);
 }
 
-//TODO: verified
 /// Quickly modify the padding of an element
 /// @param {pixel} $top - spacing at the top of the padding
 /// @param {pixel} $right - spacing at the right of the padding
@@ -34,7 +33,6 @@
 	padding-left: __convertToRem($left);
 }
 
-//TODO: verified
 /// Quickly modify the margin of an element
 /// @param {pixel} $top - spacing at the top of the margin
 /// @param {pixel} $right - spacing at the right of the margin
@@ -51,7 +49,6 @@
 	margin-left: __convertToRem($left);
 }
 
-//TODO: verified
 /// Quickly add a predefined padding based on the gabarit argument
 /// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
 /// @example
@@ -97,7 +94,6 @@
 	}
 }
 
-//TODO: verified
 /// Quickly add a predefined margin based on the gabarit argument
 /// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
 /// @example
@@ -143,7 +139,6 @@
 	}
 }
 
-//TODO: verified
 /// Quickly add a predefined padding|margin based on the gabarit argument
 /// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
 /// @example
