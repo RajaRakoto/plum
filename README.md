@@ -391,10 +391,6 @@ Generate flexbox CSS code to make dynamic layouts !
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/flexbox-maker.gif?raw=true" width="500">
 </div>
 
-<br>
-<hr>
-<br>
-
 ##### `⚫ BUTTONS maker`
 
 Generate stylish buttons in css !
@@ -410,6 +406,10 @@ Collection of shadow variants for your boxes !
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/boxshadow-maker.gif?raw=true" width="500">
 </div>
+
+<br>
+<hr>
+<br>
 
 <!-- TODO: verified -->
 
