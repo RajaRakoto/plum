@@ -80,6 +80,20 @@ module.exports = function (grunt) {
 					'xdg-open index.html',
 				].join('&&'),
 			},
+			buttons_maker: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd modules/apps/',
+					'xdg-open btn-maker.html',
+				].join('&&'),
+			},
+			boxshadow_maker: {
+				command: [
+					'cd ./node_modules/@raja_rakoto/sass-eo/',
+					'cd modules/apps/',
+					'xdg-open box-shadow-maker.html',
+				].join('&&'),
+			},
 		},
 	});
 
@@ -95,6 +109,8 @@ module.exports = function (grunt) {
 	//maker
 	grunt.registerTask('grid-maker', ['shell:grid_maker']);
 	grunt.registerTask('flexbox-maker', ['shell:flexbox_maker']);
+	grunt.registerTask('buttons-maker', ['shell:buttons_maker']);
+	grunt.registerTask('boxshadow-maker', ['shell:boxshadow_maker']);
 
 	// all tasks lists
 	const sasseoCommandList = [
@@ -106,6 +122,8 @@ module.exports = function (grunt) {
 		'hamburgers-config',
 		'grid-maker',
 		'flexbox-maker',
+		'buttons-maker',
+		'boxshadow-maker',
 	];
 	const sasseoCommandStatus = [
 		'watch all .scss files',
@@ -116,6 +134,8 @@ module.exports = function (grunt) {
 		'customize your hamburgers',
 		'open grid maker app',
 		'open flexbox maker app',
+		'open buttons maker app',
+		'open box shadow maker app',
 	];
 
 	// default tasks
