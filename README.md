@@ -35,7 +35,7 @@ The difference between gerillass and **sass-eo**:
 
 > - Allows faster integration of popular frameworks like `Bootstrap` and its alternative `Semantic-ui`
 > - Also contains library collection like `Magic` for animations, `Loaders`, `Hamburgers` menu and many more ...
-> - Has an offline web application such as `GRID maker` and `FLEXBOX maker` to manipulate layouts
+> - Has an offline web application such as `GRID maker` and `FLEXBOX maker` to manipulate layouts, `BUTTONS maker` and `BOX SHADOW maker` and many others ...
 > - Use `Milligrid` for easier CSS layout manipulation (a better alternative to bootstrap grid)
 > - More flexible use thanks to `vscode extensions`
 
@@ -394,6 +394,22 @@ Generate flexbox CSS code to make dynamic layouts !
 <br>
 <hr>
 <br>
+
+##### `⚫ BUTTONS maker`
+
+Generate stylish buttons in css !
+
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/buttons-maker.gif?raw=true" width="500">
+</div>
+
+##### `⚫ BOX SHADOW maker`
+
+Collection of shadow variants for your boxes !
+
+<div align="center">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/boxshadow-maker.gif?raw=true" width="500">
+</div>
 
 <!-- TODO: verified -->
 
