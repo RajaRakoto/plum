@@ -4,6 +4,12 @@ module.exports = function (grunt) {
 	// node-glob syntax
 	const includeAllSassFiles = ['./src/*.scss', './src/components/**/*.scss'];
 
+	// sass files path (destination: source)
+	const sassPath = {
+					'./src/index.min.css': './src/index.scss',
+					'./src/components/app/App.min.css': './src/components/app/App.scss',
+	}
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('./package.json'),
 
@@ -13,11 +19,7 @@ module.exports = function (grunt) {
 					style: 'compressed',
 					loadPath: ['./node_modules/@raja_rakoto/sass-eo'],
 				},
-				files: {
-					// destination: source
-					'./src/index.min.css': './src/index.scss',
-					'./src/components/app/App.min.css': './src/components/app/App.scss',
-				},
+				files: sassPath,
 			},
 		},
 

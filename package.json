@@ -36,7 +36,7 @@
 		"sass-framework",
 		"sass-tool-set"
 	],
-	"author": "Raja Rakotonirina",
+	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
 	"license": "GPL-3.0",
 	"bugs": {
 		"url": "https://github.com/RajaRakoto/sass-eo/issues"
