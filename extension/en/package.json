@@ -1,10 +1,10 @@
 {
 	"name": "sass-eo",
-	"publisher": "raja-rakoto7",
+	"publisher": "raja",
 	"displayName": "sass-eo",
 	"description": "List of vscode snippets for SASS-EO",
 	"version": "1.0.7",
-	"icon": "sseo-ico.png",
+	"icon": "assets/sseo-ico.png",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
