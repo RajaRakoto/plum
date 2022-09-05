@@ -8,10 +8,12 @@ import { frameworks } from '../docs/frameworks.js';
 import { install_update } from '../docs/install-update.js';
 import { libraries } from '../docs/libraries.js';
 import { usage } from '../docs/usage.js';
+import { contrib } from '../docs/contrib.js';
 
 console.log(banner)
 console.log(desc)
 console.log(install_update)
+console.log(contrib)
 console.log(usage)
 console.log(extension)
 console.log(basics)
