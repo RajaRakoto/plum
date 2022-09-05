@@ -204,7 +204,7 @@ module.exports = function (grunt) {
 
 		// task resume
 		getTaskResume(
-			'SASS-EO tasks',
+			'💜 SASS-EO DEV TASKS 💜',
 			sasseoTaskNames,
 			sasseoTaskStatus,
 			'magenta',
