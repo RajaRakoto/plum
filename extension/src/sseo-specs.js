@@ -79,8 +79,51 @@ export const sseo_specs = {
 			'The adaptive mixin helps you set the max-width value for containing elements based on the breakpoint values ​​defined in the _map-for-breakpoints.scss file, and also specifies a $gutter value, where the edges of a browser screen can most closely match the edges of the selected element. (Hint: the adaptive mixin works best with percentage values.).',
 	},
 	convertToRem: {
-		prefix: 'sseo-func-convertToRem',
+		prefix: 'sseo-specs-convertToRem',
 		body: ['__convertToRem($$value: ${1:pixel});'],
 		description: 'A function that converts a pixel value to rem.',
+	},
+	'badge-linear': {
+		prefix: 'sseo-specs-badgeLinear',
+		body: [
+			'@include badge-linear($$type: "${1:gold, silver}", $$height: ${2:pixel->4px}, $$width: ${3:pixel->10px }, $$gradient-speed: ${4:second->3s}, $$gradient-direction: ${5:normal, reverse->normal}, $$gradient-orientation: ${6:60deg, 90deg- >60deg}, $$border-radius: ${7:pixel->10px}, $$border: ${8:boolean->false}, $$font-size: ${9:pixel->12px}, $$font-color: ${10:color->#444, #eee->#444}, $$font-weight: ${12:bolder, normal, lighter->bolder});',
+		],
+		description: 'Add badge with animated linear gradient',
+	},
+	'bar-scrolling': {
+		prefix: 'sseo-specs-barScrolling',
+		body: [
+			'@include bar-scrolling($$bar-color: ${1:color}, $$bar-color-hover: ${2:color}, $$bg-color: ${3:color->#eee });',
+		],
+		description: "Customize your webpage's scrollbar.",
+	},
+	'button-all': {
+		prefix: 'sseo-specs-buttonAll',
+		body: [
+			'@include button-all($$nickname: ${1:hover, focus, active, disabled});',
+		],
+		description:
+			'Button-all mixin helps you target all HTML button elements in the DOM so you can easily apply your style rules.',
+	},
+	'nav-props': {
+		prefix: 'sseo-specs-navProps',
+		body: ['@include nav-props();'],
+		description:
+			'Nav-props mixin allows to quickly initialize the default CSS properties of a navigation bar.',
+	},
+	'typo-fontface': {
+		prefix: 'sseo-specs-typoFontFace',
+		body: [
+			'@include typo-fontface($$font-name: ${1:string}, $$path: ${2:url}, $$weight: ${3:normal, lighter, bold, bolder',
+			'}, $$style: ${4:normal, italic});',
+		],
+		description:
+			'This mixin performs fast import of external fonts and includes consistent properties.',
+	},
+	'video-responsive': {
+		prefix: 'sseo-specs-videoResponsive',
+		body: ['@include video-responsive($$ratio: ${1:16/9, 4/3});'],
+		description:
+			'The responsive video mixin helps you create responsive containing elements with a fixed aspect ratio that you define. This is especially useful when embedding videos from YouTube or similar sources.',
 	},
 };
