@@ -21,7 +21,7 @@ npm run backups
 npm run watch
 \`\`\`
 🏁 Here is a tool that will help you to generate snippets -> https://snippet-generator.app/
-s
+
 🏁 Then you can make a PR.
 
 `;

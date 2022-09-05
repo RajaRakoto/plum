@@ -1,4 +1,4 @@
-export const install_update = `
+export const get_started = `
 ---
 
 ### \`📌 Get started\`
