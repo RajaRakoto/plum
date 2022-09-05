@@ -48,3 +48,22 @@ export function reformatSnippets(source, varName) {
 	});
 	return `export const ${varName} = {${result}};`;
 }
+
+// to concat all snippets to one JSON file
+export function concatJSONsourcesToOneFile(sourcesList, distPath) {
+	const refactorSourceList = sourceList => {
+		let objRefactored = {};
+		sourceList.forEach(source => {
+			objRefactored = { ...objRefactored, ...source };
+		});
+		return objRefactored;
+	};
+
+	const JSONexportation = (sourceList, distPath) => {
+		fs.writeFileSync(distPath, JSON.stringify(sourceList), 'utf8', err => {
+			console.log(err ? err : 'The file was saved!');
+		});
+	};
+
+	JSONexportation(refactorSourceList(sourcesList), distPath);
+}
