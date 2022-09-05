@@ -16,8 +16,9 @@ grunt --gruntfile sass-eo-cli.js hamburgers-config
 \`\`\`
 
 <div align="center">
-<img src="http://i.imgur.com/t7cUjDu.gif" width="450">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/humburger-demo.gif?raw=true" width="450">
 </div>
+
 <br>
 
 Here is the list of Hamburger-like \`class\` you can choose from:
