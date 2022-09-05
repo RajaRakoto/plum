@@ -1,4 +1,4 @@
-export const install = `
+export const install_update = `
 ---
 
 ### \`📌 Installation & update\`
