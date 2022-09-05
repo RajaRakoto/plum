@@ -8,7 +8,7 @@
 		"test": "test"
 	},
 	"scripts": {
-		"build": "cd utils && node sass-eo.js > ../README.md && cd .. && cp -r README.md extension",
+		"build": "cd utils && node sass-eo.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
 		"build-vsix": "cd extension && sudo vsce package && mv *.vsix ../backups/vsix && cd ..",
 		"sassdoc": "grunt sassdoc",
 		"backups": "grunt compress-all",
