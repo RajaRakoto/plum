@@ -1,4 +1,4 @@
-export const sseo_colors = {
+export const sseo_color = {
 	'[palette]: Preset color palette.': {
 		prefix: 'sseo-palette-green',
 		body: [
