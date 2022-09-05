@@ -18,7 +18,7 @@
 | Table of Contents                               |
 | :---------------------------------------------- |
 | [Description](#-description)                    |
-| [Installation & update](#-installation--update) |
+| [Get started](#-get-started) |
 | [Usage](#-usage)                                |
 | [Extension](#-extension)                        |
 | [Basics](#-basics)                              |
@@ -48,20 +48,43 @@ The difference between gerillass and **sass-eo**:
 
 ---
 
-### `📌 Installation & update`
+### `📌 Get started`
+
+##### `⚫ Initialization`
+
+Before using **sass-eo**, add the following npm script commands to your project's `package.json` file:
+
+```json
+"scripts": {
+  "sasseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
+  "sasseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
+  "sasseo-update": "npm update @raja_rakoto/sass-eo",
+  "sasseo-init-cli": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli",
+  "sasseo-start-cli": "grunt --gruntfile sass-eo-cli.js",
+  "sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
+  "sasseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
+  "sasseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
+  "sasseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
+  "sasseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
+  "sasseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
+  "sasseo-app-gridmaker": "grunt --gruntfile sass-eo-cli.js grid-maker",
+  "sasseo-app-flexboxmaker": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
+  "sasseo-app-boxshadowmaker": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
+}
+```
 
 ##### `⚫ Installation`
 
 Run the command below to install **sass-eo**:
 
 ```bash
-npm i @raja_rakoto/sass-eo --save-dev
+npm run sasseo-install
 ```
 
 Run the following command to use **sass-eo** dependencies:
 
 ```bash
-npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
+npm run sasseo-deps
 ```
 
 ##### `⚫ Update`
@@ -69,7 +92,7 @@ npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks 
 Run the following command to update **sass-eo**:
 
 ```bash
-npm update @raja_rakoto/sass-eo
+npm run sasseo-update
 ```
 
 
@@ -85,7 +108,7 @@ Here's how to use **sass-eo** in a project ...
 **sass-eo-cli** is a command line interface to manage third-party features (sass-watch, generate docs, apps, ...) of **sass-eo**, the latter is based on the `Grunt` task runner, to use it, please run the following command to generate `sass-eo-cli.js` in root directory of your project:
 
 ```bash
-grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli
+npm run sasseo-init-cli
 ```
 
 > **NOTE**: Grunt makes it easy to import modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
@@ -93,13 +116,13 @@ grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sas
 - Type this command to see all lists of executable commands with **sass-eo-cli**:
 
 ```bash
-grunt --gruntfile sass-eo-cli.js
+npm run sasseo-start-cli
 ```
 
 - For example, you can run the command below to observe changes into `.scss files`:
 
 ```bash
-grunt --gruntfile sass-eo-cli.js watch-sass
+npm run sasseo-watch
 ```
 
 ##### `⚫ modules`
@@ -187,7 +210,7 @@ sseo-[category]-[name] (e.g: sseo-func-color-pastel)
 Run the command below in the root directory to generate the `basics modules documentation` (your browser should automatically open the documentation)
 
 ```bash
-grunt --gruntfile sass-eo-cli.js sseo-docs
+npm run sasseo-docs-basics
 ```
 
 <div align="center">
@@ -209,7 +232,7 @@ Here are the lists of built-in `libraries` in **sass-eo**
 You can also customize the style (padding, wigth, height, spacing, color, border, opacity, ...) of your `hamburgers` by typing this command:
 
 ```bash
-grunt --gruntfile sass-eo-cli.js hamburgers-config
+npm run sasseo-config-hamburgers
 ```
 
 <div align="center">
@@ -295,7 +318,7 @@ hamburger.addEventListener('click', function () {
 Type this command to get an example loader (in the root directory)
 
 ```bash
-grunt --gruntfile sass-eo-cli.js loaders-docs
+npm run sasseo-docs-loaders
 ```
 
 <div align="center">
@@ -341,7 +364,7 @@ window.addEventListener('load', () => {
 Type this command to get an example magic (in the root directory)
 
 ```bash
-grunt --gruntfile sass-eo-cli.js magic-docs
+npm run sasseo-docs-magic
 ```
 
 <div align="center">
@@ -373,6 +396,10 @@ Here are the lists of "applications" integrated in **sass-eo**
 
 Generate basic CSS Grid code to make dynamic layouts !
 
+```bash
+npm run sasseo-app-gridmaker
+```
+
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/grid-maker.gif?raw=true" width="500">
 </div>
@@ -380,6 +407,10 @@ Generate basic CSS Grid code to make dynamic layouts !
 ##### `⚫ FLEXBOX maker`
 
 Generate flexbox CSS code to make dynamic layouts !
+
+```bash
+npm run sasseo-app-flexboxmaker
+```
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/flexbox-maker.gif?raw=true" width="500">
@@ -389,6 +420,10 @@ Generate flexbox CSS code to make dynamic layouts !
 
 Generate stylish buttons in css !
 
+```bash
+npm run sasseo-app-buttonmaker
+```
+
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/buttons-maker.gif?raw=true" width="500">
 </div>
@@ -396,6 +431,10 @@ Generate stylish buttons in css !
 ##### `⚫ BOX SHADOW maker`
 
 Collection of shadow variants for your boxes !
+
+```bash
+npm run sasseo-app-shadowmaker
+```
 
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/boxshadow-maker.gif?raw=true" width="500">
@@ -443,6 +482,12 @@ I personally find this framework the best alternative to BT5, sematic-ui facilit
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
 </div>
+
+**offline docs**
+
+```bash
+npm run sasseo-docs-milligrid
+```
 
 Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
 

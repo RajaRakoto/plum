@@ -6,7 +6,7 @@ export const basics = `
 Run the command below in the root directory to generate the \`basics modules documentation\` (your browser should automatically open the documentation)
 
 \`\`\`bash
-grunt --gruntfile sass-eo-cli.js sseo-docs
+npm run sasseo-docs-basics
 \`\`\`
 
 <div align="center">

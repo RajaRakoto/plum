@@ -18,7 +18,7 @@ export const banner = `
 | Table of Contents                               |
 | :---------------------------------------------- |
 | [Description](#-description)                    |
-| [Installation & update](#-installation--update) |
+| [Get started](#-get-started) |
 | [Usage](#-usage)                                |
 | [Extension](#-extension)                        |
 | [Basics](#-basics)                              |
