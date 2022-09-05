@@ -1,6 +1,8 @@
 <div align="center">
 
-# ᔕᗩᔕᔕ-EO
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sass-eo-ico.png?raw=true" width=128>
+
+# SASS-EO
 
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/dago.gif?raw=true" width=40>
 
@@ -19,8 +21,6 @@
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/extension-demo.gif?raw=true" width="500">
 </div>
-
-Here's how to use this extension:
 
 - **`Installation`**
 

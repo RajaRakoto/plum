@@ -4,9 +4,9 @@
 	"displayName": "sass-eo-fr",
 	"description": "Liste des snippets vscode pour SASS-EO",
 	"version": "1.0.7",
-	"icon": "assets/sseo-ico.png",
+	"icon": "assets/sass-eo-ico.png",
 	"engines": {
-		"vscode": "^1.66.0"
+		"vscode": "^1.49.0"
 	},
 	"categories": [
 		"Snippets"
@@ -15,7 +15,7 @@
 		"snippets": [
 			{
 				"language": "scss",
-				"path": "./snippets/snippets.code-snippets"
+				"path": "./dist/sass-eo-fr.code-snippets"
 			}
 		]
 	}
