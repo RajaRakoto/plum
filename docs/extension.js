@@ -33,7 +33,7 @@ sseo-[category]-[name] (e.g: sseo-func-color-pastel)
 - \`button\`
 - \`docs\` (only useful in development environment)
 - \`effect\` (box, gradient, opacity, text)
-- \`func\` (all functions)
+- \`tools\` (all tools)
 - \`image\` (background, logo, resolution, responsive, retina)
 - \`import\` (sass-eo modules)
 - \`input\` (all, placeholder, style)
