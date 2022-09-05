@@ -2,7 +2,4 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
-docs
 src
-utils
-gruntfile.js
