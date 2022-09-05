@@ -1,20 +1,43 @@
 export const install_update = `
 ---
 
-### \`📌 Installation & update\`
+### \`📌 Get started\`
+
+##### \`⚫ Initialization\`
+
+Before using **sass-eo**, add the following npm script commands to your project's \`package.json\` file:
+
+\`\`\`json
+"scripts": {
+  "sasseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
+  "sasseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
+  "sasseo-update": "npm update @raja_rakoto/sass-eo",
+  "sasseo-init-cli": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli",
+  "sasseo-start-cli": "grunt --gruntfile sass-eo-cli.js",
+  "sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
+  "sasseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
+  "sasseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
+  "sasseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
+  "sasseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
+  "sasseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
+  "sasseo-app-gridmaker": "grunt --gruntfile sass-eo-cli.js grid-maker",
+  "sasseo-app-flexboxmaker": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
+  "sasseo-app-boxshadowmaker": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
+}
+\`\`\`
 
 ##### \`⚫ Installation\`
 
 Run the command below to install **sass-eo**:
 
 \`\`\`bash
-npm i @raja_rakoto/sass-eo --save-dev
+npm run sasseo-install
 \`\`\`
 
 Run the following command to use **sass-eo** dependencies:
 
 \`\`\`bash
-npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D
+npm run sasseo-deps
 \`\`\`
 
 ##### \`⚫ Update\`
@@ -22,7 +45,7 @@ npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks 
 Run the following command to update **sass-eo**:
 
 \`\`\`bash
-npm update @raja_rakoto/sass-eo
+npm run sasseo-update
 \`\`\`
 
 `;

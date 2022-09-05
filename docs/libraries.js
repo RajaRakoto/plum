@@ -12,7 +12,7 @@ Here are the lists of built-in \`libraries\` in **sass-eo**
 You can also customize the style (padding, wigth, height, spacing, color, border, opacity, ...) of your \`hamburgers\` by typing this command:
 
 \`\`\`bash
-grunt --gruntfile sass-eo-cli.js hamburgers-config
+npm run sasseo-config-hamburgers
 \`\`\`
 
 <div align="center">
@@ -98,7 +98,7 @@ hamburger.addEventListener('click', function () {
 Type this command to get an example loader (in the root directory)
 
 \`\`\`bash
-grunt --gruntfile sass-eo-cli.js loaders-docs
+npm run sasseo-docs-loaders
 \`\`\`
 
 <div align="center">
@@ -144,7 +144,7 @@ window.addEventListener('load', () => {
 Type this command to get an example magic (in the root directory)
 
 \`\`\`bash
-grunt --gruntfile sass-eo-cli.js magic-docs
+npm run sasseo-docs-magic
 \`\`\`
 
 <div align="center">

@@ -40,6 +40,12 @@ I personally find this framework the best alternative to BT5, sematic-ui facilit
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
 </div>
 
+**offline docs**
+
+\`\`\`bash
+npm run sasseo-docs-milligrid
+\`\`\`
+
 Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
 
 > sass-eo-milligrid: to use the minifier version of milligrid
