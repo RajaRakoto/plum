@@ -18,7 +18,8 @@
 | Table of Contents                               |
 | :---------------------------------------------- |
 | [Description](#-description)                    |
-| [Get started](#-get-started) |
+| [Get started](#-get-started)                    |
+| [Contribution](#-contribution)                  |
 | [Usage](#-usage)                                |
 | [Extension](#-extension)                        |
 | [Basics](#-basics)                              |
@@ -119,7 +120,7 @@ npm run backups
 npm run watch
 ```
 🏁 Here is a tool that will help you to generate snippets -> https://snippet-generator.app/
-s
+
 🏁 Then you can make a PR.
 
 
