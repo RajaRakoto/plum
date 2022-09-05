@@ -17,7 +17,7 @@ export const banner = `
 | :---------------------------------------------- |
 | [Description](#-description)                    |
 | [Installation & update](#-installation--update) |
-| [Use](#-use)                                    |
+| [Usage](#-usage)                                |
 | [Extension](#-extension)                        |
 | [Basics](#-basics)                              |
 | [Libraries](#-libraries)                        |
