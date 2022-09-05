@@ -27,7 +27,7 @@ export const sseo_animation = {
 		description: 'Add Slide Animation Effect (Fluid).',
 	},
 
-	'zoom-animation': {
+	'animation-zoom': {
 		prefix: 'sseo-animation-zoom',
 		body: ['@include animation-zoom($$in-out: ${1:in, out});'],
 		description:
@@ -45,7 +45,7 @@ export const sseo_animation = {
 		],
 		description: 'Add rotation animation effect.',
 	},
-	'notify-animation': {
+	'animation-notif': {
 		prefix: 'sseo-animation-notif',
 		body: ['@include animation-notif($$in-out: ${1:in, out});'],
 		description: 'Add notification animation effect.',
@@ -60,7 +60,7 @@ export const sseo_animation = {
 		body: ['@include animation-bounce();'],
 		description: 'Add bounce animation effect.',
 	},
-	'flash-animation': {
+	'animation-flash': {
 		prefix: 'sseo-animation-flash',
 		body: ['@include animation-flash();'],
 		description: 'Add flash animation effect.',
