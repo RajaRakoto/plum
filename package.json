@@ -7,6 +7,8 @@
 		"test": "test"
 	},
 	"scripts": {
+		"build": "cd utils && node sass-eo.js > ../README.md && cd .. && cp -r README.md extension",
+		"build-vsix": "cd extension && sudo vsce package && mv -r *.vsix ../backups/vsix && cd ..",
 		"minificator-install": "npm i @raja_rakoto/minificator --save-dev",
 		"minificator-init": "grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
 		"minificator-update": "npm update @raja_rakoto/minificator && rm -r minificator && grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
