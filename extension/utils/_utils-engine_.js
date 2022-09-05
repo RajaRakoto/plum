@@ -28,3 +28,23 @@ export function fsExport(data, filepath) {
 		}
 	});
 }
+
+// reformat engine
+export function reformatSnippets(source, varName) {
+	let prefixList = traverseKeyValueByObject(source, 'prefix');
+	let bodyList = traverseKeyValueByObject(source, 'body').map(block =>
+		block.map(e => `"${e}"`),
+	);
+	let descriptionList = traverseKeyValueByObject(source, 'description');
+	let result = '';
+	prefixList.forEach((prefix, index) => {
+		result += `
+			"${descriptionList[index]}": {
+				"prefix": "${prefix}",
+				"body": [${bodyList[index]}],
+				"description":  "${descriptionList[index]}"
+			}${index == prefixList.length - 1 ? '' : ','}
+			`;
+	});
+	return `export const ${varName} = {${result}};`;
+}
