@@ -7,7 +7,10 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"minificator-install": "npm i @raja_rakoto/minificator --save-dev",
+		"minificator-init": "grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
+		"minificator-update": "npm update @raja_rakoto/minificator && rm -r minificator && grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
+		"minificator-start": "grunt --gruntfile minificator/gruntfile.js"
 	},
 	"repository": {
 		"type": "git",
@@ -48,13 +51,13 @@
 		"sassdoc": "^2.7.4"
 	},
 	"devDependencies": {
-		"@raja_rakoto/minificator": "^1.1.1",
-		"grunt": "^1.5.2",
+		"@raja_rakoto/minificator": "^1.1.5",
+		"grunt": "^1.5.3",
 		"grunt-contrib-compress": "^2.0.0",
 		"grunt-contrib-cssmin": "^4.0.0",
 		"grunt-contrib-htmlmin": "^3.1.0",
 		"grunt-contrib-imagemin": "^4.0.0",
-		"grunt-contrib-uglify": "^5.2.1",
+		"grunt-contrib-uglify": "^5.2.2",
 		"grunt-shell": "^4.0.0",
 		"load-grunt-tasks": "^5.1.0"
 	}
