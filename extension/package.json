@@ -2,6 +2,7 @@
 	"name": "sass-eo",
 	"publisher": "raja",
 	"displayName": "sass-eo",
+	"type": "module",
 	"description": "List of vscode snippets for SASS-EO",
 	"version": "1.0.7",
 	"icon": "assets/sass-eo-ico.png",
