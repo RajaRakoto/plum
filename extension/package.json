@@ -8,6 +8,10 @@
 	"engines": {
 		"vscode": "^1.49.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RajaRakoto/sass-eo.git"
+	},
 	"categories": [
 		"Snippets"
 	],
