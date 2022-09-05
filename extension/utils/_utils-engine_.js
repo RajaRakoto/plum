@@ -19,8 +19,3 @@ export function fsReadDir(path) {
 	}
 	return fs.readdirSync(path);
 }
-
-// to drop the last n characters of the string
-export function dropRight(arr, n = 1) {
-	return arr.slice(0, -n);
-}
