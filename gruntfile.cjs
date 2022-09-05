@@ -1,7 +1,7 @@
 /**
  * @author: Raja
- * @description: a gruntfile.js template setting up a basic GRUNT task runner for sass-eo
- * @requires: grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc
+ * @description: grunt file for sass-eo
+ * @requires: grunt grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks sassdoc
  */
 module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt); // grunt plugins loader
@@ -119,6 +119,15 @@ module.exports = function (grunt) {
 				src: includeAllFiles,
 				dest: 'test',
 			},
+			utils: {
+				options: {
+					archive: backupsDestination + 'utils.tar.gz',
+				},
+				expand: true,
+				cwd: './utils/',
+				src: includeAllFiles,
+				dest: 'utils',
+			}
 		},
 
 		/**
@@ -143,6 +152,7 @@ module.exports = function (grunt) {
 		'compress:scripts',
 		'compress:extension',
 		'compress:test',
+		'compress:utils',
 	]);
 	grunt.registerTask('sass-task', ['sass:test']);
 	grunt.registerTask('watch-sass', ['watch:sass']);
@@ -151,7 +161,7 @@ module.exports = function (grunt) {
 	// all tasks lists
 	const sasseoTaskNames = ['compress-all', 'watch-sass', 'sassdoc'];
 	const sasseoTaskStatus = [
-		'compress: main | config | docs | extension | modules | node_modules | scripts | test',
+		'compress: main | config | docs | extension | modules | node_modules | scripts | test | utils',
 		'auto compile sass',
 		'generate & open sassdoc',
 	];
@@ -204,7 +214,7 @@ module.exports = function (grunt) {
 
 		// task resume
 		getTaskResume(
-			'SASS-EO tasks',
+			'💜 SASS-EO DEV TASKS 💜',
 			sasseoTaskNames,
 			sasseoTaskStatus,
 			'magenta',

@@ -1,4 +1,4 @@
-export const install_update = `
+export const get_started = `
 ---
 
 ### \`📌 Get started\`
@@ -12,7 +12,7 @@ Before using **sass-eo**, add the following npm script commands to your project'
   "sasseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
   "sasseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
   "sasseo-update": "npm update @raja_rakoto/sass-eo",
-  "sasseo-init-cli": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.js generate-sasseo-cli",
+  "sasseo-init-cli": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.cjs generate-sasseo-cli",
   "sasseo-start-cli": "grunt --gruntfile sass-eo-cli.js",
   "sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
   "sasseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
