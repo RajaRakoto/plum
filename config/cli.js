@@ -188,7 +188,7 @@ module.exports = function (grunt) {
 
 		// command resume
 		getTaskResume(
-			'~ SASS-EO CLI ~',
+			'💜 SASS-EO CLI 💜',
 			sasseoCommandList,
 			sasseoCommandStatus,
 			'magenta',
