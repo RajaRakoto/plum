@@ -2,7 +2,10 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		shell: {
 			gen_cli: {
-				command: ['cat cli.js > ../../../../sass-eo-cli.js'].join('&&'),
+				command: [
+					'cat cli.js > ../../../../sass-eo-cli.js',
+					'cp -r ../scripts ../../../../',
+				].join('&&'),
 			},
 		},
 	});
