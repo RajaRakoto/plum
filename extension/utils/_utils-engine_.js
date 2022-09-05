@@ -19,3 +19,12 @@ export function fsReadDir(path) {
 	}
 	return fs.readdirSync(path);
 }
+
+// to export all data
+export function fsExport(data, filepath) {
+	fs.writeFile(filepath, data, "utf-8" , err => {
+		if (err) {
+			console.log(err);
+		}
+	});
+}
