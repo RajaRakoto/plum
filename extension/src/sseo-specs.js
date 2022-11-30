@@ -132,14 +132,6 @@ export const sseo_specs = {
 				'Button-all mixin helps you target all HTML button elements in the DOM so you can easily apply your style rules.',
 		},
 
-	'Nav-props mixin allows to quickly initialize the default CSS properties of a navigation bar.':
-		{
-			prefix: 'sseo-specs-navProps',
-			body: ['@include nav-props();'],
-			description:
-				'Nav-props mixin allows to quickly initialize the default CSS properties of a navigation bar.',
-		},
-
 	'This mixin performs fast import of external fonts and includes consistent properties.':
 		{
 			prefix: 'sseo-specs-typoFontFace',

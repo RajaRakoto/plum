@@ -13,7 +13,7 @@ export const sseo_animation = {
 
 	'[animation]: Add scale animation (mini zoom effect).': {
 		prefix: 'sseo-animation-scale',
-		body: ['@include animation-scale($$scaleValue: ${1:foat->0.5~1.5};'],
+		body: ['@include animation-scale($$scaleValue: ${1:foat->0.5~1.5});'],
 		description: '[animation]: Add scale animation (mini zoom effect).',
 	},
 

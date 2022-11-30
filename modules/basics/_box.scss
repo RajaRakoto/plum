@@ -6,9 +6,14 @@
 ///  .containing-element{
 ///    @include circle(200px);
 ///  }
-@mixin box-circle($size) {
-	width: __convertToRem($size);
-	height: __convertToRem($size);
+@mixin box-circle($size: auto) {
+	@if $size == auto {
+		width: auto;
+		height: auto;
+	} @else {
+		width: __convertToRem($size);
+		height: __convertToRem($size);
+	}
 	display: inline-block;
 	border-radius: 100%;
 }

@@ -472,19 +472,19 @@
 ///  }
 @mixin effect-box-light($opacity: medium, $colors: #eee) {
 	@if ($opacity == solid) {
-		box-shadow: 1px 1px 2px 1px $colors;
+		box-shadow: 0px 0px 2px 1px $colors;
 	} @else if ($opacity == small) {
-		box-shadow: 1px 2px 10px 1px $colors;
-		-webkit-box-shadow: 1px 2px 10px 1px $colors;
-		-moz-box-shadow: 1px 2px 10px 1px $colors;
+		box-shadow: 0px 0px 10px 1px $colors;
+		-webkit-box-shadow: 0px 0px 10px 1px $colors;
+		-moz-box-shadow: 0px 0px 10px 1px $colors;
 	} @else if ($opacity == medium) {
-		box-shadow: 1px 3px 15px 1px $colors;
-		-webkit-box-shadow: 1px 3px 15px 1px $colors;
-		-moz-box-shadow: 1px 3px 15px 1px $colors;
+		box-shadow: 0px 0px 15px 1px $colors;
+		-webkit-box-shadow: 0px 0px 15px 1px $colors;
+		-moz-box-shadow: 0px 0px 15px 1px $colors;
 	} @else if ($opacity == large) {
-		box-shadow: 7px 5px 20px 2px $colors;
-		-webkit-box-shadow: 7px 5px 20px 2px $colors;
-		-moz-box-shadow: 7px 5px 20px 2px $colors;
+		box-shadow: 0px 0px 20px 2px $colors;
+		-webkit-box-shadow: 0px 0px 20px 2px $colors;
+		-moz-box-shadow: 0px 0px 20px 2px $colors;
 	} @else if ($opacity == none) {
 		box-shadow: none;
 	} @else {
