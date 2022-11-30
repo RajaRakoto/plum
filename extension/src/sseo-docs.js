@@ -3,7 +3,7 @@ export const sseo_docs = {
 		{
 			prefix: 'sseo-docs*0',
 			body: [
-				'//TODO: ${1:status}',
+				'/// ${1:status}',
 				'/// ${2:description}',
 				'/// @example',
 				'/// /* example 1 */',
@@ -23,7 +23,7 @@ export const sseo_docs = {
 		{
 			prefix: 'sseo-docs*1',
 			body: [
-				'//TODO: ${1:status}',
+				'/// ${1:status}',
 				'/// ${2:description}',
 				'/// @param {${3:type}} $${4:arg} [${5:default}] - ${6:description}',
 				'/// @example',
@@ -44,7 +44,7 @@ export const sseo_docs = {
 		{
 			prefix: 'sseo-docs*2',
 			body: [
-				'//TODO: ${1:status}',
+				'/// ${1:status}',
 				'/// ${2:description}',
 				'/// @param {${3:type}} $${4:arg} [${5:default}] - ${6:description}',
 				'/// @param {${7:type}} $${8:arg} [${9:default}] - ${10:description}',
@@ -66,7 +66,7 @@ export const sseo_docs = {
 		{
 			prefix: 'sseo-docs*3',
 			body: [
-				'//TODO: ${1:status}',
+				'/// ${1:status}',
 				'/// ${2:description}',
 				'/// @param {${3:type}} $${4:arg} [${5:default}] - ${6:description}',
 				'/// @param {${7:type}} $${8:arg} [${9:default}] - ${10:description}',
@@ -89,7 +89,7 @@ export const sseo_docs = {
 		{
 			prefix: 'sseo-docs*4',
 			body: [
-				'//TODO: ${1:status}',
+				'/// ${1:status}',
 				'/// ${2:description}',
 				'/// @param {${3:type}} $${4:arg} [${5:default}] - ${6:description}',
 				'/// @param {${7:type}} $${8:arg} [${9:default}] - ${10:description}',
