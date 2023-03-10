@@ -11,6 +11,6 @@ module.exports = function (grunt) {
   })
 
   grunt.loadNpmTasks('grunt-shell')
-  grunt.registerTask('generate-sasseo-cli', ['shell:gen_cli'])
+  grunt.registerTask('generate-sseo-cli', ['shell:gen_cli'])
   console.log('\n"sass-eo-cli.js" generated in root directory !\n')
 }
