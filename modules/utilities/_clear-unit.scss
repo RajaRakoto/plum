@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@use 'sass:math';
-
 @function __clearUnit($value) {
-	@return math.div($value, ($value * 0 + 1));
+	@return ($value / ($value * 0 + 1));
 }
