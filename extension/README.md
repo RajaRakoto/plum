@@ -1,3 +1,4 @@
+
 <div align="center">
 
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sass-eo-ico.png?raw=true" width=128>
@@ -14,19 +15,21 @@
 
 <br>
 
-| Table of Contents              |
-| :----------------------------- |
-| [Description](#-description)   |
-| [Get started](#-get-started)   |
-| [Contribution](#-contribution) |
-| [Usage](#-usage)               |
-| [Extension](#-extension)       |
-| [Basics](#-basics)             |
-| [Libraries](#-libraries)       |
-| [Applications](#-applications) |
-| [Frameworks](#-frameworks)     |
+| Table of Contents                               |
+| :---------------------------------------------- |
+| [Description](#-description)                    |
+| [Get started](#-get-started)                    |
+| [Contribution](#-contribution)                  |
+| [Usage](#-usage)                                |
+| [Extension](#-extension)                        |
+| [Basics](#-basics)                              |
+| [Libraries](#-libraries)                        |
+| [Applications](#-applications)                  |
+| [Frameworks](#-frameworks)                      |
 
 </div>
+
+
 
 ---
 
@@ -40,7 +43,9 @@ The difference between gerillass and **sass-eo**:
 > - Also contains library collection like `Magic` for animations, `Loaders`, `Hamburgers` menu and many more ...
 > - Has an offline web application such as `GRID maker` and `FLEXBOX maker` to manipulate layouts, `BUTTONS maker` and `BOX SHADOW maker` and many others ...
 > - Use `Milligrid` for easier CSS layout manipulation (a better alternative to bootstrap grid)
-> - More flexible use thanks to `vscode extensions`
+> - More flexible use thanks to `vscode extensions` 
+
+
 
 ---
 
@@ -52,20 +57,21 @@ Before using **sass-eo**, add the following npm script commands to your project'
 
 ```json
 "scripts": {
-  "sasseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
-  "sasseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
-  "sasseo-update": "npm update @raja_rakoto/sass-eo",
-  "sasseo-init-cli": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.cjs generate-sasseo-cli",
-  "sasseo-start-cli": "grunt --gruntfile sass-eo-cli.js",
-  "sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
-  "sasseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
-  "sasseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
-  "sasseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
-  "sasseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
-  "sasseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
-  "sasseo-app-gridmaker": "grunt --gruntfile sass-eo-cli.js grid-maker",
-  "sasseo-app-flexboxmaker": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
-  "sasseo-app-boxshadowmaker": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
+  "sseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
+  "sseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
+  "sseo-update": "npm update @raja_rakoto/sass-eo",
+  "sseo-init": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.cjs generate-sseo-cli",
+  "sseo-start": "grunt --gruntfile sass-eo-cli.js",
+  "sseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
+  "sseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
+  "sseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
+  "sseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
+  "sseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
+  "sseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
+  "sseo-app-grid": "grunt --gruntfile sass-eo-cli.js grid-maker",
+  "sseo-app-flexbox": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
+  "sseo-app-boxshadow": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
+  "sseo-app-buttons": "grunt --gruntfile sass-eo-cli.js buttons-maker"
 }
 ```
 
@@ -91,37 +97,34 @@ Run the following command to update **sass-eo**:
 npm run sasseo-update
 ```
 
+
+
+
 ---
 
 ### 📌 Contribution
 
 🏁 Before contributing, be sure to `install all dependencies` needed to work in this project by running the following command (in root directory):
-
 ```bash
 npm install
 ```
-
 🏁 With each new code snippet added, you need to update all `snippets` file and regenerate the documentation, all in one command (in root directory):
-
 ```bash
 npm run build
 ```
-
 🏁 You can run a `grunt task` to make a `local backup` of this project by running the following command (in root directory):
-
 ```bash
 npm run backups
 ```
-
 🏁 You can run a `grunt task` to watch all `.scss files` of this project by running the following command (in root directory):
-
 ```bash
 npm run watch
 ```
-
 🏁 Here is a tool that will help you to generate snippets -> https://snippet-generator.app/
 
 🏁 Then you can make a PR.
+
+
 
 ---
 
@@ -171,6 +174,8 @@ npm run sasseo-watch
      sass-eo-bootstrap-utils
      sass-eo-semantic
      sass-eo-milligrid
+
+
 
 ---
 
@@ -225,6 +230,8 @@ sseo-[category]-[name] (e.g: sseo-func-color-pastel)
 
 > **NOTE**: you can retain `[category]` or `[name]` to use snippets, the base keyword `sseo` also allows you to list all available snippets for **sass-eo **
 
+
+
 ---
 
 ### `📌 Basics`
@@ -238,6 +245,8 @@ npm run sasseo-docs-basics
 <div align="center">
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
 </div>
+
+
 
 ---
 
@@ -312,21 +321,21 @@ Here is the list of Hamburger-like `class` you can choose from:
 ```html
 <!-- Trigger the active state by adding the class name `is-active`, just remove it for the inactive state -->
 <button class="hamburger hamburger--collapse is-active" type="button">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
+	<span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+	</span>
 </button>
 ```
 
 - Since the class name should be toggled with Javascript:
 
 ```js
-var hamburger = document.querySelector('.hamburger')
+var hamburger = document.querySelector('.hamburger');
 // On click
 hamburger.addEventListener('click', function () {
-  // Toggle class "is-active"
-  hamburger.classList.toggle('is-active')
-})
+	// Toggle class "is-active"
+	hamburger.classList.toggle('is-active');
+});
 ```
 
 <br>
@@ -357,8 +366,8 @@ Import loaders module `@import 'sass-eo-lib-loaders'`
 ```scss
 // SCSS
 #my-loader {
-  //use loader-1 with 2 colors as argument (primary, secondary)
-  @include loader-1(gold, orangered);
+	//use loader-1 with 2 colors as argument (primary, secondary)
+	@include loader-1(gold, orangered);
 }
 ```
 
@@ -369,10 +378,10 @@ Import loaders module `@import 'sass-eo-lib-loaders'`
 
 ```js
 // Javascript - this script allows to launch a loder with the id "my-loader" as loading of the web page
-const loader = document.getElementById('my-loader')
+const loader = document.getElementById('my-loader');
 window.addEventListener('load', () => {
-  loader.style.display = 'none'
-})
+	loader.style.display = 'none';
+});
 ```
 
 <br>
@@ -399,10 +408,12 @@ Import magic module `@import 'sass-eo-lib-magic'`
 ```scss
 // SCSS - call the magic mixin inside a selector
 .cards {
-  //The argument of each magic mixin corresponds to its "animation-delay" expressed in seconds
-  @include magic-boingInUp(1s);
+	//The argument of each magic mixin corresponds to its "animation-delay" expressed in seconds
+	@include magic-boingInUp(1s);
 }
 ```
+
+
 
 ---
 
@@ -458,6 +469,8 @@ npm run sasseo-app-shadowmaker
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/boxshadow-maker.gif?raw=true" width="500">
 </div>
 
+
+
 ---
 
 ### `📌 Frameworks`
@@ -509,8 +522,10 @@ Milligrid is a configurable and easy to learn CSS flexbox grid system based on M
 
 > sass-eo-milligrid: to use the minifier version of milligrid
 
+
+
 <div align="center">
 
 #### Enjoy it 😉
-
 </div>
+
