@@ -16,7 +16,9 @@
 		"minificator-install": "npm i @raja_rakoto/minificator --save-dev",
 		"minificator-init": "grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
 		"minificator-update": "npm update @raja_rakoto/minificator && rm -r minificator && grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
-		"minificator-start": "grunt --gruntfile minificator/gruntfile.js"
+		"minificator-start": "grunt --gruntfile minificator/gruntfile.js",
+		"format": "prettier --check --ignore-path .gitignore .",
+		"format:fix": "prettier --write --ignore-path .gitignore ."
 	},
 	"repository": {
 		"type": "git",
@@ -67,6 +69,7 @@
 		"grunt-contrib-uglify": "^5.2.2",
 		"grunt-shell": "^4.0.0",
 		"load-grunt-tasks": "^5.1.0",
+		"prettier": "^2.8.4",
 		"traverse": "^0.6.6"
 	}
 }
