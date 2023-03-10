@@ -32,13 +32,13 @@ Before using **sass-eo**, add the following npm script commands to your project'
 Run the command below to install **sass-eo**:
 
 \`\`\`bash
-npm run sasseo-install
+npm run sseo-install
 \`\`\`
 
 Run the following command to use **sass-eo** dependencies:
 
 \`\`\`bash
-npm run sasseo-deps
+npm run sseo-deps
 \`\`\`
 
 ##### \`⚫ Update\`
@@ -46,7 +46,7 @@ npm run sasseo-deps
 Run the following command to update **sass-eo**:
 
 \`\`\`bash
-npm run sasseo-update
+npm run sseo-update
 \`\`\`
 
 `

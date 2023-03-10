@@ -43,7 +43,7 @@ I personally find this framework the best alternative to BT5, sematic-ui facilit
 **offline docs**
 
 \`\`\`bash
-npm run sasseo-docs-milligrid
+npm run sseo-docs-milligrid
 \`\`\`
 
 Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/

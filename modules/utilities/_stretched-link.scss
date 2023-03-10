@@ -1,4 +1,4 @@
-@charset "URF-8";
+@charset "UTF-8";
 
 @mixin __stretched-link($value: 'before') {
   @if index('before' 'after', $value) {

@@ -80,13 +80,13 @@ Before using **sass-eo**, add the following npm script commands to your project'
 Run the command below to install **sass-eo**:
 
 ```bash
-npm run sasseo-install
+npm run sseo-install
 ```
 
 Run the following command to use **sass-eo** dependencies:
 
 ```bash
-npm run sasseo-deps
+npm run sseo-deps
 ```
 
 ##### `⚫ Update`
@@ -94,7 +94,7 @@ npm run sasseo-deps
 Run the following command to update **sass-eo**:
 
 ```bash
-npm run sasseo-update
+npm run sseo-update
 ```
 
 
@@ -137,7 +137,7 @@ Here's how to use **sass-eo** in a project ...
 **sass-eo-cli** is a command line interface to manage third-party features (sass-watch, generate docs, apps, ...) of **sass-eo**, the latter is based on the `Grunt` task runner, to use it, please run the following command to generate `sass-eo-cli.js` in root directory of your project:
 
 ```bash
-npm run sasseo-init-cli
+npm run sseo-init-cli
 ```
 
 > **NOTE**: Grunt makes it easy to import modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
@@ -145,13 +145,13 @@ npm run sasseo-init-cli
 - Type this command to see all lists of executable commands with **sass-eo-cli**:
 
 ```bash
-npm run sasseo-start-cli
+npm run sseo-start-cli
 ```
 
 - For example, you can run the command below to observe changes into `.scss files`:
 
 ```bash
-npm run sasseo-watch
+npm run sseo-watch
 ```
 
 ##### `⚫ modules`
@@ -239,7 +239,7 @@ sseo-[category]-[name] (e.g: sseo-func-color-pastel)
 Run the command below in the root directory to generate the `basics modules documentation` (your browser should automatically open the documentation)
 
 ```bash
-npm run sasseo-docs-basics
+npm run sseo-docs-basics
 ```
 
 <div align="center">
@@ -261,7 +261,7 @@ Here are the lists of built-in `libraries` in **sass-eo**
 You can also customize the style (padding, wigth, height, spacing, color, border, opacity, ...) of your `hamburgers` by typing this command:
 
 ```bash
-npm run sasseo-config-hamburgers
+npm run sseo-config-hamburgers
 ```
 
 <div align="center">
@@ -347,7 +347,7 @@ hamburger.addEventListener('click', function () {
 Type this command to get an example loader (in the root directory)
 
 ```bash
-npm run sasseo-docs-loaders
+npm run sseo-docs-loaders
 ```
 
 <div align="center">
@@ -393,7 +393,7 @@ window.addEventListener('load', () => {
 Type this command to get an example magic (in the root directory)
 
 ```bash
-npm run sasseo-docs-magic
+npm run sseo-docs-magic
 ```
 
 <div align="center">
@@ -426,7 +426,7 @@ Here are the lists of "applications" integrated in **sass-eo**
 Generate basic CSS Grid code to make dynamic layouts !
 
 ```bash
-npm run sasseo-app-gridmaker
+npm run sseo-app-gridmaker
 ```
 
 <div align="center">
@@ -438,7 +438,7 @@ npm run sasseo-app-gridmaker
 Generate flexbox CSS code to make dynamic layouts !
 
 ```bash
-npm run sasseo-app-flexboxmaker
+npm run sseo-app-flexboxmaker
 ```
 
 <div align="center">
@@ -450,7 +450,7 @@ npm run sasseo-app-flexboxmaker
 Generate stylish buttons in css !
 
 ```bash
-npm run sasseo-app-buttonmaker
+npm run sseo-app-buttonmaker
 ```
 
 <div align="center">
@@ -462,7 +462,7 @@ npm run sasseo-app-buttonmaker
 Collection of shadow variants for your boxes !
 
 ```bash
-npm run sasseo-app-shadowmaker
+npm run sseo-app-shadowmaker
 ```
 
 <div align="center">
@@ -515,7 +515,7 @@ I personally find this framework the best alternative to BT5, sematic-ui facilit
 **offline docs**
 
 ```bash
-npm run sasseo-docs-milligrid
+npm run sseo-docs-milligrid
 ```
 
 Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/

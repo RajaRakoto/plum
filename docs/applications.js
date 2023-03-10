@@ -10,7 +10,7 @@ Here are the lists of "applications" integrated in **sass-eo**
 Generate basic CSS Grid code to make dynamic layouts !
 
 \`\`\`bash
-npm run sasseo-app-gridmaker
+npm run sseo-app-gridmaker
 \`\`\`
 
 <div align="center">
@@ -22,7 +22,7 @@ npm run sasseo-app-gridmaker
 Generate flexbox CSS code to make dynamic layouts !
 
 \`\`\`bash
-npm run sasseo-app-flexboxmaker
+npm run sseo-app-flexboxmaker
 \`\`\`
 
 <div align="center">
@@ -34,7 +34,7 @@ npm run sasseo-app-flexboxmaker
 Generate stylish buttons in css !
 
 \`\`\`bash
-npm run sasseo-app-buttonmaker
+npm run sseo-app-buttonmaker
 \`\`\`
 
 <div align="center">
@@ -46,7 +46,7 @@ npm run sasseo-app-buttonmaker
 Collection of shadow variants for your boxes !
 
 \`\`\`bash
-npm run sasseo-app-shadowmaker
+npm run sseo-app-shadowmaker
 \`\`\`
 
 <div align="center">
