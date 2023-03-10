@@ -67,46 +67,46 @@
 ///  	}
 ///  }
 @mixin loadify($params...) {
-	@if not & {
-		@if length($params) ==
-			0 or
-			(length($params) == 1 and nth($params, 1) == 'init')
-		{
-			@keyframes loadify {
-				to {
-					opacity: 1;
-					visibility: visible;
-					backface-visibility: visible;
-				}
-			}
-			%loadify {
-				opacity: 0;
-				visibility: hidden;
-				backface-visibility: hidden;
-				animation-name: loadify;
-				animation-fill-mode: forwards;
-			}
-		} @else if
-			(length($params) == 1 and nth($params, 1) != 'init') or
-			(length($params) == 1 and type-of(nth($params, 1)) != 'string')
-		{
-			@error "#{nth($params, 1)} is not a valid argument. Please pass `init` as an argument to initialize the effect or do not pass any argument at all.";
-		} @else if length($params) > 1 {
-			@error "Only one argument is allowed when you call this mixin at the root of your stylesheet! Please pass `init` as an argument to initialize the effect or do not pass any argument at all.";
-		}
-	} @else if & {
-		@extend %loadify;
-		@if length($params) == 0 {
-			animation-delay: 0.2s;
-			animation-duration: 0.5s;
-		} @else if length($params) == 1 {
-			animation-delay: #{__isTime(nth($params, 1))};
-			animation-duration: 0.5s;
-		} @else if length($params) == 2 {
-			animation-delay: #{__isTime(nth($params, 1))};
-			animation-duration: #{__isTime(nth($params, 2))};
-		} @else if length($params) > 2 {
-			@error "You cannot pass more than two arguments.";
-		}
-	}
+  @if not & {
+    @if length($params) ==
+      0 or
+      (length($params) == 1 and nth($params, 1) == 'init')
+    {
+      @keyframes loadify {
+        to {
+          opacity: 1;
+          visibility: visible;
+          backface-visibility: visible;
+        }
+      }
+      %loadify {
+        opacity: 0;
+        visibility: hidden;
+        backface-visibility: hidden;
+        animation-name: loadify;
+        animation-fill-mode: forwards;
+      }
+    } @else if
+      (length($params) == 1 and nth($params, 1) != 'init') or
+      (length($params) == 1 and type-of(nth($params, 1)) != 'string')
+    {
+      @error "#{nth($params, 1)} is not a valid argument. Please pass `init` as an argument to initialize the effect or do not pass any argument at all.";
+    } @else if length($params) > 1 {
+      @error "Only one argument is allowed when you call this mixin at the root of your stylesheet! Please pass `init` as an argument to initialize the effect or do not pass any argument at all.";
+    }
+  } @else if & {
+    @extend %loadify;
+    @if length($params) == 0 {
+      animation-delay: 0.2s;
+      animation-duration: 0.5s;
+    } @else if length($params) == 1 {
+      animation-delay: #{__isTime(nth($params, 1))};
+      animation-duration: 0.5s;
+    } @else if length($params) == 2 {
+      animation-delay: #{__isTime(nth($params, 1))};
+      animation-duration: #{__isTime(nth($params, 2))};
+    } @else if length($params) > 2 {
+      @error "You cannot pass more than two arguments.";
+    }
+  }
 }

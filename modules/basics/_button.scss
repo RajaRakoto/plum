@@ -36,16 +36,16 @@
 ///   }
 /// }
 @mixin button-all($pseudo: null) {
-	@if not $pseudo {
-		#{$list-of-buttons} {
-			@content;
-		}
-	} @else if index($list, $pseudo) {
-		$allBtn: __pseudoSelector($list-of-buttons, $pseudo);
-		#{$allBtn} {
-			@content;
-		}
-	} @else {
-		@error "The argument must be `null` or `hover` or `focus` or `active` or `disabled`";
-	}
+  @if not $pseudo {
+    #{$list-of-buttons} {
+      @content;
+    }
+  } @else if index($list, $pseudo) {
+    $allBtn: __pseudoSelector($list-of-buttons, $pseudo);
+    #{$allBtn} {
+      @content;
+    }
+  } @else {
+    @error "The argument must be `null` or `hover` or `focus` or `active` or `disabled`";
+  }
 }

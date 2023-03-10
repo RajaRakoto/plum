@@ -1,75 +1,75 @@
 {
-	"name": "@raja_rakoto/sass-eo",
-	"version": "1.7.3",
-	"description": "Customize your website faster with a toolset powered by SASS (Syntactically Awesome Style Sheets) 💜",
-	"type": "module",
-	"directories": {
-		"doc": "docs",
-		"test": "test"
-	},
-	"scripts": {
-		"build": "cd utils && node sass-eo.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
-		"build-vsix": "cd extension && sudo vsce package && mv *.vsix ../backups/vsix && cd ..",
-		"sassdoc": "grunt sassdoc",
-		"backups": "grunt compress-all",
-		"watch": "grunt watch-sass",
-		"minificator-install": "npm i @raja_rakoto/minificator --save-dev",
-		"minificator-init": "grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
-		"minificator-update": "npm update @raja_rakoto/minificator && rm -r minificator && grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
-		"minificator-start": "grunt --gruntfile minificator/gruntfile.js",
-		"format": "prettier --check --ignore-path .gitignore .",
-		"format:fix": "prettier --write --ignore-path .gitignore ."
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/RajaRakoto/sass-eo.git"
-	},
-	"keywords": [
-		"ui",
-		"style",
-		"css",
-		"css3",
-		"sass",
-		"scss",
-		"layout",
-		"tools",
-		"toolkit",
-		"mixins",
-		"function",
-		"collection",
-		"minimalist",
-		"bootstrap",
-		"semantic",
-		"milligrid",
-		"sass-mixins",
-		"sass-toolkit",
-		"sass-library",
-		"sass-framework",
-		"sass-tool-set"
-	],
-	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/RajaRakoto/sass-eo/issues"
-	},
-	"homepage": "https://github.com/RajaRakoto/sass-eo#readme",
-	"dependencies": {
-		"grunt-contrib-sass": "^2.0.0",
-		"grunt-contrib-watch": "^1.1.0",
-		"sassdoc": "^2.7.4"
-	},
-	"devDependencies": {
-		"@raja_rakoto/minificator": "^1.1.5",
-		"fs": "^0.0.1-security",
-		"grunt": "^1.5.3",
-		"grunt-contrib-compress": "^2.0.0",
-		"grunt-contrib-cssmin": "^4.0.0",
-		"grunt-contrib-htmlmin": "^3.1.0",
-		"grunt-contrib-imagemin": "^4.0.0",
-		"grunt-contrib-uglify": "^5.2.2",
-		"grunt-shell": "^4.0.0",
-		"load-grunt-tasks": "^5.1.0",
-		"prettier": "^2.8.4",
-		"traverse": "^0.6.6"
-	}
+  "name": "@raja_rakoto/sass-eo",
+  "version": "1.7.3",
+  "description": "Customize your website faster with a toolset powered by SASS (Syntactically Awesome Style Sheets) 💜",
+  "type": "module",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd utils && node sass-eo.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
+    "build-vsix": "cd extension && sudo vsce package && mv *.vsix ../backups/vsix && cd ..",
+    "sassdoc": "grunt sassdoc",
+    "backups": "grunt compress-all",
+    "watch": "grunt watch-sass",
+    "minificator-install": "npm i @raja_rakoto/minificator --save-dev",
+    "minificator-init": "grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
+    "minificator-update": "npm update @raja_rakoto/minificator && rm -r minificator && grunt --gruntfile node_modules/@raja_rakoto/minificator/minificator.js minificator-init",
+    "minificator-start": "grunt --gruntfile minificator/gruntfile.js",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajaRakoto/sass-eo.git"
+  },
+  "keywords": [
+    "ui",
+    "style",
+    "css",
+    "css3",
+    "sass",
+    "scss",
+    "layout",
+    "tools",
+    "toolkit",
+    "mixins",
+    "function",
+    "collection",
+    "minimalist",
+    "bootstrap",
+    "semantic",
+    "milligrid",
+    "sass-mixins",
+    "sass-toolkit",
+    "sass-library",
+    "sass-framework",
+    "sass-tool-set"
+  ],
+  "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RajaRakoto/sass-eo/issues"
+  },
+  "homepage": "https://github.com/RajaRakoto/sass-eo#readme",
+  "dependencies": {
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "sassdoc": "^2.7.4"
+  },
+  "devDependencies": {
+    "@raja_rakoto/minificator": "^1.1.5",
+    "fs": "^0.0.1-security",
+    "grunt": "^1.5.3",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-shell": "^4.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "prettier": "^2.8.4",
+    "traverse": "^0.6.6"
+  }
 }

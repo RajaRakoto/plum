@@ -21,24 +21,24 @@
 ///  	);
 ///  }
 @mixin image-logo($width, $height, $image: null) {
-	display: inline-block;
-	position: relative;
-	width: $width;
-	height: $height;
-	@if $image {
-		background-image: url($image);
-	}
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	a {
-		display: block;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		text-indent: 100%;
-		@include __stretched-link(after);
-	}
+  display: inline-block;
+  position: relative;
+  width: $width;
+  height: $height;
+  @if $image {
+    background-image: url($image);
+  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  a {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: 100%;
+    @include __stretched-link(after);
+  }
 }
 
 /// Image-background mixin allows you to apply background images to the selected element(s).
@@ -70,70 +70,70 @@
 ///    @include image-background("./src/assets/images/my-img.png", rgba(0, 128, 128, 0.7) rgba(255, 192, 203, 0.8), left);
 ///  }
 @mixin image-background(
-	$image-url: null,
-	$filter-color: null,
-	$filter-direction: null
+  $image-url: null,
+  $filter-color: null,
+  $filter-direction: null
 ) {
-	@if $image-url {
-		@if $filter-color {
-			@if length($filter-color) == 1 {
-				background-image: linear-gradient(to top, $filter-color, $filter-color),
-					url($image-url);
-			} @else if length($filter-color) > 1 {
-				$color-list: ();
-				@for $i from 1 through length($filter-color) {
-					$color-list: append($color-list, nth($filter-color, $i), comma);
-				}
-				@if $filter-direction {
-					@if map-has-key($map-for-directions, $filter-direction) {
-						background-image: linear-gradient(
-								map-get($map-for-directions, $filter-direction),
-								$color-list
-							),
-							url($image-url);
-					} @else {
-						@if index('deg', unit($filter-direction)) {
-							background-image: linear-gradient($filter-direction, $color-list),
-								url($image-url);
-						} @else {
-							@error "#{$filter-direction} is a wrong value for the $filter-direction parameter. The value must be either a number followed by the 'deg' unit or one of the following pre-defined values: #{quote(map-keys($map-for-directions))}.";
-						}
-					}
-				} @else {
-					background-image: linear-gradient(to top, $color-list),
-						url($image-url);
-				}
-			}
-		} @else {
-			background-image: url($image-url);
-		}
-	} @else {
-		position: relative;
-		&::after {
-			content: '';
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			@if length($filter-color) == 1 {
-				background: $filter-color;
-			} @else if length($filter-color) > 1 {
-				@include gls-linear-gradient(
-					if(not $filter-direction, 'top', $filter-direction),
-					$filter-color
-				);
-			}
-		}
-		& > * {
-			position: relative;
-			z-index: 1;
-		}
-	}
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  @if $image-url {
+    @if $filter-color {
+      @if length($filter-color) == 1 {
+        background-image: linear-gradient(to top, $filter-color, $filter-color),
+          url($image-url);
+      } @else if length($filter-color) > 1 {
+        $color-list: ();
+        @for $i from 1 through length($filter-color) {
+          $color-list: append($color-list, nth($filter-color, $i), comma);
+        }
+        @if $filter-direction {
+          @if map-has-key($map-for-directions, $filter-direction) {
+            background-image: linear-gradient(
+                map-get($map-for-directions, $filter-direction),
+                $color-list
+              ),
+              url($image-url);
+          } @else {
+            @if index('deg', unit($filter-direction)) {
+              background-image: linear-gradient($filter-direction, $color-list),
+                url($image-url);
+            } @else {
+              @error "#{$filter-direction} is a wrong value for the $filter-direction parameter. The value must be either a number followed by the 'deg' unit or one of the following pre-defined values: #{quote(map-keys($map-for-directions))}.";
+            }
+          }
+        } @else {
+          background-image: linear-gradient(to top, $color-list),
+            url($image-url);
+        }
+      }
+    } @else {
+      background-image: url($image-url);
+    }
+  } @else {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @if length($filter-color) == 1 {
+        background: $filter-color;
+      } @else if length($filter-color) > 1 {
+        @include gls-linear-gradient(
+          if(not $filter-direction, 'top', $filter-direction),
+          $filter-color
+        );
+      }
+    }
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /// Add high resolution images to your site, with a replacement solution for devices that do not display high resolution images when using Retina Image, it is preferable to compress as much as possible without destroying the image source (https://tinypng.com).
@@ -145,15 +145,15 @@
 ///	  @include image-retina('./src/assets/images/my-img.png', 350px, 200px);
 ///  }
 @mixin image-retina($image, $width, $height) {
-	@media (min--moz-device-pixel-ratio: 1.3),
-		(-o-min-device-pixel-ratio: 2.6/2),
-		(-webkit-min-device-pixel-ratio: 1.3),
-		(min-device-pixel-ratio: 1.3),
-		(min-resolution: 1.3dppx) {
-		/* on retina, use image that's scaled by 2 */
-		background-image: url($image);
-		background-size: __convertToRem($width) __convertToRem($height);
-	}
+  @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: __convertToRem($width) __convertToRem($height);
+  }
 }
 
 /// Image-resolution mixin helps you to target elements based on the various screen resolutions.
@@ -165,23 +165,23 @@
 ///  	}
 ///  }
 @mixin image-resolution($resolution: 'x1') {
-	@if $resolution == '1x' {
-		@media (min-resolution: 96dpi) {
-			@content;
-		}
-	} @else if $resolution == '2x' {
-		@media (min-resolution: 192dpi) {
-			@content;
-		}
-	} @else if $resolution == '3x' {
-		@media (min-resolution: 288dpi) {
-			@content;
-		}
-	} @else {
-		@media (min-resolution: #{$resolution}) {
-			@content;
-		}
-	}
+  @if $resolution == '1x' {
+    @media (min-resolution: 96dpi) {
+      @content;
+    }
+  } @else if $resolution == '2x' {
+    @media (min-resolution: 192dpi) {
+      @content;
+    }
+  } @else if $resolution == '3x' {
+    @media (min-resolution: 288dpi) {
+      @content;
+    }
+  } @else {
+    @media (min-resolution: #{$resolution}) {
+      @content;
+    }
+  }
 }
 
 /// Image-responsive mixin helps you to make images responsive and change the default display CSS property value from inline to block in order to remove the extra space below them.
@@ -191,9 +191,9 @@
 ///	  @include image-responsive();
 ///  }
 @mixin image-responsive($height: auto) {
-	width: 100%;
-	height: $height;
-	object-fit: cover;
-	object-position: center;
-	display: block;
+  width: 100%;
+  height: $height;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }

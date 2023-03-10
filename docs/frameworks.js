@@ -50,4 +50,4 @@ Milligrid is a configurable and easy to learn CSS flexbox grid system based on M
 
 > sass-eo-milligrid: to use the minifier version of milligrid
 
-`;
+`

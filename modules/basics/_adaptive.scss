@@ -16,11 +16,11 @@
 ///   @include adaptive(2em);
 /// }
 @mixin adaptive($gutter: 30px) {
-	$actual-breakpoints: map-remove($map-for-breakpoints, 'xsmall');
-	margin: 0 auto;
-	@each $item, $value in $actual-breakpoints {
-		@media (min-width: #{$value}) {
-			max-width: calc(#{$value} - (#{$gutter} * 2));
-		}
-	}
+  $actual-breakpoints: map-remove($map-for-breakpoints, 'xsmall');
+  margin: 0 auto;
+  @each $item, $value in $actual-breakpoints {
+    @media (min-width: #{$value}) {
+      max-width: calc(#{$value} - (#{$gutter} * 2));
+    }
+  }
 }

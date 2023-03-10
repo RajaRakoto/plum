@@ -9,21 +9,21 @@
 ///	 	@include bar-scrolling($amethyst, $wisteria);
 ///  }
 @mixin bar-scrolling($bar-color, $bar-color-hover, $bg-color: #eee) {
-	::-webkit-scrollbar {
-		width: 10px;
-		height: 10px;
-	}
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
 
-	::-webkit-scrollbar-track {
-		background: $bg-color;
-	}
+  ::-webkit-scrollbar-track {
+    background: $bg-color;
+  }
 
-	::-webkit-scrollbar-thumb {
-		background: $bar-color;
-		border-radius: 10px;
-	}
+  ::-webkit-scrollbar-thumb {
+    background: $bar-color;
+    border-radius: 10px;
+  }
 
-	::-webkit-scrollbar-thumb:hover {
-		background: $bar-color-hover;
-	}
+  ::-webkit-scrollbar-thumb:hover {
+    background: $bar-color-hover;
+  }
 }

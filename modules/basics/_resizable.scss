@@ -16,7 +16,7 @@
 ///    @include resizable(vertical);
 ///  }
 @mixin resizable($direction: both, $overflow: auto) {
-	resize: $direction;
-	overflow: $overflow;
-	max-width: 100%;
+  resize: $direction;
+  overflow: $overflow;
+  max-width: 100%;
 }

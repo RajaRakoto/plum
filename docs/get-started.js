@@ -49,4 +49,4 @@ Run the following command to update **sass-eo**:
 npm run sasseo-update
 \`\`\`
 
-`;
+`

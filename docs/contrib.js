@@ -24,4 +24,4 @@ npm run watch
 
 🏁 Then you can make a PR.
 
-`;
+`

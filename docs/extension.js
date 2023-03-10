@@ -52,4 +52,4 @@ sseo-[category]-[name] (e.g: sseo-func-color-pastel)
 
 > **NOTE**: you can retain \`[category]\` or \`[name]\` to use snippets, the base keyword \`sseo\` also allows you to list all available snippets for **sass-eo **
 
-`;
+`

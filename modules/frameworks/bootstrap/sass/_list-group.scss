@@ -33,7 +33,7 @@
 
   > .list-group-item::before {
     // Increments only this instance of the section counter
-    content: counters(section, ".") ". ";
+    content: counters(section, '.') '. ';
     counter-increment: section;
   }
 }
@@ -70,11 +70,13 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x);
+  padding: var(--#{$prefix}list-group-item-padding-y)
+    var(--#{$prefix}list-group-item-padding-x);
   color: var(--#{$prefix}list-group-color);
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}list-group-bg);
-  border: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
+  border: var(--#{$prefix}list-group-border-width) solid
+    var(--#{$prefix}list-group-border-color);
 
   &:first-child {
     @include border-top-radius(inherit);
@@ -103,7 +105,9 @@
     border-top-width: 0;
 
     &.active {
-      margin-top: calc(var(--#{$prefix}list-group-border-width) * -1); // stylelint-disable-line function-disallowed-list
+      margin-top: calc(
+        var(--#{$prefix}list-group-border-width) * -1
+      ); // stylelint-disable-line function-disallowed-list
       border-top-width: var(--#{$prefix}list-group-border-width);
     }
   }
@@ -122,12 +126,16 @@
 
       > .list-group-item {
         &:first-child {
-          @include border-bottom-start-radius(var(--#{$prefix}list-group-border-radius));
+          @include border-bottom-start-radius(
+            var(--#{$prefix}list-group-border-radius)
+          );
           @include border-top-end-radius(0);
         }
 
         &:last-child {
-          @include border-top-end-radius(var(--#{$prefix}list-group-border-radius));
+          @include border-top-end-radius(
+            var(--#{$prefix}list-group-border-radius)
+          );
           @include border-bottom-start-radius(0);
         }
 
@@ -140,7 +148,9 @@
           border-left-width: 0;
 
           &.active {
-            margin-left: calc(var(--#{$prefix}list-group-border-width) * -1); // stylelint-disable-line function-disallowed-list
+            margin-left: calc(
+              var(--#{$prefix}list-group-border-width) * -1
+            ); // stylelint-disable-line function-disallowed-list
             border-left-width: var(--#{$prefix}list-group-border-width);
           }
         }
@@ -148,7 +158,6 @@
     }
   }
 }
-
 
 // Flush list items
 //
@@ -167,7 +176,6 @@
   }
 }
 
-
 // scss-docs-start list-group-modifiers
 // List group contextual variants
 //
@@ -177,10 +185,21 @@
 @each $state, $value in $theme-colors {
   $list-group-variant-bg: shift-color($value, $list-group-item-bg-scale);
   $list-group-variant-color: shift-color($value, $list-group-item-color-scale);
-  @if (contrast-ratio($list-group-variant-bg, $list-group-variant-color) < $min-contrast-ratio) {
-    $list-group-variant-color: mix($value, color-contrast($list-group-variant-bg), abs($list-group-item-color-scale));
+  @if (
+    contrast-ratio($list-group-variant-bg, $list-group-variant-color) <
+      $min-contrast-ratio
+  ) {
+    $list-group-variant-color: mix(
+      $value,
+      color-contrast($list-group-variant-bg),
+      abs($list-group-item-color-scale)
+    );
   }
 
-  @include list-group-item-variant($state, $list-group-variant-bg, $list-group-variant-color);
+  @include list-group-item-variant(
+    $state,
+    $list-group-variant-bg,
+    $list-group-variant-color
+  );
 }
 // scss-docs-end list-group-modifiers
