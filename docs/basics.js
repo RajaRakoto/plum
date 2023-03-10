@@ -13,4 +13,4 @@ npm run sasseo-docs-basics
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
 </div>
 
-`;
+`

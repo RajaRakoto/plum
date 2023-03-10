@@ -13,21 +13,21 @@
 ///
 ///  @include typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
 @mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
-	@if (
-		($weight == normal) or
-			($weight == lighter) or
-			($weight == bold) or
-			($weight == bolder) and
-			($style == normal) or
-			($style == italic)
-	) {
-		@font-face {
-			font-family: $font-name;
-			font-weight: $weight;
-			font-style: $style;
-			src: url($path);
-		}
-	} @else {
-		@error "The argument of weight must be `solid` or `small` or `medium` or `large` or `none` | The argument of style must be `normal` or `italic`";
-	}
+  @if (
+    ($weight == normal) or
+      ($weight == lighter) or
+      ($weight == bold) or
+      ($weight == bolder) and
+      ($style == normal) or
+      ($style == italic)
+  ) {
+    @font-face {
+      font-family: $font-name;
+      font-weight: $weight;
+      font-style: $style;
+      src: url($path);
+    }
+  } @else {
+    @error "The argument of weight must be `solid` or `small` or `medium` or `large` or `none` | The argument of style must be `normal` or `italic`";
+  }
 }

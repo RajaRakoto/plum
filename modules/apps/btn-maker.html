@@ -1,462 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>buttons maker</title>
-
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-
-		<style>
-			@import url('https://hello.myfonts.net/count/38f6fd');
-			@import url('https://hello.myfonts.net/count/3b6094');
-
-			@font-face {
-				font-display: swap;
-				font-family: 'CerebriSans-Bold';
-				src: url('css/webfonts/38F6FD_0_0.eot');
-				src: url('css/webfonts/38F6FD_0_0.eot%3F') format('embedded-opentype'),
-					url('css/webfonts/38F6FD_0_0.woff2') format('woff2'),
-					url('css/webfonts/38F6FD_0_0.woff') format('woff'),
-					url('css/webfonts/38F6FD_0_0.ttf') format('truetype');
-			}
-
-			@font-face {
-				font-display: swap;
-				font-family: 'CerebriSans-Regular';
-				src: url('css/webfonts/38F6FD_1_0.eot');
-				src: url('css/webfonts/38F6FD_1_0.eot%3F') format('embedded-opentype'),
-					url('css/webfonts/38F6FD_1_0.woff2') format('woff2'),
-					url('css/webfonts/38F6FD_1_0.woff') format('woff'),
-					url('css/webfonts/38F6FD_1_0.ttf') format('truetype');
-			}
-		</style>
-
-		<style>
-			body {
-				background: #fff;
-				font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
-					sans-serif;
-				-webkit-font-smoothing: antialiased;
-				text-align: center;
-				padding-top: 7em;
-				padding-bottom: 5em;
-			}
-
-			body > p {
-				padding-left: 1em;
-				padding-right: 1em;
-			}
-
-			a {
-				color: #000;
-			}
-
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				padding: 4em 0;
-				width: 100%;
-				max-width: 1280px;
-				margin: 0 auto;
-				justify-content: space-around;
-			}
-
-			li {
-				border-radius: 6px;
-				margin: 2em 1em;
-				flex: 0 0 calc(100vw - 2em - 1em);
-				height: 15vh;
-				display: block;
-				transition: all 300ms;
-				color: #555;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-			}
-
-			li .credits {
-				font-size: 0.7em;
-				opacity: 0.85;
-				display: block;
-				padding-top: 2em;
-			}
-
-			header.active a.producthunt {
-				display: none;
-			}
-
-			a.a-button {
-				background-color: transparent;
-				color: #000000;
-				cursor: pointer;
-				display: inline-block;
-				line-height: 32px;
-				padding: 0 8px;
-				text-decoration: none;
-				user-select: none;
-				border-radius: 6px;
-				transition: all 150ms;
-				margin-left: 5px;
-				margin-right: 5px;
-			}
-
-			a.a-button:hover {
-				transform: scale(1.1);
-				box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-					rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
-					rgba(149, 157, 165, 0.2) 0px 8px 24px;
-			}
-
-			a.a-button .logo-img {
-				margin-left: 2px;
-				margin-right: 3px;
-				width: 20px;
-				height: auto;
-				vertical-align: sub;
-			}
-
-			a.get-cssscan {
-				text-decoration: none;
-				background-color: #2cbc63;
-				border-radius: 6px;
-				display: inline-block !important;
-				padding: 9px 22px;
-				text-align: center;
-				transition: all 200ms;
-			}
-
-			a.get-cssscan span {
-				display: none;
-			}
-
-			a.get-cssscan svg {
-				vertical-align: sub;
-			}
-
-			a.get-cssscan:hover {
-				background-color: #30d46f;
-				box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #1a9047 0px 0px 0px 2px;
-			}
-
-			@media all and (min-width: 375px) {
-				a.get-cssscan span {
-					display: inline;
-				}
-
-				li {
-					flex: 0 0 calc(48vw - 2em - 1em);
-				}
-			}
-
-			@media all and (min-width: 768px) {
-				ul {
-					padding: 4em 0;
-					justify-content: space-between;
-				}
-
-				li {
-					margin: 2.7em;
-					flex: 0 0 calc(32vw - (2.7em * 2));
-					height: 110px;
-				}
-
-				header.active a.producthunt {
-					display: initial;
-				}
-
-				header.active a.producthunt img {
-					display: block;
-				}
-			}
-
-			@media all and (min-width: 1024px) {
-				ul {
-					justify-content: space-around;
-				}
-
-				li {
-					padding: 1em 0;
-					margin: 2em;
-					flex: 0 0 200px;
-					height: 150px;
-				}
-			}
-
-			h1,
-			h2,
-			h3,
-			.cssscan .title,
-			.logo {
-				font-family: CerebriSans-Bold, -apple-system, system-ui, Roboto,
-					sans-serif;
-				font-weight: normal;
-			}
-
-			.cssscan-a {
-				text-decoration: none;
-				padding: 0 9%;
-				display: block;
-			}
-
-			.cssscan {
-				margin: auto;
-			}
-
-			.cssscan {
-				padding: 2.5rem;
-				background: #c2fbd7;
-				border-radius: 24px;
-				position: relative;
-				overflow: hidden;
-				box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
-				cursor: pointer;
-				margin-top: 3em;
-				font-size: 19px;
-				text-align: left;
-			}
-
-			.cssscan p.title {
-				font-size: 28px;
-				margin-bottom: 0;
-				margin-top: 0;
-			}
-
-			.cssscan img {
-				position: absolute;
-				top: 14%;
-				right: -37%;
-				width: 95%;
-				height: 95%;
-				transform: rotate(-7deg);
-				transition: all 0.3s;
-			}
-
-			.cssscan:hover img {
-				top: 10%;
-				right: -35%;
-				transform: scale(1.1) rotate(-7deg);
-			}
-
-			.cssscan:hover p.learn-more {
-				text-decoration: underline;
-			}
-
-			.cssscan p.title {
-				margin-bottom: 0;
-			}
-
-			.cssscan p.desc {
-				opacity: 0.8;
-				color: #333;
-				margin-top: 10px;
-				margin-bottom: 1.3em;
-			}
-
-			p.learn-more {
-				margin: 0;
-			}
-
-			.cssscan-pro {
-				background: rgba(30, 32, 44, 0.95);
-				color: #fff;
-			}
-
-			.box-shadow {
-				background: #f8f8f8;
-				color: #333;
-			}
-
-			.cssscan-pro * {
-				color: #fff !important;
-			}
-
-			.cssscan-pro img {
-				top: 5%;
-			}
-
-			.cssscan-pro:hover img {
-				top: 5%;
-			}
-
-			.gradient-text {
-				background-image: linear-gradient(
-					rgba(42, 245, 152, 1),
-					rgba(0, 158, 253, 1)
-				);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-size: 250%;
-				transition: 500ms background-position;
-			}
-
-			@media screen and (min-width: 0px) and (max-width: 1010px) {
-				.cssscan-a {
-					padding: 0;
-				}
-
-				.cssscan {
-					margin-top: 2em;
-					min-height: 300px;
-					border-radius: 0;
-				}
-
-				.cssscan img {
-					top: initial;
-					bottom: -14%;
-					right: -5%;
-					width: 45%;
-					height: 45%;
-				}
-
-				.cssscan:hover img {
-					top: initial;
-					bottom: -10%;
-					right: -5%;
-					transform: scale(1.1) rotate(-7deg);
-				}
-
-				.cssscan-pro img,
-				.cssscan-pro:hover img {
-					bottom: -4%;
-				}
-			}
-
-			header {
-				display: flex;
-				position: fixed;
-				top: 50px;
-				left: 0;
-				padding: 0 9%;
-				align-items: center;
-				box-sizing: border-box;
-				z-index: 999;
-			}
-
-			header.active {
-				top: 0;
-				left: 0;
-				width: 100%;
-				background: #fff;
-				transition: all 250ms;
-				z-index: 999;
-				padding: 0 6%;
-				box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-					rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-			}
-
-			header.active .logo-wrapper img {
-				width: 30px;
-				height: 30px;
-			}
-
-			header.active a {
-				display: initial;
-			}
-
-			header.active .button {
-				display: inline-flex;
-				height: 40px;
-				font-size: 14px;
-				padding: 0 25px;
-				margin-right: 10px;
-			}
-
-			header.active a:last-child .button {
-				margin-right: 0;
-			}
-
-			header a {
-				display: none;
-			}
-
-			.logo-wrapper {
-				display: flex;
-				align-items: center;
-				font-family: CerebriSans-SemiBold, -apple-system, system-ui, Roboto,
-					sans-serif;
-			}
-
-			.logo-wrapper img {
-				width: 60px;
-				height: 60px;
-				margin-right: 1em;
-			}
-
-			header .buttons-wrapper {
-				margin-left: auto;
-				display: flex;
-				align-items: center;
-			}
-
-			a.no-underline {
-				text-decoration: none;
-			}
-
-			.cssscan-pro,
-			.box-shadow,
-			.toastlog {
-				margin-top: 2em;
-			}
-
-			.toastlog {
-				background: #fdd231;
-			}
-
-			.shortcut {
-				box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-					rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-				padding: 5px;
-				margin: 0 5px;
-				border-radius: 4px;
-			}
-
-			a.green-btn-style {
-				background: #c2fbd7;
-				color: green;
-				transition: 200ms;
-				padding: 0px 5px;
-				border-radius: 4px;
-				display: inline-block;
-			}
-
-			a.green-btn-style:hover {
-				background: #afe6c3;
-				transform: scale(1.05);
-			}
-		</style>
-	</head>
-	<body>
-		<h1>buttons maker</h1>
-		<div class="sharethis-inline-share-buttons" style="margin-top: 4em"></div>
-		<ul></ul>
-		<script>
-			const isMac = navigator.appVersion.indexOf('Mac') != -1;
-
-			if (isMac) {
-				document.querySelector('.shortcuts-disclaimer .shortcut').textContent =
-					'⌘+D';
-			}
-
-			function copyToClipboard(value) {
-				const tempInput = document.createElement('textarea');
-				tempInput.style = 'position: absolute; left: -1000px; top: -1000px';
-				tempInput.value = value;
-				document.body.appendChild(tempInput);
-				tempInput.select();
-				document.execCommand('copy');
-				document.body.removeChild(tempInput);
-				return true;
-			}
-
-			const ul = document.querySelector('ul');
-			const buttons = [
-				{
-					credits: 'Dribbble',
-					css: `
+  <head>
+    <meta charset="utf-8" />
+    <title>buttons maker</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <style>
+      @import url('https://hello.myfonts.net/count/38f6fd');
+      @import url('https://hello.myfonts.net/count/3b6094');
+
+      @font-face {
+        font-display: swap;
+        font-family: 'CerebriSans-Bold';
+        src: url('css/webfonts/38F6FD_0_0.eot');
+        src: url('css/webfonts/38F6FD_0_0.eot%3F') format('embedded-opentype'),
+          url('css/webfonts/38F6FD_0_0.woff2') format('woff2'),
+          url('css/webfonts/38F6FD_0_0.woff') format('woff'),
+          url('css/webfonts/38F6FD_0_0.ttf') format('truetype');
+      }
+
+      @font-face {
+        font-display: swap;
+        font-family: 'CerebriSans-Regular';
+        src: url('css/webfonts/38F6FD_1_0.eot');
+        src: url('css/webfonts/38F6FD_1_0.eot%3F') format('embedded-opentype'),
+          url('css/webfonts/38F6FD_1_0.woff2') format('woff2'),
+          url('css/webfonts/38F6FD_1_0.woff') format('woff'),
+          url('css/webfonts/38F6FD_1_0.ttf') format('truetype');
+      }
+    </style>
+
+    <style>
+      body {
+        background: #fff;
+        font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+        padding-top: 7em;
+        padding-bottom: 5em;
+      }
+
+      body > p {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+
+      a {
+        color: #000;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 4em 0;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        justify-content: space-around;
+      }
+
+      li {
+        border-radius: 6px;
+        margin: 2em 1em;
+        flex: 0 0 calc(100vw - 2em - 1em);
+        height: 15vh;
+        display: block;
+        transition: all 300ms;
+        color: #555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      li .credits {
+        font-size: 0.7em;
+        opacity: 0.85;
+        display: block;
+        padding-top: 2em;
+      }
+
+      header.active a.producthunt {
+        display: none;
+      }
+
+      a.a-button {
+        background-color: transparent;
+        color: #000000;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 32px;
+        padding: 0 8px;
+        text-decoration: none;
+        user-select: none;
+        border-radius: 6px;
+        transition: all 150ms;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      a.a-button:hover {
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+          rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      a.a-button .logo-img {
+        margin-left: 2px;
+        margin-right: 3px;
+        width: 20px;
+        height: auto;
+        vertical-align: sub;
+      }
+
+      a.get-cssscan {
+        text-decoration: none;
+        background-color: #2cbc63;
+        border-radius: 6px;
+        display: inline-block !important;
+        padding: 9px 22px;
+        text-align: center;
+        transition: all 200ms;
+      }
+
+      a.get-cssscan span {
+        display: none;
+      }
+
+      a.get-cssscan svg {
+        vertical-align: sub;
+      }
+
+      a.get-cssscan:hover {
+        background-color: #30d46f;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #1a9047 0px 0px 0px 2px;
+      }
+
+      @media all and (min-width: 375px) {
+        a.get-cssscan span {
+          display: inline;
+        }
+
+        li {
+          flex: 0 0 calc(48vw - 2em - 1em);
+        }
+      }
+
+      @media all and (min-width: 768px) {
+        ul {
+          padding: 4em 0;
+          justify-content: space-between;
+        }
+
+        li {
+          margin: 2.7em;
+          flex: 0 0 calc(32vw - (2.7em * 2));
+          height: 110px;
+        }
+
+        header.active a.producthunt {
+          display: initial;
+        }
+
+        header.active a.producthunt img {
+          display: block;
+        }
+      }
+
+      @media all and (min-width: 1024px) {
+        ul {
+          justify-content: space-around;
+        }
+
+        li {
+          padding: 1em 0;
+          margin: 2em;
+          flex: 0 0 200px;
+          height: 150px;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      .cssscan .title,
+      .logo {
+        font-family: CerebriSans-Bold, -apple-system, system-ui, Roboto,
+          sans-serif;
+        font-weight: normal;
+      }
+
+      .cssscan-a {
+        text-decoration: none;
+        padding: 0 9%;
+        display: block;
+      }
+
+      .cssscan {
+        margin: auto;
+      }
+
+      .cssscan {
+        padding: 2.5rem;
+        background: #c2fbd7;
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
+        cursor: pointer;
+        margin-top: 3em;
+        font-size: 19px;
+        text-align: left;
+      }
+
+      .cssscan p.title {
+        font-size: 28px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .cssscan img {
+        position: absolute;
+        top: 14%;
+        right: -37%;
+        width: 95%;
+        height: 95%;
+        transform: rotate(-7deg);
+        transition: all 0.3s;
+      }
+
+      .cssscan:hover img {
+        top: 10%;
+        right: -35%;
+        transform: scale(1.1) rotate(-7deg);
+      }
+
+      .cssscan:hover p.learn-more {
+        text-decoration: underline;
+      }
+
+      .cssscan p.title {
+        margin-bottom: 0;
+      }
+
+      .cssscan p.desc {
+        opacity: 0.8;
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: 1.3em;
+      }
+
+      p.learn-more {
+        margin: 0;
+      }
+
+      .cssscan-pro {
+        background: rgba(30, 32, 44, 0.95);
+        color: #fff;
+      }
+
+      .box-shadow {
+        background: #f8f8f8;
+        color: #333;
+      }
+
+      .cssscan-pro * {
+        color: #fff !important;
+      }
+
+      .cssscan-pro img {
+        top: 5%;
+      }
+
+      .cssscan-pro:hover img {
+        top: 5%;
+      }
+
+      .gradient-text {
+        background-image: linear-gradient(
+          rgba(42, 245, 152, 1),
+          rgba(0, 158, 253, 1)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 250%;
+        transition: 500ms background-position;
+      }
+
+      @media screen and (min-width: 0px) and (max-width: 1010px) {
+        .cssscan-a {
+          padding: 0;
+        }
+
+        .cssscan {
+          margin-top: 2em;
+          min-height: 300px;
+          border-radius: 0;
+        }
+
+        .cssscan img {
+          top: initial;
+          bottom: -14%;
+          right: -5%;
+          width: 45%;
+          height: 45%;
+        }
+
+        .cssscan:hover img {
+          top: initial;
+          bottom: -10%;
+          right: -5%;
+          transform: scale(1.1) rotate(-7deg);
+        }
+
+        .cssscan-pro img,
+        .cssscan-pro:hover img {
+          bottom: -4%;
+        }
+      }
+
+      header {
+        display: flex;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding: 0 9%;
+        align-items: center;
+        box-sizing: border-box;
+        z-index: 999;
+      }
+
+      header.active {
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        transition: all 250ms;
+        z-index: 999;
+        padding: 0 6%;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+
+      header.active .logo-wrapper img {
+        width: 30px;
+        height: 30px;
+      }
+
+      header.active a {
+        display: initial;
+      }
+
+      header.active .button {
+        display: inline-flex;
+        height: 40px;
+        font-size: 14px;
+        padding: 0 25px;
+        margin-right: 10px;
+      }
+
+      header.active a:last-child .button {
+        margin-right: 0;
+      }
+
+      header a {
+        display: none;
+      }
+
+      .logo-wrapper {
+        display: flex;
+        align-items: center;
+        font-family: CerebriSans-SemiBold, -apple-system, system-ui, Roboto,
+          sans-serif;
+      }
+
+      .logo-wrapper img {
+        width: 60px;
+        height: 60px;
+        margin-right: 1em;
+      }
+
+      header .buttons-wrapper {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      a.no-underline {
+        text-decoration: none;
+      }
+
+      .cssscan-pro,
+      .box-shadow,
+      .toastlog {
+        margin-top: 2em;
+      }
+
+      .toastlog {
+        background: #fdd231;
+      }
+
+      .shortcut {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding: 5px;
+        margin: 0 5px;
+        border-radius: 4px;
+      }
+
+      a.green-btn-style {
+        background: #c2fbd7;
+        color: green;
+        transition: 200ms;
+        padding: 0px 5px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      a.green-btn-style:hover {
+        background: #afe6c3;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>buttons maker</h1>
+    <div class="sharethis-inline-share-buttons" style="margin-top: 4em"></div>
+    <ul></ul>
+    <script>
+      const isMac = navigator.appVersion.indexOf('Mac') != -1
+
+      if (isMac) {
+        document.querySelector('.shortcuts-disclaimer .shortcut').textContent =
+          '⌘+D'
+      }
+
+      function copyToClipboard(value) {
+        const tempInput = document.createElement('textarea')
+        tempInput.style = 'position: absolute; left: -1000px; top: -1000px'
+        tempInput.value = value
+        document.body.appendChild(tempInput)
+        tempInput.select()
+        document.execCommand('copy')
+        document.body.removeChild(tempInput)
+        return true
+      }
+
+      const ul = document.querySelector('ul')
+      const buttons = [
+        {
+          credits: 'Dribbble',
+          css: `
           .button-{index} {
             background-color: #EA4C89;
             border-radius: 8px;
@@ -489,10 +489,10 @@
             background-color: #F082AC;
           }
         `,
-				},
-				{
-					credits: 'Dribbble',
-					css: `
+        },
+        {
+          credits: 'Dribbble',
+          css: `
           .button-{index} {
             background-color: rgba(51, 51, 51, 0.05);
             border-radius: 8px;
@@ -516,10 +516,10 @@
             touch-action: manipulation;
           }
         `,
-				},
-				{
-					credits: 'Github',
-					css: `
+        },
+        {
+          credits: 'Github',
+          css: `
           .button-{index} {
             appearance: none;
             background-color: #2ea44f;
@@ -571,10 +571,10 @@
             box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
           }
         `,
-				},
-				{
-					credits: 'Github',
-					css: `
+        },
+        {
+          credits: 'Github',
+          css: `
           .button-{index} {
             appearance: none;
             background-color: #FAFBFC;
@@ -632,10 +632,10 @@
             display: none;
           }
         `,
-				},
-				{
-					credits: 'Sketch',
-					css: `
+        },
+        {
+          credits: 'Sketch',
+          css: `
           .button-{index} {
             align-items: center;
             background-clip: padding-box;
@@ -681,10 +681,10 @@
             transform: translateY(0);
           }
         `,
-				},
-				{
-					credits: 'Sketch',
-					css: `
+        },
+        {
+          credits: 'Sketch',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #FFFFFF;
@@ -732,10 +732,10 @@
             transform: translateY(0);
           }
         `,
-				},
-				{
-					credits: 'Stackoverflow',
-					css: `
+        },
+        {
+          credits: 'Stackoverflow',
+          css: `
           .button-{index} {
             background-color: #0095ff;
             border: 1px solid transparent;
@@ -776,10 +776,10 @@
             box-shadow: none;
           }
         `,
-				},
-				{
-					credits: 'Stackoverflow',
-					css: `
+        },
+        {
+          credits: 'Stackoverflow',
+          css: `
           .button-{index} {
             background-color: #e1ecf4;
             border-radius: 3px;
@@ -822,10 +822,10 @@
             color: #2c5777;
           }
         `,
-				},
-				{
-					credits: 'Stripe',
-					css: `
+        },
+        {
+          credits: 'Stripe',
+          css: `
           .button-{index} {
             appearance: button;
             backface-visibility: hidden;
@@ -863,10 +863,10 @@
             box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
           }
         `,
-				},
-				{
-					credits: 'macOS Big Sur',
-					css: `
+        },
+        {
+          credits: 'macOS Big Sur',
+          css: `
           .button-{index} {
             display: flex;
             flex-direction: column;
@@ -890,10 +890,10 @@
             outline: 0;
           }
         `,
-				},
-				{
-					credits: 'macOS Big Sur',
-					css: `
+        },
+        {
+          credits: 'macOS Big Sur',
+          css: `
           .button-{index} {
             display: flex;
             flex-direction: column;
@@ -915,10 +915,10 @@
             outline: 0;
           }
         `,
-				},
-				{
-					credits: 'macOS Big Sur',
-					css: `
+        },
+        {
+          credits: 'macOS Big Sur',
+          css: `
           .button-{index} {
             display: flex;
             flex-direction: column;
@@ -941,10 +941,10 @@
             outline: 0;
           }
         `,
-				},
-				{
-					credits: 'Amazon',
-					css: `
+        },
+        {
+          credits: 'Amazon',
+          css: `
           .button-{index} {
             background-color: #fff;
             border: 1px solid #d5d9d9;
@@ -978,10 +978,10 @@
             outline: 0;
           }
         `,
-				},
-				{
-					credits: 'Amazon',
-					css: `
+        },
+        {
+          credits: 'Amazon',
+          css: `
           .button-{index} {
             background-image: linear-gradient(#f7f8fa ,#e7e9ec);
             border-color: #adb1b8 #a2a6ac #8d9096;
@@ -1027,10 +1027,10 @@
             outline: 0;
           }
         `,
-				},
-				{
-					credits: 'Apple',
-					css: `
+        },
+        {
+          credits: 'Apple',
+          css: `
           .button-{index} {
             background-image: linear-gradient(#42A1EC, #0070C9);
             border: 1px solid #0077CC;
@@ -1078,10 +1078,10 @@
             outline: none;
           }
         `,
-				},
-				{
-					credits: 'Google',
-					css: `
+        },
+        {
+          credits: 'Google',
+          css: `
           .button-{index} {
             background-color: #f8f9fa;
             border: 1px solid #f8f9fa;
@@ -1112,10 +1112,10 @@
             outline: none;
           }
         `,
-				},
-				{
-					credits: 'Google',
-					css: `
+        },
+        {
+          credits: 'Google',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -1185,10 +1185,10 @@
             box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
           }
         `,
-				},
-				{
-					credits: 'Linkedin',
-					css: `
+        },
+        {
+          credits: 'Linkedin',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #0A66C2;
@@ -1235,10 +1235,10 @@
             color: rgba(0, 0, 0, .3);
           }
         `,
-				},
-				{
-					credits: 'Duolingo',
-					css: `
+        },
+        {
+          credits: 'Duolingo',
+          css: `
           .button-{index} {
             appearance: button;
             background-color: #1899D6;
@@ -1299,10 +1299,10 @@
             cursor: auto;
           }
         `,
-				},
-				{
-					credits: 'ui.glass',
-					css: `
+        },
+        {
+          credits: 'ui.glass',
+          css: `
           .button-{index} {
             appearance: button;
             background-color: #4D4AE8;
@@ -1363,10 +1363,10 @@
             pointer-events: none;
           }
         `,
-				},
-				{
-					credits: 'Stackbit',
-					css: `
+        },
+        {
+          credits: 'Stackbit',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -1410,10 +1410,10 @@
             box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
           }
         `,
-				},
-				{
-					credits: 'Noor',
-					css: `
+        },
+        {
+          credits: 'Noor',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: button;
@@ -1448,10 +1448,10 @@
             background-color: #1C84FF;
           }
         `,
-				},
-				{
-					credits: 'Airbnb',
-					css: `
+        },
+        {
+          credits: 'Airbnb',
+          css: `
           .button-{index} {
             background-color: #FFFFFF;
             border: 1px solid #222222;
@@ -1495,10 +1495,10 @@
             opacity: 1;
           }
         `,
-				},
-				{
-					credits: 'Nomad List',
-					css: `
+        },
+        {
+          credits: 'Nomad List',
+          css: `
           .button-{index} {
             background: #FF4742;
             border: 1px solid #FF4742;
@@ -1535,10 +1535,10 @@
             opacity: .5;
           }
         `,
-				},
-				{
-					credits: 'Gumroad',
-					css: `
+        },
+        {
+          credits: 'Gumroad',
+          css: `
           .button-{index} {
             background-color: #36A9AE;
             background-image: linear-gradient(#37ADB2, #329CA0);
@@ -1585,10 +1585,10 @@
             box-shadow: none;
           }
         `,
-				},
-				{
-					credits: 'Coinbase',
-					css: `
+        },
+        {
+          credits: 'Coinbase',
+          css: `
           .button-{index} {
             appearance: button;
             background-color: #1652F0;
@@ -1630,10 +1630,10 @@
             border-color: #0039D7;
           }
         `,
-				},
-				{
-					credits: 'Foundation',
-					css: `
+        },
+        {
+          credits: 'Foundation',
+          css: `
           .button-{index} {
             appearance: none;
             background-color: #000000;
@@ -1676,10 +1676,10 @@
             transform: translateY(0);
           }
         `,
-				},
-				{
-					credits: 'Foundation',
-					css: `
+        },
+        {
+          credits: 'Foundation',
+          css: `
           .button-{index} {
             appearance: none;
             background-color: transparent;
@@ -1724,10 +1724,10 @@
             transform: translateY(0);
           }
         `,
-				},
-				{
-					credits: 'Algolia',
-					css: `
+        },
+        {
+          credits: 'Algolia',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -1773,10 +1773,10 @@
             transform: translateY(2px);
           }
         `,
-				},
-				{
-					credits: 'Algolia',
-					css: `
+        },
+        {
+          credits: 'Algolia',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -1822,10 +1822,10 @@
             transform: translateY(2px);
           }
         `,
-				},
-				{
-					credits: 'Farfetch',
-					css: `
+        },
+        {
+          credits: 'Farfetch',
+          css: `
           .button-{index} {
             background-color: #222;
             border-radius: 4px;
@@ -1859,10 +1859,10 @@
             opacity: .75;
           }
         `,
-				},
-				{
-					credits: 'BeachNearby.com',
-					css: `
+        },
+        {
+          credits: 'BeachNearby.com',
+          css: `
           .button-{index} {
             background-color: #fff000;
             border-radius: 12px;
@@ -1894,10 +1894,10 @@
             cursor: not-allowed;
           }
         `,
-				},
-				{
-					credits: 'CSS Scan',
-					css: `
+        },
+        {
+          credits: 'CSS Scan',
+          css: `
           .button-{index} {
             background-color: #c2fbd7;
             border-radius: 100px;
@@ -1922,10 +1922,10 @@
             transform: scale(1.05) rotate(-1deg);
           }
         `,
-				},
-				{
-					credits: 'Typedream',
-					css: `
+        },
+        {
+          credits: 'Typedream',
+          css: `
           .button-{index} {
             background: #5E5DF0;
             border-radius: 999px;
@@ -1948,10 +1948,10 @@
             border: 0;
           }
         `,
-				},
-				{
-					credits: 'Mouseless',
-					css: `
+        },
+        {
+          credits: 'Mouseless',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #fff;
@@ -1984,10 +1984,10 @@
             box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
           }
         `,
-				},
-				{
-					credits: 'Linear',
-					css: `
+        },
+        {
+          credits: 'Linear',
+          css: `
           .button-{index} {
             background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
             border-radius: 8px;
@@ -2020,10 +2020,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'MongoDB',
-					css: `
+        },
+        {
+          credits: 'MongoDB',
+          css: `
           .button-{index} {
             background-color: #13aa52;
             border: 1px solid #13aa52;
@@ -2057,10 +2057,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Tailwind',
-					css: `
+        },
+        {
+          credits: 'Tailwind',
+          css: `
           .button-{index} {
             background-color: #FFFFFF;
             border: 0;
@@ -2095,10 +2095,10 @@
             box-shadow: none;
           }
         `,
-				},
-				{
-					credits: 'Tailwind',
-					css: `
+        },
+        {
+          credits: 'Tailwind',
+          css: `
           .button-{index} {
             background-color: #FFFFFF;
             border: 1px solid rgb(209,213,219);
@@ -2133,10 +2133,10 @@
             box-shadow: none;
           }
         `,
-				},
-				{
-					credits: 'Tailwind',
-					css: `
+        },
+        {
+          credits: 'Tailwind',
+          css: `
           .button-{index} {
             background-color: #111827;
             border: 1px solid transparent;
@@ -2178,10 +2178,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'FlightConnections.com',
-					css: `
+        },
+        {
+          credits: 'FlightConnections.com',
+          css: `
           .button-{index} {
             background-color: initial;
             background-image: linear-gradient(-180deg, #00D775, #00BD68);
@@ -2213,10 +2213,10 @@
             background: #00bd68;
           }
         `,
-				},
-				{
-					credits: 'FlightConnections.com',
-					css: `
+        },
+        {
+          credits: 'FlightConnections.com',
+          css: `
           .button-{index} {
             background-color: initial;
             background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
@@ -2249,10 +2249,10 @@
             box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
           }
         `,
-				},
-				{
-					credits: 'Eatmore.io',
-					css: `
+        },
+        {
+          credits: 'Eatmore.io',
+          css: `
           .button-{index} {
             background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
             border-radius: .5rem;
@@ -2281,10 +2281,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Smashing Magazine',
-					css: `
+        },
+        {
+          credits: 'Smashing Magazine',
+          css: `
           .button-{index} {
             background: #e62143;
             border-radius: 11px;
@@ -2325,10 +2325,10 @@
             border-color: #dadada;
           }
         `,
-				},
-				{
-					credits: 'Smashing Magazine',
-					css: `
+        },
+        {
+          credits: 'Smashing Magazine',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #FFE7E7;
@@ -2382,10 +2382,10 @@
             color: #FFFFFF;
           }
         `,
-				},
-				{
-					credits: 'ls.graphics',
-					css: `
+        },
+        {
+          credits: 'ls.graphics',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: rgba(240, 240, 240, 0.26);
@@ -2427,10 +2427,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Chakra UI',
-					css: `
+        },
+        {
+          credits: 'Chakra UI',
+          css: `
           .button-{index} {
             align-items: center;
             background: #FFFFFF;
@@ -2456,11 +2456,11 @@
             touch-action: manipulation;
           }
         `,
-				},
-				{
-					credits: 'Squarespace',
-					html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span></button>`,
-					css: `
+        },
+        {
+          credits: 'Squarespace',
+          html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span></button>`,
+          css: `
           .button-{index} {
             appearance: none;
             background-color: #FFFFFF;
@@ -2520,10 +2520,10 @@
             position: relative;
           }
         `,
-				},
-				{
-					credits: 'Steven Lei',
-					css: `
+        },
+        {
+          credits: 'Steven Lei',
+          css: `
           .button-{index},
           .button-{index}:after {
             width: 150px;
@@ -2624,10 +2624,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Scoot',
-					css: `
+        },
+        {
+          credits: 'Scoot',
+          css: `
           .button-{index} {
             appearance: button;
             background-color: #000;
@@ -2679,10 +2679,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Wilmingtonandbeaches',
-					css: `
+        },
+        {
+          credits: 'Wilmingtonandbeaches',
+          css: `
           .button-{index} {
             background-color: transparent;
             border: 1px solid #266DB6;
@@ -2732,10 +2732,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Joe Bocock',
-					css: `
+        },
+        {
+          credits: 'Joe Bocock',
+          css: `
           .button-{index} {
             font-size: 16px;
             font-weight: 200;
@@ -2774,10 +2774,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Alpine Day',
-					css: `
+        },
+        {
+          credits: 'Alpine Day',
+          css: `
           .button-{index} {
             background-color: #3DD1E7;
             border: 0 solid #E5E7EB;
@@ -2830,10 +2830,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Michael McMillan',
-					css: `
+        },
+        {
+          credits: 'Michael McMillan',
+          css: `
           .button-{index} {
             font-family: "Open Sans", sans-serif;
             font-size: 16px;
@@ -2863,10 +2863,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Paper CSS',
-					css: `
+        },
+        {
+          credits: 'Paper CSS',
+          css: `
           .button-{index} {
             align-self: center;
             background-color: #fff;
@@ -2907,10 +2907,10 @@
             box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
           }
         `,
-				},
-				{
-					credits: 'Squareshot',
-					css: `
+        },
+        {
+          credits: 'Squareshot',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #fee6e3;
@@ -2969,11 +2969,11 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Scott Branch',
-					html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span><span>Alternate text</span></button>`,
-					css: `
+        },
+        {
+          credits: 'Scott Branch',
+          html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span><span>Alternate text</span></button>`,
+          css: `
           .button-{index} {
             position: relative;
             overflow: hidden;
@@ -3037,10 +3037,10 @@
             transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
           }
         `,
-				},
-				{
-					credits: 'Module system design',
-					css: `
+        },
+        {
+          credits: 'Module system design',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #06f;
@@ -3090,10 +3090,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Module system design',
-					css: `
+        },
+        {
+          credits: 'Module system design',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: #fff;
@@ -3143,10 +3143,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Bulma',
-					css: `
+        },
+        {
+          credits: 'Bulma',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -3191,10 +3191,10 @@
             box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
           }
         `,
-				},
-				{
-					credits: 'Material',
-					css: `
+        },
+        {
+          credits: 'Material',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -3253,10 +3253,10 @@
             background: #A46BF5;
           }
         `,
-				},
-				{
-					credits: 'Pintura (pqina)',
-					css: `
+        },
+        {
+          credits: 'Pintura (pqina)',
+          css: `
           .button-{index} {
             background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
             border: 0;
@@ -3287,10 +3287,10 @@
             box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
           }
         `,
-				},
-				{
-					credits: 'Greenlight',
-					css: `
+        },
+        {
+          credits: 'Greenlight',
+          css: `
           .button-{index} {
             align-items: center;
             background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -3327,11 +3327,11 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Greenlight',
-					html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span></button>`,
-					css: `
+        },
+        {
+          credits: 'Greenlight',
+          html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span></button>`,
+          css: `
           .button-{index} {
             align-items: center;
             background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -3381,10 +3381,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'siter.io',
-					css: `
+        },
+        {
+          credits: 'siter.io',
+          css: `
           .button-{index} {
             appearance: none;
             backface-visibility: hidden;
@@ -3446,10 +3446,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Flagpack',
-					css: `
+        },
+        {
+          credits: 'Flagpack',
+          css: `
           .button-{index} {
             background-color: #0a6bff;
             border-radius: 4px;
@@ -3488,11 +3488,11 @@
             }
           }
         `,
-				},
-				{
-					credits: 'spltjs',
-					liBackground: '#F5F5FA',
-					css: `
+        },
+        {
+          credits: 'spltjs',
+          liBackground: '#F5F5FA',
+          css: `
           .button-{index} {
             align-items: center;
             background: #f5f5fa;
@@ -3531,10 +3531,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'static.app',
-					css: `
+        },
+        {
+          credits: 'static.app',
+          css: `
           .button-{index} {
             appearance: none;
             backface-visibility: hidden;
@@ -3582,10 +3582,10 @@
             box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
           }
         `,
-				},
-				{
-					credits: 'Sonuum',
-					css: `
+        },
+        {
+          credits: 'Sonuum',
+          css: `
           .button-{index} {
             background-color: initial;
             background-image: linear-gradient(#8614f8 0, #760be0 100%);
@@ -3624,10 +3624,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'gra.dient.art',
-					css: `
+        },
+        {
+          credits: 'gra.dient.art',
+          css: `
           .button-{index} {
             background-image: linear-gradient(#0dccea, #0d70ea);
             border: 0;
@@ -3646,10 +3646,10 @@
             touch-action: manipulation;
           }
         `,
-				},
-				{
-					credits: 'ios6.netlify.app',
-					css: `
+        },
+        {
+          credits: 'ios6.netlify.app',
+          css: `
           .button-{index} {
             background-color: #0078d0;
             border: 0;
@@ -3696,10 +3696,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Spatium.earth',
-					css: `
+        },
+        {
+          credits: 'Spatium.earth',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: initial;
@@ -3738,10 +3738,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Famera',
-					css: `
+        },
+        {
+          credits: 'Famera',
+          css: `
           .button-{index} {
             appearance: none;
             background-color: #FFFFFF;
@@ -3785,10 +3785,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'UIForms',
-					css: `
+        },
+        {
+          credits: 'UIForms',
+          css: `
           .button-{index} {
             background-color: #fbeee0;
             border: 2px solid #422800;
@@ -3824,11 +3824,11 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Mighty',
-					html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span></button>`,
-					css: `
+        },
+        {
+          credits: 'Mighty',
+          html: `<button class="button-{index}" role="button"><span class="text">Button {index}</span></button>`,
+          css: `
           .button-{index} {
             align-items: center;
             background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
@@ -3885,10 +3885,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'many.link',
-					css: `
+        },
+        {
+          credits: 'many.link',
+          css: `
           .button-{index} {
             background-color: #cf245f;
             background-image: linear-gradient(to bottom right, #fcd34d, #ef4444, #ec4899);
@@ -3920,10 +3920,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Shadow.tech',
-					css: `
+        },
+        {
+          credits: 'Shadow.tech',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -4025,10 +4025,10 @@
             opacity: .24;
           }
         `,
-				},
-				{
-					credits: 'Shadow.tech',
-					css: `
+        },
+        {
+          credits: 'Shadow.tech',
+          css: `
           .button-{index} {
             align-items: center;
             appearance: none;
@@ -4139,10 +4139,10 @@
             opacity: .24;
           }
         `,
-				},
-				{
-					credits: 'Loom',
-					css: `
+        },
+        {
+          credits: 'Loom',
+          css: `
           .button-{index} {
             backface-visibility: hidden;
             background: #332cf2;
@@ -4204,10 +4204,10 @@
             transform: translateY(.125rem);
           }
         `,
-				},
-				{
-					credits: 'Loom',
-					css: `
+        },
+        {
+          credits: 'Loom',
+          css: `
           .button-{index} {
             background: #fff;
             backface-visibility: hidden;
@@ -4268,10 +4268,10 @@
             transform: translateY(.125rem);
           }
         `,
-				},
-				{
-					credits: 'Shuffle',
-					css: `
+        },
+        {
+          credits: 'Shuffle',
+          css: `
           .button-{index} {
             background-color: #fff;
             border: 0 solid #e2e8f0;
@@ -4307,17 +4307,17 @@
             }
           }
         `,
-				},
-				{
-					credits: 'Josh W Comeau',
-					html: `<button class="button-{index}-pushable" role="button">
+        },
+        {
+          credits: 'Josh W Comeau',
+          html: `<button class="button-{index}-pushable" role="button">
             <span class="button-{index}-shadow"></span>
             <span class="button-{index}-edge"></span>
             <span class="button-{index}-front text">
               Button {index}
             </span>
           </button>`,
-					css: `
+          css: `
           .button-{index}-pushable {
             position: relative;
             border: none;
@@ -4421,10 +4421,10 @@
             outline: none;
           }
         `,
-				},
-				{
-					credits: 'react-hot-toast',
-					css: `
+        },
+        {
+          credits: 'react-hot-toast',
+          css: `
           .button-{index} {
             appearance: button;
             background-color: transparent;
@@ -4462,10 +4462,10 @@
             box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
           }
         `,
-				},
-				{
-					credits: 'Expo',
-					css: `
+        },
+        {
+          credits: 'Expo',
+          css: `
           .button-{index} {
             align-items: center;
             background-color: initial;
@@ -4517,10 +4517,10 @@
             }
           }
         `,
-				},
-				{
-					credits: 'CSS Scan',
-					css: `
+        },
+        {
+          credits: 'CSS Scan',
+          css: `
           .button-{index} {
             padding: 0.6em 2em;
             border: none;
@@ -4588,10 +4588,10 @@
             border-radius: 10px;
           }
         `,
-				},
-				{
-					credits: 'gagan-gv',
-					css: `
+        },
+        {
+          credits: 'gagan-gv',
+          css: `
           .button-{index} {
             all: unset;
             width: 100px;
@@ -4659,10 +4659,10 @@
             transform: translate(0, 5%);
           }
         `,
-				},
-				{
-					credits: 'Gumpack',
-					css: `
+        },
+        {
+          credits: 'Gumpack',
+          css: `
           .button-{index} {
             margin: 10px;
             padding: 15px 30px;
@@ -4694,10 +4694,10 @@
             transform: scale(0.95);
           }
         `,
-				},
-				{
-					credits: 'adamgiebl',
-					css: `
+        },
+        {
+          credits: 'adamgiebl',
+          css: `
           .button-{index} {
             display: flex;
             align-items: center;
@@ -4726,22 +4726,22 @@
             box-shadow: 0 0.3em 1em -0.5em #14a73e98;
           }
         `,
-				},
-			];
+        },
+      ]
 
-			async function addButton(button) {
-				const index = buttons.indexOf(button) + 1;
+      async function addButton(button) {
+        const index = buttons.indexOf(button) + 1
 
-				const li = document.createElement('li');
-				let html = `<button class="button-${index}" role="button">Button ${index}</button>`;
-				if (button.html) {
-					html = button.html.replace(/{index}/g, index);
-				}
-				if (button.liBackground) {
-					li.style.background = button.liBackground;
-				}
-				console.log('porraaa', html);
-				li.innerHTML = `
+        const li = document.createElement('li')
+        let html = `<button class="button-${index}" role="button">Button ${index}</button>`
+        if (button.html) {
+          html = button.html.replace(/{index}/g, index)
+        }
+        if (button.liBackground) {
+          li.style.background = button.liBackground
+        }
+        console.log('porraaa', html)
+        li.innerHTML = `
         <div class="button-wrapper">
           ${html}
         </div>
@@ -4751,111 +4751,111 @@
         <span class="credits">
           by ${button.credits}
         </span>
-      `;
+      `
 
-				li.querySelector(
-					'.button-wrapper',
-				).dataset.tippyContent = `Click to copy button ${index}`;
-				ul.appendChild(li);
+        li.querySelector(
+          '.button-wrapper',
+        ).dataset.tippyContent = `Click to copy button ${index}`
+        ul.appendChild(li)
 
-				li.addEventListener('click', function (e) {
-					const textElement = button.html
-						? li.querySelector('button .text') || li.querySelector('button')
-						: li.querySelector('button');
+        li.addEventListener('click', function (e) {
+          const textElement = button.html
+            ? li.querySelector('button .text') || li.querySelector('button')
+            : li.querySelector('button')
 
-					const previousTextContent = textElement.textContent;
-					copyToClipboard(
-						`
+          const previousTextContent = textElement.textContent
+          copyToClipboard(
+            `
           <!-- HTML !-->
           ${html}
 
           /* CSS */${button.css.replace(/{index}/g, index)}
           ${
-						button.liBackground
-							? `\n/* Parent background */\n${button.liBackground}`
-							: ''
-					}
+            button.liBackground
+              ? `\n/* Parent background */\n${button.liBackground}`
+              : ''
+          }
         `
-							.replace(/^ {10}/gm, '')
-							.trim(),
-					);
-					if (textElement.textContent !== `Copied ${index}`) {
-						li.classList.add('copied');
-						textElement.textContent = `Copied ${index}`;
-						setTimeout(() => {
-							textElement.textContent = previousTextContent;
-							li.classList.remove('copied');
-						}, 1000);
-					}
-				});
-			}
+              .replace(/^ {10}/gm, '')
+              .trim(),
+          )
+          if (textElement.textContent !== `Copied ${index}`) {
+            li.classList.add('copied')
+            textElement.textContent = `Copied ${index}`
+            setTimeout(() => {
+              textElement.textContent = previousTextContent
+              li.classList.remove('copied')
+            }, 1000)
+          }
+        })
+      }
 
-			async function processArray(buttonsArray) {
-				buttonsArray.map(button => addButton(button));
-			}
+      async function processArray(buttonsArray) {
+        buttonsArray.map((button) => addButton(button))
+      }
 
-			processArray(buttons);
-		</script>
-		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://unpkg.com/tippy.js@6"></script>
-		<script>
-			tippy.delegate('body', {
-				target: '[data-tippy-content]',
-				touch: false,
-			});
-		</script>
-		<!-- Google Analytics Tracking code -->
-		<script>
-			(function (i, s, o, g, r, a, m) {
-				i['GoogleAnalyticsObject'] = r;
-				(i[r] =
-					i[r] ||
-					function () {
-						(i[r].q = i[r].q || []).push(arguments);
-					}),
-					(i[r].l = 1 * new Date());
-				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m);
-			})(
-				window,
-				document,
-				'script',
-				'//www.google-analytics.com/analytics.js',
-				'ga',
-			);
+      processArray(buttons)
+    </script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      tippy.delegate('body', {
+        target: '[data-tippy-content]',
+        touch: false,
+      })
+    </script>
+    <!-- Google Analytics Tracking code -->
+    <script>
+      ;(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r
+        ;(i[r] =
+          i[r] ||
+          function () {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(
+        window,
+        document,
+        'script',
+        '//www.google-analytics.com/analytics.js',
+        'ga',
+      )
 
-			ga('create', 'UA-120858769-2', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<!-- MailerLite Universal -->
-		<script>
-			(function (m, a, i, l, e, r) {
-				m['MailerLiteObject'] = e;
-				function f() {
-					var c = { a: arguments, q: [] };
-					var r = this.push(c);
-					return 'number' != typeof r ? r : f.bind(c.q);
-				}
-				f.q = f.q || [];
-				m[e] = m[e] || f.bind(f.q);
-				m[e].q = m[e].q || f.q;
-				r = a.createElement(i);
-				var _ = a.getElementsByTagName(i)[0];
-				r.async = 1;
-				r.src = l + '?v' + ~~(new Date().getTime() / 1000000);
-				_.parentNode.insertBefore(r, _);
-			})(
-				window,
-				document,
-				'script',
-				'https://static.mailerlite.com/js/universal.js',
-				'ml',
-			);
+      ga('create', 'UA-120858769-2', 'auto')
+      ga('send', 'pageview')
+    </script>
+    <!-- MailerLite Universal -->
+    <script>
+      ;(function (m, a, i, l, e, r) {
+        m['MailerLiteObject'] = e
+        function f() {
+          var c = { a: arguments, q: [] }
+          var r = this.push(c)
+          return 'number' != typeof r ? r : f.bind(c.q)
+        }
+        f.q = f.q || []
+        m[e] = m[e] || f.bind(f.q)
+        m[e].q = m[e].q || f.q
+        r = a.createElement(i)
+        var _ = a.getElementsByTagName(i)[0]
+        r.async = 1
+        r.src = l + '?v' + ~~(new Date().getTime() / 1000000)
+        _.parentNode.insertBefore(r, _)
+      })(
+        window,
+        document,
+        'script',
+        'https://static.mailerlite.com/js/universal.js',
+        'ml',
+      )
 
-			var ml_account = ml('accounts', '2205100', 'j9b3a0j1a5', 'load');
-		</script>
-		<!-- End MailerLite Universal -->
-	</body>
+      var ml_account = ml('accounts', '2205100', 'j9b3a0j1a5', 'load')
+    </script>
+    <!-- End MailerLite Universal -->
+  </body>
 </html>

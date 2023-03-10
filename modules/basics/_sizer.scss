@@ -16,6 +16,6 @@
 ///  	@include sizer(250px, auto);
 ///  }
 @mixin sizer($width, $height: $width) {
-	width: __convertToRem($width);
-	height: __convertToRem($height);
+  width: __convertToRem($width);
+  height: __convertToRem($height);
 }

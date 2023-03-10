@@ -164,4 +164,4 @@ Import magic module \`@import 'sass-eo-lib-magic'\`
 }
 \`\`\`
 
-`;
+`

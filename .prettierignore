@@ -1,0 +1,9 @@
+minificator
+node_modules
+sassdoc
+scripts
+test
+tmp
+package.json
+package-lock.json
+README.md

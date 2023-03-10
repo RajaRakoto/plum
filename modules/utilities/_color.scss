@@ -28,12 +28,12 @@ $asbestos: #7f8c8d;
 ///	  color: __color-pastel($carrot);
 ///  }
 @function __color-pastel($colors) {
-	$hue: hue($colors);
-	$sat: 100%;
-	$light: 90%;
-	$pastel: hsl($hue, $sat, $light);
+  $hue: hue($colors);
+  $sat: 100%;
+  $light: 90%;
+  $pastel: hsl($hue, $sat, $light);
 
-	@return $pastel;
+  @return $pastel;
 }
 
 /// A function that adjusts the brightness of an argument color
@@ -44,9 +44,9 @@ $asbestos: #7f8c8d;
 ///	  color: __color-adjust($emerald, 30%);
 ///  }
 @function __color-adjust($colors, $percent) {
-	$adjust: lighten(adjust-hue($colors, 20), $percent);
+  $adjust: lighten(adjust-hue($colors, 20), $percent);
 
-	@return $adjust;
+  @return $adjust;
 }
 
 /// A function that returns the complementary of a color (uses to determine a graphic chart)
@@ -56,10 +56,10 @@ $asbestos: #7f8c8d;
 ///	  color: __color-complement($peter-river);
 ///  }
 @function __color-complement($colors, $colors-primary: $colors) {
-	@if (hue($colors) >= 135 and hue($colors) < 180) {
-		$colors: complement($colors-primary);
-	} @else {
-		$colors: adjust-hue($colors, -60);
-	}
-	@return $colors;
+  @if (hue($colors) >= 135 and hue($colors) < 180) {
+    $colors: complement($colors-primary);
+  } @else {
+    $colors: adjust-hue($colors, -60);
+  }
+  @return $colors;
 }

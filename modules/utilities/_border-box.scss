@@ -7,7 +7,7 @@
     *::after {
       box-sizing: border-box;
     }
-  } @else if & and $value == "only" {
+  } @else if & and $value == 'only' {
     &,
     &::before,
     &::after {

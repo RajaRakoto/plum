@@ -8,26 +8,26 @@
 ///  	@include effect-gradient-text($direction: top-right, $colors: teal dodgerblue);
 ///  }
 @mixin effect-gradient-text($direction, $colors) {
-	$list: ();
-	@for $i from 1 through length($colors) {
-		$list: append($list, nth($colors, $i), comma);
-	}
-	@if map-has-key($map-for-directions, $direction) {
-		background: linear-gradient(
-			map-get($map-for-directions, $direction),
-			$list
-		);
-	} @else if not map-has-key($map-for-directions, $direction) {
-		@if not index('deg', unit($direction)) {
-			@error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
-		} @else {
-			background: linear-gradient($direction, $list);
-		}
-	}
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	color: transparent;
+  $list: ();
+  @for $i from 1 through length($colors) {
+    $list: append($list, nth($colors, $i), comma);
+  }
+  @if map-has-key($map-for-directions, $direction) {
+    background: linear-gradient(
+      map-get($map-for-directions, $direction),
+      $list
+    );
+  } @else if not map-has-key($map-for-directions, $direction) {
+    @if not index('deg', unit($direction)) {
+      @error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
+    } @else {
+      background: linear-gradient($direction, $list);
+    }
+  }
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /// Effect-gradient-radial mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property.
@@ -57,20 +57,20 @@
 ///  	);
 ///  }
 @mixin effect-gradient-radial($shape, $position, $colors) {
-	$list: ();
-	$shape: unquote($shape);
-	$position: unquote($position);
-	@for $i from 1 through length($colors) {
-		$list: append($list, nth($colors, $i), comma);
-	}
-	@if map-has-key($map-for-positions, $position) {
-		background: radial-gradient(
-			$shape map-get($map-for-positions, $position),
-			$list
-		);
-	} @else if not map-has-key($map-for-positions, $position) {
-		background: radial-gradient($shape $position, $list);
-	}
+  $list: ();
+  $shape: unquote($shape);
+  $position: unquote($position);
+  @for $i from 1 through length($colors) {
+    $list: append($list, nth($colors, $i), comma);
+  }
+  @if map-has-key($map-for-positions, $position) {
+    background: radial-gradient(
+      $shape map-get($map-for-positions, $position),
+      $list
+    );
+  } @else if not map-has-key($map-for-positions, $position) {
+    background: radial-gradient($shape $position, $list);
+  }
 }
 
 /// Effect-gradient-linear mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
@@ -81,22 +81,22 @@
 ///  	@include effect-gradient-linear(left, #43c6ac #191654);
 ///  }
 @mixin effect-gradient-linear($direction, $colors) {
-	$list: ();
-	@for $i from 1 through length($colors) {
-		$list: append($list, nth($colors, $i), comma);
-	}
-	@if map-has-key($map-for-directions, $direction) {
-		background: linear-gradient(
-			map-get($map-for-directions, $direction),
-			$list
-		);
-	} @else if not map-has-key($map-for-directions, $direction) {
-		@if not index('deg', unit($direction)) {
-			@error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
-		} @else {
-			background: linear-gradient($direction, $list);
-		}
-	}
+  $list: ();
+  @for $i from 1 through length($colors) {
+    $list: append($list, nth($colors, $i), comma);
+  }
+  @if map-has-key($map-for-directions, $direction) {
+    background: linear-gradient(
+      map-get($map-for-directions, $direction),
+      $list
+    );
+  } @else if not map-has-key($map-for-directions, $direction) {
+    @if not index('deg', unit($direction)) {
+      @error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
+    } @else {
+      background: linear-gradient($direction, $list);
+    }
+  }
 }
 
 /// Effect-text-image mixin helps you to clip the background image of a selected element to the shape of its foreground text.
@@ -113,15 +113,15 @@
 ///  	');
 ///  }
 @mixin effect-text-image($image: null) {
-	@if $image {
-		background-image: url($image);
-	}
-	background-size: cover;
-	background-position: center;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	color: transparent;
+  @if $image {
+    background-image: url($image);
+  }
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /// Simply call the effect-hide mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
@@ -139,27 +139,27 @@
 ///  	@include effect-hide(unhide);
 ///  }
 @mixin effect-hide($toggle: 'hide') {
-	@if $toggle == 'hide' {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		border: 0;
-		overflow: hidden;
-		clip: rect(1px, 1px, 1px, 1px);
-		clip-path: inset(100%);
-		white-space: nowrap;
-	} @else if $toggle == 'unhide' {
-		position: static;
-		width: auto;
-		height: auto;
-		overflow: visible;
-		clip: auto;
-		clip-path: none;
-		white-space: inherit;
-	} @else if not index ('hide' 'unhide', $toggle) {
-		@error "#{$toggle} is not a valid value for the `$toggle` argument. The value must be either `hide` or `unhide`.";
-	}
+  @if $toggle == 'hide' {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(100%);
+    white-space: nowrap;
+  } @else if $toggle == 'unhide' {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: inherit;
+  } @else if not index ('hide' 'unhide', $toggle) {
+    @error "#{$toggle} is not a valid value for the `$toggle` argument. The value must be either `hide` or `unhide`.";
+  }
 }
 
 /// Add an opacity effect on an element (compatible with IE8)
@@ -169,9 +169,9 @@
 ///	  @include effect-opacity(10%);
 ///  }
 @mixin effect-opacity($percent) {
-	opacity: $percent;
-	$percent-ie: $percent * 100;
-	filter: alpha(opacity=$percent-ie); //IE8
+  opacity: $percent;
+  $percent-ie: $percent * 100;
+  filter: alpha(opacity=$percent-ie); //IE8
 }
 
 /// Add an outdoor shadow effect on a container
@@ -181,27 +181,27 @@
 ///	  @include effect-box-shadow(smooth);
 ///  }
 @mixin effect-box-shadow($opacity: solid) {
-	@if ($opacity == solid) {
-		box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
-	} @else if ($opacity == small) {
-		box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
-		-webkit-box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
-		-moz-box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
-	} @else if ($opacity == medium) {
-		box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
-		-webkit-box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
-		-moz-box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
-	} @else if ($opacity == large) {
-		box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
-		-webkit-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
-		-moz-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
-	} @else if ($opacity == smooth) {
-		box-shadow: 4px 4px 15px rgba(rgb(61, 61, 61), 0.15);
-	} @else if ($opacity == none) {
-		box-shadow: none;
-	} @else {
-		@error "The argument must be `solid` or `small` or `medium` or `large` or `smooth` or `none`";
-	}
+  @if ($opacity == solid) {
+    box-shadow: 1px 1px 2px 1px rgba(20, 20, 20, 0.59);
+  } @else if ($opacity == small) {
+    box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 2px 1px 18px -6px rgba(0, 0, 0, 0.38);
+  } @else if ($opacity == medium) {
+    box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 2px 1px 30px 0px rgba(0, 0, 0, 0.38);
+  } @else if ($opacity == large) {
+    box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.38);
+  } @else if ($opacity == smooth) {
+    box-shadow: 4px 4px 15px rgba(rgb(61, 61, 61), 0.15);
+  } @else if ($opacity == none) {
+    box-shadow: none;
+  } @else {
+    @error "The argument must be `solid` or `small` or `medium` or `large` or `smooth` or `none`";
+  }
 }
 
 /// Add an interior shadow effect on a container
@@ -211,17 +211,17 @@
 ///	  @include effect-box-shadow-inset(large);
 ///  }
 @mixin effect-box-shadow-inset($opacity: medium) {
-	@if ($opacity == small) {
-		box-shadow: 1px 1px 2px #111 inset;
-	} @else if ($opacity == medium) {
-		box-shadow: 1px 1px 8px #111 inset;
-	} @else if ($opacity == large) {
-		box-shadow: 1px 1px 20px #111 inset;
-	} @else if ($opacity == none) {
-		box-shadow: none;
-	} @else {
-		@error "The argument must be `small` or `medium` or `large` or `none`";
-	}
+  @if ($opacity == small) {
+    box-shadow: 1px 1px 2px #111 inset;
+  } @else if ($opacity == medium) {
+    box-shadow: 1px 1px 8px #111 inset;
+  } @else if ($opacity == large) {
+    box-shadow: 1px 1px 20px #111 inset;
+  } @else if ($opacity == none) {
+    box-shadow: none;
+  } @else {
+    @error "The argument must be `small` or `medium` or `large` or `none`";
+  }
 }
 
 /// Add an internal shadow effect on a text
@@ -231,19 +231,19 @@
 ///	  @include effect-text-shadow(small);
 ///  }
 @mixin effect-text-shadow($opacity: medium, $colors: #222) {
-	$list: 'small', 'large', 'none';
+  $list: 'small', 'large', 'none';
 
-	@if ($opacity == small) {
-		text-shadow: 0px 1px 2px $colors;
-	} @else if ($opacity == medium) {
-		text-shadow: 0px 1px 8px $colors;
-	} @else if ($opacity == large) {
-		text-shadow: 0px 1px 20px $colors;
-	} @else if ($opacity == none) {
-		text-shadow: none;
-	} @else {
-		@error "The argument must be `small` or `medium` or `large` or `none`";
-	}
+  @if ($opacity == small) {
+    text-shadow: 0px 1px 2px $colors;
+  } @else if ($opacity == medium) {
+    text-shadow: 0px 1px 8px $colors;
+  } @else if ($opacity == large) {
+    text-shadow: 0px 1px 20px $colors;
+  } @else if ($opacity == none) {
+    text-shadow: none;
+  } @else {
+    @error "The argument must be `small` or `medium` or `large` or `none`";
+  }
 }
 
 /// Effect-text-supershadow mixin helps you to add shadow to text elements. Accepts comma-separated list of shadows or a single shadow value that can be multiplied optionally. It provides an easy-to-use one-line method - unlike "effect-text-shadow" mixin, this one is more customizable and more powerful in terms of functionality
@@ -278,134 +278,134 @@
 ///  	@include effect-text-supershadow(top-right crimson 10px true);
 ///  }
 @mixin effect-text-supershadow($params...) {
-	$value: ();
+  $value: ();
 
-	@for $i from 1 through length($params) {
-		// Takes each items come from $params.
-		$item: nth($params, $i);
+  @for $i from 1 through length($params) {
+    // Takes each items come from $params.
+    $item: nth($params, $i);
 
-		// The first value comes from the $item is direction.
-		// This will be used in the @if, @else statements with $size to control the offset of the shadows.
-		$direction: nth($item, 1);
+    // The first value comes from the $item is direction.
+    // This will be used in the @if, @else statements with $size to control the offset of the shadows.
+    $direction: nth($item, 1);
 
-		// Second value is the color.
-		$colors: nth($item, 2);
+    // Second value is the color.
+    $colors: nth($item, 2);
 
-		// The third value is the actual offset value of the shadows.
-		$size: nth($item, 3);
+    // The third value is the actual offset value of the shadows.
+    $size: nth($item, 3);
 
-		// Takes the unit of the $size value to use it later to increment the amount of shadow based on the unit.
-		$sizeUnit: unit($size);
+    // Takes the unit of the $size value to use it later to increment the amount of shadow based on the unit.
+    $sizeUnit: unit($size);
 
-		// The $blur argument is optional. It controls the size of the blur.
-		$blur: null;
+    // The $blur argument is optional. It controls the size of the blur.
+    $blur: null;
 
-		// The $fill argument is optional. This makes shadow fill the gap between the actual text and shadow's end-point. The default value is set to false.
-		$fill: null;
+    // The $fill argument is optional. This makes shadow fill the gap between the actual text and shadow's end-point. The default value is set to false.
+    $fill: null;
 
-		// Assigns the optional sub-arguments to the actual argument.
-		@if length($item) == 4 and type-of(nth($item, 4)) == number {
-			$blur: nth($item, length($item));
-		} @else if length($item) == 4 and type-of(nth($item, 4)) == bool {
-			$fill: nth($item, length($item));
-		} @else if length($item) == 5 {
-			$blur: nth($item, 4);
-			$fill: nth($item, length($item));
-		}
+    // Assigns the optional sub-arguments to the actual argument.
+    @if length($item) == 4 and type-of(nth($item, 4)) == number {
+      $blur: nth($item, length($item));
+    } @else if length($item) == 4 and type-of(nth($item, 4)) == bool {
+      $fill: nth($item, length($item));
+    } @else if length($item) == 5 {
+      $blur: nth($item, 4);
+      $fill: nth($item, length($item));
+    }
 
-		// The code below changes the angle of $direction of the shadow based on the predefined values.
-		@if $direction == 'top' {
-			@if $fill == true {
-				// The __clearUnit(); function is used here due to it is not possible to count $size with a unit. First, it clears the unit from the $size argument and then adds it back again in the @for loop.
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: 0 -#{$increase} $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: 0 -#{$size} $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'top-left' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: -#{$increase} -#{$increase} $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: -#{$size} -#{$size} $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'top-right' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: #{$increase} -#{$increase} $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: #{$size} -#{$size} $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'bottom' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: 0 #{$increase} $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: 0 #{$size} $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'bottom-left' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: -#{$increase} #{$increase} $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: -#{$size} #{$size} $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'bottom-right' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: #{$increase} #{$increase} $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: #{$size} #{$size} $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'left' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: -#{$increase} 0 $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: -#{$size} 0 $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		} @else if $direction == 'right' {
-			@if $fill == true {
-				@for $i from 1 through __clearUnit($size) {
-					$increase: $i * 1 + $sizeUnit;
-					$shadow: #{$increase} 0 $blur $colors;
-					$value: append($value, $shadow, comma);
-				}
-			} @else {
-				$shadow: #{$size} 0 $blur $colors;
-				$value: append($value, $shadow, comma);
-			}
-		}
-	}
-	text-shadow: $value;
+    // The code below changes the angle of $direction of the shadow based on the predefined values.
+    @if $direction == 'top' {
+      @if $fill == true {
+        // The __clearUnit(); function is used here due to it is not possible to count $size with a unit. First, it clears the unit from the $size argument and then adds it back again in the @for loop.
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: 0 -#{$increase} $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: 0 -#{$size} $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'top-left' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: -#{$increase} -#{$increase} $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: -#{$size} -#{$size} $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'top-right' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: #{$increase} -#{$increase} $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: #{$size} -#{$size} $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'bottom' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: 0 #{$increase} $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: 0 #{$size} $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'bottom-left' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: -#{$increase} #{$increase} $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: -#{$size} #{$size} $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'bottom-right' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: #{$increase} #{$increase} $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: #{$size} #{$size} $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'left' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: -#{$increase} 0 $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: -#{$size} 0 $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    } @else if $direction == 'right' {
+      @if $fill == true {
+        @for $i from 1 through __clearUnit($size) {
+          $increase: $i * 1 + $sizeUnit;
+          $shadow: #{$increase} 0 $blur $colors;
+          $value: append($value, $shadow, comma);
+        }
+      } @else {
+        $shadow: #{$size} 0 $blur $colors;
+        $value: append($value, $shadow, comma);
+      }
+    }
+  }
+  text-shadow: $value;
 }
 
 ///  Effect-text-stroke mixin helps you to add stroke to a text element and style it very easily.
@@ -423,15 +423,15 @@
 ///  	);
 ///  }
 @mixin effect-text-stroke(
-	$fallback-color: black,
-	$colors: transparent,
-	$stroke-color: black,
-	$stroke-width: 1px
+  $fallback-color: black,
+  $colors: transparent,
+  $stroke-color: black,
+  $stroke-width: 1px
 ) {
-	color: $fallback-color;
-	-webkit-text-fill-color: $colors;
-	-webkit-text-stroke-color: $stroke-color;
-	-webkit-text-stroke-width: $stroke-width;
+  color: $fallback-color;
+  -webkit-text-fill-color: $colors;
+  -webkit-text-stroke-color: $stroke-color;
+  -webkit-text-stroke-width: $stroke-width;
 }
 
 /// Add a glimmer (light effect) external to a text
@@ -450,17 +450,17 @@
 ///	  @include effect-text-light(large, $sun-flower);
 ///  }
 @mixin effect-text-light($opacity: medium, $colors: #eee) {
-	@if ($opacity == small) {
-		text-shadow: 0px 1px 2px $colors;
-	} @else if ($opacity == medium) {
-		text-shadow: 0px 1px 8px $colors;
-	} @else if ($opacity == large) {
-		text-shadow: 0px 1px 20px $colors;
-	} @else if ($opacity == none) {
-		text-shadow: none;
-	} @else {
-		@error "The argument must be `small` or `medium` or `large` or `none`";
-	}
+  @if ($opacity == small) {
+    text-shadow: 0px 1px 2px $colors;
+  } @else if ($opacity == medium) {
+    text-shadow: 0px 1px 8px $colors;
+  } @else if ($opacity == large) {
+    text-shadow: 0px 1px 20px $colors;
+  } @else if ($opacity == none) {
+    text-shadow: none;
+  } @else {
+    @error "The argument must be `small` or `medium` or `large` or `none`";
+  }
 }
 
 /// Add a glimmer (light effect) external to a container
@@ -471,23 +471,23 @@
 ///	  @include effect-box-light(medium);
 ///  }
 @mixin effect-box-light($opacity: medium, $colors: #eee) {
-	@if ($opacity == solid) {
-		box-shadow: 0px 0px 2px 1px $colors;
-	} @else if ($opacity == small) {
-		box-shadow: 0px 0px 10px 1px $colors;
-		-webkit-box-shadow: 0px 0px 10px 1px $colors;
-		-moz-box-shadow: 0px 0px 10px 1px $colors;
-	} @else if ($opacity == medium) {
-		box-shadow: 0px 0px 15px 1px $colors;
-		-webkit-box-shadow: 0px 0px 15px 1px $colors;
-		-moz-box-shadow: 0px 0px 15px 1px $colors;
-	} @else if ($opacity == large) {
-		box-shadow: 0px 0px 20px 2px $colors;
-		-webkit-box-shadow: 0px 0px 20px 2px $colors;
-		-moz-box-shadow: 0px 0px 20px 2px $colors;
-	} @else if ($opacity == none) {
-		box-shadow: none;
-	} @else {
-		@error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
-	}
+  @if ($opacity == solid) {
+    box-shadow: 0px 0px 2px 1px $colors;
+  } @else if ($opacity == small) {
+    box-shadow: 0px 0px 10px 1px $colors;
+    -webkit-box-shadow: 0px 0px 10px 1px $colors;
+    -moz-box-shadow: 0px 0px 10px 1px $colors;
+  } @else if ($opacity == medium) {
+    box-shadow: 0px 0px 15px 1px $colors;
+    -webkit-box-shadow: 0px 0px 15px 1px $colors;
+    -moz-box-shadow: 0px 0px 15px 1px $colors;
+  } @else if ($opacity == large) {
+    box-shadow: 0px 0px 20px 2px $colors;
+    -webkit-box-shadow: 0px 0px 20px 2px $colors;
+    -moz-box-shadow: 0px 0px 20px 2px $colors;
+  } @else if ($opacity == none) {
+    box-shadow: none;
+  } @else {
+    @error "The argument must be `solid` or `small` or `medium` or `large` or `none`";
+  }
 }

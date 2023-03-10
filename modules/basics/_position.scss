@@ -29,19 +29,19 @@
 ///  	@include position-set(sticky, null 30px null 30px);
 ///  }
 @mixin position-set($position: absolute, $offsets: 0) {
-	$offsets: __shorthandProperty($offsets);
-	$positioning-offsets: (
-		top: nth($offsets, 1),
-		right: nth($offsets, 2),
-		bottom: nth($offsets, 3),
-		left: nth($offsets, 4),
-	);
-	position: $position;
-	@each $offset, $value in $positioning-offsets {
-		@if __validateLength($value) {
-			#{$offset}: $value;
-		}
-	}
+  $offsets: __shorthandProperty($offsets);
+  $positioning-offsets: (
+    top: nth($offsets, 1),
+    right: nth($offsets, 2),
+    bottom: nth($offsets, 3),
+    left: nth($offsets, 4),
+  );
+  position: $position;
+  @each $offset, $value in $positioning-offsets {
+    @if __validateLength($value) {
+      #{$offset}: $value;
+    }
+  }
 }
 
 /// Position-center mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
@@ -80,25 +80,25 @@
 ///  	}
 ///  }
 @mixin position-center($axis: 'both') {
-	@if $axis == 'both' or $axis == 'vertical' {
-		top: 50%;
-	}
-	@if $axis == 'both' or $axis == 'horizontal' {
-		left: 50%;
-	}
-	transform: if(
-			$axis == 'horizontal',
-			translateX(-50%),
-			if($axis == 'both', translateX(-50%), null)
-		)
-		if(
-			$axis == 'vertical',
-			translateY(-50%),
-			if($axis == 'both', translateY(-50%), null)
-		);
-	@if not($axis == 'both' or $axis == 'vertical' or $axis == 'horizontal') {
-		@error "The argument must be `vertical` or `horizontal` or `both`";
-	}
+  @if $axis == 'both' or $axis == 'vertical' {
+    top: 50%;
+  }
+  @if $axis == 'both' or $axis == 'horizontal' {
+    left: 50%;
+  }
+  transform: if(
+      $axis == 'horizontal',
+      translateX(-50%),
+      if($axis == 'both', translateX(-50%), null)
+    )
+    if(
+      $axis == 'vertical',
+      translateY(-50%),
+      if($axis == 'both', translateY(-50%), null)
+    );
+  @if not($axis == 'both' or $axis == 'vertical' or $axis == 'horizontal') {
+    @error "The argument must be `vertical` or `horizontal` or `both`";
+  }
 }
 
 /// Quickly center a block
@@ -107,9 +107,9 @@
 ///	  @include position-block-center();
 ///  }
 @mixin position-block-center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /// Quickly center child item
@@ -118,7 +118,7 @@
 ///	  @include position-flex-center();
 ///  }
 @mixin position-flex-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -56,55 +56,55 @@
 ///  	}
 ///  }
 @mixin columnize($params...) {
-	$columns: nth($params, 1);
-	$gutter: null;
-	$fill: false;
-	display: flex;
-	flex-wrap: wrap;
-	@include __border-box;
-	> * {
-		@if length($params) == 1 {
-			flex: 0 0 calc(100% / #{$columns});
-			margin-bottom: 0;
-			&:not(:last-child) {
-				margin-right: 0;
-			}
-		} @else if length($params) == 2 {
-			@if type-of(nth($params, 2)) == bool {
-				$fill: nth($params, length($params));
-				flex-grow: #{if($fill == true, 1, 0)};
-				flex-shrink: 0;
-				flex-basis: calc(100% / #{$columns});
-				margin-bottom: 0;
-				&:not(:last-child) {
-					margin-right: 0;
-				}
-			} @else if type-of(nth($params, 2)) == number {
-				$gutter: nth($params, length($params));
-				flex-grow: 0;
-				flex-shrink: 0;
-				flex-basis: calc((100% - (#{$columns} - 1) * #{$gutter}) / #{$columns});
-				margin-bottom: __convertToRem($gutter);
-				&:not(:last-child) {
-					margin-right: __convertToRem($gutter);
-				}
-				&:nth-child(#{$columns}n) {
-					margin-right: 0;
-				}
-			}
-		} @else if length($params) == 3 {
-			$gutter: nth($params, 2);
-			$fill: nth($params, length($params));
-			flex-grow: if($fill == true, 1, 0);
-			flex-shrink: 0;
-			flex-basis: calc((100% - (#{$columns} - 1) * #{$gutter}) / #{$columns});
-			margin-bottom: __convertToRem($gutter);
-			&:not(:last-child) {
-				margin-right: __convertToRem($gutter);
-			}
-			&:nth-child(#{$columns}n) {
-				margin-right: 0;
-			}
-		}
-	}
+  $columns: nth($params, 1);
+  $gutter: null;
+  $fill: false;
+  display: flex;
+  flex-wrap: wrap;
+  @include __border-box;
+  > * {
+    @if length($params) == 1 {
+      flex: 0 0 calc(100% / #{$columns});
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    } @else if length($params) == 2 {
+      @if type-of(nth($params, 2)) == bool {
+        $fill: nth($params, length($params));
+        flex-grow: #{if($fill == true, 1, 0)};
+        flex-shrink: 0;
+        flex-basis: calc(100% / #{$columns});
+        margin-bottom: 0;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      } @else if type-of(nth($params, 2)) == number {
+        $gutter: nth($params, length($params));
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc((100% - (#{$columns} - 1) * #{$gutter}) / #{$columns});
+        margin-bottom: __convertToRem($gutter);
+        &:not(:last-child) {
+          margin-right: __convertToRem($gutter);
+        }
+        &:nth-child(#{$columns}n) {
+          margin-right: 0;
+        }
+      }
+    } @else if length($params) == 3 {
+      $gutter: nth($params, 2);
+      $fill: nth($params, length($params));
+      flex-grow: if($fill == true, 1, 0);
+      flex-shrink: 0;
+      flex-basis: calc((100% - (#{$columns} - 1) * #{$gutter}) / #{$columns});
+      margin-bottom: __convertToRem($gutter);
+      &:not(:last-child) {
+        margin-right: __convertToRem($gutter);
+      }
+      &:nth-child(#{$columns}n) {
+        margin-right: 0;
+      }
+    }
+  }
 }
