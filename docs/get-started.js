@@ -9,20 +9,21 @@ Before using **sass-eo**, add the following npm script commands to your project'
 
 \`\`\`json
 "scripts": {
-  "sasseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
-  "sasseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
-  "sasseo-update": "npm update @raja_rakoto/sass-eo",
-  "sasseo-init-cli": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.cjs generate-sasseo-cli",
-  "sasseo-start-cli": "grunt --gruntfile sass-eo-cli.js",
-  "sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
-  "sasseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
-  "sasseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
-  "sasseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
-  "sasseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
-  "sasseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
-  "sasseo-app-gridmaker": "grunt --gruntfile sass-eo-cli.js grid-maker",
-  "sasseo-app-flexboxmaker": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
-  "sasseo-app-boxshadowmaker": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
+  "sseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
+  "sseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
+  "sseo-update": "npm update @raja_rakoto/sass-eo",
+  "sseo-init": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.cjs generate-sseo-cli",
+  "sseo-start": "grunt --gruntfile sass-eo-cli.js",
+  "sseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
+  "sseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
+  "sseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
+  "sseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
+  "sseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
+  "sseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
+  "sseo-app-grid": "grunt --gruntfile sass-eo-cli.js grid-maker",
+  "sseo-app-flexbox": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
+  "sseo-app-boxshadow": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
+  "sseo-app-buttons": "grunt --gruntfile sass-eo-cli.js buttons-maker"
 }
 \`\`\`
 
