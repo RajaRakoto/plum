@@ -1,16 +1,16 @@
 {
-	"name": "@rajarakoto/sass-eo",
+	"name": "@rajarakoto/plum",
 	"version": "1.8.3",
-	"description": "Customize your website faster with SASS-EO, a toolset powered by SASS (Syntactically Awesome Style Sheets) 🩷",
+	"description": "Customize your website faster with PLUM, a toolset powered by SASS (Syntactically Awesome Style Sheets) 🩷",
 	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
 	"license": "MIT",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RajaRakoto/sass-eo.git"
+		"url": "git+https://github.com/RajaRakoto/plum.git"
 	},
-	"homepage": "https://github.com/RajaRakoto/sass-eo#readme",
-	"bugs": "https://github.com/RajaRakoto/sass-eo/issues",
+	"homepage": "https://github.com/RajaRakoto/plum#readme",
+	"bugs": "https://github.com/RajaRakoto/plum/issues",
 	"keywords": [
 		"css",
 		"sass",
@@ -24,7 +24,7 @@
 		"bun": ">= 1.0.0"
 	},
 	"scripts": {
-		"build": "cd utils && node sass-eo.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
+		"build": "cd utils && node plum.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
 		"sassdoc": "grunt sassdoc",
 		"backups": "grunt compress-all",
 		"watch": "grunt watch-sass",
