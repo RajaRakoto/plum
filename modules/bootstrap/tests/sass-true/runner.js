@@ -9,9 +9,7 @@ module.exports = (filename, { describe, it }) => {
   const TRUE_SETUP = '$true-terminal-output: false; @import "true";'
   const sassString = TRUE_SETUP + data
 
-  runSass(
-    { describe, it, sourceType: 'string' },
-    sassString,
-    { loadPaths: [path.dirname(filename)] }
-  )
+  runSass({ describe, it, sourceType: 'string' }, sassString, {
+    loadPaths: [path.dirname(filename)],
+  })
 }

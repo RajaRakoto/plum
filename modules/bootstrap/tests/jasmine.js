@@ -12,5 +12,5 @@ module.exports = {
   requires: [path.join(__dirname, 'sass-true/register')],
   // Ensure we use `require` so that the require.extensions works
   // as `import` completely bypasses it
-  jsLoader: 'require'
+  jsLoader: 'require',
 }
