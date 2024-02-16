@@ -1,7 +1,7 @@
 /**
  * @author: Raja
  * @description: grunt file for sass-eo
- * @requires: grunt grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks sassdoc
+ * @requires: grunt grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks | sassdoc
  */
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt) // grunt plugins loader
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         files: [
           // scss file list
           {
-            src: ['./test/main.scss'],
+            src: ['./test/style.scss'],
             dest: './test/style.css',
           },
         ],
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
      * Run shell commands
      */
     shell: {
-      sassdoc: {
+      documentation: {
         command: ['sassdoc .', 'cd sassdoc', 'xdg-open index.html'].join('&&'),
       },
     },
@@ -56,14 +56,14 @@ module.exports = function (grunt) {
         files: [{ src: ['./*', './.*'] }],
         filter: 'isFile',
       },
-      config: {
+      apps: {
         options: {
-          archive: backupsDestination + 'config.tar.gz',
+          archive: backupsDestination + 'apps.tar.gz',
         },
         expand: true,
-        cwd: './config/',
+        cwd: './apps/',
         src: includeAllFiles,
-        dest: 'config',
+        dest: 'apps',
       },
       docs: {
         options: {
@@ -83,33 +83,6 @@ module.exports = function (grunt) {
         src: includeAllFiles,
         dest: 'modules',
       },
-      node_modules: {
-        options: {
-          archive: backupsDestination + 'node_modules.tar.gz',
-        },
-        expand: true,
-        cwd: './node_modules/',
-        src: includeAllFiles,
-        dest: 'node_modules',
-      },
-      scripts: {
-        options: {
-          archive: backupsDestination + 'scripts.tar.gz',
-        },
-        expand: true,
-        cwd: './scripts/',
-        src: includeAllFiles,
-        dest: 'scripts',
-      },
-      extension: {
-        options: {
-          archive: backupsDestination + 'extension.tar.gz',
-        },
-        expand: true,
-        cwd: './extension/',
-        src: includeAllFiles,
-        dest: 'extension',
-      },
       test: {
         options: {
           archive: backupsDestination + 'test.tar.gz',
@@ -119,14 +92,14 @@ module.exports = function (grunt) {
         src: includeAllFiles,
         dest: 'test',
       },
-      utils: {
+      tmp: {
         options: {
-          archive: backupsDestination + 'utils.tar.gz',
+          archive: backupsDestination + 'tmp.tar.gz',
         },
         expand: true,
-        cwd: './utils/',
+        cwd: './tmp/',
         src: includeAllFiles,
-        dest: 'utils',
+        dest: 'tmp',
       },
     },
 
@@ -143,27 +116,23 @@ module.exports = function (grunt) {
   })
 
   // all grunt register tasks
-  grunt.registerTask('compress-all', [
+  grunt.registerTask('backup', [
     'compress:main',
-    'compress:config',
+    'compress:apps',
     'compress:docs',
     'compress:modules',
-    'compress:node_modules',
-    'compress:scripts',
-    'compress:extension',
     'compress:test',
-    'compress:utils',
+    'compress:tmp',
   ])
-  grunt.registerTask('sass-task', ['sass:test'])
-  grunt.registerTask('watch-sass', ['watch:sass'])
-  grunt.registerTask('sassdoc', ['shell:sassdoc'])
+  grunt.registerTask('test', ['watch:sass'])
+  grunt.registerTask('documentation', ['shell:documentation'])
 
   // all tasks lists
-  const sasseoTaskNames = ['compress-all', 'watch-sass', 'sassdoc']
+  const sasseoTaskNames = ['backup', 'test', 'documentation']
   const sasseoTaskStatus = [
-    'compress: main | config | docs | extension | modules | node_modules | scripts | test | utils',
-    'auto compile sass',
-    'generate & open sassdoc',
+    'backup: main | apps | docs | modules | test | tmp',
+    'watching sass files changes in test folder',
+    'generate & open palm documentation with sassdoc',
   ]
 
   // default tasks
@@ -214,7 +183,7 @@ module.exports = function (grunt) {
 
     // task resume
     getTaskResume(
-      '💜 SASS-EO DEV TASKS 💜',
+      '== PALM TASKS ==',
       sasseoTaskNames,
       sasseoTaskStatus,
       'magenta',
