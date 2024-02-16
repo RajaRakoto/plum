@@ -796,7 +796,7 @@
         return Z
       })
     : 'undefined' !== typeof module && module.exports
-    ? (module.exports = Z)
-    : ((window.WebFont = Z),
-      window.WebFontConfig && Y.load(window.WebFontConfig))
+      ? (module.exports = Z)
+      : ((window.WebFont = Z),
+        window.WebFontConfig && Y.load(window.WebFontConfig))
 })()

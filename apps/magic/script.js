@@ -61,8 +61,8 @@ function _typeof(e) {
     return null == e
       ? e + ''
       : 'object' === _typeof(e) || 'function' == typeof e
-      ? l[c.call(e)] || 'object'
-      : _typeof(e)
+        ? l[c.call(e)] || 'object'
+        : _typeof(e)
   }
   var b = function e(t, n) {
       return new e.fn.init(t, n)
@@ -91,8 +91,8 @@ function _typeof(e) {
         return null == e
           ? o.call(this)
           : e < 0
-          ? this[e + this.length]
-          : this[e]
+            ? this[e + this.length]
+            : this[e]
       },
       pushStack: function (e) {
         var t = b.merge(this.constructor(), e)
@@ -159,8 +159,8 @@ function _typeof(e) {
                         i && !Array.isArray(n)
                           ? []
                           : i || b.isPlainObject(n)
-                          ? n
-                          : {}),
+                            ? n
+                            : {}),
                       (i = !1),
                       (a[t] = b.extend(l, o, r)))
                     : void 0 !== r && (a[t] = r))
@@ -361,8 +361,8 @@ function _typeof(e) {
         return r != r || n
           ? t
           : r < 0
-          ? String.fromCharCode(r + 65536)
-          : String.fromCharCode((r >> 10) | 55296, (1023 & r) | 56320)
+            ? String.fromCharCode(r + 65536)
+            : String.fromCharCode((r >> 10) | 55296, (1023 & r) | 56320)
       },
       re = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,
       ie = function (e, t) {
@@ -616,8 +616,8 @@ function _typeof(e) {
                   return void 0 !== t.getElementsByTagName
                     ? t.getElementsByTagName(e)
                     : n.qsa
-                    ? t.querySelectorAll(e)
-                    : void 0
+                      ? t.querySelectorAll(e)
+                      : void 0
                 }
               : function (e, t) {
                   var n,
@@ -724,13 +724,13 @@ function _typeof(e) {
                       ? e === d || (e.ownerDocument === w && x(w, e))
                         ? -1
                         : t === d || (t.ownerDocument === w && x(w, t))
-                        ? 1
-                        : c
-                        ? P(c, e) - P(c, t)
-                        : 0
+                          ? 1
+                          : c
+                            ? P(c, e) - P(c, t)
+                            : 0
                       : 4 & r
-                      ? -1
-                      : 1)
+                        ? -1
+                        : 1)
                   )
                 }
               : function (e, t) {
@@ -745,14 +745,14 @@ function _typeof(e) {
                     return e === d
                       ? -1
                       : t === d
-                      ? 1
-                      : i
-                      ? -1
-                      : o
-                      ? 1
-                      : c
-                      ? P(c, e) - P(c, t)
-                      : 0
+                        ? 1
+                        : i
+                          ? -1
+                          : o
+                            ? 1
+                            : c
+                              ? P(c, e) - P(c, t)
+                              : 0
                   if (i === o) return pe(e, t)
                   for (n = e; (n = n.parentNode); ) a.unshift(n)
                   for (n = t; (n = n.parentNode); ) s.unshift(n)
@@ -760,10 +760,10 @@ function _typeof(e) {
                   return r
                     ? pe(a[r], s[r])
                     : a[r] === w
-                    ? -1
-                    : s[r] === w
-                    ? 1
-                    : 0
+                      ? -1
+                      : s[r] === w
+                        ? 1
+                        : 0
                 }),
             d)
           : d
@@ -803,10 +803,10 @@ function _typeof(e) {
       return void 0 !== o
         ? o
         : n.attributes || !g
-        ? e.getAttribute(t)
-        : (o = e.getAttributeNode(t)) && o.specified
-        ? o.value
-        : null
+          ? e.getAttribute(t)
+          : (o = e.getAttributeNode(t)) && o.specified
+            ? o.value
+            : null
     }),
     (se.escape = function (e) {
       return (e + '').replace(re, ie)
@@ -929,17 +929,19 @@ function _typeof(e) {
                     '=' === t
                       ? i === n
                       : '!=' === t
-                      ? i !== n
-                      : '^=' === t
-                      ? n && 0 === i.indexOf(n)
-                      : '*=' === t
-                      ? n && i.indexOf(n) > -1
-                      : '$=' === t
-                      ? n && i.slice(-n.length) === n
-                      : '~=' === t
-                      ? (' ' + i.replace($, ' ') + ' ').indexOf(n) > -1
-                      : '|=' === t &&
-                        (i === n || i.slice(0, n.length + 1) === n + '-'))
+                        ? i !== n
+                        : '^=' === t
+                          ? n && 0 === i.indexOf(n)
+                          : '*=' === t
+                            ? n && i.indexOf(n) > -1
+                            : '$=' === t
+                              ? n && i.slice(-n.length) === n
+                              : '~=' === t
+                                ? (' ' + i.replace($, ' ') + ' ').indexOf(n) >
+                                  -1
+                                : '|=' === t &&
+                                  (i === n ||
+                                    i.slice(0, n.length + 1) === n + '-'))
             }
           },
           CHILD: function (e, t, n, r, i) {
@@ -1029,16 +1031,16 @@ function _typeof(e) {
             return i[b]
               ? i(t)
               : i.length > 1
-              ? ((n = [e, e, '', t]),
-                r.setFilters.hasOwnProperty(e.toLowerCase())
-                  ? le(function (e, n) {
-                      for (var r, o = i(e, t), a = o.length; a--; )
-                        e[(r = P(e, o[a]))] = !(n[r] = o[a])
-                    })
-                  : function (e) {
-                      return i(e, 0, n)
-                    })
-              : i
+                ? ((n = [e, e, '', t]),
+                  r.setFilters.hasOwnProperty(e.toLowerCase())
+                    ? le(function (e, n) {
+                        for (var r, o = i(e, t), a = o.length; a--; )
+                          e[(r = P(e, o[a]))] = !(n[r] = o[a])
+                      })
+                    : function (e) {
+                        return i(e, 0, n)
+                      })
+                : i
           },
         },
         pseudos: {
@@ -1259,7 +1261,9 @@ function _typeof(e) {
                   (l = i ? P(o, f) : p[c]) > -1 &&
                   (o[l] = !(a[l] = f))
             }
-          } else (y = Te(y === a ? y.splice(h, y.length) : y)), i ? i(null, a, y, u) : H.apply(a, y)
+          } else
+            (y = Te(y === a ? y.splice(h, y.length) : y)),
+              i ? i(null, a, y, u) : H.apply(a, y)
         })
       )
     }
@@ -1502,8 +1506,8 @@ function _typeof(e) {
             return !0 === e[t]
               ? t.toLowerCase()
               : (r = e.getAttributeNode(t)) && r.specified
-              ? r.value
-              : null
+                ? r.value
+                : null
         }),
       se
     )
@@ -1540,14 +1544,14 @@ function _typeof(e) {
           return !!t.call(e, r, e) !== n
         })
       : t.nodeType
-      ? b.grep(e, function (e) {
-          return (e === t) !== n
-        })
-      : 'string' != typeof t
-      ? b.grep(e, function (e) {
-          return u.call(t, e) > -1 !== n
-        })
-      : b.filter(t, e, n)
+        ? b.grep(e, function (e) {
+            return (e === t) !== n
+          })
+        : 'string' != typeof t
+          ? b.grep(e, function (e) {
+              return u.call(t, e) > -1 !== n
+            })
+          : b.filter(t, e, n)
   }
   ;(b.filter = function (e, t, n) {
     var r = t[0]
@@ -1624,10 +1628,10 @@ function _typeof(e) {
     return e.nodeType
       ? ((this[0] = e), (this.length = 1), this)
       : g(e)
-      ? void 0 !== n.ready
-        ? n.ready(e)
-        : e(b)
-      : b.makeArray(e, this)
+        ? void 0 !== n.ready
+          ? n.ready(e)
+          : e(b)
+        : b.makeArray(e, this)
   }).prototype = b.fn),
     (j = b(r))
   var L = /^(?:parents|prev(?:Until|All))/,
@@ -1670,8 +1674,8 @@ function _typeof(e) {
           ? u.call(b(e), this[0])
           : u.call(this, e.jquery ? e[0] : e)
         : this[0] && this[0].parentNode
-        ? this.first().prevAll().length
-        : -1
+          ? this.first().prevAll().length
+          : -1
     },
     add: function (e, t) {
       return this.pushStack(b.uniqueSort(b.merge(this.get(), b(e, t))))
@@ -1749,8 +1753,8 @@ function _typeof(e) {
       e && g((i = e.promise))
         ? i.call(e).done(t).fail(n)
         : e && g((i = e.then))
-        ? i.call(e, t, n)
-        : t.apply(void 0, [e].slice(r))
+          ? i.call(e, t, n)
+          : t.apply(void 0, [e].slice(r))
     } catch (e) {
       n.apply(void 0, [e])
     }
@@ -2135,8 +2139,8 @@ function _typeof(e) {
             n = (t = Array.isArray(t)
               ? t.map(X)
               : (t = X(t)) in r
-              ? [t]
-              : t.match(P) || []).length
+                ? [t]
+                : t.match(P) || []).length
             for (; n--; ) delete r[t[n]]
           }
           ;(void 0 === t || b.isEmptyObject(r)) &&
@@ -2167,10 +2171,10 @@ function _typeof(e) {
                 ('null' === e
                   ? null
                   : e === +e + ''
-                  ? +e
-                  : J.test(e)
-                  ? JSON.parse(e)
-                  : e))
+                    ? +e
+                    : J.test(e)
+                      ? JSON.parse(e)
+                      : e))
             )
           })(n)
         } catch (e) {}
@@ -2227,8 +2231,8 @@ function _typeof(e) {
                   return void 0 !== (n = Q.get(o, e))
                     ? n
                     : void 0 !== (n = Z(o, e))
-                    ? n
-                    : void 0
+                      ? n
+                      : void 0
                 this.each(function () {
                   Q.set(this, e, t)
                 })
@@ -2299,12 +2303,12 @@ function _typeof(e) {
           arguments.length < n
             ? b.queue(this[0], e)
             : void 0 === t
-            ? this
-            : this.each(function () {
-                var n = b.queue(this, e, t)
-                b._queueHooks(this, e),
-                  'fx' === e && 'inprogress' !== n[0] && b.dequeue(this, e)
-              })
+              ? this
+              : this.each(function () {
+                  var n = b.queue(this, e, t)
+                  b._queueHooks(this, e),
+                    'fx' === e && 'inprogress' !== n[0] && b.dequeue(this, e)
+                })
         )
       },
       dequeue: function (e) {
@@ -2459,8 +2463,8 @@ function _typeof(e) {
         void 0 !== e.getElementsByTagName
           ? e.getElementsByTagName(t || '*')
           : void 0 !== e.querySelectorAll
-          ? e.querySelectorAll(t || '*')
-          : []),
+            ? e.querySelectorAll(t || '*')
+            : []),
       void 0 === t || (t && A(e, t)) ? b.merge([e], n) : n
     )
   }
@@ -2934,14 +2938,14 @@ function _typeof(e) {
               ? e.charCode
               : e.keyCode
             : !e.which && void 0 !== t && Ce.test(e.type)
-            ? 1 & t
-              ? 1
-              : 2 & t
-              ? 3
-              : 4 & t
-              ? 2
-              : 0
-            : e.which
+              ? 1 & t
+                ? 1
+                : 2 & t
+                  ? 3
+                  : 4 & t
+                    ? 2
+                    : 0
+              : e.which
         },
       },
       b.event.addProp,
@@ -3664,16 +3668,16 @@ function _typeof(e) {
             (null != e.elem[e.prop] && null == e.elem.style[e.prop])
             ? e.elem[e.prop]
             : (t = b.css(e.elem, e.prop, '')) && 'auto' !== t
-            ? t
-            : 0
+              ? t
+              : 0
         },
         set: function (e) {
           b.fx.step[e.prop]
             ? b.fx.step[e.prop](e)
             : 1 !== e.elem.nodeType ||
-              (!b.cssHooks[e.prop] && null == e.elem.style[Ge(e.prop)])
-            ? (e.elem[e.prop] = e.now)
-            : b.style(e.elem, e.prop, e.now + e.unit)
+                (!b.cssHooks[e.prop] && null == e.elem.style[Ge(e.prop)])
+              ? (e.elem[e.prop] = e.now)
+              : b.style(e.elem, e.prop, e.now + e.unit)
         },
       },
     }),
@@ -4121,13 +4125,13 @@ function _typeof(e) {
                 ? null === n
                   ? void b.removeAttr(e, t)
                   : i && 'set' in i && void 0 !== (r = i.set(e, n, t))
-                  ? r
-                  : (e.setAttribute(t, n + ''), n)
+                    ? r
+                    : (e.setAttribute(t, n + ''), n)
                 : i && 'get' in i && null !== (r = i.get(e, t))
-                ? r
-                : null == (r = b.find.attr(e, t))
-                ? void 0
-                : r)
+                  ? r
+                  : null == (r = b.find.attr(e, t))
+                    ? void 0
+                    : r)
       },
       attrHooks: {
         type: {
@@ -4202,8 +4206,8 @@ function _typeof(e) {
                 ? r
                 : (e[t] = n)
               : i && 'get' in i && null !== (r = i.get(e, t))
-              ? r
-              : e[t]
+                ? r
+                : e[t]
           )
       },
       propHooks: {
@@ -4213,8 +4217,8 @@ function _typeof(e) {
             return t
               ? parseInt(t, 10)
               : ht.test(e.nodeName) || (gt.test(e.nodeName) && e.href)
-              ? 0
-              : -1
+                ? 0
+                : -1
           },
         },
       },
@@ -4303,23 +4307,23 @@ function _typeof(e) {
             ? this.addClass(e)
             : this.removeClass(e)
           : g(e)
-          ? this.each(function (n) {
-              b(this).toggleClass(e.call(this, n, yt(this), t), t)
-            })
-          : this.each(function () {
-              var t, i, o, a
-              if (r)
-                for (i = 0, o = b(this), a = mt(e); (t = a[i++]); )
-                  o.hasClass(t) ? o.removeClass(t) : o.addClass(t)
-              else
-                (void 0 !== e && 'boolean' !== n) ||
-                  ((t = yt(this)) && Y.set(this, '__className__', t),
-                  this.setAttribute &&
-                    this.setAttribute(
-                      'class',
-                      t || !1 === e ? '' : Y.get(this, '__className__') || '',
-                    ))
-            })
+            ? this.each(function (n) {
+                b(this).toggleClass(e.call(this, n, yt(this), t), t)
+              })
+            : this.each(function () {
+                var t, i, o, a
+                if (r)
+                  for (i = 0, o = b(this), a = mt(e); (t = a[i++]); )
+                    o.hasClass(t) ? o.removeClass(t) : o.addClass(t)
+                else
+                  (void 0 !== e && 'boolean' !== n) ||
+                    ((t = yt(this)) && Y.set(this, '__className__', t),
+                    this.setAttribute &&
+                      this.setAttribute(
+                        'class',
+                        t || !1 === e ? '' : Y.get(this, '__className__') || '',
+                      ))
+              })
       },
       hasClass: function (e) {
         var t,
@@ -4346,11 +4350,11 @@ function _typeof(e) {
               (null == (i = r ? e.call(this, n, b(this).val()) : e)
                 ? (i = '')
                 : 'number' == typeof i
-                ? (i += '')
-                : Array.isArray(i) &&
-                  (i = b.map(i, function (e) {
-                    return null == e ? '' : e + ''
-                  })),
+                  ? (i += '')
+                  : Array.isArray(i) &&
+                    (i = b.map(i, function (e) {
+                      return null == e ? '' : e + ''
+                    })),
               ((t =
                 b.valHooks[this.type] ||
                 b.valHooks[this.nodeName.toLowerCase()]) &&
@@ -4359,16 +4363,16 @@ function _typeof(e) {
                 (this.value = i))
           }))
         : i
-        ? (t = b.valHooks[i.type] || b.valHooks[i.nodeName.toLowerCase()]) &&
-          'get' in t &&
-          void 0 !== (n = t.get(i, 'value'))
-          ? n
-          : 'string' == typeof (n = i.value)
-          ? n.replace(xt, '')
-          : null == n
-          ? ''
-          : n
-        : void 0
+          ? (t = b.valHooks[i.type] || b.valHooks[i.nodeName.toLowerCase()]) &&
+            'get' in t &&
+            void 0 !== (n = t.get(i, 'value'))
+            ? n
+            : 'string' == typeof (n = i.value)
+              ? n.replace(xt, '')
+              : null == n
+                ? ''
+                : n
+          : void 0
     },
   }),
     b.extend({
@@ -4619,10 +4623,10 @@ function _typeof(e) {
             return null == n
               ? null
               : Array.isArray(n)
-              ? b.map(n, function (e) {
-                  return { name: t.name, value: e.replace(kt, '\r\n') }
-                })
-              : { name: t.name, value: n.replace(kt, '\r\n') }
+                ? b.map(n, function (e) {
+                    return { name: t.name, value: e.replace(kt, '\r\n') }
+                  })
+                : { name: t.name, value: n.replace(kt, '\r\n') }
           })
           .get()
       },
@@ -4966,8 +4970,8 @@ function _typeof(e) {
                 204 === t || 'HEAD' === h.type
                   ? (C = 'nocontent')
                   : 304 === t
-                  ? (C = 'notmodified')
-                  : ((C = w.state), (p = w.data), (l = !(d = w.error))))
+                    ? (C = 'notmodified')
+                    : ((C = w.state), (p = w.data), (l = !(d = w.error))))
               : ((d = C), (!t && C) || ((C = 'error'), t < 0 && (t = 0))),
             (E.status = t),
             (E.statusText = (n || C) + ''),
@@ -5111,18 +5115,18 @@ function _typeof(e) {
                   'abort' === e
                     ? s.abort()
                     : 'error' === e
-                    ? 'number' != typeof s.status
-                      ? o(0, 'error')
-                      : o(s.status, s.statusText)
-                    : o(
-                        Bt[s.status] || s.status,
-                        s.statusText,
-                        'text' !== (s.responseType || 'text') ||
-                          'string' != typeof s.responseText
-                          ? { binary: s.response }
-                          : { text: s.responseText },
-                        s.getAllResponseHeaders(),
-                      ))
+                      ? 'number' != typeof s.status
+                        ? o(0, 'error')
+                        : o(s.status, s.statusText)
+                      : o(
+                          Bt[s.status] || s.status,
+                          s.statusText,
+                          'text' !== (s.responseType || 'text') ||
+                            'string' != typeof s.responseText
+                            ? { binary: s.response }
+                            : { text: s.responseText },
+                          s.getAllResponseHeaders(),
+                        ))
               }
             }),
               (s.onload = n()),
@@ -5443,17 +5447,17 @@ function _typeof(e) {
                     ? t['inner' + e]
                     : t.document.documentElement['client' + e]
                   : 9 === t.nodeType
-                  ? ((o = t.documentElement),
-                    Math.max(
-                      t.body['scroll' + e],
-                      o['scroll' + e],
-                      t.body['offset' + e],
-                      o['offset' + e],
-                      o['client' + e],
-                    ))
-                  : void 0 === i
-                  ? b.css(t, n, s)
-                  : b.style(t, n, i, s)
+                    ? ((o = t.documentElement),
+                      Math.max(
+                        t.body['scroll' + e],
+                        o['scroll' + e],
+                        t.body['offset' + e],
+                        o['offset' + e],
+                        o['client' + e],
+                      ))
+                    : void 0 === i
+                      ? b.css(t, n, s)
+                      : b.style(t, n, i, s)
               },
               t,
               a ? i : void 0,
@@ -5557,8 +5561,8 @@ function _typeof(e) {
   'undefined' != typeof module
     ? (module.exports = t())
     : 'function' == typeof define && define.amd
-    ? define(t)
-    : (e.Popper = t())
+      ? define(t)
+      : (e.Popper = t())
 })(this, function () {
   'use strict'
   function e(e) {
@@ -5605,8 +5609,8 @@ function _typeof(e) {
         ? i(o)
         : o
       : e
-      ? e.ownerDocument.documentElement
-      : document.documentElement
+        ? e.ownerDocument.documentElement
+        : document.documentElement
   }
   function f(e) {
     return null === e.parentNode ? e : f(e.parentNode)
@@ -6033,8 +6037,8 @@ function _typeof(e) {
             return '' === e[e.length - 1] && -1 !== ['+', '-'].indexOf(t)
               ? ((e[e.length - 1] = t), (f = !0), e)
               : f
-              ? ((e[e.length - 1] += t), (f = !1), e)
-              : e.concat(t)
+                ? ((e[e.length - 1] += t), (f = !1), e)
+                : e.concat(t)
           }, [])
           .map(function (e) {
             return (function (e, t, n, o) {
@@ -6358,10 +6362,10 @@ function _typeof(e) {
               'left' === a
                 ? ((f.top += n[0]), (f.left -= n[1]))
                 : 'right' === a
-                ? ((f.top += n[0]), (f.left += n[1]))
-                : 'top' === a
-                ? ((f.left += n[0]), (f.top -= n[1]))
-                : 'bottom' === a && ((f.left += n[0]), (f.top += n[1])),
+                  ? ((f.top += n[0]), (f.left += n[1]))
+                  : 'top' === a
+                    ? ((f.left += n[0]), (f.top -= n[1]))
+                    : 'bottom' === a && ((f.left += n[0]), (f.top += n[1])),
               (e.popper = f),
               e
             )
@@ -6768,8 +6772,8 @@ function _typeof(t) {
   'undefined' != typeof module
     ? e(exports, require('jquery'), require('popper.js'))
     : 'function' == typeof define && define.amd
-    ? define(['exports', 'jquery', 'popper.js'], e)
-    : e(((t = t || self).bootstrap = {}), t.jQuery, t.Popper)
+      ? define(['exports', 'jquery', 'popper.js'], e)
+      : e(((t = t || self).bootstrap = {}), t.jQuery, t.Popper)
 })(this, function (t, e, n) {
   'use strict'
   function i(t, e) {
@@ -6909,8 +6913,8 @@ function _typeof(t) {
       return t instanceof ShadowRoot
         ? t
         : t.parentNode
-        ? c.findShadowRoot(t.parentNode)
-        : null
+          ? c.findShadowRoot(t.parentNode)
+          : null
     },
   }
   ;(e.fn.emulateTransitionEnd = l),
@@ -7901,10 +7905,10 @@ function _typeof(t) {
             t.hasClass(dt)
               ? ((n = Ct), e(this._menu).hasClass(mt) && (n = St))
               : t.hasClass(_t)
-              ? (n = At)
-              : t.hasClass(gt)
-              ? (n = wt)
-              : e(this._menu).hasClass(mt) && (n = Dt),
+                ? (n = At)
+                : t.hasClass(gt)
+                  ? (n = wt)
+                  : e(this._menu).hasClass(mt) && (n = Dt),
             n
           )
         }),
@@ -8785,8 +8789,8 @@ function _typeof(t) {
                 t.html(n))
               : t.text(n)
             : this.config.html
-            ? e(n).parent().is(t) || t.empty().append(n)
-            : t.text(e(n).text())
+              ? e(n).parent().is(t) || t.empty().append(n)
+              : t.text(e(n).text())
         }),
         (i.getTitle = function () {
           var t = this.element.getAttribute('data-original-title')
@@ -8822,8 +8826,8 @@ function _typeof(t) {
           return !1 === this.config.container
             ? document.body
             : c.isElement(this.config.container)
-            ? e(this.config.container)
-            : e(document).find(this.config.container)
+              ? e(this.config.container)
+              : e(document).find(this.config.container)
         }),
         (i._getAttachment = function (t) {
           return te[t.toUpperCase()]
@@ -9720,11 +9724,11 @@ function _typeof2(t) {
   'object' === ('undefined' == typeof module ? 'undefined' : _typeof2(module))
     ? (module.exports = e())
     : 'function' == typeof define && define.amd
-    ? define([], e)
-    : 'object' ===
-      ('undefined' == typeof exports ? 'undefined' : _typeof2(exports))
-    ? (exports.ClipboardJS = e())
-    : (t.ClipboardJS = e())
+      ? define([], e)
+      : 'object' ===
+          ('undefined' == typeof exports ? 'undefined' : _typeof2(exports))
+        ? (exports.ClipboardJS = e())
+        : (t.ClipboardJS = e())
 })(this, function () {
   return (function (t) {
     var e = {}
@@ -10316,11 +10320,11 @@ function _typeof2(t) {
         return 'function' == typeof t.addEventListener
           ? r.apply(null, arguments)
           : 'function' == typeof n
-          ? r.bind(null, document).apply(null, arguments)
-          : ('string' == typeof t && (t = document.querySelectorAll(t)),
-            Array.prototype.map.call(t, function (t) {
-              return r(t, e, n, o, i)
-            }))
+            ? r.bind(null, document).apply(null, arguments)
+            : ('string' == typeof t && (t = document.querySelectorAll(t)),
+              Array.prototype.map.call(t, function (t) {
+                return r(t, e, n, o, i)
+              }))
       }
     },
     function (t, e) {
