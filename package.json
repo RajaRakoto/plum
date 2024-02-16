@@ -25,10 +25,10 @@
 	},
 	"scripts": {
 		"build": "cd utils && node plum.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
-		"sassdoc": "grunt sassdoc",
-		"backups": "grunt compress-all",
-		"watch": "grunt watch-sass",
-    "prettier": "prettier --config .prettierrc --write ."
+    "prettier": "prettier --config .prettierrc --write .",
+		"backup": "grunt backup",
+		"test": "grunt test",
+		"documentation": "grunt documentation"
 	},
 	"devDependencies": {
 		"@types/bun": "latest",
