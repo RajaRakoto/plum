@@ -1,7 +1,7 @@
 {
 	"name": "@rajarakoto/plum",
 	"version": "1.8.3",
-	"description": "Customize your website faster with PLUM, a toolset powered by SASS (Syntactically Awesome Style Sheets) 🩷",
+	"description": "Customize your website faster with PLUM, a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size 🩷",
 	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
 	"license": "MIT",
 	"type": "module",
