@@ -124,6 +124,7 @@ module.exports = function (grunt) {
     'compress:test',
     'compress:tmp',
   ])
+  grunt.registerTask('sass-task', ['sass:test'])
   grunt.registerTask('test', ['watch:sass'])
   grunt.registerTask('documentation', ['shell:documentation'])
 
