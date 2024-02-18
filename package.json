@@ -26,7 +26,7 @@
 	"scripts": {
 		"gen": "bun docs.js > ../README.md",
     "prettier": "prettier --config .prettierrc --write .",
-		"backup": "grunt backup",
+		"backups": "grunt backups",
 		"test": "grunt test",
 		"documentation": "grunt documentation"
 	},
@@ -39,8 +39,5 @@
 		"grunt-shell": "^4.0.0",
 		"load-grunt-tasks": "^5.1.0",
 		"sassdoc": "^2.7.4"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
 	}
 }
