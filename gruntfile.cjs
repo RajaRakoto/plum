@@ -1,26 +1,22 @@
 /**
- * @author: Raja
- * @description: grunt file for sass-eo
- * @requires: grunt grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks | sassdoc
+ * @author: Raja Rakotonirina <raja.rakoto7@gmail.com>
+ * @description: gruntfile for plum
+ * @requires: grunt | grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks | sassdoc
  */
 module.exports = function (grunt) {
-  require('load-grunt-tasks')(grunt) // grunt plugins loader
+  require('load-grunt-tasks')(grunt)
 
-  // all files destination
+  // backups destination
   const backupsDestination = './backups/'
 
   // node-glob syntax
   const includeAllFiles = ['**/*', '.*/**/*', '**/.*', '**/.*/**/*']
 
-  /**
-   * ~ ALL GRUNT PLUGINS CONFIG ~
-   */
+  // all grunt plugins config
   grunt.initConfig({
     pkg: grunt.file.readJSON('./package.json'),
 
-    /**
-     * Compile sass to css
-     */
+    // compile sass to css
     sass: {
       test: {
         options: {
@@ -36,18 +32,14 @@ module.exports = function (grunt) {
       },
     },
 
-    /**
-     * Run shell commands
-     */
+    // run shell commands
     shell: {
       documentation: {
         command: ['sassdoc .', 'cd sassdoc', 'xdg-open index.html'].join('&&'),
       },
     },
 
-    /**
-     * Compress files and folders (incremental backup)
-     */
+    // compress files and folders (incremental backup)
     compress: {
       main: {
         options: {
@@ -55,15 +47,6 @@ module.exports = function (grunt) {
         },
         files: [{ src: ['./*', './.*'] }],
         filter: 'isFile',
-      },
-      apps: {
-        options: {
-          archive: backupsDestination + 'apps.tar.gz',
-        },
-        expand: true,
-        cwd: './apps/',
-        src: includeAllFiles,
-        dest: 'apps',
       },
       docs: {
         options: {
@@ -103,9 +86,7 @@ module.exports = function (grunt) {
       },
     },
 
-    /**
-     * Run predefined tasks whenever watched file patterns are added, changed or deleted
-     */
+    // run predefined tasks whenever watched file patterns are added, changed or deleted
     watch: {
       sass: {
         files: ['./test/*.scss'], // src listening
@@ -116,9 +97,8 @@ module.exports = function (grunt) {
   })
 
   // all grunt register tasks
-  grunt.registerTask('backup', [
+  grunt.registerTask('backups', [
     'compress:main',
-    'compress:apps',
     'compress:docs',
     'compress:modules',
     'compress:test',
@@ -129,9 +109,9 @@ module.exports = function (grunt) {
   grunt.registerTask('documentation', ['shell:documentation'])
 
   // all tasks lists
-  const sasseoTaskNames = ['backup', 'test', 'documentation']
+  const sasseoTaskNames = ['backups', 'test', 'documentation']
   const sasseoTaskStatus = [
-    'backup: main | apps | docs | modules | test | tmp',
+    'backups: main | docs | modules | test | tmp',
     'watching sass files changes in test folder',
     'generate & open palm documentation with sassdoc',
   ]
