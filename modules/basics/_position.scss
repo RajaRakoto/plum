@@ -111,14 +111,3 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-/// Quickly center child item
-/// @example
-///  .containing-element {
-///	  @include position-flex-center();
-///  }
-@mixin position-flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
