@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
-@mixin getAllGabarit($size) {
+@mixin getAllSize($size) {
   padding: __convertToRem($size) __convertToRem($size) __convertToRem($size)
     __convertToRem($size);
   margin: __convertToRem($size) __convertToRem($size) __convertToRem($size)
     __convertToRem($size);
 }
 
-@mixin getPaddingGabarit($size) {
+@mixin getPaddingSize($size) {
   padding: __convertToRem($size) __convertToRem($size) __convertToRem($size)
     __convertToRem($size);
 }
 
-@mixin getMarginGabarit($size) {
+@mixin getMarginSize($size) {
   margin: __convertToRem($size) __convertToRem($size) __convertToRem($size)
     __convertToRem($size);
 }
@@ -49,137 +49,137 @@
   margin-left: __convertToRem($left);
 }
 
-/// Quickly add a predefined padding based on the gabarit argument
-/// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
+/// Quickly add a predefined padding based on the size argument
+/// @param {string} $size [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing size of container
 /// @example
 ///
 /// /* example 1 */
 ///
 ///  .containing-element {
-///	  @include spacing-padding-gabarit(medium);
+///	  @include spacing-padding-size(medium);
 ///  }
 ///
 /// /* example 2 */
 ///
 ///  .containing-element {
-///	  @include spacing-padding-gabarit(small);
+///	  @include spacing-padding-size(small);
 ///  }
-@mixin spacing-padding-gabarit($gabarit: medium) {
-  @if ($gabarit == xx-small) {
-    @include getPaddingGabarit(4px);
+@mixin spacing-padding-size($size: medium) {
+  @if ($size == xx-small) {
+    @include getPaddingSize(4px);
   }
-  @if ($gabarit == x-small) {
-    @include getPaddingGabarit(6px);
+  @if ($size == x-small) {
+    @include getPaddingSize(6px);
   }
-  @if ($gabarit == smaller) {
-    @include getPaddingGabarit(12px);
+  @if ($size == smaller) {
+    @include getPaddingSize(12px);
   }
-  @if ($gabarit == small) {
-    @include getPaddingGabarit(16px);
+  @if ($size == small) {
+    @include getPaddingSize(16px);
   }
-  @if ($gabarit == medium) {
-    @include getPaddingGabarit(24px);
+  @if ($size == medium) {
+    @include getPaddingSize(24px);
   }
-  @if ($gabarit == large) {
-    @include getPaddingGabarit(32px);
+  @if ($size == large) {
+    @include getPaddingSize(32px);
   }
-  @if ($gabarit == larger) {
-    @include getPaddingGabarit(64px);
+  @if ($size == larger) {
+    @include getPaddingSize(64px);
   }
-  @if ($gabarit == x-large) {
-    @include getPaddingGabarit(72px);
+  @if ($size == x-large) {
+    @include getPaddingSize(72px);
   }
-  @if ($gabarit == xx-large) {
-    @include getPaddingGabarit(96px);
+  @if ($size == xx-large) {
+    @include getPaddingSize(96px);
   }
 }
 
-/// Quickly add a predefined margin based on the gabarit argument
-/// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
+/// Quickly add a predefined margin based on the size argument
+/// @param {string} $size [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing size of container
 /// @example
 ///
 /// /* example 1 */
 ///
 ///  .containing-element {
-///	  @include spacing-margin-gabarit(large);
+///	  @include spacing-margin-size(large);
 ///  }
 ///
 /// /* example 2 */
 ///
 ///  .containing-element {
-///	  @include spacing-margin-gabarit(xx-small);
+///	  @include spacing-margin-size(xx-small);
 ///  }
-@mixin spacing-margin-gabarit($gabarit: medium) {
-  @if ($gabarit == xx-small) {
-    @include getMarginGabarit(4px);
+@mixin spacing-margin-size($size: medium) {
+  @if ($size == xx-small) {
+    @include getMarginSize(4px);
   }
-  @if ($gabarit == x-small) {
-    @include getMarginGabarit(6px);
+  @if ($size == x-small) {
+    @include getMarginSize(6px);
   }
-  @if ($gabarit == smaller) {
-    @include getMarginGabarit(12px);
+  @if ($size == smaller) {
+    @include getMarginSize(12px);
   }
-  @if ($gabarit == small) {
-    @include getMarginGabarit(16px);
+  @if ($size == small) {
+    @include getMarginSize(16px);
   }
-  @if ($gabarit == medium) {
-    @include getMarginGabarit(24px);
+  @if ($size == medium) {
+    @include getMarginSize(24px);
   }
-  @if ($gabarit == large) {
-    @include getMarginGabarit(32px);
+  @if ($size == large) {
+    @include getMarginSize(32px);
   }
-  @if ($gabarit == larger) {
-    @include getMarginGabarit(64px);
+  @if ($size == larger) {
+    @include getMarginSize(64px);
   }
-  @if ($gabarit == x-large) {
-    @include getMarginGabarit(72px);
+  @if ($size == x-large) {
+    @include getMarginSize(72px);
   }
-  @if ($gabarit == xx-large) {
-    @include getMarginGabarit(96px);
+  @if ($size == xx-large) {
+    @include getMarginSize(96px);
   }
 }
 
-/// Quickly add a predefined padding|margin based on the gabarit argument
-/// @param {string} $gabarit [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing gabarit of container
+/// Quickly add a predefined padding|margin based on the size argument
+/// @param {string} $size [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing size of container
 /// @example
 ///
 /// /* example 1 */
 ///
 ///  .containing-element {
-///	  @include spacing-all-gabarit(x-large);
+///	  @include spacing-all-size(x-large);
 ///  }
 ///
 /// /* example 2 */
 ///
 ///  .containing-element {
-///	  @include spacing-all-gabarit(smaller);
+///	  @include spacing-all-size(smaller);
 ///  }
-@mixin spacing-all-gabarit($gabarit: medium) {
-  @if ($gabarit == xx-small) {
-    @include getAllGabarit(4px);
+@mixin spacing-all-size($size: medium) {
+  @if ($size == xx-small) {
+    @include getAllSize(4px);
   }
-  @if ($gabarit == x-small) {
-    @include getAllGabarit(6px);
+  @if ($size == x-small) {
+    @include getAllSize(6px);
   }
-  @if ($gabarit == smaller) {
-    @include getAllGabarit(12px);
+  @if ($size == smaller) {
+    @include getAllSize(12px);
   }
-  @if ($gabarit == small) {
-    @include getAllGabarit(16px);
+  @if ($size == small) {
+    @include getAllSize(16px);
   }
-  @if ($gabarit == medium) {
-    @include getAllGabarit(24px);
+  @if ($size == medium) {
+    @include getAllSize(24px);
   }
-  @if ($gabarit == large) {
-    @include getAllGabarit(32px);
+  @if ($size == large) {
+    @include getAllSize(32px);
   }
-  @if ($gabarit == larger) {
-    @include getAllGabarit(64px);
+  @if ($size == larger) {
+    @include getAllSize(64px);
   }
-  @if ($gabarit == x-large) {
-    @include getAllGabarit(72px);
+  @if ($size == x-large) {
+    @include getAllSize(72px);
   }
-  @if ($gabarit == xx-large) {
-    @include getAllGabarit(96px);
+  @if ($size == xx-large) {
+    @include getAllSize(96px);
   }
 }
