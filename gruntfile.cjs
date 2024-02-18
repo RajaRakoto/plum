@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     sass: {
       test: {
         options: {
-          style: 'compressed', // output style: compact, expanded, compressed
+          style: 'expanded', // output style: compact, expanded, compressed
         },
         files: [
           // scss file list
