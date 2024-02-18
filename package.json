@@ -24,7 +24,7 @@
 		"bun": ">= 1.0.0"
 	},
 	"scripts": {
-		"build": "cd utils && node plum.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
+		"gen": "bun docs.js > ../README.md",
     "prettier": "prettier --config .prettierrc --write .",
 		"backup": "grunt backup",
 		"test": "grunt test",
