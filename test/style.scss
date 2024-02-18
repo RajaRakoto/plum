@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@import '../basics.scss';
+@import './test';
+
+.box {
+  @include animation-bounce();
+}
+
+.test1 {
+  @extend %flex-test;
+  justify-content: space-between;
+}
+
+.test2 {
+  @extend %flex-test;
+  flex-direction: column;
+}
