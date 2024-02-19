@@ -8,7 +8,8 @@
 @import 'functions';
 @import 'variables';
 
-:root, :host {
+:root,
+:host {
   --#{$fa-css-prefix}-style-family-brands: 'Font Awesome 6 Brands';
   --#{$fa-css-prefix}-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
 }
@@ -18,7 +19,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: $fa-font-display;
-  src: url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
+  src:
+    url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
     url('#{$fa-font-path}/fa-brands-400.ttf') format('truetype');
 }
 
@@ -28,5 +30,7 @@
 }
 
 @each $name, $icon in $fa-brand-icons {
-  .#{$fa-css-prefix}-#{$name}:before { content: unquote("\"#{ $icon }\""); }
+  .#{$fa-css-prefix}-#{$name}:before {
+    content: unquote('"#{ $icon }"');
+  }
 }
