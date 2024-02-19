@@ -17,7 +17,8 @@
         0 8px 3px rgba(0, 0, 0, 0.2)
       );
     } @else {
-      box-shadow: 0 7px 0 darken($ubtn-bgcolor, 20%),
+      box-shadow:
+        0 7px 0 darken($ubtn-bgcolor, 20%),
         0 8px 3px rgba(0, 0, 0, 0.2);
     }
 
@@ -29,7 +30,8 @@
           0 8px 3px rgba(0, 0, 0, 0.2)
         );
       } @else {
-        box-shadow: 0 7px 0 darken($ubtn-bgcolor, 20%),
+        box-shadow:
+          0 7px 0 darken($ubtn-bgcolor, 20%),
           0 8px 3px rgba(0, 0, 0, 0.2);
       }
     }
@@ -49,7 +51,8 @@
       } @else {
         transition-property: all;
         transition-duration: 0.15s;
-        box-shadow: 0 2px 0 darken($ubtn-bgcolor, 20%),
+        box-shadow:
+          0 2px 0 darken($ubtn-bgcolor, 20%),
           0 3px 3px rgba(0, 0, 0, 0.2);
       }
     }
@@ -76,7 +79,8 @@
             0 8px 3px rgba(0, 0, 0, 0.3)
           );
         } @else {
-          box-shadow: 0 7px 0 darken($ubtn-background, 10%),
+          box-shadow:
+            0 7px 0 darken($ubtn-background, 10%),
             0 8px 3px rgba(0, 0, 0, 0.3);
         }
 
@@ -88,7 +92,8 @@
               0 8px 3px rgba(0, 0, 0, 0.3)
             );
           } @else {
-            box-shadow: 0 7px 0 darken($ubtn-background, 12%),
+            box-shadow:
+              0 7px 0 darken($ubtn-background, 12%),
               0 8px 3px rgba(0, 0, 0, 0.3);
           }
         }
@@ -102,7 +107,8 @@
               0 4px 3px rgba(0, 0, 0, 0.2)
             );
           } @else {
-            box-shadow: 0 2px 0 darken($ubtn-background, 20%),
+            box-shadow:
+              0 2px 0 darken($ubtn-background, 20%),
               0 3px 3px rgba(0, 0, 0, 0.2);
           }
         }
