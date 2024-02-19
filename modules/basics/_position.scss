@@ -4,7 +4,6 @@
 /// @param {string} $position [static, relative, fixed, absolute, sticky] - this option sets the position property of a selected element(s)
 /// @param {list (top, right, bottom, left)} $offsets [0] - accepts a list of values to set the offset of the edges of the box. Uses CSS shorthand method
 /// @example
-///
 ///  /* example 1 */
 ///
 ///  .containing-element {
