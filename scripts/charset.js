@@ -23,7 +23,10 @@ function traverseDirectory(dir) {
 // add utf8 at the beginning of an SCSS file
 function processSCSSFile(filePath) {
   const data = fs.readFileSync(filePath, 'utf8')
-  if (!data.startsWith('@charset "UTF-8";')) {
+  const hasDoubleQuotes = data.startsWith('@charset "UTF-8";')
+  const hasSingleQuotes = data.startsWith("@charset 'UTF-8';")
+
+  if (!hasDoubleQuotes && !hasSingleQuotes) {
     const newData = `@charset "UTF-8";\n\n${data}`
     fs.writeFileSync(filePath, newData)
     console.log(`${path.relative(process.cwd(), filePath)} encoded ... [done]`)
