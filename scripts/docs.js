@@ -1,13 +1,13 @@
-import { applications } from './docs/applications.js'
-import { banner } from './docs/banner.js'
-import { basics } from './docs/basics.js'
-import { desc } from './docs/desc.js'
-import { extension } from './docs/extension.js'
-import { frameworks } from './docs/frameworks.js'
-import { get_started } from './docs/get-started.js'
-import { libraries } from './docs/libraries.js'
-import { usage } from './docs/usage.js'
-import { contrib } from './docs/contrib.js'
+import { applications } from '../docs/applications.js'
+import { banner } from '../docs/banner.js'
+import { basics } from '../docs/basics.js'
+import { desc } from '../docs/desc.js'
+import { extension } from '../docs/extension.js'
+import { frameworks } from '../docs/frameworks.js'
+import { get_started } from '../docs/get-started.js'
+import { libraries } from '../docs/libraries.js'
+import { usage } from '../docs/usage.js'
+import { contrib } from '../docs/contrib.js'
 
 console.log(banner)
 console.log(desc)
