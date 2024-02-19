@@ -24,7 +24,8 @@
 		"bun": ">= 1.0.0"
 	},
 	"scripts": {
-		"gen": "bun docs.js > ../README.md",
+		"gen": "cd scripts && bun docs.js > ../README.md",
+		"charset": "cd scripts && bun charset.js",
     "prettier": "prettier --config .prettierrc --write .",
 		"backups": "grunt backups",
 		"test": "grunt test",
