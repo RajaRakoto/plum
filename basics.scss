@@ -1,48 +1,48 @@
 @charset "UTF-8";
 
-/* lists */
-@import './modules/lists/list-of-anchor-pseudo-classes';
-@import './modules/lists/list-of-buttons';
-@import './modules/lists/list-of-counter-styles';
-@import './modules/lists/list-of-directions';
-@import './modules/lists/list-of-length-units';
-@import './modules/lists/list-of-text-inputs';
+/* utilities > lists */
+@import './utilities/lists/list-of-anchor-pseudo-classes';
+@import './utilities/lists/list-of-buttons';
+@import './utilities/lists/list-of-counter-styles';
+@import './utilities/lists/list-of-directions';
+@import './utilities/lists/list-of-length-units';
+@import './utilities/lists/list-of-text-inputs';
 
-/* maps */
-@import './modules/maps/map-for-breakpoints';
-@import './modules/maps/map-for-directions';
-@import './modules/maps/map-for-font-formats';
-@import './modules/maps/map-for-positions';
-@import './modules/maps/map-for-smartphones';
-@import './modules/maps/map-for-tablets';
+/* utilities > maps */
+@import './utilities/maps/map-for-breakpoints';
+@import './utilities/maps/map-for-directions';
+@import './utilities/maps/map-for-font-formats';
+@import './utilities/maps/map-for-positions';
+@import './utilities/maps/map-for-smartphones';
+@import './utilities/maps/map-for-tablets';
 
 /* utilities */
-@import './modules/utilities/border-box';
-@import './modules/utilities/clear-unit';
-@import './modules/utilities/clear-whitespace';
-@import './modules/utilities/color';
-@import './modules/utilities/convert-to-em';
-@import './modules/utilities/convert-to-number';
-@import './modules/utilities/convert-to-rem';
-@import './modules/utilities/darken';
-@import './modules/utilities/font-sizer';
-@import './modules/utilities/font-source';
-@import './modules/utilities/is-color';
-@import './modules/utilities/is-number';
-@import './modules/utilities/is-time';
-@import './modules/utilities/lighten';
-@import './modules/utilities/map-deep-get';
-@import './modules/utilities/null';
-@import './modules/utilities/pixelify';
-@import './modules/utilities/pseudo-selector';
-@import './modules/utilities/remify';
-@import './modules/utilities/shorthand-property';
-@import './modules/utilities/stretched-link';
-@import './modules/utilities/validate-breakpoint';
-@import './modules/utilities/validate-length';
-@import './modules/utilities/validate-scissors';
+@import './utilities/border-box';
+@import './utilities/clear-unit';
+@import './utilities/clear-whitespace';
+@import './utilities/color';
+@import './utilities/convert-to-em';
+@import './utilities/convert-to-number';
+@import './utilities/convert-to-rem';
+@import './utilities/darken';
+@import './utilities/font-sizer';
+@import './utilities/font-source';
+@import './utilities/is-color';
+@import './utilities/is-number';
+@import './utilities/is-time';
+@import './utilities/lighten';
+@import './utilities/map-deep-get';
+@import './utilities/null';
+@import './utilities/pixelify';
+@import './utilities/pseudo-selector';
+@import './utilities/remify';
+@import './utilities/shorthand-property';
+@import './utilities/stretched-link';
+@import './utilities/validate-breakpoint';
+@import './utilities/validate-length';
+@import './utilities/validate-scissors';
 
-/* basics */
+/* modules > basics */
 @import './modules/basics/adaptive';
 @import './modules/basics/animation';
 @import './modules/basics/antialias';
