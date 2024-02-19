@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // Shared between modals and offcanvases
 @mixin overlay-backdrop($zindex, $backdrop-bg, $backdrop-opacity) {
   position: fixed;

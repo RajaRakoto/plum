@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /// This mixin performs fast import of external fonts and include consistent properties.
 /// @param {string} $font-name - the name of the font family to use throughout your code
 /// @param {path} $path - font path
