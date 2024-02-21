@@ -1,18 +1,24 @@
-@include keyframes(rotateOutUpRight) {
-  0% {
-    opacity: 1;
-    @include transform(rotate(0));
-    @include transform-origin(right bottom);
+@mixin animate-rotateOutUpRight(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-rotateOutUpRight) {
+    0% {
+      opacity: 1;
+      @include transform(rotate(0));
+      @include transform-origin(right bottom);
+    }
+    100% {
+      opacity: 0;
+      @include transform(rotate(90deg));
+      @include transform-origin(right bottom);
+    }
   }
-  100% {
-    opacity: 0;
-    @include transform(rotate(90deg));
-    @include transform-origin(right bottom);
-  }
-}
-
-@mixin rotateOutUpRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(rotateOutUpRight);
+  @include animation-name(animate-rotateOutUpRight);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

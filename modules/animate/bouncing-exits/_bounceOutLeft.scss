@@ -1,19 +1,25 @@
-@include keyframes(bounceOutLeft) {
+@mixin animate-bounceOutLeft(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-bounceOutLeft) {
     0% {
       @include transform(translateX(0));
     }
-   20% {
-     opacity: 1;
-     @include transform(translateX(20px));
+    20% {
+      opacity: 1;
+      @include transform(translateX(20px));
     }
-  100% {
-    opacity: 0;
-    @include transform(translateX(-2000px));
+    100% {
+      opacity: 0;
+      @include transform(translateX(-2000px));
+    }
   }
-}
-
-@mixin bounceOutLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(bounceOutLeft);
+  @include animation-name(animate-bounceOutLeft);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

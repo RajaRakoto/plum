@@ -1,16 +1,22 @@
-@include keyframes(fadeInLeftBig) {
-  0% {
-    opacity: 0;
-    @include transform(translateX(-2000px));
+@mixin animate-fadeInLeftBig(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-fadeInLeftBig) {
+    0% {
+      opacity: 0;
+      @include transform(translateX(-2000px));
+    }
+    100% {
+      opacity: 1;
+      @include transform(translateX(0));
+    }
   }
-  100% {
-    opacity: 1;
-    @include transform(translateX(0));
-  }
-}
-
-@mixin fadeInLeftBig($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(fadeInLeftBig);
+  @include animation-name(animate-fadeInLeftBig);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

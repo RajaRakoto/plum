@@ -1,15 +1,21 @@
-@include keyframes(slideOutRight) {
-	0% {
-  	@include transform(translateX(0));
+@mixin animate-slideOutRight(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-slideOutRight) {
+    0% {
+      @include transform(translateX(0));
+    }
+    100% {
+      opacity: 0;
+      @include transform(translateX(2000px));
+    }
   }
-	100% {
-  	opacity: 0;
-  	@include transform(translateX(2000px));
-  }
-}
-
-@mixin slideOutRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(slideOutRight);
+  @include animation-name(animate-slideOutRight);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

@@ -1,16 +1,22 @@
-@include keyframes(fadeOutDownBig) {
-  0% {
-    opacity: 1;
-    @include transform(translateY(0));
+@mixin animate-fadeOutDownBig(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-fadeOutDownBig) {
+    0% {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+    100% {
+      opacity: 0;
+      @include transform(translateY(2000px));
+    }
   }
-  100% {
-    opacity: 0;
-    @include transform(translateY(2000px));
-  }
-}
-
-@mixin fadeOutDownBig($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(fadeOutDownBig);
+  @include animation-name(animate-fadeOutDownBig);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

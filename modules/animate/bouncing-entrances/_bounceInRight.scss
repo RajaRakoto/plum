@@ -1,22 +1,28 @@
-@include keyframes(bounceInRight) {
-  0% {
-    opacity: 0;
-    @include transform(translateX(2000px));
+@mixin animate-bounceInRight(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-bounceInRight) {
+    0% {
+      opacity: 0;
+      @include transform(translateX(2000px));
+    }
+    60% {
+      opacity: 1;
+      @include transform(translateX(-30px));
+    }
+    80% {
+      @include transform(translateX(10px));
+    }
+    100% {
+      @include transform(translateX(0));
+    }
   }
-  60% {
-    opacity: 1;
-    @include transform(translateX(-30px));
-  }
-  80% {
-    @include transform(translateX(10px));
-  }
-  100% {
-    @include transform(translateX(0));
-  }
-}
-
-@mixin bounceInRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(bounceInRight);
+  @include animation-name(animate-bounceInRight);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

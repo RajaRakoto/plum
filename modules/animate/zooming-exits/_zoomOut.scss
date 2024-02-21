@@ -1,18 +1,24 @@
-@include keyframes(zoomOut) {
-  0% {
-    opacity: 1;
+@mixin animate-zoomOut(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-zoomOut) {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      @include transform(scale3d(0.3, 0.3, 0.3));
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  50% {
-    opacity: 0;
-    @include transform(scale3d(.3, .3, .3));
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@mixin zoomOut($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(zoomOut);
+  @include animation-name(animate-zoomOut);
   @include count($count);
   @include duration($duration);
   @include delay($delay);

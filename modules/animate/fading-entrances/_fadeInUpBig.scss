@@ -1,16 +1,22 @@
-@include keyframes(fadeInUpBig) {
-  0% {
-    opacity: 0;
-    @include transform(translateY(2000px));
+@mixin animate-fadeInUpBig(
+  $count: $countDefault,
+  $duration: $durationDefault,
+  $delay: $delayDefault,
+  $function: $functionDefault,
+  $fill: $fillDefault,
+  $visibility: $visibilityDefault
+) {
+  @include keyframes(animate-fadeInUpBig) {
+    0% {
+      opacity: 0;
+      @include transform(translateY(2000px));
+    }
+    100% {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
   }
-  100% {
-    opacity: 1;
-    @include transform(translateY(0));
-  }
-}
-
-@mixin fadeInUpBig($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(fadeInUpBig);
+  @include animation-name(animate-fadeInUpBig);
   @include count($count);
   @include duration($duration);
   @include delay($delay);
