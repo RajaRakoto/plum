@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 // source directory
-const directoryPath = '../modules/hover/effects/2d-transitions'
+const directoryPath = '../modules/hover/effects'
 
 function removeFirstLine(filePath) {
   const data = fs.readFileSync(filePath, 'utf8')
