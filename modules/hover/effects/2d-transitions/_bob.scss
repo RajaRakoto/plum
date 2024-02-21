@@ -1,4 +1,3 @@
-/* Bob */
 @include keyframes(#{$nameSpace}-bob) {
 	0% {
 		@include prefixed(transform, translateY(-8px));

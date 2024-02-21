@@ -8,18 +8,18 @@
  * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
  */
 
-@import "options";
-@import "mixins";
-@import "hacks";
+@import 'options';
+@import 'mixins';
+@import 'hacks';
 
-
-/* 2D TRANSITIONS */
-@import "effects/2d-transitions/grow";
+@import 'effects/2d-transitions/grow';
+// @mixin hvr-2d-transitions-grow() {
 @if $includeClasses {
-	.#{$nameSpace}-grow {
-		@include grow();
-	}
+  .#{$nameSpace}-grow {
+    @include grow();
+  }
 }
+// }
 
 // @import "effects/2d-transitions/shrink";
 // @if $includeClasses {
@@ -344,7 +344,6 @@
 // 	}
 // }
 
-
 // /* BORDER TRANSITIONS */
 // @import "effects/border-transitions/border-fade";
 // @if $includeClasses {
@@ -464,7 +463,6 @@
 // 		@include overline-reveal();
 // 	}
 // }
-
 
 // /* SHADOW/GLOW TRANSITIONS */
 // @import "effects/shadow-and-glow-transitions/glow";
