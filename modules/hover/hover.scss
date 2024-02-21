@@ -1,25 +1,18 @@
-/*!
- * Hover.css (http://ianlunn.github.io/Hover/)
- * Version: 2.3.2
- * Author: Ian Lunn @IanLunn
- * Author URL: http://ianlunn.co.uk/
- * Github: https://github.com/IanLunn/Hover
+@charset "UTF-8";
 
- * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
- */
-
+@import 'banner';
 @import 'options';
 @import 'mixins';
 @import 'hacks';
 
 @import 'effects/2d-transitions/grow';
-// @mixin hvr-2d-transitions-grow() {
-@if $includeClasses {
-  .#{$nameSpace}-grow {
-    @include grow();
+@mixin hvr-2d-transitions-grow() {
+  @if $includeClasses {
+    .#{$nameSpace}-grow {
+      @include grow();
+    }
   }
 }
-// }
 
 // @import "effects/2d-transitions/shrink";
 // @if $includeClasses {
