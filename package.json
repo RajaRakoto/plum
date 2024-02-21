@@ -24,9 +24,9 @@
 		"bun": ">= 1.0.0"
 	},
 	"scripts": {
-		"script:docs": "cd scripts && bun docs.js > ../README.md",
-		"script:charset": "cd scripts && bun charset.js",
-    "script:comment": "cd scripts && bun comment.js",
+		"script:global-docs": "cd scripts && bun global-docs.js > ../README.md",
+		"script:global-charset": "cd scripts && bun global-charset.js",
+    "script:hover-comment": "cd scripts && bun hover-comment.js",
     "prettier": "prettier --config .prettierrc --write .",
 		"backups": "grunt backups",
 		"test": "grunt test",
