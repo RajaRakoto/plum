@@ -265,7 +265,6 @@
   }
 }
 
-/* BACKGROUND TRANSITIONS */
 @import 'effects/background-transitions/fade';
 @mixin hvr-background-transitions-fade() {
   @if $includeClasses {
@@ -428,7 +427,6 @@
   }
 }
 
-/* BORDER TRANSITIONS */
 @import 'effects/border-transitions/border-fade';
 @mixin hvr-border-transitions-border-fade() {
   @if $includeClasses {
@@ -582,7 +580,6 @@
   }
 }
 
-/* SHADOW/GLOW TRANSITIONS */
 @import 'effects/shadow-and-glow-transitions/glow';
 @mixin hvr-shadow-and-glow-transitions-glow() {
   @if $includeClasses {
@@ -646,7 +643,6 @@
   }
 }
 
-/* SPEECH BUBBLES */
 @import 'effects/speech-bubbles/bubble-top';
 @mixin hvr-speech-bubbles-bubble-top() {
   @if $includeClasses {
@@ -719,7 +715,6 @@
   }
 }
 
-/* ICONS */
 @import 'effects/icons/icon-back';
 @mixin hvr-icons-icon-back() {
   @if $includeClasses {
@@ -963,7 +958,6 @@
   }
 }
 
-/* CURLS */
 @import 'effects/curls/curl-top-left';
 @mixin hvr-curl-top-left() {
   @if $includeClasses {
