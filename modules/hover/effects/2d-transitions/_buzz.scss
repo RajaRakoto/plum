@@ -1,4 +1,3 @@
-/* Buzz */
 @include keyframes(#{$nameSpace}-buzz) {
 	50% {
 		@include prefixed(transform, translateX(3px) rotate(2deg));

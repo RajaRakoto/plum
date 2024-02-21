@@ -1,4 +1,3 @@
-/* Pulse Shrink */
 @include keyframes(#{$nameSpace}-pulse-shrink) {
 	to {
 		@include prefixed(transform, scale(.9));

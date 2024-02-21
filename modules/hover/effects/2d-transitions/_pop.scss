@@ -1,4 +1,3 @@
-/* Pop */
 @include keyframes(#{$nameSpace}-pop) {
 	50% {
 		@include prefixed(transform, scale(1.2));

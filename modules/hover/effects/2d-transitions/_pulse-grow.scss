@@ -1,4 +1,3 @@
-/* Pulse Grow */
 @include keyframes(#{$nameSpace}-pulse-grow) {
 	to {
 		@include prefixed(transform, scale(1.1));

@@ -1,4 +1,3 @@
-/* Push */
 @include keyframes(#{$nameSpace}-push) {
 	50% {
 		@include prefixed(transform, scale(.8));

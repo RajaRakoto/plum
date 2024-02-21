@@ -1,4 +1,3 @@
-/* Sink */
 @mixin sink {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

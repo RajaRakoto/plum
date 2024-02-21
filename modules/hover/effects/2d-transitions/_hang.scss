@@ -1,4 +1,3 @@
-/* Hang */
 @include keyframes(#{$nameSpace}-hang) {
 	0% {
 		@include prefixed(transform, translateY(8px));

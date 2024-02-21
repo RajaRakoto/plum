@@ -1,4 +1,3 @@
-/* Skew Backward */
 @mixin skew-backward {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

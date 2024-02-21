@@ -1,4 +1,3 @@
-/* Wobble Bottom */
 @include keyframes(#{$nameSpace}-wobble-bottom) {
 	16.65% {
 		@include prefixed(transform, skew(-12deg));

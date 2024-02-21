@@ -1,4 +1,3 @@
-/* Skew */
 @mixin skew {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

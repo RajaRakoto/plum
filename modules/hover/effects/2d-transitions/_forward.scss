@@ -1,4 +1,3 @@
-/* Forward */
 @mixin forward {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

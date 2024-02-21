@@ -1,4 +1,3 @@
-/* Float */
 @mixin float {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

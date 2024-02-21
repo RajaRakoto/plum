@@ -1,4 +1,3 @@
-/* Rotate */
 @mixin rotate {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);
