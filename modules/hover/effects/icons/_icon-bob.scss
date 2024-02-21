@@ -1,4 +1,3 @@
-/* Icon Bob */
 @include keyframes(#{$nameSpace}-icon-bob) {
 	0% {
 		@include prefixed(transform, translateY(-6px));

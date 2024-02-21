@@ -1,4 +1,3 @@
-/* Grow Shadow */
 @mixin grow-shadow {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

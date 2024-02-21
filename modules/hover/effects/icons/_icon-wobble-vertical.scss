@@ -1,4 +1,3 @@
-/* Icon Wobble Vertical */
 @include keyframes(#{$nameSpace}-icon-wobble-vertical) {
 	16.65% {
 		@include prefixed(transform, translateY(6px));

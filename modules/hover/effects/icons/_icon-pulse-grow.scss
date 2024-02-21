@@ -1,4 +1,3 @@
-/* Icon Pulse Grow */
 @include keyframes(#{$nameSpace}-icon-pulse-grow) {
 	to {
 		@include prefixed(transform, scale(1.3));

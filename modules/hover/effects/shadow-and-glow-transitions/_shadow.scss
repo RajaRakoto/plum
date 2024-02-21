@@ -1,4 +1,3 @@
-/* Shadow */
 @mixin shadow {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

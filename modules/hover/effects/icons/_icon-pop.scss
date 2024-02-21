@@ -1,4 +1,3 @@
-/* Icon Pop */
 @include keyframes(#{$nameSpace}-icon-pop) {
 	50% {
 		@include prefixed(transform, scale(1.5));

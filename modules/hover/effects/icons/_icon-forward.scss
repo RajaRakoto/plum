@@ -1,4 +1,3 @@
-/* Icon Forward */
 @mixin icon-forward {
 	@include hacks();
 	@include prefixed(transition-duration, $fastDuration);

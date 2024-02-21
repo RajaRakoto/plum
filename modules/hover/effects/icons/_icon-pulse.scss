@@ -1,4 +1,3 @@
-/* Icon Pulse */
 @include keyframes(#{$nameSpace}-icon-pulse) {
 	25% {
 		@include prefixed(transform, scale(1.3));

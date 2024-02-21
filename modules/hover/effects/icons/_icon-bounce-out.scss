@@ -1,4 +1,3 @@
-/* Icon Bounce Out */
 @include keyframes(#{$nameSpace}-icon-bounce-out) {
 	50% {
 		@include prefixed(transform, scale(1.5));

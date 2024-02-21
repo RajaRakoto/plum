@@ -1,4 +1,3 @@
-/* Icon Pulse Shrink */
 @include keyframes(#{$nameSpace}-icon-pulse-shrink) {
 	to {
 		@include prefixed(transform, scale(.8));

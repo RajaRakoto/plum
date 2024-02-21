@@ -1,4 +1,3 @@
-/* Icon Sink */
 @mixin icon-sink {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

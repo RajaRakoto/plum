@@ -1,4 +1,3 @@
-/* Box Shadow Outset */
 @mixin box-shadow-outset {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

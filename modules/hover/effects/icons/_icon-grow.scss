@@ -1,4 +1,3 @@
-/* Icon Grow */
 @mixin icon-grow {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

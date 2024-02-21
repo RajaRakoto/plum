@@ -1,4 +1,3 @@
-/* Icon Back */
 @mixin icon-back {
 	@include hacks();
 	@include prefixed(transition-duration, $fastDuration);
