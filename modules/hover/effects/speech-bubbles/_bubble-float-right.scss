@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin bubble-float-right {
 	@include hacks();
 	position: relative;

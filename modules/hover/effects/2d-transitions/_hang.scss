@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-hang) {
 	0% {
 		@include prefixed(transform, translateY(8px));

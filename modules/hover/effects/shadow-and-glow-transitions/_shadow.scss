@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin shadow {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

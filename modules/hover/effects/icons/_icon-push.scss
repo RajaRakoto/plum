@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-icon-push) {
 	50% {
 		@include prefixed(transform, scale(.5));

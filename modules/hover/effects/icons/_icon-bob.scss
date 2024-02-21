@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-icon-bob) {
 	0% {
 		@include prefixed(transform, translateY(-6px));

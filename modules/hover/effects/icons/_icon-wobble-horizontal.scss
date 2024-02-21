@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-icon-wobble-horizontal) {
 	16.65% {
 		@include prefixed(transform, translateX(6px));

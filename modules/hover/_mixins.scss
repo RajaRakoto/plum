@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // prefix declarations
 @mixin prefixed($property, $value) {
   @if $webkit == true {

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin round-corners {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);

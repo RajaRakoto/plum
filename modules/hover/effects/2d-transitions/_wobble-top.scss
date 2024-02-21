@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-wobble-top) {
 	16.65% {
 		@include prefixed(transform, skew(-12deg));

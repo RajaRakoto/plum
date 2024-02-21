@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin bounce-to-right {
 	@include hacks();
 	position: relative;

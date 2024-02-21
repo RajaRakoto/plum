@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-pulse-shrink) {
 	to {
 		@include prefixed(transform, scale(.9));

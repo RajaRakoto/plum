@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin curl-top-left {
 	@include hacks();
 	position: relative;

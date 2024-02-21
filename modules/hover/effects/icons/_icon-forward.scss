@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin icon-forward {
 	@include hacks();
 	@include prefixed(transition-duration, $fastDuration);

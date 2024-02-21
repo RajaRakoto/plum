@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @include keyframes(#{$nameSpace}-back-pulse) {
 	50% {
 		background-color: rgba(32, 152, 209, .75);

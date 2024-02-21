@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin grow-rotate {
 	@include hacks();
 	@include prefixed(transition-duration, $mediumDuration);
