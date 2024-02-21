@@ -1,3 +1,7 @@
+/**
+ * This script adds the `@charset "UTF-8";` declaration at the beginning of all SCSS files in the project.
+ */
+
 const fs = require('fs')
 const path = require('path')
 

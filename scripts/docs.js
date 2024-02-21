@@ -1,3 +1,7 @@
+/**
+ * This script is used to generate the documentation for the project.
+ */
+
 import { applications } from '../docs/applications.js'
 import { banner } from '../docs/banner.js'
 import { basics } from '../docs/basics.js'
