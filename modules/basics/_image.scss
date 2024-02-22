@@ -197,3 +197,53 @@
   object-position: center;
   display: block;
 }
+
+/// Preload images by setting them to a background-image on the html:after element.
+/// Note: Call "@include image-preload;" after all images in your stylesheet to load images, any calls after this will be ignored.
+/// @param {string} $preload - path to image(s)
+/// @example
+/// .element1:hover {
+///   $image1: 'http://placeimg.com/500/350/tech/grayscale';
+///   background-image: url($image1);
+///   @include image-preload($image1);
+/// }
+/// .element2:hover {
+///   $image2: 'http://placeimg.com/500/350/tech';
+///   background-image: url($image2);
+///   @include image-preload($image2);
+/// }
+/// @include image-preload;
+@mixin image-preload($preload: run) {
+  @if not variable-exists(_preload-image-list) {
+    $_preload-image-list: () !global;
+  }
+  @if not variable-exists(_preload-image-urls) {
+    $_preload-image-urls: () !global;
+  }
+  @if not variable-exists(_preload-images-loaded) {
+    $_preload-images-loaded: false !global;
+  }
+  @if $preload == run and not $_preload-images-loaded {
+    $_preload-images-loaded: true !global;
+    html:after {
+      content: '';
+      display: none;
+      background-image: $_preload-image-urls;
+    }
+  } @else {
+    $_preload-image-list: join($preload, $_preload-image-list) !global;
+    $image-urls: ();
+    @if length($_preload-image-list) > 0 {
+      @for $i from 1 through length($_preload-image-list) {
+        $image-urls: join(url(nth($_preload-image-list, $i)), $image-urls);
+      }
+      $result: ();
+      @each $item in $image-urls {
+        @if not index($result, $item) {
+          $result: append($result, $item, comma);
+        }
+      }
+      $_preload-image-urls: $result !global;
+    }
+  }
+}
