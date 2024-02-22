@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+$position-default: null !default;
+
+/// Easily set an element's t = top, r = right, b = bottom, l = left values.
+/// @param {pixel} $top - the top value
+/// @param {pixel} $right - the right value
+/// @param {pixel} $bottom - the bottom value
+/// @param {pixel} $left - the left value
+/// @example
+/// .element {
+///   @include trbl(55px,null,null,15px);
+/// }
+@mixin trbl(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+@mixin top-left {
+  @include trbl(0, null, null, 0);
+}
+@mixin top-right {
+  @include trbl(0, 0);
+}
+@mixin bottom-left {
+  @include trbl(null, null, 0, 0);
+}
+@mixin bottom-right {
+  @include trbl(null, 0, 0, null);
+}
