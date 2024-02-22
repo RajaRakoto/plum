@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$position-default: null !default;
+
 // Utils
 @mixin position(
   $type,
