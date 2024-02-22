@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/// Outputs the overflow-wrap property and its legacy name word-wrap to support browsers that do not yet use "overflow-wrap".
+/// @param {string} $wrap [break-word] - accepted CSS values are "normal", "break-word", "inherit", "initial" or "unset".
+/// @example
+///   .wrapper {
+///     @include overflow-wrap;
+///   }
+@mixin overflow-wrap($wrap: break-word) {
+  word-wrap: $wrap;
+  overflow-wrap: $wrap;
+}
