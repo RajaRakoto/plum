@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+// Utils
+@mixin position(
+  $type,
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  position: $type;
+  $allowed_types: absolute relative fixed;
+  @if not index($allowed_types, $type) {
+    @warn "Unknown position: #{$type}.";
+  }
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+
 /// Position-set mixin provides a one-line method to rapidly set both the position and the offset properties of a selected element.
 /// @param {string} $position [static, relative, fixed, absolute, sticky] - this option sets the position property of a selected element(s)
 /// @param {list (top, right, bottom, left)} $offsets [0] - accepts a list of values to set the offset of the edges of the box. Uses CSS shorthand method
@@ -109,4 +127,58 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/// Mixin to define the position of an element as absolute.
+/// @param {pixel} $top - the value of the top property for the element.
+/// @param {pixel} $right - the value of the right property for the element.
+/// @param {pixel} $bottom - the value of the bottom property for the element.
+/// @param {pixel} $left - the value of the left property for the element.
+/// @example
+///  .element {
+///    @include position-absolute(10px,  20px,  30px,  40px);
+///  }
+@mixin position-absolute(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+
+/// Mixin to define the position of an element as relative.
+/// @param {pixel} $top - the value of the top property for the element.
+/// @param {pixel} $right - the value of the right property for the element.
+/// @param {pixel} $bottom - the value of the bottom property for the element.
+/// @param {pixel} $left - the value of the left property for the element.
+/// @example
+///  .element {
+///    @include position-relative(10px,  20px,  30px,  40px);
+///  }
+@mixin position-relative(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @include position(relative, $top, $right, $bottom, $left);
+}
+
+/// Mixin to define the position of an element as fixed.
+/// @param {pixel} $top - the value of the top property for the element.
+/// @param {pixel} $right - the value of the right property for the element.
+/// @param {pixel} $bottom - the value of the bottom property for the element.
+/// @param {pixel} $left - the value of the left property for the element.
+/// @example
+///  .element {
+///    @include position-fixed(10px,  20px,  30px,  40px);
+///  }
+@mixin position-fixed(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @include position(fixed, $top, $right, $bottom, $left);
 }
