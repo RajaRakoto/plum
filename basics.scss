@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* utilities > lists */
+// utilities > lists
 @import './utilities/lists/list-of-anchor-pseudo-classes';
 @import './utilities/lists/list-of-buttons';
 @import './utilities/lists/list-of-counter-styles';
@@ -8,7 +8,7 @@
 @import './utilities/lists/list-of-length-units';
 @import './utilities/lists/list-of-text-inputs';
 
-/* utilities > maps */
+// utilities > maps
 @import './utilities/maps/map-for-breakpoints';
 @import './utilities/maps/map-for-directions';
 @import './utilities/maps/map-for-font-formats';
@@ -16,7 +16,7 @@
 @import './utilities/maps/map-for-smartphones';
 @import './utilities/maps/map-for-tablets';
 
-/* utilities */
+// utilities
 @import './utilities/border-box';
 @import './utilities/clear-unit';
 @import './utilities/clear-whitespace';
@@ -42,7 +42,7 @@
 @import './utilities/validate-length';
 @import './utilities/validate-scissors';
 
-/* modules > basics */
+// modules > basics
 @import './modules/basics/adaptive';
 @import './modules/basics/animation';
 @import './modules/basics/antialias';
