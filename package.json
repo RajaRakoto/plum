@@ -1,46 +1,54 @@
 {
-	"name": "@rajarakoto/plum",
-	"version": "1.8.3",
-	"description": "Customize your website faster with PLUM, a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size 🩷",
-	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
-	"license": "MIT",
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/RajaRakoto/plum.git"
-	},
-	"homepage": "https://github.com/RajaRakoto/plum#readme",
-	"bugs": "https://github.com/RajaRakoto/plum/issues",
-	"keywords": [
-		"css",
-		"sass",
-		"collection",
-		"mixins",
-		"toolkit",
-		"scss",
-		"styles"
-	],
+  "name": "@rajarakoto/plum",
+  "version": "1.8.3",
+  "description": "Customize your website faster with PLUM, a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size 🩷",
+  "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajaRakoto/plum.git"
+  },
+  "homepage": "https://github.com/RajaRakoto/plum#readme",
+  "bugs": "https://github.com/RajaRakoto/plum/issues",
+  "keywords": [
+    "css",
+    "sass",
+    "collection",
+    "mixins",
+    "toolkit",
+    "scss",
+    "styles"
+  ],
   "engines": {
-		"bun": ">= 1.0.0"
-	},
-	"scripts": {
-		"script:global-docs": "cd scripts && bun global-docs.js > ../README.md",
-		"script:global-charset": "cd scripts && bun global-charset.js",
+    "bun": ">= 1.0.0"
+  },
+  "scripts": {
+    "script:global-docs": "cd scripts && bun global-docs.js > ../README.md",
+    "script:global-charset": "cd scripts && bun global-charset.js",
     "script:hover-comment": "cd scripts && bun hover-comment.js",
+    "test": "grunt test",
+    "documentation": "grunt documentation",
     "prettier": "prettier --config .prettierrc --write .",
-		"backups": "grunt backups",
-		"test": "grunt test",
-		"documentation": "grunt documentation"
-	},
-	"devDependencies": {
-		"@types/bun": "latest",
-		"grunt": "^1.6.1",
-		"grunt-contrib-compress": "^2.0.0",
-		"grunt-contrib-sass": "^2.0.0",
-		"grunt-contrib-watch": "^1.1.0",
-		"grunt-shell": "^4.0.0",
-		"load-grunt-tasks": "^5.1.0",
+    "backups": "grunt backups",
+    "pkg-check": "depcheck",
+    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+    "versioning": "ungit",
+    "version-major": "npm version major",
+    "version-minor": "npm version minor",
+    "version-patch": "npm version patch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "depcheck": "^1.4.7",
+    "grunt": "^1.6.1",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-shell": "^4.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "npm-check-updates": "^16.14.15",
     "prettier": "^3.2.5",
-		"sassdoc": "^2.7.4"
-	}
+    "sassdoc": "^2.7.4"
+  }
 }
