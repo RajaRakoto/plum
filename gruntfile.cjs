@@ -1,7 +1,7 @@
 /**
  * @author: Raja Rakotonirina <raja.rakoto7@gmail.com>
  * @description: gruntfile for plum
- * @requires: grunt | grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks | sassdoc
+ * @requires: grunt | grunt-contrib-sass | grunt-contrib-watch | grunt-contrib-compress | grunt-shell | load-grunt-tasks | sassdoc
  */
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt)
