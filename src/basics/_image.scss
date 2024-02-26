@@ -212,7 +212,7 @@
 ///   background-image: url($image2);
 ///   @include image-preload($image2);
 /// }
-/// @include image-preload;
+/// @include image-preload();
 @mixin image-preload($preload: run) {
   @if not variable-exists(_preload-image-list) {
     $_preload-image-list: () !global;
