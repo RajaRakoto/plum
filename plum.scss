@@ -42,34 +42,40 @@
 @import './utilities/validate-length';
 @import './utilities/validate-scissors';
 
-// modules > basics
-@import './modules/basics/adaptive';
-@import './modules/basics/animation';
-@import './modules/basics/antialias';
-@import './modules/basics/badge';
-@import './modules/basics/bar';
-@import './modules/basics/box';
-@import './modules/basics/breakpoint';
-@import './modules/basics/breakpointer';
-@import './modules/basics/button';
-@import './modules/basics/clearfix';
-@import './modules/basics/columnize';
-@import './modules/basics/effect';
-@import './modules/basics/except';
-@import './modules/basics/flex';
-@import './modules/basics/image';
-@import './modules/basics/input';
-@import './modules/basics/loadify';
-@import './modules/basics/minireset';
-@import './modules/basics/mobile';
-@import './modules/basics/normalize';
-@import './modules/basics/only';
-@import './modules/basics/overflow';
-@import './modules/basics/position';
-@import './modules/basics/resizable';
-@import './modules/basics/sizer';
-@import './modules/basics/spacing';
-@import './modules/basics/tablet';
-@import './modules/basics/trbl';
-@import './modules/basics/typo';
-@import './modules/basics/video';
+// src > basics
+@import './src/basics/animation';
+@import './src/basics/box';
+@import './src/basics/effect';
+@import './src/basics/image';
+@import './src/basics/input';
+@import './src/basics/position';
+@import './src/basics/spacing';
+
+// src > layout
+@import './src/layout/clearfix';
+@import './src/layout/columnize';
+@import './src/layout/flex';
+
+// src > media
+@import './src/media/breakpoint';
+@import './src/media/breakpointer';
+
+// src > specs
+@import './src/specs/adaptive';
+@import './src/specs/antialias';
+@import './src/specs/badge';
+@import './src/specs/bar';
+@import './src/specs/button';
+@import './src/specs/except';
+@import './src/specs/loadify';
+@import './src/specs/minireset';
+@import './src/specs/mobile';
+@import './src/specs/normalize';
+@import './src/specs/only';
+@import './src/specs/overflow';
+@import './src/specs/resizable';
+@import './src/specs/sizer';
+@import './src/specs/tablet';
+@import './src/specs/trbl';
+@import './src/specs/typo';
+@import './src/specs/video';
