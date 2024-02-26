@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-tinDownIn($duration) {
+@mixin magic-tinDownIn($duration, $delay) {
   -webkit-animation-name: tinDownIn;
   animation-name: tinDownIn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes tinDownIn {

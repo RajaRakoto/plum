@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-boingOutDown($duration) {
+@mixin magic-boingOutDown($duration, $delay) {
   -webkit-animation-name: boingOutDown;
   animation-name: boingOutDown;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes boingOutDown {

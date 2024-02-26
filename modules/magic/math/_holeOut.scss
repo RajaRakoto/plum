@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-holeOut($duration) {
+@mixin magic-holeOut($duration, $delay) {
   -webkit-animation-name: holeOut;
   animation-name: holeOut;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes holeOut {

@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-spaceInRight($duration) {
+@mixin magic-spaceInRight($duration, $delay) {
   -webkit-animation-name: spaceInRight;
   animation-name: spaceInRight;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes spaceInRight {

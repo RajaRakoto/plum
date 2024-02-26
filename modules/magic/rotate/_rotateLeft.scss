@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-rotateLeft($duration) {
+@mixin magic-rotateLeft($duration, $delay) {
   -webkit-animation-name: rotateLeft;
   animation-name: rotateLeft;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes rotateLeft {

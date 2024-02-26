@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-perspectiveLeft($duration) {
+@mixin magic-perspectiveLeft($duration, $delay) {
   -webkit-animation-name: perspectiveLeft;
   animation-name: perspectiveLeft;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes perspectiveLeft {

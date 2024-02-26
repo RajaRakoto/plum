@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-perspectiveUp($duration) {
+@mixin magic-perspectiveUp($duration, $delay) {
   -webkit-animation-name: perspectiveUp;
   animation-name: perspectiveUp;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes perspectiveUp {

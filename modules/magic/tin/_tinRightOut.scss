@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-tinRightOut($duration) {
+@mixin magic-tinRightOut($duration, $delay) {
   -webkit-animation-name: tinRightOut;
   animation-name: tinRightOut;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes tinRightOut {

@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-bombLeftOut($duration) {
+@mixin magic-bombLeftOut($duration, $delay) {
   -webkit-animation-name: bombLeftOut;
   animation-name: bombLeftOut;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes bombLeftOut {

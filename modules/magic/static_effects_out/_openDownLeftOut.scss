@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-openDownLeftOut($duration) {
+@mixin magic-openDownLeftOut($duration, $delay) {
   -webkit-animation-name: openDownLeftOut;
   animation-name: openDownLeftOut;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes openDownLeftOut {

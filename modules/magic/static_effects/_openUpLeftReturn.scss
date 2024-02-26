@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-openUpLeftReturn($duration) {
+@mixin magic-openUpLeftReturn($duration, $delay) {
   -webkit-animation-name: openUpLeftReturn;
   animation-name: openUpLeftReturn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes openUpLeftReturn {

@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-@mixin magic-puffIn($duration) {
+@mixin magic-puffIn($duration, $delay) {
   animation-name: puffIn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes puffIn {

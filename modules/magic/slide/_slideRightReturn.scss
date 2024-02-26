@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-slideRightReturn($duration) {
+@mixin magic-slideRightReturn($duration, $delay) {
   -webkit-animation-name: slideRightReturn;
   animation-name: slideRightReturn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes slideRightReturn {

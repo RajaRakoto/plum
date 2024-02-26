@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-slideDown($duration) {
+@mixin magic-slideDown($duration, $delay) {
   -webkit-animation-name: slideDown;
   animation-name: slideDown;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes slideDown {

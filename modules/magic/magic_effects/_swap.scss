@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-swap($duration) {
+@mixin magic-swap($duration, $delay) {
   -webkit-animation-name: swap;
   animation-name: swap;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes swap {
