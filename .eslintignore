@@ -89,14 +89,15 @@ typings
 .tern-port
 
 # own
-backups
-tmp
 .github
 .eslintignore
 .eslintrc
 .gitignore
 .prettierignore
 .prettierrc
+backups
+sassdoc
+tmp
 bun.lockb
 esbuild.js
 build.js
@@ -107,3 +108,4 @@ package.json
 README.md
 tsconfig.json
 tsconfig.release.json
+modules/bootstrap/tests/jasmine.js
