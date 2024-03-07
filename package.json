@@ -32,7 +32,7 @@
     "documentation": "grunt documentation",
     "prettier": "prettier --config .prettierrc --write .",
     "eslint": "eslint . --ext js,cjs,mjs --report-unused-disable-directives --max-warnings 0",
-    "backups": "grunt backup",
+    "backup": "grunt backup",
     "pkg-check": "depcheck",
     "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
     "versioning": "ungit",

@@ -123,7 +123,7 @@ module.exports = function (grunt) {
   })
 
   // all grunt register tasks
-  grunt.registerTask('backups', [
+  grunt.registerTask('backup', [
     'compress:main',
     'compress:docs',
     'compress:modules',
