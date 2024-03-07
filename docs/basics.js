@@ -1,16 +1,11 @@
 export const basics = `
 ---
 
-### \`📌 Basics\`
+### 📌 Basics
 
-Run the command below in the root directory to generate the \`basics modules documentation\` (your browser should automatically open the documentation)
+Plum's core features by bundling various mixins and helpful functions accessible through the [plum CLI](https://github.com/RajaRakoto/plum-cli), allowing users to easily access the official documentation offline.
 
-\`\`\`bash
-npm run sseo-docs-basics
+\`\`\`scss
+@import '@rajarakoto/plum/plum';
 \`\`\`
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
-</div>
-
 `
