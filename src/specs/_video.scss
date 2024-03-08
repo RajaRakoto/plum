@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@use "sass:math";
+@use 'sass:math';
 
 /// Video-responsive mixin helps you create responsive containing elements with a fixed aspect ratio that you define. This is especially useful when you embed videos from youtube or similar sources.
 /// @param {string} $ratio [16/9, 4/3] - the aspect ratio of the video
