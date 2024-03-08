@@ -1,6 +1,6 @@
 {
   "name": "@raja_rakoto/plum",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Customize your website faster with PLUM, a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size 🩷",
   "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
   "license": "MIT",
