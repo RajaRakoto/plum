@@ -4,7 +4,7 @@
 /// @param {string} $wrap [break-word] - accepted CSS values are "normal", "break-word", "inherit", "initial" or "unset".
 /// @example
 ///   .wrapper {
-///     @include overflow-wrap;
+///     @include overflow-wrap();
 ///   }
 @mixin overflow-wrap($wrap: break-word) {
   word-wrap: $wrap;
