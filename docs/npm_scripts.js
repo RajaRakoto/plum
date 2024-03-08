@@ -36,6 +36,7 @@ export const npm_scripts = `
 - 📜 \`npm-check:registry\` - Get the currently configured registry for npm.
 - 📜 \`npm-proxy-set:registry\` - Set the npm registry to use a local proxy.
 - 📜 \`npm-proxy:start\` - Start a Verdaccio server with a local npm proxy.
+- 📜 \`npm-login\` - Login to a registry user account.
 - 📜 \`npm-proxy:publish\` - Publish your npm package via the local proxy.
 - 📜 \`npm-proxy:unpublish\` - Forcefully unpublish the plum package from the npm registry via the local proxy.
 - 📜 \`npm-proxy:republish\` - Republish your npm package by first unpublishing it and then publishing it again via the local proxy.
