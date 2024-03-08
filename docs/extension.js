@@ -5,6 +5,8 @@ export const extension = `
 
 **Plum** simplifies its utilization through a dedicated [VSCode extension](https://github.com/RajaRakoto/plum-extension), encompassing a variety of code snippets. These snippets facilitate swift code generation for invoking mixins, functions, modules, frameworks, and more ...
 
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-extension-demo.gif?raw=true" width="800">
+
 **Usage**: You can install it by typing "plum" in the extension tab of your IDE
 
 **Prefix**: The extension of **Plum** includes a particular "prefix" to better organize and classify its snippets:
