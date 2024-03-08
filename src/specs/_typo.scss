@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/// This mixin performs fast import of external fonts and include consistent properties.
+/// @param {string} $font-name - the name of the font family to use throughout your code
+/// @param {path} $path - font path
+/// @param {string} $weight [normal, lighter, bold, bolder] - font weight
+/// @param {string} $style [normal, italic] - style to use
+/// @example
+///
+///  /* example 1 */
+///
+///  @include typo-fontface('Quicksand-regular', './src/assets/fonts/Quicksand-regular.ttf')
+///
+///  /* example 2 */
+///
+///  @include typo-fontface('Quicksand-bold', './src/assets/fonts/Quicksand-bold.ttf', bolder)
+@mixin typo-fontface($font-name, $path, $weight: normal, $style: normal) {
+  @if (
+    ($weight == normal) or
+      ($weight == lighter) or
+      ($weight == bold) or
+      ($weight == bolder) and
+      ($style == normal) or
+      ($style == italic)
+  ) {
+    @font-face {
+      font-family: $font-name;
+      font-weight: $weight;
+      font-style: $style;
+      src: url($path);
+    }
+  } @else {
+    @error "The argument of weight must be `solid` or `small` or `medium` or `large` or `none` | The argument of style must be `normal` or `italic`";
+  }
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@mixin flex-test() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%flex-test {
+  @include flex-test();
+}

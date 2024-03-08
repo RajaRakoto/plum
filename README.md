@@ -1,531 +1,319 @@
 
 <div align="center">
-
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sass-eo-ico.png?raw=true" width=128>
-
-# SASS-EO
-
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/dago.gif?raw=true" width=40>
-
-<br>
-
-![Sass](https://img.shields.io/badge/-Sass-777?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699) ![Javascript](https://img.shields.io/badge/-Javascript-777?style=flat&logo=javascript&logoColor=dbb332&labelColor=ffffff) ![JSON](https://img.shields.io/badge/-JSON-777?style=flat&logo=JSON&logoColor=777&labelColor=ffffff) ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff) ![NPM](https://img.shields.io/badge/-NPM-777?style=flat&logo=npm&labelColor=ffffff) ![Grunt](https://img.shields.io/badge/-Grunt-777?style=flat&logo=grunt&logoColor=orangered&labelColor=ffffff)
-
-[SASS-EO -> Github](https://github.com/RajaRakoto/sass-eo)
-
-<br>
-
-| Table of Contents                               |
-| :---------------------------------------------- |
-| [Description](#-description)                    |
-| [Get started](#-get-started)                    |
-| [Contribution](#-contribution)                  |
-| [Usage](#-usage)                                |
-| [Extension](#-extension)                        |
-| [Basics](#-basics)                              |
-| [Libraries](#-libraries)                        |
-| [Applications](#-applications)                  |
-| [Frameworks](#-frameworks)                      |
-
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-gray.png?raw=true" width=512>
 </div>
 
+# plum 🩷
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/build-by.svg?raw=true)](https://forthebadge.com)
+
+![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff)
+
+**Accelerate your website customization process with PLUM — an efficient mixins toolset driven by SASS. Easily generate uniform, adaptable CSS stylesheets, regardless of project magnitude. Seamlessly incorporate third-party modules like animate, buttons2, flex, grid, hover2, magic, buttons, open-color, shadows ... Enjoy effortless integration with popular CSS frameworks such as Bootstrap for enhanced versatility.**
+
+> Additional tools such as [Plum CLI](https://github.com/RajaRakoto/plum-cli) and [Plum Extension](https://github.com/RajaRakoto/plum-extension) for VSCode are utilized to enhance the use of **Plum** package.
 
 
 ---
 
-### `📌 Description`
+### 📌 Get started
 
-**sass-eo** is a library of SASS (Syntactically Awesome Style Sheets) mixins and functions, it's a fork of the gerillass project with some changes to make it easier to use, **sass-eo** offers flexibility, speed, performance and creativity in frontend development.
+You can use [Plum CLI](https://github.com/RajaRakoto/plum-cli) to install **Plum** package in your project:
 
-The difference between gerillass and **sass-eo**:
+```bash
+npm install -g @rajarakoto/plum-cli
+```
 
-> - Allows faster integration of popular frameworks like `Bootstrap` and its alternative `Semantic-ui`
-> - Also contains library collection like `Magic` for animations, `Loaders`, `Hamburgers` menu and many more ...
-> - Has an offline web application such as `GRID maker` and `FLEXBOX maker` to manipulate layouts, `BUTTONS maker` and `BOX SHADOW maker` and many others ...
-> - Use `Milligrid` for easier CSS layout manipulation (a better alternative to bootstrap grid)
-> - More flexible use thanks to `vscode extensions` 
+Execute the following command to start CLI:
 
+```bash
+plum-cli
+```
+
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-cli-demo.gif?raw=true" width="500">
 
 
 ---
 
-### `📌 Get started`
+### 📌 Basics
 
-##### `⚫ Initialization`
+Plum's main attributes are consolidated through a mix of diverse mixins and useful functions that users can conveniently access offline via the [plum CLI](https://github.com/RajaRakoto/plum-cli), facilitating easy access to the official documentation.
 
-Before using **sass-eo**, add the following npm script commands to your project's `package.json` file:
+**Here are some simple examples of different ways to use Plum (you can refer to all use cases in the plum-cli documentation):**
+```scss
+@import '@rajarakoto/plum/plum';
 
-```json
-"scripts": {
-  "sseo-install": "npm i @raja_rakoto/sass-eo --save-dev",
-  "sseo-deps": "npm i grunt grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks sassdoc -D",
-  "sseo-update": "npm update @raja_rakoto/sass-eo",
-  "sseo-init": "grunt --gruntfile ./node_modules/@raja_rakoto/sass-eo/config/gen.cjs generate-sseo-cli",
-  "sseo-start": "grunt --gruntfile sass-eo-cli.js",
-  "sseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
-  "sseo-docs-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
-  "sseo-docs-loaders": "grunt --gruntfile sass-eo-cli.js loaders-docs",
-  "sseo-docs-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
-  "sseo-docs-milligrid": "grunt --gruntfile sass-eo-cli.js milligrid-docs",
-  "sseo-config-hamburgers": "grunt --gruntfile sass-eo-cli.js hamburgers-config",
-  "sseo-app-grid": "grunt --gruntfile sass-eo-cli.js grid-maker",
-  "sseo-app-flexbox": "grunt --gruntfile sass-eo-cli.js flexbox-maker",
-  "sseo-app-boxshadow": "grunt --gruntfile sass-eo-cli.js boxshadow-maker"
-  "sseo-app-buttons": "grunt --gruntfile sass-eo-cli.js buttons-maker"
+@include minireset();
+@include normalize();
+@include typo-fontface(
+    'Quicksand-regular',
+    './src/assets/fonts/Quicksand-regular.ttf'
+  )
+  .box {
+  width: __convertToRem(100px);
+  height: __convertToEm(150px);
+  color: __color-pastel('blue');
+}
+
+.zoom-in {
+  @include animation-zoom($in-out: in);
+}
+
+.box-debug {
+  @include box-debugging(
+    $colors: red,
+    $size: 3px,
+    $bg-color: false,
+    $status: true
+  );
+}
+
+.opacity-50 {
+  @include effect-opacity($percent: 50%);
+}
+
+img {
+  @include image-responsive($height: auto);
+}
+
+.video-element {
+  @include video-responsive('4/3');
+}
+
+@include input-all(hover) {
+  background-color: orangered;
+}
+
+@include button-all {
+  background-color: teal;
+  color: white;
+}
+
+.containing-element {
+  @include position-set(sticky, null 30px null 30px);
+}
+
+.containing-element {
+  @include spacing-padding-size(small);
+}
+
+.parent-element {
+  @include clearfix;
+}
+
+.parent-element {
+  @include columnize(4);
+  .item {
+    background-color: silver;
+  }
+}
+
+.element {
+  @include flex-box();
+}
+
+.element {
+  @include flex-wrap(wrap-reverse);
+}
+
+.containing-element {
+  /* idem -> @media (width: 1200px) */
+  @include breakpoint(only, 1200px) {
+    background-color: teal;
+  }
+}
+
+.main-container {
+  @include adaptive();
+}
+
+@include antialias() .wrapper {
+  .item {
+    @include except(first) {
+      background-color: dodgerblue;
+      color: #eee;
+    }
+  }
+}
+
+.wrapper {
+  .item {
+    @include only(last) {
+      background-color: dodgerblue;
+      color: #eee;
+    }
+  }
+}
+
+.wrapper {
+  @include overflow-wrap();
+}
+
+img {
+  @include loadify(0.5s);
+}
+
+.containing-element {
+  @include mobile(iPhoneX) {
+    background-color: teal;
+  }
+}
+
+.containing-element {
+  @include tablet(iPadPro) {
+    background-color: teal;
+  }
+}
+
+.containing-element {
+  @include resizable();
+}
+
+.containing-element {
+  @include sizer(400px);
+}
+
+.element {
+  @include trbl(55px, null, null, 15px);
 }
 ```
 
-##### `⚫ Installation`
-
-Run the command below to install **sass-eo**:
-
-```bash
-npm run sseo-install
-```
-
-Run the following command to use **sass-eo** dependencies:
-
-```bash
-npm run sseo-deps
-```
-
-##### `⚫ Update`
-
-Run the following command to update **sass-eo**:
-
-```bash
-npm run sseo-update
-```
-
-
-
 
 ---
 
-### 📌 Contribution
+### 📌 Extension (VSCode)
 
-🏁 Before contributing, be sure to `install all dependencies` needed to work in this project by running the following command (in root directory):
-```bash
-npm install
-```
-🏁 With each new code snippet added, you need to update all `snippets` file and regenerate the documentation, all in one command (in root directory):
-```bash
-npm run build
-```
-🏁 You can run a `grunt task` to make a `local backup` of this project by running the following command (in root directory):
-```bash
-npm run backups
-```
-🏁 You can run a `grunt task` to watch all `.scss files` of this project by running the following command (in root directory):
-```bash
-npm run watch
-```
-🏁 Here is a tool that will help you to generate snippets -> https://snippet-generator.app/
+**Plum** simplifies its utilization through a dedicated [VSCode extension](https://github.com/RajaRakoto/plum-extension), encompassing a variety of code snippets. These snippets facilitate swift code generation for invoking mixins, functions, modules, frameworks, and more ...
 
-🏁 Then you can make a PR.
+**Usage**: You can install it by typing "plum" in the extension tab of your IDE
 
-
-
----
-
-### `📌 Usage`
-
-Here's how to use **sass-eo** in a project ...
-
-##### `⚫ sass-eo-cli`
-
-**sass-eo-cli** is a command line interface to manage third-party features (sass-watch, generate docs, apps, ...) of **sass-eo**, the latter is based on the `Grunt` task runner, to use it, please run the following command to generate `sass-eo-cli.js` in root directory of your project:
-
-```bash
-npm run sseo-init-cli
-```
-
-> **NOTE**: Grunt makes it easy to import modules from `node_modules`. Using this you can import the module from **sass-eo** when you need it using `@import <module_name>` in any .scss file
-
-- Type this command to see all lists of executable commands with **sass-eo-cli**:
-
-```bash
-npm run sseo-start-cli
-```
-
-- For example, you can run the command below to observe changes into `.scss files`:
-
-```bash
-npm run sseo-watch
-```
-
-##### `⚫ modules`
-
-- Here are the lists of `modules` available in **sass-eo**:
-
-=> To import a module, use the following syntax in `.scss file` -> **@import '<module_name>'** (e.g: `@import 'sass-eo-basics'`)
-
-    **basics modules**
-     sass-eo-basics
-
-    **libraries modules**
-     sass-eo-lib-hamburgers
-     sass-eo-lib-loader
-     sass-eo-lib-magic
-
-    **frameworks modules**
-     sass-eo-bootstrap
-     sass-eo-bootstrap-grid
-     sass-eo-bootstrap-utils
-     sass-eo-semantic
-     sass-eo-milligrid
-
-
-
----
-
-### `📌 Extension`
-
-**sass-eo** has a `vscode` extension to facilitate its use, this extension includes a set of snippets allowing to quickly generate a code to call a mixin or a function of basic modules, libraries or frameworks ...
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/extension-demo.gif?raw=true" width="500">
-</div>
-
-##### `⚫ Installation`
-
-You can install it by typing "sass-eo" in the extension tab of your IDE
-
-> **NOTE**: You have 2 extension versions, one in English and one in French (sass-eo-fr)
-
-##### `⚫ Prefix`
-
-The extension of **sass-eo** includes a particular "prefix" to better organize and classify its snippets
-
-Basic syntax for using the extension:
-
-```sass
-sseo-[category]-[name] (e.g: sseo-func-color-pastel)
-```
-
-**[category]**: represents keywords to quickly identify the snippets to use, here are the lists of keywords
-
-- `animation`
-- `bar` (scroll)
-- `box` (circle, debug, radius, sizing)
-- `button`
-- `docs` (only useful in development environment)
-- `effect` (box, gradient, opacity, text)
-- `tools` (all tools)
-- `image` (background, logo, resolution, responsive, retina)
-- `import` (sass-eo modules)
-- `input` (all, placeholder, style)
-- `layout` (clearfix, columnize)
-- `lib` (magic, loaders, ...)
-- `media` (media queries)
-- `nav` (navigation bars)
-- `palette` (list color palette as sass variable)
-- `position` (block, center, flex, set)
-- `spacing` (pattern, margin, padding)
-- `specs` (special or unclassified mixins)
-- `typo` (font)
-- `video` (reactive)
-
-**[name]**: represents the name of a mixin, a function, a library or a framework (ex: normalize, except, ...)
-
-> **NOTE**: you can retain `[category]` or `[name]` to use snippets, the base keyword `sseo` also allows you to list all available snippets for **sass-eo **
-
-
-
----
-
-### `📌 Basics`
-
-Run the command below in the root directory to generate the `basics modules documentation` (your browser should automatically open the documentation)
-
-```bash
-npm run sseo-docs-basics
-```
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/sassdoc-sc.gif?raw=true" width="700">
-</div>
-
-
-
----
-
-### `📌 Libraries`
-
-Here are the lists of built-in `libraries` in **sass-eo**
-
-##### `⚫ Hamburgers`
-
-`Hamburgers` is a collection of tasty hamburger icons animated by CSS. The source is also included as a modular and customizable Sass library, so make your own Hamburgers.
-
-You can also customize the style (padding, wigth, height, spacing, color, border, opacity, ...) of your `hamburgers` by typing this command:
-
-```bash
-npm run sseo-config-hamburgers
-```
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/humburger-demo.gif?raw=true" width="450">
-</div>
-
-<br>
-
-Here is the list of Hamburger-like `class` you can choose from:
-
-```
-  hamburger--3dx
-  hamburger--3dx-r
-  hamburger--3dy
-  hamburger--3dy-r
-  hamburger--3dxy
-  hamburger--3dxy-r
-  hamburger--arrow
-  hamburger--arrow-r
-  hamburger--arrowalt
-  hamburger--arrowalt-r
-  hamburger--arrowturn
-  hamburger--arrowturn-r
-  hamburger--boring
-  hamburger--collapse
-  hamburger--collapse-r
-  hamburger--elastic
-  hamburger--elastic-r
-  hamburger--emphatic
-  hamburger--emphatic-r
-  hamburger--minus
-  hamburger--slider
-  hamburger--slider-r
-  hamburger--spin
-  hamburger--spin-r
-  hamburger--spring
-  hamburger--spring-r
-  hamburger--stand
-  hamburger--stand-r
-  hamburger--squeeze
-  hamburger--vortex
-  hamburger--vortex-r
-```
-
-<br>
-
-> **NOTE**: `-r` are reverse variants (e.g: `hamburger--spin` clockwise while `hamburger--spin-r` counter-clockwise).
-
-<br>
-
-**Use:**
-
-- Import hamburgers module `@import 'sass-eo-lib-hamburgers'`
-
-- Add the corresponding class in your HTML page:
-
-```html
-<!-- Trigger the active state by adding the class name `is-active`, just remove it for the inactive state -->
-<button class="hamburger hamburger--collapse is-active" type="button">
-	<span class="hamburger-box">
-		<span class="hamburger-inner"></span>
-	</span>
-</button>
-```
-
-- Since the class name should be toggled with Javascript:
-
-```js
-var hamburger = document.querySelector('.hamburger');
-// On click
-hamburger.addEventListener('click', function () {
-	// Toggle class "is-active"
-	hamburger.classList.toggle('is-active');
-});
-```
-
-<br>
-
-##### `⚫ Loaders`
-
-`loaders` are collections of mixins used to add a loading effect to each element
-
-Type this command to get an example loader (in the root directory)
-
-```bash
-npm run sseo-docs-loaders
-```
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/loader.gif?raw=true" width="450">
-</div>
-<br>
-
-> **NOTE**: Some loader contains only one color, i-e only 1 argument for the mixin (e.g: @include loader-10(dodgerblue))
-
-<br>
-
-**Use:**
-
-Import loaders module `@import 'sass-eo-lib-loaders'`
+**Prefix**: The extension of **Plum** includes a particular "prefix" to better organize and classify its snippets:
 
 ```scss
-// SCSS
-#my-loader {
-	//use loader-1 with 2 colors as argument (primary, secondary)
-	@include loader-1(gold, orangered);
-}
+plum-[category]-[name...] // e.g: plum-modules-oc-grape
 ```
 
-```html
-<!-- HTML - Right after the opening tag <body> -->
-<div id="my-loader"></div>
-```
+`[category]`: These keywords serve as quick references for identifying the appropriate snippets to utilize. Here are the examples of categories (you can see the full list in the extension):
 
-```js
-// Javascript - this script allows to launch a loder with the id "my-loader" as loading of the web page
-const loader = document.getElementById('my-loader');
-window.addEventListener('load', () => {
-	loader.style.display = 'none';
-});
-```
+- import
+- modules
+- specs
+- animation
+- box
+- effect
+- input
+- image
+- position
+...
 
-<br>
+`[name]`: This designation denotes a mixin, function, module, or framework name. It acts as a quick identifier for the specific code snippet you wish to employ. For example, if you're opting for the "blue" color scheme, simply typing "plum-blue" will prompt the extension to suggest "plum-modules-oc-blue" for your selection.
 
-##### `⚫ Magic`
 
-`Magic` is a built-in CSS animation library in **sass-eo**, just call a magic mixin to animate an element
+---
 
-Type this command to get an example magic (in the root directory)
+### 📌 Modules & Applications & Scripts
 
-```bash
-npm run sseo-docs-magic
-```
+Here are the lists of third-party modules, applications, and scripts that you can use with **Plum**:
 
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/magic.gif?raw=true" width="450">
-</div>
-<br>
+> The **"module"** tag signifies libraries or frameworks that can be imported into your SASS file using the @import directive. Meanwhile, **"app"** tag refer to a collection of tools that enable you to access documentation or generate code. Lastly, the **"script"** tag indicates that it requires a JavaScript file to be functional. All are available on [plum CLI](https://github.com/RajaRakoto/plum-cli).
 
-**Use:**
-
-Import magic module `@import 'sass-eo-lib-magic'`
+**`Animate`** (module + app): A collection of CSS animations to make your website more attractive !
 
 ```scss
-// SCSS - call the magic mixin inside a selector
-.cards {
-	//The argument of each magic mixin corresponds to its "animation-delay" expressed in seconds
-	@include magic-boingInUp(1s);
-}
+@import '@rajarakoto/plum/modules/animate';
+@include animate-bounceInLeft($duration: second, $delay: second);
 ```
 
+**`Magic`** (module + app): Magic CSS are a set of simple animations to include in your web or app project's.
+
+```scss
+@import '@rajarakoto/plum/modules/magic';
+@include magic-openUpLeft($duration: second, $delay: second);
+```
+
+**`Buttons2`** (module + app + script): A highly customizable production ready mobile web and desktop css button library.
+
+```scss
+@import '@rajarakoto/plum/modules/buttons2';
+@include buttons2-borderless();
+```
+
+**`Hover2`** (module + app): A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on. Easily apply to your own elements, modify or just use for inspiration.
+
+```scss
+@import '@rajarakoto/plum/modules/hover2';
+@include hover2-2d-transitions-shrink();
+```
+
+**`Open color | oc-scheme`** (module + app): Open-source color scheme optimized for UI like font, background, border and more ...
+
+```scss
+@import '@rajarakoto/plum/modules/open-color';
+$oc-green-0~9;
+```
+
+**`Fontawesome`** (module): The web's most popular icon set and toolkit.
+
+```scss
+@import '@rajarakoto/plum/modules/fontawesome-free';
+```
+
+**`Bootstrap`** (module + script): **Plum** integrates the sass source code of Bootstrap 5 in order to partially use its functionalities. You have 4 choices:
+
+```scss
+@import '@rajarakoto/plum/modules/bootstrap';
+@import '@rajarakoto/plum/modules/bootstrap-grid';
+@import '@rajarakoto/plum/modules/bootstrap-reboot';
+@import '@rajarakoto/plum/modules/bootstrap-utilities';
+```
+
+**`Flex`** (app): Generate flexbox CSS code to make dynamic layouts !
+
+**`Grid`** (app): Generate basic CSS Grid code to make dynamic layouts !
+
+**`Buttons`** (app) : Generate stylish buttons in css !
+
+**`Shadows`** (app): Collection of shadow variants for your boxes !
 
 
 ---
 
-### `📌 Applications`
+### 📌 NPM Scripts
 
-Here are the lists of "applications" integrated in **sass-eo**
+**scripts (utils)**
+- 📜 `script:global-docs` - Generate README.md for documentation
+- 📜 `script:global-charset` - Adds the @charset "UTF-8" declaration at the beginning of all SCSS files in the project.
+- 📜 `script:hover-comment` - Used to remove the first line of a SCSS file if it starts with a comment.
 
-##### `⚫ GRID maker`
+**Testing**
+- 📜 `test` - Run the watched file for sass testing.
 
-Generate basic CSS Grid code to make dynamic layouts !
+**Documentation**
+- 📜 `documentation` - Generate offline docs with Sassdoc
 
-```bash
-npm run sseo-app-gridmaker
-```
+**Linting and Formatting**
+- 📜 `eslint` - Lint source files with ESLint.
+- 📜 `prettier` - Reformat source files with Prettier.
 
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/grid-maker.gif?raw=true" width="500">
-</div>
+**Backup and Dependency Management**
+- 📜 `backup` - Backup files with Grunt.
+- 📜 `pkg-check` - Check useless dependencies with depcheck.
+- 📜 `pkg-upgrade` - Upgrade outdated dependencies (interactive mode) with npm-check-updates.
 
-##### `⚫ FLEXBOX maker`
+**Versioning**
+- 📜 `versioning` - Start ungit server.
 
-Generate flexbox CSS code to make dynamic layouts !
-
-```bash
-npm run sseo-app-flexboxmaker
-```
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/flexbox-maker.gif?raw=true" width="500">
-</div>
-
-##### `⚫ BUTTONS maker`
-
-Generate stylish buttons in css !
-
-```bash
-npm run sseo-app-buttonmaker
-```
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/buttons-maker.gif?raw=true" width="500">
-</div>
-
-##### `⚫ BOX SHADOW maker`
-
-Collection of shadow variants for your boxes !
-
-```bash
-npm run sseo-app-shadowmaker
-```
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/boxshadow-maker.gif?raw=true" width="500">
-</div>
-
-
-
----
-
-### `📌 Frameworks`
-
-##### `⚫ Bootstrap`
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/bootstrap.png?raw=true" width="100">
-</div>
-
-**sass-eo** integrates the sass source code of BT5 in order to partially use its functionalities -> https://getbootstrap.com/docs/5.0/getting-started/introduction/
-
-> **You have 3 choices to use bootstrap with sass-eo**
-
-     sass-eo-bootstrap: to use bootstrap minifier version
-     sass-eo-bootstrap-grid: to use only the boostrap grid system
-     sass-eo-bootstrap-utils: to use only bootstrap utilities
-
-<br>
-
-##### `⚫ Semantic-ui`
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/semantic.png?raw=true" width="70">
-</div>
-
-I personally find this framework the best alternative to BT5, sematic-ui facilitates the creation of responsive layouts, one of the advantages of this framework is that it integrates semantic-ui-react , a collection of React components from Semantic-ui
-
-- semantic-ui -> https://semantic-ui.com/introduction/getting-started.html
-- semantic-ui-react -> https://react.semantic-ui.com/
-
-> sass-eo-semantic: to use the minifier version of semantic-ui
-
-<br>
-
-##### `⚫ Milligrid`
-
-<div align="center">
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/sass-eo/milligram.png?raw=true" width="72">
-</div>
-
-**offline docs**
-
-```bash
-npm run sseo-docs-milligrid
-```
-
-Milligrid is a configurable and easy to learn CSS flexbox grid system based on Milligram -> http://bencoveney.github.io/Milligrid/
-
-> sass-eo-milligrid: to use the minifier version of milligrid
-
-
-
-<div align="center">
-
-#### Enjoy it 😉
-</div>
+**npm Commands**
+- 📜 `npm-version:major` - Increments the major version number of your project using npm.
+- 📜 `npm-version:minor` - Increments the minor version number of your project using npm.
+- 📜 `npm-version:patch` - Increments the version patch number of your project using npm.
+- 📜 `npm-publish` - Publish your npm package with public access.
+- 📜 `npm-unpublish` - Forcefully unpublish the plum package from npm.
+- 📜 `npm-reset:registry` - Delete the custom npm registry.
+- 📜 `npm-check:registry` - Get the currently configured registry for npm.
+- 📜 `npm-proxy-set:registry` - Set the npm registry to use a local proxy.
+- 📜 `npm-proxy:start` - Start a Verdaccio server with a local npm proxy.
+- 📜 `npm-proxy:publish` - Publish your npm package via the local proxy.
+- 📜 `npm-proxy:unpublish` - Forcefully unpublish the plum package from the npm registry via the local proxy.
+- 📜 `npm-proxy:republish` - Republish your npm package by first unpublishing it and then publishing it again via the local proxy.
 

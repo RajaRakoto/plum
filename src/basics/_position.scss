@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+$position-default: null !default;
+
+// Utils
+@mixin position(
+  $type,
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  position: $type;
+  $allowed_types: absolute relative fixed;
+  @if not index($allowed_types, $type) {
+    @warn "Unknown position: #{$type}.";
+  }
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+
+/// Position-set mixin provides a one-line method to rapidly set both the position and the offset properties of a selected element.
+/// @param {string} $position [static, relative, fixed, absolute, sticky] - this option sets the position property of a selected element(s)
+/// @param {list (top, right, bottom, left)} $offsets [0] - accepts a list of values to set the offset of the edges of the box. Uses CSS shorthand method
+/// @example
+///  /* example 1 */
+///
+///  .containing-element {
+///  	@include position-set(absolute);
+///  }
+///
+///  /* example 2 */
+///
+///  .containing-element {
+///  	@include position-set(fixed);
+///  }
+///
+///  /* example 3 - with offsets values */
+///
+///  .containing-element {
+///  	@include position-set(relative, 20px 30px 20px 30px);
+///  }
+///
+///  /* example 4 - omit a value with "null" */
+///
+///  .containing-element {
+///  	@include position-set(sticky, null 30px null 30px);
+///  }
+@mixin position-set($position: absolute, $offsets: 0) {
+  $offsets: __shorthandProperty($offsets);
+  $positioning-offsets: (
+    top: nth($offsets, 1),
+    right: nth($offsets, 2),
+    bottom: nth($offsets, 3),
+    left: nth($offsets, 4),
+  );
+  position: $position;
+  @each $offset, $value in $positioning-offsets {
+    @if __validateLength($value) {
+      #{$offset}: $value;
+    }
+  }
+}
+
+/// Position-center mixin allows you to center elements (the elements that have position value either absolute or fixed) on both the horizontal and vertical axes - [WARNING]: You must declare either position: absolute or position: fixed style rule to the selected element to make this mixin work correctly. The parent element’s position value, which you’ll be centering within must be other than static.
+/// @param {string} $axis [vertical, horizontal, both] - sets the axis of the alingment (element position)
+/// @example
+///  /* example 1 - both */
+///
+///  .parent-element {
+///  	position: relative;
+///  	.element {
+///  		position: absolute;
+///  		/* (top: 50%, left: 50%) */
+///  		@include position-center(both);
+///  	}
+///  }
+///
+///  /* example 2 - horizontal */
+///
+///  .parent-element {
+///  	position: relative;
+///  	.element {
+///  		position: absolute;
+///  		/* (left: 50%) */
+///  		@include center(horizontal);
+///  	}
+///  }
+///
+///  /* example 3 - vertical */
+///
+///  .parent-element {
+///  	position: relative;
+///  	.element {
+///  		position: absolute;
+///  		/* (top: 50%) */
+///  		@include position-center(vertical);
+///  	}
+///  }
+@mixin position-center($axis: 'both') {
+  @if $axis == 'both' or $axis == 'vertical' {
+    top: 50%;
+  }
+  @if $axis == 'both' or $axis == 'horizontal' {
+    left: 50%;
+  }
+  transform: if(
+      $axis == 'horizontal',
+      translateX(-50%),
+      if($axis == 'both', translateX(-50%), null)
+    )
+    if(
+      $axis == 'vertical',
+      translateY(-50%),
+      if($axis == 'both', translateY(-50%), null)
+    );
+  @if not($axis == 'both' or $axis == 'vertical' or $axis == 'horizontal') {
+    @error "The argument must be `vertical` or `horizontal` or `both`";
+  }
+}
+
+/// Quickly center a block
+/// @example
+///  .containing-element {
+///	  @include position-block-center();
+///  }
+@mixin position-block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/// Mixin to define the position of an element as absolute.
+/// @param {pixel} $top - the value of the top property for the element.
+/// @param {pixel} $right - the value of the right property for the element.
+/// @param {pixel} $bottom - the value of the bottom property for the element.
+/// @param {pixel} $left - the value of the left property for the element.
+/// @example
+///  .element {
+///    @include position-absolute(10px,  20px,  30px,  40px);
+///  }
+@mixin position-absolute(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+
+/// Mixin to define the position of an element as relative.
+/// @param {pixel} $top - the value of the top property for the element.
+/// @param {pixel} $right - the value of the right property for the element.
+/// @param {pixel} $bottom - the value of the bottom property for the element.
+/// @param {pixel} $left - the value of the left property for the element.
+/// @example
+///  .element {
+///    @include position-relative(10px,  20px,  30px,  40px);
+///  }
+@mixin position-relative(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @include position(relative, $top, $right, $bottom, $left);
+}
+
+/// Mixin to define the position of an element as fixed.
+/// @param {pixel} $top - the value of the top property for the element.
+/// @param {pixel} $right - the value of the right property for the element.
+/// @param {pixel} $bottom - the value of the bottom property for the element.
+/// @param {pixel} $left - the value of the left property for the element.
+/// @example
+///  .element {
+///    @include position-fixed(10px,  20px,  30px,  40px);
+///  }
+@mixin position-fixed(
+  $top: $position-default,
+  $right: $position-default,
+  $bottom: $position-default,
+  $left: $position-default
+) {
+  @include position(fixed, $top, $right, $bottom, $left);
+}
