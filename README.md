@@ -30,7 +30,7 @@ Execute the following command to start CLI:
 plum-cli
 ```
 
-<img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-cli-demo.gif?raw=true" width="500">
+<img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-cli-demo.gif?raw=true" width="800">
 
 
 ---
@@ -49,7 +49,8 @@ Plum's main attributes are consolidated through a mix of diverse mixins and usef
     'Quicksand-regular',
     './src/assets/fonts/Quicksand-regular.ttf'
   )
-  .box {
+
+.box {
   width: __convertToRem(100px);
   height: __convertToEm(150px);
   color: __color-pastel('blue');
