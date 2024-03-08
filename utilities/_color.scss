@@ -22,11 +22,7 @@ $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
 /// A function that returns the pastel of the color in argument
-/// @param {string} $colors - The color to determine its pastel value
-/// @example
-///  .containing-element {
-///	  color: __color-pastel($carrot);
-///  }
+/// @param {string} $colors - color to determine its pastel value
 @function __color-pastel($colors) {
   $hue: hue($colors);
   $sat: 100%;
@@ -37,24 +33,17 @@ $asbestos: #7f8c8d;
 }
 
 /// A function that adjusts the brightness of an argument color
-/// @param {string} $colors - The color to adjust
+/// @param {string} $colors - color to adjust
 /// @param {percent} $percent - lighten percentage
-/// @example
-///  .containing-element {
-///	  color: __color-adjust($emerald, 30%);
-///  }
 @function __color-adjust($colors, $percent) {
   $adjust: lighten(adjust-hue($colors, 20), $percent);
 
   @return $adjust;
 }
 
-/// A function that returns the complementary of a color (uses to determine a graphic chart)
-/// @param {string} $colors - The color to determine its complementary
-/// @example
-///  .containing-element {
-///	  color: __color-complement($peter-river);
-///  }
+/// A function that returns the complement of the color in argument
+/// @param {string} $colors - color to determine its complement value
+/// @param {string} $colors-primary - primary color
 @function __color-complement($colors, $colors-primary: $colors) {
   @if (hue($colors) >= 135 and hue($colors) < 180) {
     $colors: complement($colors-primary);

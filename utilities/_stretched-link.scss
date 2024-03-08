@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+// note: this mixin is not meant to be used directly
 @mixin __stretched-link($value: 'before') {
   @if index('before' 'after', $value) {
     &#{'::' + $value} {

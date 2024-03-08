@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/// A function that checks if a value is a color
+/// @param {color} $value - value to check if it is a color
 @function __isColor($value) {
   $list: ();
   @for $i from 1 through length($value) {

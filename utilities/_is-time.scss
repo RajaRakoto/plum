@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/// A function that checks if a value is a time value
+/// @param {time} $value - value to check if it is a time value
 @function __isTime($value) {
   @for $i from 1 through length($value) {
     @if (

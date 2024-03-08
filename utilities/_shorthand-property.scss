@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/// A function that returns a shorthand property
+/// @param {list} $value - list of values
 @function __shorthandProperty($value) {
   @if length($value) == 1 {
     @return nth($value, 1) nth($value, 1) nth($value, 1) nth($value, 1);

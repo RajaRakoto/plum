@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/// A function that removes whitespace from a string
+/// @param {string} $string - string to remove whitespace from
 @function __clearWhitespace($string) {
   @while (str-index($string, ' ') != null) {
     $index: str-index($string, ' ');
