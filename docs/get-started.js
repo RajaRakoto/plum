@@ -21,7 +21,7 @@ If you use [sass](https://www.npmjs.com/package/sass) package for compiling your
 
 \`\`\`json
 "scripts": {
-  "watch:sass": "sass --watch style.scss:style.css --load-path=node_modules" // start it with npm run watch:sass
+  "watch:sass": "sass --watch style.scss:style.css --load-path=node_modules --style=compressed"
 },
 \`\`\`
 `
