@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-magic($duration) {
+@mixin magic-magic($duration, $delay) {
   -webkit-animation-name: magic;
   animation-name: magic;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes magic {

@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-spaceInUp($duration) {
+@mixin magic-spaceInUp($duration, $delay) {
   -webkit-animation-name: spaceInUp;
   animation-name: spaceInUp;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   .spaceInUp {

@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-foolishIn($duration) {
+@mixin magic-foolishIn($duration, $delay) {
   -webkit-animation-name: foolishIn;
   animation-name: foolishIn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes foolishIn {

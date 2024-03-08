@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-perspectiveDownReturn($duration) {
+@mixin magic-perspectiveDownReturn($duration, $delay) {
   -webkit-animation-name: perspectiveDownReturn;
   animation-name: perspectiveDownReturn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes perspectiveDownReturn {

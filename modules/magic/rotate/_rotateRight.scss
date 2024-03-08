@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-rotateRight($duration) {
+@mixin magic-rotateRight($duration, $delay) {
   -webkit-animation-name: rotateRight;
   animation-name: rotateRight;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes rotateRight {

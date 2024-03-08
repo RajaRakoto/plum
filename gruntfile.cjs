@@ -1,30 +1,25 @@
 /**
- * @author: Raja
- * @description: grunt file for sass-eo
- * @requires: grunt grunt-contrib-sass | grunt-contrib-watch | grunt-shell | load-grunt-tasks | sassdoc
+ * @description: gruntfile for plum
+ * @requires: grunt | grunt-contrib-sass | grunt-contrib-watch | grunt-contrib-compress | grunt-shell | load-grunt-tasks | sassdoc
  */
 module.exports = function (grunt) {
-  require('load-grunt-tasks')(grunt) // grunt plugins loader
+  require('load-grunt-tasks')(grunt)
 
-  // all files destination
+  // backups destination
   const backupsDestination = './backups/'
 
   // node-glob syntax
   const includeAllFiles = ['**/*', '.*/**/*', '**/.*', '**/.*/**/*']
 
-  /**
-   * ~ ALL GRUNT PLUGINS CONFIG ~
-   */
+  // all grunt plugins config
   grunt.initConfig({
     pkg: grunt.file.readJSON('./package.json'),
 
-    /**
-     * Compile sass to css
-     */
+    // compile sass to css
     sass: {
       test: {
         options: {
-          style: 'compressed', // output style: compact, expanded, compressed
+          style: 'expanded', // output style: compact, expanded, compressed
         },
         files: [
           // scss file list
@@ -36,18 +31,14 @@ module.exports = function (grunt) {
       },
     },
 
-    /**
-     * Run shell commands
-     */
+    // run shell commands
     shell: {
       documentation: {
         command: ['sassdoc .', 'cd sassdoc', 'xdg-open index.html'].join('&&'),
       },
     },
 
-    /**
-     * Compress files and folders (incremental backup)
-     */
+    // compress files and folders (incremental backup)
     compress: {
       main: {
         options: {
@@ -55,15 +46,6 @@ module.exports = function (grunt) {
         },
         files: [{ src: ['./*', './.*'] }],
         filter: 'isFile',
-      },
-      apps: {
-        options: {
-          archive: backupsDestination + 'apps.tar.gz',
-        },
-        expand: true,
-        cwd: './apps/',
-        src: includeAllFiles,
-        dest: 'apps',
       },
       docs: {
         options: {
@@ -83,6 +65,24 @@ module.exports = function (grunt) {
         src: includeAllFiles,
         dest: 'modules',
       },
+      scripts: {
+        options: {
+          archive: backupsDestination + 'scripts.tar.gz',
+        },
+        expand: true,
+        cwd: './scripts/',
+        src: includeAllFiles,
+        dest: 'scripts',
+      },
+      src: {
+        options: {
+          archive: backupsDestination + 'src.tar.gz',
+        },
+        expand: true,
+        cwd: './src/',
+        src: includeAllFiles,
+        dest: 'src',
+      },
       test: {
         options: {
           archive: backupsDestination + 'test.tar.gz',
@@ -101,11 +101,18 @@ module.exports = function (grunt) {
         src: includeAllFiles,
         dest: 'tmp',
       },
+      utilities: {
+        options: {
+          archive: backupsDestination + 'utilities.tar.gz',
+        },
+        expand: true,
+        cwd: './utilities/',
+        src: includeAllFiles,
+        dest: 'utilities',
+      },
     },
 
-    /**
-     * Run predefined tasks whenever watched file patterns are added, changed or deleted
-     */
+    // run predefined tasks whenever watched file patterns are added, changed or deleted
     watch: {
       sass: {
         files: ['./test/*.scss'], // src listening
@@ -118,22 +125,24 @@ module.exports = function (grunt) {
   // all grunt register tasks
   grunt.registerTask('backup', [
     'compress:main',
-    'compress:apps',
     'compress:docs',
     'compress:modules',
+    'compress:scripts',
+    'compress:src',
     'compress:test',
     'compress:tmp',
+    'compress:utilities',
   ])
   grunt.registerTask('sass-task', ['sass:test'])
   grunt.registerTask('test', ['watch:sass'])
   grunt.registerTask('documentation', ['shell:documentation'])
 
   // all tasks lists
-  const sasseoTaskNames = ['backup', 'test', 'documentation']
-  const sasseoTaskStatus = [
-    'backup: main | apps | docs | modules | test | tmp',
+  const plumTaskNames = ['backup', 'test', 'documentation']
+  const plumTaskStatus = [
+    'compress: main | docs | modules | scripts | src | test | tmp | utilities',
     'watching sass files changes in test folder',
-    'generate & open palm documentation with sassdoc',
+    'generate & open plum documentation with sassdoc',
   ]
 
   // default tasks
@@ -184,9 +193,9 @@ module.exports = function (grunt) {
 
     // task resume
     getTaskResume(
-      '== PALM TASKS ==',
-      sasseoTaskNames,
-      sasseoTaskStatus,
+      '== PLUM TASKS ==',
+      plumTaskNames,
+      plumTaskStatus,
       'magenta',
     )
   })

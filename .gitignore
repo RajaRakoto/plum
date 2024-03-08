@@ -90,7 +90,5 @@ typings
 
 # own
 backups
-tmp
 sassdoc
-test
-backups
+tmp

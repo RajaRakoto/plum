@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-twisterInDown($duration) {
+@mixin magic-twisterInDown($duration, $delay) {
   -webkit-animation-name: twisterInDown;
   animation-name: twisterInDown;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes twisterInDown {

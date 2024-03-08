@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-spaceOutUp($duration) {
+@mixin magic-spaceOutUp($duration, $delay) {
   -webkit-animation-name: spaceOutUp;
   animation-name: spaceOutUp;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes spaceOutUp {

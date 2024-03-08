@@ -1,46 +1,64 @@
 {
-	"name": "@rajarakoto/plum",
-	"version": "1.8.3",
-	"description": "Customize your website faster with PLUM, a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size 🩷",
-	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
-	"license": "MIT",
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/RajaRakoto/plum.git"
-	},
-	"homepage": "https://github.com/RajaRakoto/plum#readme",
-	"bugs": "https://github.com/RajaRakoto/plum/issues",
-	"keywords": [
-		"css",
-		"sass",
-		"collection",
-		"mixins",
-		"toolkit",
-		"scss",
-		"styles"
-	],
-  "engines": {
-		"bun": ">= 1.0.0"
-	},
-	"scripts": {
-		"build": "cd utils && node plum.js > ../README.md && cd .. && cp -r README.md extension && cd extension/utils && node build.js && cd ../..",
+  "name": "@rajarakoto/plum",
+  "version": "1.8.3",
+  "description": "Customize your website faster with PLUM, a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size 🩷",
+  "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajaRakoto/plum.git"
+  },
+  "homepage": "https://github.com/RajaRakoto/plum#readme",
+  "bugs": "https://github.com/RajaRakoto/plum/issues",
+  "keywords": [
+    "plum",
+    "css",
+    "sass",
+    "collection",
+    "mixins",
+    "toolkit",
+    "scss",
+    "styles"
+  ],
+  "scripts": {
+    "script:global-docs": "cd scripts && bun global-docs.js > ../README.md",
+    "script:global-charset": "cd scripts && bun global-charset.js",
+    "script:hover-comment": "cd scripts && bun hover-comment.js",
+    "test": "grunt test",
+    "documentation": "grunt documentation",
+    "eslint": "eslint . --ext js,cjs,mjs --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --config .prettierrc --write .",
-		"backup": "grunt backup",
-		"test": "grunt test",
-		"documentation": "grunt documentation"
-	},
-	"devDependencies": {
-		"@types/bun": "latest",
-		"grunt": "^1.6.1",
-		"grunt-contrib-compress": "^2.0.0",
-		"grunt-contrib-sass": "^2.0.0",
-		"grunt-contrib-watch": "^1.1.0",
-		"grunt-shell": "^4.0.0",
-		"load-grunt-tasks": "^5.1.0",
-		"sassdoc": "^2.7.4"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+    "backup": "grunt backup",
+    "pkg-check": "depcheck",
+    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+    "versioning": "ungit",
+    "npm-version:major": "npm version major",
+    "npm-version:minor": "npm version minor",
+    "npm-version:patch": "npm version patch",
+    "npm-publish": "npm publish --access public",
+    "npm-unpublish": "npm unpublish --force @rajarakoto/plum",
+    "npm-reset:registry": "npm config delete registry",
+    "npm-check:registry": "npm config get registry",
+    "npm-proxy-set:registry": "npm set registry http://localhost:4873/",
+    "npm-proxy:start": "bun run npm-proxy-set:registry && verdaccio",
+    "npm-proxy:publish": "npm publish --registry http://localhost:4873/",
+    "npm-proxy:unpublish": "npm unpublish --force --registry http://localhost:4873/ @rajarakoto/plum",
+    "npm-proxy:republish": "bun run npm-proxy:unpublish && bun run npm-proxy:publish"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "depcheck": "^1.4.7",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "grunt": "^1.6.1",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-shell": "^4.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "npm-check-updates": "^16.14.15",
+    "prettier": "^3.2.5",
+    "sassdoc": "^2.7.4"
+  }
 }

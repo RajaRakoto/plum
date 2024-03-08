@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+/// The flex-box value causes an element to generate a block-level flex container box
+/// @example
+/// .element {
+///   @include flex-box();
+/// }
+@mixin flex-box() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%flex-box {
+  @include flex-box();
+}
+
+/// The flex-inline value causes an element to generate a inline-level flex container box.
+/// @example
+/// .element {
+///   @include flex-inline();
+/// }
+@mixin flex-inline() {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+%inline-flex {
+  @include flex-inline();
+}
+
+/// The flex-direction mixin specifies how flex items are placed in the flex container, by setting the direction of the flex container's main axis. This determines the direction that flex items are laid out in.
+/// @param {string} $direction [row, row-reverse, column, column-reverse] - direction of the flex container
+/// @example
+/// .element {
+///   @include flex-direction(column);
+/// }
+@mixin flex-direction($direction: row) {
+  @if $direction == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+  } @else if $direction == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+  } @else if $direction == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+/// The flex-wrap mixin controls whether the flex container is single-line or multi-line, and the direction of the cross-axis, which determines the direction new lines are stacked in.
+/// @param {string} $value [nowrap, wrap, wrap-reverse] - wrap value
+/// @example
+/// .element {
+///   @include flex-wrap(wrap-reverse);
+/// }
+@mixin flex-wrap($value: nowrap) {
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+}
+
+/// The flex-flow mixin is a shorthand for setting the flex-direction and flex-wrap properties, which together define the flex container's main and cross axes.
+/// @param {string} $values row, row-reverse, column, column-reverse | nowrap, wrap, wrap-reverse] - flex-flow value, separated by a space
+/// @example
+/// .element {
+///   @include flex-flow(row nowrap); // '|' is replaced by a space
+/// }
+@mixin flex-flow(
+  $values: (
+    row nowrap,
+  )
+) {
+  -webkit-flex-flow: $values;
+  -moz-flex-flow: $values;
+  -ms-flex-flow: $values;
+  flex-flow: $values;
+}
+
+/// The flex-order mixin controls the order in which flex items appear within their flex container, by assigning them to ordinal groups.
+/// @param {integer} $int [0] - order value
+/// @example
+/// .element {
+///   @include flex-order(1);
+/// }
+@mixin flex-order($int: 0) {
+  -webkit-box-ordinal-group: $int + 1;
+  -webkit-order: $int;
+  -moz-order: $int;
+  -ms-flex-order: $int;
+  order: $int;
+}
+
+/// The flex-grow mixin sets the flex grow factor. Negative numbers are invalid.
+/// @param {integer} $int [0] - grow value
+/// @example
+/// .element {
+///   @include flex-grow(1);
+/// }
+@mixin flex-grow($int: 0) {
+  -webkit-box-flex: $int;
+  -webkit-flex-grow: $int;
+  -moz-flex-grow: $int;
+  -ms-flex-positive: $int;
+  flex-grow: $int;
+}
+
+/// The flex-shrink mixin sets the flex shrink factor. Negative numbers are invalid.
+/// @param {integer} $int [1] - shrink value
+/// @example
+/// .element {
+///   @include flex-shrink(1);
+/// }
+@mixin flex-shrink($int: 1) {
+  -webkit-flex-shrink: $int;
+  -moz-flex-shrink: $int;
+  -ms-flex-negative: $int;
+  flex-shrink: $int;
+}
+
+/// The flex-basis mixin sets the flex basis. Negative lengths are invalid.
+/// @param {pixel} $width [auto] - basis value
+/// @example
+/// .element {
+///   @include flex-basis(100px);
+/// }
+@mixin flex-basis($width: auto) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -ms-flex-preferred-size: $width;
+  flex-basis: $width;
+}
+
+/// The flex-all mixin specifies the components of a flexible length: the flex grow factor and flex shrink factor, and the flex basis. When an element is a flex item, flex is consulted instead of the main size property to determine the main size of the element. If an element is not a flex item, 'flex' has no effect.
+/// @param {integer} $fg [1] - flex-grow value
+/// @param {integer} $fs [null] - flex-shrink value
+/// @param {pixel} $fb [null] - flex-basis value
+/// @example
+/// .element {
+///   @include flex-all(1, 1, 100px);
+/// }
+@mixin flex-all($fg: 1, $fs: null, $fb: null) {
+  $fg-boxflex: $fg;
+  @if type-of($fg) == 'list' {
+    $fg-boxflex: nth($fg, 1);
+  }
+  -webkit-box-flex: $fg-boxflex;
+  -webkit-flex: $fg $fs $fb;
+  -moz-box-flex: $fg-boxflex;
+  -moz-flex: $fg $fs $fb;
+  -ms-flex: $fg $fs $fb;
+  flex: $fg $fs $fb;
+}
+
+/// The flex-justify-content mixin aligns flex items along the main axis of the current line of the flex container. This is done after any flexible lengths and any auto margins have been resolved. Typically it helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line, 'space-*' values not supported in older syntaxes.
+/// @param {string} $align [flex-start, flex-end, center, space-between, space-around] - justify content value
+/// @example
+/// .element {
+///   @include flex-justify-content(center);
+/// }
+@mixin flex-justify-content($align: flex-start) {
+  @if $align == flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $align == flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $align == space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $align == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $align;
+    -ms-flex-pack: $align;
+  }
+  -webkit-justify-content: $align;
+  -moz-justify-content: $align;
+  justify-content: $align;
+}
+
+/// The flex-align-items mixin can be aligned in the cross axis of the current line of the flex container, similar to 'justify-content' but in the perpendicular direction. 'align-items' sets the default alignment for all of the flex container's items, including anonymous flex items. 'align-self' allows this default alignment to be overridden for individual flex items. (For anonymous flex items, 'align-self' always matches the value of 'align-items' on their associated flex container.)
+/// @param {string} $align [flex-start, flex-end, center, baseline, stretch] - align items value
+/// @example
+/// .element {
+///   @include flex-align-items(baseline);
+/// }
+@mixin flex-align-items($align: stretch) {
+  @if $align == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $align == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+  }
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  align-items: $align;
+}
+
+/// The flex-align-self mixin allows this default alignment to be overridden for individual flex items.
+/// @param {string} $align [auto, flex-start, flex-end, center, baseline, stretch] - align self value
+/// @example
+/// .element {
+///   @include flex-align-self(flex-end);
+/// }
+@mixin flex-align-self($align: auto) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  @if $align == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $align == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $align;
+  }
+  align-self: $align;
+}
+
+/// The flex-align-content mixin aligns a flex container's lines within the flex container when there is extra space in the cross-axis, similar to how 'justify-content' aligns individual items within the main-axis. Note, this property has no effect when the flexbox has only a single line.
+/// @param {string} $align [flex-start, flex-end, center, space-between, space-around, stretch] - align content value
+/// @example
+/// .element {
+///   @include flex-align-content(center);
+/// }
+@mixin flex-align-content($align: stretch) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  @if $align == flex-start {
+    -ms-flex-line-pack: start;
+  } @else if $align == flex-end {
+    -ms-flex-line-pack: end;
+  } @else {
+    -ms-flex-line-pack: $align;
+  }
+  align-content: $align;
+}

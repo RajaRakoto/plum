@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-swashIn($duration) {
+@mixin magic-swashIn($duration, $delay) {
   -webkit-animation-name: swashIn;
   animation-name: swashIn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes swashIn {

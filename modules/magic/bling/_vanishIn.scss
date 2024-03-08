@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-@mixin magic-vanishIn($duration) {
+@mixin magic-vanishIn($duration, $delay) {
   animation-name: vanishIn;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes vanishIn {

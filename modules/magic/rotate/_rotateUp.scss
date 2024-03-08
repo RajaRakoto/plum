@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-rotateUp($duration) {
+@mixin magic-rotateUp($duration, $delay) {
   -webkit-animation-name: rotateUp;
   animation-name: rotateUp;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes rotateUp {

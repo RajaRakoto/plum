@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-slideLeft($duration) {
+@mixin magic-slideLeft($duration, $delay) {
   -webkit-animation-name: slideLeft;
   animation-name: slideLeft;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes slideLeft {

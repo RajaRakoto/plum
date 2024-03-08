@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+@mixin getAllSize($size) {
+  padding: __convertToRem($size) __convertToRem($size) __convertToRem($size)
+    __convertToRem($size);
+  margin: __convertToRem($size) __convertToRem($size) __convertToRem($size)
+    __convertToRem($size);
+}
+
+@mixin getPaddingSize($size) {
+  padding: __convertToRem($size) __convertToRem($size) __convertToRem($size)
+    __convertToRem($size);
+}
+
+@mixin getMarginSize($size) {
+  margin: __convertToRem($size) __convertToRem($size) __convertToRem($size)
+    __convertToRem($size);
+}
+
+/// Quickly modify the padding of an element
+/// @param {pixel} $top - spacing at the top of the padding
+/// @param {pixel} $right - spacing at the right of the padding
+/// @param {pixel} $bottom - spacing at the bottom of the padding
+/// @param {pixel} $left - spacing at the left of the padding
+/// @example
+///  .containing-element {
+///	  @include spacing-padding(10px, 0px, 10px, 0px);
+///  }
+@mixin spacing-padding($top, $right, $bottom, $left) {
+  padding-top: __convertToRem($top);
+  padding-right: __convertToRem($right);
+  padding-bottom: __convertToRem($bottom);
+  padding-left: __convertToRem($left);
+}
+
+/// Quickly modify the margin of an element
+/// @param {pixel} $top - spacing at the top of the margin
+/// @param {pixel} $right - spacing at the right of the margin
+/// @param {pixel} $bottom - spacing at the bottom of the margin
+/// @param {pixel} $left - spacing at the left of the margin
+/// @example
+///  .containing-element {
+///	  @include spacing-margin(30px, 12px, 30px, 12px);
+///  }
+@mixin spacing-margin($top, $right, $bottom, $left) {
+  margin-top: __convertToRem($top);
+  margin-right: __convertToRem($right);
+  margin-bottom: __convertToRem($bottom);
+  margin-left: __convertToRem($left);
+}
+
+/// Quickly add a predefined padding based on the size argument
+/// @param {string} $size [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing size of container
+/// @example
+///
+/// /* example 1 */
+///
+///  .containing-element {
+///	  @include spacing-padding-size(medium);
+///  }
+///
+/// /* example 2 */
+///
+///  .containing-element {
+///	  @include spacing-padding-size(small);
+///  }
+@mixin spacing-padding-size($size: medium) {
+  @if ($size == xx-small) {
+    @include getPaddingSize(4px);
+  }
+  @if ($size == x-small) {
+    @include getPaddingSize(6px);
+  }
+  @if ($size == smaller) {
+    @include getPaddingSize(12px);
+  }
+  @if ($size == small) {
+    @include getPaddingSize(16px);
+  }
+  @if ($size == medium) {
+    @include getPaddingSize(24px);
+  }
+  @if ($size == large) {
+    @include getPaddingSize(32px);
+  }
+  @if ($size == larger) {
+    @include getPaddingSize(64px);
+  }
+  @if ($size == x-large) {
+    @include getPaddingSize(72px);
+  }
+  @if ($size == xx-large) {
+    @include getPaddingSize(96px);
+  }
+}
+
+/// Quickly add a predefined margin based on the size argument
+/// @param {string} $size [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing size of container
+/// @example
+///
+/// /* example 1 */
+///
+///  .containing-element {
+///	  @include spacing-margin-size(large);
+///  }
+///
+/// /* example 2 */
+///
+///  .containing-element {
+///	  @include spacing-margin-size(xx-small);
+///  }
+@mixin spacing-margin-size($size: medium) {
+  @if ($size == xx-small) {
+    @include getMarginSize(4px);
+  }
+  @if ($size == x-small) {
+    @include getMarginSize(6px);
+  }
+  @if ($size == smaller) {
+    @include getMarginSize(12px);
+  }
+  @if ($size == small) {
+    @include getMarginSize(16px);
+  }
+  @if ($size == medium) {
+    @include getMarginSize(24px);
+  }
+  @if ($size == large) {
+    @include getMarginSize(32px);
+  }
+  @if ($size == larger) {
+    @include getMarginSize(64px);
+  }
+  @if ($size == x-large) {
+    @include getMarginSize(72px);
+  }
+  @if ($size == xx-large) {
+    @include getMarginSize(96px);
+  }
+}
+
+/// Quickly add a predefined padding|margin based on the size argument
+/// @param {string} $size [xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large] - spacing size of container
+/// @example
+///
+/// /* example 1 */
+///
+///  .containing-element {
+///	  @include spacing-all-size(x-large);
+///  }
+///
+/// /* example 2 */
+///
+///  .containing-element {
+///	  @include spacing-all-size(smaller);
+///  }
+@mixin spacing-all-size($size: medium) {
+  @if ($size == xx-small) {
+    @include getAllSize(4px);
+  }
+  @if ($size == x-small) {
+    @include getAllSize(6px);
+  }
+  @if ($size == smaller) {
+    @include getAllSize(12px);
+  }
+  @if ($size == small) {
+    @include getAllSize(16px);
+  }
+  @if ($size == medium) {
+    @include getAllSize(24px);
+  }
+  @if ($size == large) {
+    @include getAllSize(32px);
+  }
+  @if ($size == larger) {
+    @include getAllSize(64px);
+  }
+  @if ($size == x-large) {
+    @include getAllSize(72px);
+  }
+  @if ($size == xx-large) {
+    @include getAllSize(96px);
+  }
+}

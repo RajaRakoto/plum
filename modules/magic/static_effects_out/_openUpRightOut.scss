@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-openUpRightOut($duration) {
+@mixin magic-openUpRightOut($duration, $delay) {
   -webkit-animation-name: openUpRightOut;
   animation-name: openUpRightOut;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes openUpRightOut {

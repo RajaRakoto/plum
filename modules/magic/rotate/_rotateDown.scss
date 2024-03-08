@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@mixin magic-rotateDown($duration) {
+@mixin magic-rotateDown($duration, $delay) {
   -webkit-animation-name: rotateDown;
   animation-name: rotateDown;
   animation-duration: $duration;
+  animation-delay: $delay;
   animation-fill-mode: both;
 
   @-webkit-keyframes rotateDown {
