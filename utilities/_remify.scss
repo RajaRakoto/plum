@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@use 'sass:math';
+
 $font-size: 16;
 
 /// A function that converts a pixel value to rem
