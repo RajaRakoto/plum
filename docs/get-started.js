@@ -16,4 +16,12 @@ plum-cli
 \`\`\`
 
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-cli-demo.gif?raw=true" width="800">
+
+If you use [sass](https://www.npmjs.com/package/sass) package for compiling your SCSS files, you can incorporate the following command in your package.json file to enable SCSS file monitoring:
+
+\`\`\`json
+"scripts": {
+  "watch:sass": "sass --watch style.scss:style.css --load-path=node_modules" // start it with npm run watch:sass
+},
+\`\`\`
 `

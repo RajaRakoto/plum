@@ -32,6 +32,14 @@ plum-cli
 
 <img src="https://github.com/RajaRakoto/github-docs/blob/master/plum/plum-cli-demo.gif?raw=true" width="800">
 
+If you use [sass](https://www.npmjs.com/package/sass) package for compiling your SCSS files, you can incorporate the following command in your package.json file to enable SCSS file monitoring:
+
+```json
+"scripts": {
+  "watch:sass": "sass --watch style.scss:style.css --load-path=node_modules" // start it with npm run watch:sass
+},
+```
+
 
 ---
 
@@ -45,15 +53,16 @@ Plum's main attributes are consolidated through a mix of diverse mixins and usef
 
 @include minireset();
 @include normalize();
+@include antialias();
 @include typo-fontface(
-    'Quicksand-regular',
-    './src/assets/fonts/Quicksand-regular.ttf'
-  )
+  'Quicksand-regular',
+  './src/assets/fonts/Quicksand-regular.ttf'
+);
 
 .box {
   width: __convertToRem(100px);
   height: __convertToEm(150px);
-  color: __color-pastel('blue');
+  color: __color-pastel(blue);
 }
 
 .zoom-in {
@@ -118,7 +127,6 @@ img {
 }
 
 .containing-element {
-  /* idem -> @media (width: 1200px) */
   @include breakpoint(only, 1200px) {
     background-color: teal;
   }
@@ -128,7 +136,7 @@ img {
   @include adaptive();
 }
 
-@include antialias() .wrapper {
+.wrapper {
   .item {
     @include except(first) {
       background-color: dodgerblue;
@@ -150,8 +158,10 @@ img {
   @include overflow-wrap();
 }
 
+@include loadify(init);
+
 img {
-  @include loadify(0.5s);
+  @include loadify(0.5s); // note: you must initialize the loadify before
 }
 
 .containing-element {
