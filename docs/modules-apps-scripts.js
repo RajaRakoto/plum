@@ -11,14 +11,18 @@ Here are the lists of third-party modules, applications, and scripts that you ca
 
 \`\`\`scss
 @import '@rajarakoto/plum/modules/animate';
-@include animate-bounceInLeft($duration: second, $delay: second);
+.bounce-in-left {
+  @include animate-bounceInLeft($duration: second, $delay: second);
+}
 \`\`\`
 
 **\`Magic\`** (module + app): Magic CSS are a set of simple animations to include in your web or app project's.
 
 \`\`\`scss
 @import '@rajarakoto/plum/modules/magic';
-@include magic-openUpLeft($duration: second, $delay: second);
+.open-up-left {
+  @include magic-openUpLeft($duration: second, $delay: second);
+}
 \`\`\`
 
 **\`Buttons2\`** (module + app + script): A highly customizable production ready mobile web and desktop css button library.
@@ -39,7 +43,9 @@ Here are the lists of third-party modules, applications, and scripts that you ca
 
 \`\`\`scss
 @import '@rajarakoto/plum/modules/open-color';
-$oc-green-0~9;
+h1 {
+  color: $oc-green-5;
+}
 \`\`\`
 
 **\`Fontawesome\`** (module): The web's most popular icon set and toolkit.
