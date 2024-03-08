@@ -6,7 +6,7 @@ export const get_started = `
 You can use [Plum CLI](https://github.com/RajaRakoto/plum-cli) to install **Plum** package in your project:
 
 \`\`\`bash
-npm install -g @rajarakoto/plum-cli
+npm install -g @raja_rakoto/plum-cli
 \`\`\`
 
 Execute the following command to start CLI:
