@@ -7,7 +7,7 @@ Plum's main attributes are consolidated through a mix of diverse mixins and usef
 
 **Here are some simple examples of different ways to use Plum (you can refer to all use cases in the plum-cli documentation):**
 \`\`\`scss
-@import '@raja_rakoto/plum/plum';
+@import '@raja-rakoto/plum/plum';
 
 @include minireset();
 @include normalize();
